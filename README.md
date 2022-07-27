@@ -45,8 +45,7 @@ Applicable sur PC, Android et iOS.
  
 
 ils apparaissent en premier à un niveau de zoom éloigné.
-ce sont les éléments OpenStreetMap suivants:
-
+ce sont les éléments OpenStreetMap suivants:<br><i>
 "tracktype=grade1"<br>
 "tracktype=grade2"<br>
 "smoothness=intermediate"<br>
@@ -61,18 +60,18 @@ ce sont les éléments OpenStreetMap suivants:
 "surface=sett"<br>
 "surface=cobblestone"<br>
 "surface=compacted"<br>
-"surface=fine_gravel" <br>
+"surface=fine_gravel" <br></i>
 
- et pour les pointillés<br>
+ et pour les pointillés<br><i>
 "tracktype=grade3"<br>
 "smoothness=bad"<br>
 "surface=gravel"<br>
-"surface=pebblestone"<br>
+"surface=pebblestone"<br></i>
 
 ### les chemins non empierrés sont en trait vert.
 
  
-ce sont les éléments OpenStreetMap suivants:<br>
+ce sont les éléments OpenStreetMap suivants:<br><i>
 "tracktype=grade4"<br>
 "smoothness=very_bad"<br>
 "surface=unpaved"<br>
@@ -80,14 +79,14 @@ ce sont les éléments OpenStreetMap suivants:<br>
 "surface=dirt"<br>
 "surface=earth"<br>
 "mtb:scale=0"<br>
-"mtb:scale=1"<br>
+"mtb:scale=1"<br></i>
 
 ### les chemins d'exploitation et les chemins non précisés dans OSM sont en trait vert pointillés à un niveau de zoom plus proche.
 
  
 Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait continu.
 
-ce sont les éléments OpenStreetMap suivants:<br>
+ce sont les éléments OpenStreetMap suivants:<br><i>
 "tracktype=grade5"<br>
 "smoothness=very_horrible"<br>
 "smoothness=horrible"<br>
@@ -95,42 +94,42 @@ ce sont les éléments OpenStreetMap suivants:<br>
 "surface=mud"<br>
 "surface=sand"<br>
 "mtb:scale=2"<br>
-"mtb:scale=3"<br>
+"mtb:scale=3"<br></i>
 
 ### les chemins interdits sont en rouge (gardent leur type défini avant)
 
-ce sont les éléments OpenStreetMap suivants:<br>
+ce sont les éléments OpenStreetMap suivants:<br><i>
 "private"<br>
 "no"<br>
 "forestry"<br>
 "agricultural"<br>
 "destination"<br>
-"customers"<br>
+"customers"<br></i>
 
 ### les sentiers sont en trait fin noir pointillé
 auquel se superposent les informations de difficultés VTT et / ou pédestre
 
  
-des points verts pour un sentier facile pour une moto d'enduro légère<br>
+des points verts pour un sentier facile pour une moto d'enduro légère<br><i>
 "mtb:scale=0"<br>
-"mtb:scale:imba=0"<br>
+"mtb:scale:imba=0"<br></i>
 
  
-des points oranges pour un sentier "technique" pour une moto d'enduro légère<br>
+des points oranges pour un sentier "technique" pour une moto d'enduro légère<br><i>
 "mtb:scale=1"<br>
 "mtb:scale:imba=1"<br>
-"sac_scale=hiking"<br>
+"sac_scale=hiking"<br></i>
 
  
-des points rouges pour un sentier difficile pour une moto d'enduro légère (franchissement)<br>
+des points rouges pour un sentier difficile pour une moto d'enduro légère (franchissement)<br><i>
 "mtb:scale=2"<br>
 "mtb:scale=3"<br>
 "mtb:scale:imba=2"<br>
 "mtb:scale:imba=3"<br>
-"sac_scale=mountain_hiking"<br>
+"sac_scale=mountain_hiking"<br></i>
 
  
-des points noirs pour un sentier impassable pour une moto d'enduro légère<br>
+des points noirs pour un sentier impassable pour une moto d'enduro légère<br><i>
 "mtb:scale=4<br>
 "mtb:scale:imba=4<br>
 "mtb:scale=5<br>
@@ -138,7 +137,7 @@ des points noirs pour un sentier impassable pour une moto d'enduro légère<br>
 "sac_scale=demanding_mountain_hiking"<br>
 "sac_scale=alpine_hiking"<br>
 "sac_scale=demanding_alpine_hiking"<br>
-"sac_scale=difficult_alpine_hiking"<br>
+"sac_scale=difficult_alpine_hiking"<br></i>
 
 
 
