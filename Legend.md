@@ -13,7 +13,6 @@
   <tr>
     <td colspan="2"><img src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" width="122" /> <img src="https://1.bp.blogspot.com/--rn2omJqCFI/YB095SXw-HI/AAAAAAAAEXc/wSUP8PfkXWs6QryhW2FgRSJMWbuih0V_gCLcBGAsYHQ/s0/chemin_piste_moins.png" width="110" /></td>
     <td colspan="2"><img src="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s111/chemin_moyen.png" width="150" /></td>
-    <td></td>
   </tr>
   <tr>
     <th colspan="2"><b>les chemins d'exploitation et les chemins non précisés dans OSM</b><br> sont en trait vert pointillés à un niveau de zoom plus proche</th>
