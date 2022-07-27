@@ -102,6 +102,7 @@ suite de la légende https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/le
 ---
 
 ## Installer le rendu
+pour mettre à jour le rendu et/ou les routages ou pour créer les profils de routage préférez la méthode des fichiers osf à restaurer, voir https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration
 <table>
     <thead>
     <tr>
