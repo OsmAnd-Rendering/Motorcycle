@@ -17,6 +17,7 @@ more detail here : https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html
 - Simplification pour lisibilité des itinéraires VTT/pédestre<br>
 - Réglages supplémentaires pour la lisibilité en roulant<br>
 <br><br>
+
 ---
 
 ## Screenshots<br>
