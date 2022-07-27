@@ -42,7 +42,8 @@ Applicable sur PC, Android et iOS.
 ## Légende
 ### les chemins carrossables considérés comme faciles sont en trait épais marron foncé (pointillé si un peu moins lisse)
 
- 
+ [legende_enduro_render.pdf](https://github.com/OsmAnd-Rendering/Motorcycle/files/9196656/legende_enduro_render.pdf)
+
 
 ils apparaissent en premier à un niveau de zoom éloigné.
 ce sont les éléments OpenStreetMap suivants:<br><i>
