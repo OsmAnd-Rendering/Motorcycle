@@ -33,34 +33,16 @@ les sentiers sont en trait fin noir pointillé<br>auquel se superposent les info
 <p>&nbsp;<a href="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="74" data-original-width="95" src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" border="0"></a></p>
 <div style="text-align: left;">des <b>points <span data-darkreader-inline-color="" style="--darkreader-inline-color: #1dff1a; color: #04ff00;">verts</span></b> pour un sentier facile pour une moto d'enduro légère<br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=0"</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=0"</i></span><p>
+
 <a href="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="87" data-original-width="157" src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" border="0"></a>&nbsp;</p><div style="text-align: left;">des <b>points <span data-darkreader-inline-color="" style="--darkreader-inline-color: #ffad1a; color: #ffa400;">oranges</span></b> pour un sentier "technique" pour une moto d'enduro légère<br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=1"</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=1"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=hiking"</i></span><p>
+
 <a href="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="116" data-original-width="131" src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" border="0"></a>&nbsp;</p><div style="text-align: left;">des <b>points <span data-darkreader-inline-color="" style="--darkreader-inline-color: #ff1a1a; color: red;">rouges</span></b> pour un sentier difficile pour une moto d'enduro légère (franchissement) <br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=2"</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale=3"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=2"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=3"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=mountain_hiking"</i></span><p>
+
 <a href="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="97" data-original-width="172" src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.png" border="0"></a>&nbsp;</p><div style="text-align: left;">des <b>points noirs</b> pour un sentier impassable pour une moto d'enduro légère <br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=4</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=4</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale=5</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale=6</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=demanding_mountain_hiking"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=alpine_hiking"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=demanding_alpine_hiking"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=difficult_alpine_hiking"</i></span><p>
+
 <a href="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="118" data-original-width="87" src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" border="0"></a><br>
 <br>vous pourrez aussi rencontrer très rarement des traits fins rouge 
