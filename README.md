@@ -3,11 +3,11 @@ off road motorcycle render style and routing for OsmAnd Android and iOS
 
 Style focused on off-road motorcycle use with the track classified by "difficulty" linked to the type of machine and the details present in OpenStreetMap.
 
-Routing calculations for 3 types of motorcycle use are under "branch" routing https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing
+Routing calculations for 3 types of motorcycle :  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
 
-osf files for automatic install are under "branch" configuration https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration
+osf files for automatic install : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-more detail here : https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html
+more detail here : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html)
 
 ## Changements notables par rapport aux styles standard :
 <br>
@@ -28,19 +28,19 @@ more detail here : https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html
 ### 
 | <img src="https://1.bp.blogspot.com/-4PDQS4TdN0U/YJzl-K4DbjI/AAAAAAAAEi0/tXv0eyXuGEMS93m2lxKqQqMrqMsf9busgCLcBGAsYHQ/w296-h640/PT%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-VDzxurdpIiI/YJzjwUlMM4I/AAAAAAAAEik/uZcepPSb630Fe-n55IIBL5TmeJz4ZSsfACLcBGAsYHQ/w296-h640/GT_sec%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-2jO-scaZT8k/YJzinm1gWHI/AAAAAAAAEic/7Qe9Xhfd9mIbINux-c_4Gw7iRT5DH4ugwCLcBGAsYHQ/w296-h640/GT%255B1%255D.jpg" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
-<br>
 
 ---
+## ➡️[Légende](Legend.md)
+---
 
-## Télécharger le rendu
+## Téléchargement
 Applicable sur PC, Android et iOS.
 
 - Télécharger le fichier en faisant un clic droit ou appui long sur [ce lien](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/enduro.render.xml)
     - Télécharger la cible du lien.<br><br>
 
----
 
-## Légende
+<!-- ## Légende
 
 les chemins <b>carrossables</b> considérés comme faciles sont en trait épais marron foncé (pointillé si un peu moins lisse)<br>
 <a href="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" style="margin-left: auto; margin-right: auto;">
@@ -98,12 +98,12 @@ des <b>points noirs</b> pour un sentier impassable pour une moto d'enduro légè
 <br>
 <br>
 suite de la légende https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/legende.md
-<br>
+<br> -->
 
 ---
 
-## Installer le rendu
-pour mettre à jour le rendu et/ou les routages ou pour créer les profils de routage préférez la méthode des fichiers osf à restaurer, voir https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration
+## Installation
+pour mettre à jour le rendu et/ou les routages ou pour créer les profils de routage préférez la méthode des fichiers osf à restaurer, voir [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 <table>
     <thead>
     <tr>
