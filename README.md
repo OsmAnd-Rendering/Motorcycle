@@ -1,3 +1,5 @@
+`🇫🇷 Français`&emsp;🇬🇧 [English](README_EN.md)
+
 # Motorcycle
 Render style axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap.
 
