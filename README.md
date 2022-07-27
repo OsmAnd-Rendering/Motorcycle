@@ -1,13 +1,11 @@
 # Motorcycle
-off road motorcycle render style and routing for OsmAnd Android and iOS
+Render style axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap.
 
-Style focused on off-road motorcycle use with the track classified by "difficulty" linked to the type of machine and the details present in OpenStreetMap.
+Calculs de routage pour 3 types de motos :  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
 
-Routing calculations for 3 types of motorcycle :  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
+fichiers osf pour installation automatique : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-osf files for automatic install : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
-
-more detail here : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html)
+plus de détails ici : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html)
 
 ## Changements notables par rapport aux styles standard :
 <br>
