@@ -1,4 +1,4 @@
-`🇫🇷 Français`&emsp;🇬🇧 [English](README_EN.md)
+🇫🇷 [Français](README.md)&emsp;🇬🇧 [English](README_EN.md)
 
 # Motorcycle
 Render style focused on off-road motorcycle use with roads classified by "difficulty" linked to the type of machine and to the details present in OpenStreetMap.
