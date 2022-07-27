@@ -3,11 +3,11 @@ off road motorcycle render style and routing for OsmAnd Android and iOS
 
 Style focused on off-road motorcycle use with the track classified by "difficulty" linked to the type of machine and the details present in OpenStreetMap.
 
-Routing calculations for 3 types of motorcycle use are under "branch" routing https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing
+Routing calculations for 3 types of motorcycle use are under "branch" : [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
 
-osf files for automatic install are under "branch" configuration https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration
+osf files for automatic install are under "branch" : [configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-more detail here : https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html
+more detail here : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html)
 
 ## Changements notables par rapport aux styles standard :
 <br>
@@ -175,8 +175,8 @@ Quelques éléments remarquables (les autres sont facilement reconnaissables)<br
     </thead>
     <tbody>
     <tr>
-        <td width="50%"><li> À l'aide d'un gestionnaire de fichiers, <code>déplacez le fichier xml téléchargé</code> dans le dossier:<br><code>Android / data / net.osmand.plus / files / rendering</code><br><li>  <code>Fermez l'application</code> Osmand avec le bouton carré d'android<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez <code>Paramétrer la carte</code><br<li> Descendez à <code>Style de la carte</code><br> <li> Sélectionnez <code>CycloRoute</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
-        <td><li> Ouvrez votre téléchargement, puis choisissez <code>Ouvrir avec OsmAnd</code>. Votre style a été importé!<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez sur <code>Paramétrer la carte</code><br><li> Descendez à <code>Style de la carte</code><br><li> Sélectionnez <code>CycloRoute</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
+        <td width="50%"><li> À l'aide d'un gestionnaire de fichiers, <code>déplacez le fichier xml téléchargé</code> dans le dossier:<br><code>Android / data / net.osmand.plus / files / rendering</code><br><li>  <code>Fermez l'application</code> Osmand avec le bouton carré d'android<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez <code>Paramétrer la carte</code><br<li> Descendez à <code>Style de la carte</code><br> <li> Sélectionnez <code>Enduro</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
+        <td><li> Ouvrez votre téléchargement, puis choisissez <code>Ouvrir avec OsmAnd</code>. Votre style a été importé!<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez sur <code>Paramétrer la carte</code><br><li> Descendez à <code>Style de la carte</code><br><li> Sélectionnez <code>Enduro</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
     </tr>
     <tbody>
 </table>
