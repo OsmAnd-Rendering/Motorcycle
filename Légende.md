@@ -1,5 +1,6 @@
-## Légende
+# Légende
 
+## Chemins
 les chemins <b>carrossables</b> considérés comme faciles sont en trait épais marron foncé (pointillé si un peu moins lisse)<br>
 <a href="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="96" data-original-width="129" src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" border="0"></a>
@@ -24,7 +25,11 @@ continu.
 <a href="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="74" data-original-width="85" src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" border="0"></a>
 <br>
 <br>
-<span style="font-size: large;"><b>les sentiers</b></span> sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre
+
+---
+
+## Sentiers
+les sentiers sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre
 <p>&nbsp;<a href="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="74" data-original-width="95" src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" border="0"></a></p>
 <div style="text-align: left;">des <b>points <span data-darkreader-inline-color="" style="--darkreader-inline-color: #1dff1a; color: #04ff00;">verts</span></b> pour un sentier facile pour une moto d'enduro légère<br></div>
@@ -66,10 +71,14 @@ probablement pas.&nbsp;</p><p>et enfin une dernière variante des sentiers qui
  s'affiche en marron clair car vous n'êtes pas censés les emprunter,&nbsp; ce
  sont les "footway" pour OSM, des cheminements piéton exclusivement 
 comme les trottoirs en ville mais qui sont souvent à tort identifié 
-comme tel à la place de sentiers génériques en pleine nature.<br></p> 
-<b>barrière</b>: une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
+comme tel à la place de sentiers génériques en pleine nature.</p> <br>
+
+### barrière
+une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="29" data-original-width="49" src="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" border="0"></a></div><div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="52" data-original-width="65" src="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" border="0"></a></div><br>
-<b>les balisages</b> désactivables dans le menu du style<br>
+
+### Balisages
+ désactivables dans le menu du style<br>
 icônes selon le type (GR rouge et blanc, tour de pays rouge et jaune, PR
  jaune) et surlignage des parcours en jaune pour pédestre et mauve pour 
 VTT<br>
@@ -78,7 +87,9 @@ VTT<br>
 un exemple des différents balisages, icône ou référence / nom selon le 
 niveau de zoom (le vélo dans le rond blanc pour les itinéraires VTT).<br>
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-exeX47jqhkE/YHl78COV4-I/AAAAAAAAEhQ/I3XvrOUpvmkKBi8QpOHZ5aZRpA1k255AQCLcBGAsYHQ/s0/balisages.jpg" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="2340" data-original-width="1080" src="https://1.bp.blogspot.com/-exeX47jqhkE/YHl78COV4-I/AAAAAAAAEhQ/I3XvrOUpvmkKBi8QpOHZ5aZRpA1k255AQCLcBGAsYHQ/w295-h640/balisages.jpg" width="295" height="640" border="0"></a></div>
-<p><span style="font-size: large;"><b>les routes</b></span><br></p>
+<br><br>
+
+## Routes
 autoroute<br>
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-j8cd8vBYYtw/YB1S4Ag1sNI/AAAAAAAAEZA/tGnsCcEtpxMlBCVkJvLiGGkieSTuxPq7gCLcBGAsYHQ/s0/autoroute.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="79" data-original-width="116" src="https://1.bp.blogspot.com/-j8cd8vBYYtw/YB1S4Ag1sNI/AAAAAAAAEZA/tGnsCcEtpxMlBCVkJvLiGGkieSTuxPq7gCLcBGAsYHQ/s0/autoroute.png" border="0"></a></div><br>
 profil autoroutier<br>
@@ -103,6 +114,10 @@ tunnel<br>
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-MXh4pXRREMY/YB1WN0ZmN-I/AAAAAAAAEaM/pJ-YjJ77vlwDkcDFytrU7YKV6Us5SVkWQCLcBGAsYHQ/s0/voie_ferree_tunnel.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="75" data-original-width="106" src="https://1.bp.blogspot.com/-MXh4pXRREMY/YB1WN0ZmN-I/AAAAAAAAEaM/pJ-YjJ77vlwDkcDFytrU7YKV6Us5SVkWQCLcBGAsYHQ/s0/voie_ferree_tunnel.png" border="0"></a></div><br>
 pont<br>
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-zW1HQZXLnRE/YB1WYR8M0bI/AAAAAAAAEaQ/6_ibC5ZIEHsCJDPpo5a6GiVJHy7ndPL6wCLcBGAsYHQ/s0/voie_ferree_pont.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="49" data-original-width="115" src="https://1.bp.blogspot.com/-zW1HQZXLnRE/YB1WYR8M0bI/AAAAAAAAEaQ/6_ibC5ZIEHsCJDPpo5a6GiVJHy7ndPL6wCLcBGAsYHQ/s0/voie_ferree_pont.png" border="0"></a></div><br>
+
+
+
+## Eléments remarquables
 Quelques éléments remarquables (les autres sont facilement reconnaissables)<br>
 <b>les conduites d'eau forcée ou pipeline</b> <br>
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-9woAA4wbSdg/YB1bKgqm6JI/AAAAAAAAEa8/ogNaDqWsSvAPaaPYwe0VxctBXcOfMoKCgCLcBGAsYHQ/s0/eau_conduite-forcee.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="50" data-original-width="96" src="https://1.bp.blogspot.com/-9woAA4wbSdg/YB1bKgqm6JI/AAAAAAAAEa8/ogNaDqWsSvAPaaPYwe0VxctBXcOfMoKCgCLcBGAsYHQ/s0/eau_conduite-forcee.png" border="0"></a></div><br>
