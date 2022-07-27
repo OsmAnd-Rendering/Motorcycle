@@ -3,11 +3,11 @@ off road motorcycle render style and routing for OsmAnd Android and iOS
 
 Style focused on off-road motorcycle use with the track classified by "difficulty" linked to the type of machine and the details present in OpenStreetMap.
 
-Routing calculations for 3 types of motorcycle use are under "branch" : [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
+Routing calculations for 3 types of motorcycle use are under "branch" routing https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing
 
-osf files for automatic install are under "branch" : [configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+osf files for automatic install are under "branch" configuration https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration
 
-more detail here : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html)
+more detail here : https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html
 
 ## Changements notables par rapport aux styles standard :
 <br>
@@ -65,62 +65,46 @@ continu.
 <a href="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="74" data-original-width="85" src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" border="0"></a>
 <br>
 <br>
-<span style="font-size: large;"><b>les sentiers</b></span> sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre
-<p>&nbsp;<a href="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" style="margin-left: auto; margin-right: auto;">
-<img alt="" data-original-height="74" data-original-width="95" src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" border="0"></a></p>
-<div style="text-align: left;">des <b>points <span data-darkreader-inline-color="" style="--darkreader-inline-color: #1dff1a; color: #04ff00;">verts</span></b> pour un sentier facile pour une moto d'enduro légère<br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=0"</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=0"</i></span><p>
+<b>les sentiers</b> sont en trait fin noir pointillé<br>
+auquel se superposent les informations de difficultés VTT et / ou pédestre<br>
+<a href="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" style="margin-left: auto; margin-right: auto;">
+<img alt="" data-original-height="74" data-original-width="95" src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" border="0"></a>
+<br>
+<br>
+des <b>points verts</b> pour un sentier facile pour une moto d'enduro légère<br>
 <a href="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" style="margin-left: auto; margin-right: auto;">
-<img alt="" data-original-height="87" data-original-width="157" src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" border="0"></a>&nbsp;</p><div style="text-align: left;">des <b>points <span data-darkreader-inline-color="" style="--darkreader-inline-color: #ffad1a; color: #ffa400;">oranges</span></b> pour un sentier "technique" pour une moto d'enduro légère<br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=1"</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=1"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=hiking"</i></span><p>
+<img alt="" data-original-height="87" data-original-width="157" src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" border="0"></a>
+<br>
+<br>
+des <b>points oranges</b> pour un sentier "technique" pour une moto d'enduro légère<br>
 <a href="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" style="margin-left: auto; margin-right: auto;">
-<img alt="" data-original-height="116" data-original-width="131" src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" border="0"></a>&nbsp;</p><div style="text-align: left;">des <b>points <span data-darkreader-inline-color="" style="--darkreader-inline-color: #ff1a1a; color: red;">rouges</span></b> pour un sentier difficile pour une moto d'enduro légère (franchissement) <br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=2"</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale=3"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=2"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=3"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=mountain_hiking"</i></span><p>
+<img alt="" data-original-height="116" data-original-width="131" src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" border="0"></a>
+<br>
+<br>
+des <b>points rouges</b> pour un sentier difficile pour une moto d'enduro légère (franchissement) <br>
 <a href="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.png" style="margin-left: auto; margin-right: auto;">
-<img alt="" data-original-height="97" data-original-width="172" src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.png" border="0"></a>&nbsp;</p><div style="text-align: left;">des <b>points noirs</b> pour un sentier impassable pour une moto d'enduro légère <br></div>
-<span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600;">
-<span style="font-size: x-small;"><i>"mtb:scale=4</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale:imba=4</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale=5</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"mtb:scale=6</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=demanding_mountain_hiking"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=alpine_hiking"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=demanding_alpine_hiking"</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #c2ff85; color: #336600; font-size: x-small;"><i>
-"sac_scale=difficult_alpine_hiking"</i></span><p>
+<img alt="" data-original-height="97" data-original-width="172" src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.png" border="0"></a>
+<br>
+<br>
+des <b>points noirs</b> pour un sentier impassable pour une moto d'enduro légère <br>
 <a href="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" style="margin-left: auto; margin-right: auto;">
-<img alt="" data-original-height="118" data-original-width="87" src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" border="0"></a><br>
-<br>vous pourrez aussi rencontrer très rarement des traits fins rouge 
-qui apparaissent à un zoom plus élevé que les sentiers, ce sont des 
-sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le 
-routage "enduro" pourra vous y faire passer mais ... il n'existe 
-probablement pas.&nbsp;</p><p>et enfin une dernière variante des sentiers qui
- s'affiche en marron clair car vous n'êtes pas censés les emprunter,&nbsp; ce
- sont les "footway" pour OSM, des cheminements piéton exclusivement 
-comme les trottoirs en ville mais qui sont souvent à tort identifié 
-comme tel à la place de sentiers génériques en pleine nature.<br></p> 
+<img alt="" data-original-height="118" data-original-width="87" src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" border="0"></a>
+<br>
+<br>
 <b>barrière</b>: une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
-<div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="29" data-original-width="49" src="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" border="0"></a></div><div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="52" data-original-width="65" src="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" border="0"></a></div><br>
+<a href="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="29" data-original-width="49" src="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" border="0"></a><br>
+<a href="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="52" data-original-width="65" src="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" border="0"></a>
+<br>
+<br>
 <b>les balisages</b> désactivables dans le menu du style<br>
-icônes selon le type (GR rouge et blanc, tour de pays rouge et jaune, PR
- jaune) et surlignage des parcours en jaune pour pédestre et mauve pour 
+icônes selon le type (GR rouge et blanc, tour de pays rouge et jaune, PR jaune) et surlignage des parcours en jaune pour pédestre et mauve pour 
 VTT<br>
-<div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-v9JIlGQyY04/YB1fTNBit8I/AAAAAAAAEcI/y0XLKm7IjKQX2dLxHZf4UiGqmvlCuQgbgCLcBGAsYHQ/s0/balisage_GR.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="166" data-original-width="149" src="https://1.bp.blogspot.com/-v9JIlGQyY04/YB1fTNBit8I/AAAAAAAAEcI/y0XLKm7IjKQX2dLxHZf4UiGqmvlCuQgbgCLcBGAsYHQ/s0/balisage_GR.png" border="0"></a></div><div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-2_uR1MBI6i4/YB1fTEK6XAI/AAAAAAAAEcM/viiTU1aELfU--BqJzzx2eBlQLsdxqvcAwCLcBGAsYHQ/s0/balisage_PR.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="172" data-original-width="100" src="https://1.bp.blogspot.com/-2_uR1MBI6i4/YB1fTEK6XAI/AAAAAAAAEcM/viiTU1aELfU--BqJzzx2eBlQLsdxqvcAwCLcBGAsYHQ/s0/balisage_PR.png" border="0"></a></div><div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-KwuLIkdzr6w/YB1fTG9afrI/AAAAAAAAEcQ/HVoeu2oKI5YpwGiWMPqaPUKIWw_ZLvFHACLcBGAsYHQ/s0/balisage_tour-pays.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="95" data-original-width="94" src="https://1.bp.blogspot.com/-KwuLIkdzr6w/YB1fTG9afrI/AAAAAAAAEcQ/HVoeu2oKI5YpwGiWMPqaPUKIWw_ZLvFHACLcBGAsYHQ/s0/balisage_tour-pays.png" border="0"></a></div>
-<div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-BGUBHcmYT3o/YB1hZrCc8FI/AAAAAAAAEck/pWMR0K2vTFkiUUS_fUZbEnxWTUYxee-ZACLcBGAsYHQ/s0/balisage_vtt.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="97" data-original-width="149" src="https://1.bp.blogspot.com/-BGUBHcmYT3o/YB1hZrCc8FI/AAAAAAAAEck/pWMR0K2vTFkiUUS_fUZbEnxWTUYxee-ZACLcBGAsYHQ/s0/balisage_vtt.png" border="0"></a></div><br>
-un exemple des différents balisages, icône ou référence / nom selon le 
-niveau de zoom (le vélo dans le rond blanc pour les itinéraires VTT).<br>
-<div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-exeX47jqhkE/YHl78COV4-I/AAAAAAAAEhQ/I3XvrOUpvmkKBi8QpOHZ5aZRpA1k255AQCLcBGAsYHQ/s0/balisages.jpg" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="2340" data-original-width="1080" src="https://1.bp.blogspot.com/-exeX47jqhkE/YHl78COV4-I/AAAAAAAAEhQ/I3XvrOUpvmkKBi8QpOHZ5aZRpA1k255AQCLcBGAsYHQ/w295-h640/balisages.jpg" width="295" height="640" border="0"></a></div>
-<p><span style="font-size: large;"><b>les routes</b></span><br></p>
-autoroute<br>
+<a href="https://1.bp.blogspot.com/-v9JIlGQyY04/YB1fTNBit8I/AAAAAAAAEcI/y0XLKm7IjKQX2dLxHZf4UiGqmvlCuQgbgCLcBGAsYHQ/s0/balisage_GR.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="166" data-original-width="149" src="https://1.bp.blogspot.com/-v9JIlGQyY04/YB1fTNBit8I/AAAAAAAAEcI/y0XLKm7IjKQX2dLxHZf4UiGqmvlCuQgbgCLcBGAsYHQ/s0/balisage_GR.png" border="0"></a><br>
+<a href="https://1.bp.blogspot.com/-2_uR1MBI6i4/YB1fTEK6XAI/AAAAAAAAEcM/viiTU1aELfU--BqJzzx2eBlQLsdxqvcAwCLcBGAsYHQ/s0/balisage_PR.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="172" data-original-width="100" src="https://1.bp.blogspot.com/-2_uR1MBI6i4/YB1fTEK6XAI/AAAAAAAAEcM/viiTU1aELfU--BqJzzx2eBlQLsdxqvcAwCLcBGAsYHQ/s0/balisage_PR.png" border="0"></a><br>
+<a href="https://1.bp.blogspot.com/-KwuLIkdzr6w/YB1fTG9afrI/AAAAAAAAEcQ/HVoeu2oKI5YpwGiWMPqaPUKIWw_ZLvFHACLcBGAsYHQ/s0/balisage_tour-pays.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="95" data-original-width="94" src="https://1.bp.blogspot.com/-KwuLIkdzr6w/YB1fTG9afrI/AAAAAAAAEcQ/HVoeu2oKI5YpwGiWMPqaPUKIWw_ZLvFHACLcBGAsYHQ/s0/balisage_tour-pays.png" border="0"></a><br>
+<a href="https://1.bp.blogspot.com/-BGUBHcmYT3o/YB1hZrCc8FI/AAAAAAAAEck/pWMR0K2vTFkiUUS_fUZbEnxWTUYxee-ZACLcBGAsYHQ/s0/balisage_vtt.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="97" data-original-width="149" src="https://1.bp.blogspot.com/-BGUBHcmYT3o/YB1hZrCc8FI/AAAAAAAAEck/pWMR0K2vTFkiUUS_fUZbEnxWTUYxee-ZACLcBGAsYHQ/s0/balisage_vtt.png" border="0"></a><br>
+## les routes
+### autoroute
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-j8cd8vBYYtw/YB1S4Ag1sNI/AAAAAAAAEZA/tGnsCcEtpxMlBCVkJvLiGGkieSTuxPq7gCLcBGAsYHQ/s0/autoroute.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="79" data-original-width="116" src="https://1.bp.blogspot.com/-j8cd8vBYYtw/YB1S4Ag1sNI/AAAAAAAAEZA/tGnsCcEtpxMlBCVkJvLiGGkieSTuxPq7gCLcBGAsYHQ/s0/autoroute.png" border="0"></a></div><br>
 profil autoroutier<br>
 <div class="separator" style="clear: both;"><a href="https://1.bp.blogspot.com/-WOXj9Wpj9Jk/YB1TIQBgoKI/AAAAAAAAEZI/_L69ImXJDMs5ZPUu9cYgOdo7uxNjpJ7tQCLcBGAsYHQ/s0/autoroute_profil.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="83" data-original-width="111" src="https://1.bp.blogspot.com/-WOXj9Wpj9Jk/YB1TIQBgoKI/AAAAAAAAEZI/_L69ImXJDMs5ZPUu9cYgOdo7uxNjpJ7tQCLcBGAsYHQ/s0/autoroute_profil.png" border="0"></a></div><br>
@@ -175,8 +159,8 @@ Quelques éléments remarquables (les autres sont facilement reconnaissables)<br
     </thead>
     <tbody>
     <tr>
-        <td width="50%"><li> À l'aide d'un gestionnaire de fichiers, <code>déplacez le fichier xml téléchargé</code> dans le dossier:<br><code>Android / data / net.osmand.plus / files / rendering</code><br><li>  <code>Fermez l'application</code> Osmand avec le bouton carré d'android<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez <code>Paramétrer la carte</code><br<li> Descendez à <code>Style de la carte</code><br> <li> Sélectionnez <code>Enduro</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
-        <td><li> Ouvrez votre téléchargement, puis choisissez <code>Ouvrir avec OsmAnd</code>. Votre style a été importé!<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez sur <code>Paramétrer la carte</code><br><li> Descendez à <code>Style de la carte</code><br><li> Sélectionnez <code>Enduro</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
+        <td width="50%"><li> À l'aide d'un gestionnaire de fichiers, <code>déplacez le fichier xml téléchargé</code> dans le dossier:<br><code>Android / data / net.osmand.plus / files / rendering</code><br><li>  <code>Fermez l'application</code> Osmand avec le bouton carré d'android<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez <code>Paramétrer la carte</code><br<li> Descendez à <code>Style de la carte</code><br> <li> Sélectionnez <code>enduro</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
+        <td><li> Ouvrez votre téléchargement, puis choisissez <code>Ouvrir avec OsmAnd</code>. Votre style a été importé!<br><li> Ouvrez OsmAnd, puis dans le menu latéral gauche, sélectionnez sur <code>Paramétrer la carte</code><br><li> Descendez à <code>Style de la carte</code><br><li> Sélectionnez <code>enduro</code>, votre nouveau rendu.<br><li> Terminé ! 🎉</td>
     </tr>
     <tbody>
 </table>
