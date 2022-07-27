@@ -11,17 +11,13 @@ more detail here : https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html
 
 ## Changements notables par rapport aux styles standard :
 <br>
-
-- Chemins identifiés visuellement par carrossabilité.
+- Chemins identifiés visuellement par carrossabilité (couleurs)
 - POI utiles / intéressants mis en évidence
 - Difficulté des sentiers à partir des tags VTT et pédestre
 - Simplification pour lisibilité des itinéraires VTT/pédestre
 - Réglages supplémentaires pour la lisibilité en roulant
-- Encore plus ; )
 <br><br>
-
 ---
-
 ## Screenshots<br>
 ### à venir
 | <img src="" width="250" /> | <img src="" width="250" /> | <img src="" width="250" /> |
