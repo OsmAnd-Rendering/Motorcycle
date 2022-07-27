@@ -11,20 +11,22 @@ more detail here : https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html
 
 ## Changements notables par rapport aux styles standard :
 <br>
-- Chemins identifiés visuellement par carrossabilité (couleurs)
-- POI utiles / intéressants mis en évidence
-- Difficulté des sentiers à partir des tags VTT et pédestre
-- Simplification pour lisibilité des itinéraires VTT/pédestre
-- Réglages supplémentaires pour la lisibilité en roulant
+- Chemins identifiés visuellement par carrossabilité (couleurs)<br>
+- POI utiles / intéressants mis en évidence<br>
+- Difficulté des sentiers à partir des tags VTT et pédestre<br>
+- Simplification pour lisibilité des itinéraires VTT/pédestre<br>
+- Réglages supplémentaires pour la lisibilité en roulant<br>
 <br><br>
 ---
+
 ## Screenshots<br>
+
 ### à venir
 | <img src="" width="250" /> | <img src="" width="250" /> | <img src="" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
 
 ### à venir
-| <img src="" /> | <img src="" width="250" /> | <img src="" width="250" /> |
+| <img src="" width="250" /> | <img src="" width="250" /> | <img src="" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
 <br>
 
@@ -60,19 +62,4 @@ Applicable sur PC, Android et iOS.
 
 ---
 
-## Configurer la carte 
-
-<table>
-    <thead>
-    <tr>
-        <th>à venir</th>
-        <th>à venir</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td width="50%"> <ul><li>Appuyez sur <code>Paramétrer la carte</code><ul><li>Appuyez sur <code>Masquer</code><ul><li>Masquer les libellés des POI </li><li>Masquer les icônes des POI</li></ul></li></ul></li></ul> <br><br><br><br><br><br><br><em>L'écran n'affichera que les POI utiles pour le cyclisme</em></td>
-        <td><ul><li>Appuyez sur <code>Paramétrer la carte</code><ul><li>Appuyez sur <code>Masquer</code><ul><li>Masquer les libellés des POI</li><li>Masquer les icônes des POI</li></ul></li></ul></li></ul> <strong>puis</strong> <br><br> <ul><li>Appuyez sur <code>Paramétrer la carte</code><ul><li>Appuyez sur <code>Détails</code> <ul><li>Activer POI pour Cyclotourisme</li></ul></li></ul></li></ul><br><em>L'écran n'affichera que les POI utiles pour le Cyclotourisme en plus de ceux pour le vélo.</em></td>
-    </tr>
-    <tbody>
-</table>
+## à venir
