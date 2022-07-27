@@ -41,34 +41,29 @@ Applicable sur PC, Android et iOS.
 
 ## Légende
 
-les chemins <b>carrossables</b> considérés comme faciles sont en trait épais marron foncé (pointillé si un peu moins lisse)
-<p>&nbsp;<a href="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" style="margin-left: auto; margin-right: auto;">
+les chemins <b>carrossables</b> considérés comme faciles sont en trait épais marron foncé (pointillé si un peu moins lisse)<br>
+<a href="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" style="margin-left: auto; margin-right: auto;">
 <img alt="" data-original-height="96" data-original-width="129" src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" border="0"></a>
 <a href="https://1.bp.blogspot.com/--rn2omJqCFI/YB095SXw-HI/AAAAAAAAEXc/wSUP8PfkXWs6QryhW2FgRSJMWbuih0V_gCLcBGAsYHQ/s0/chemin_piste_moins.png" style="margin-left: auto; margin-right: auto;">
-<img alt="" data-original-height="56" data-original-width="67" src="https://1.bp.blogspot.com/--rn2omJqCFI/YB095SXw-HI/AAAAAAAAEXc/wSUP8PfkXWs6QryhW2FgRSJMWbuih0V_gCLcBGAsYHQ/s0/chemin_piste_moins.png" border="0"></a><br>
-</p>
+<img alt="" data-original-height="56" data-original-width="67" src="https://1.bp.blogspot.com/--rn2omJqCFI/YB095SXw-HI/AAAAAAAAEXc/wSUP8PfkXWs6QryhW2FgRSJMWbuih0V_gCLcBGAsYHQ/s0/chemin_piste_moins.png" border="0"></a>
 <br>
-<b>les chemins non empierrés</b> sont en trait vert.
-<p>&nbsp;<a href="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s111/chemin_moyen.png" style="margin-left: auto; margin-right: auto;">
-<img data-original-height="88" data-original-width="111" src="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s16000/chemin_moyen.png" border="0"></a><br>
 <br>
-<b>les chemins d'exploitation et les chemins non précisés dans OSM</b> sont en trait vert pointillés à un niveau de zoom plus proche.
-<p>&nbsp;<a href="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" style="margin-left: auto; margin-right: auto;">
-<img alt="" data-original-height="77" data-original-width="74" src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" border="0"></a><br></p><div style="text-align: left;">Lorsque
- l'option "cacher chemin sans info" est désactivée dans le menu 
-"Détails" du style les chemins non renseignés dans OSM restent en trait 
-continu.</div><br>
-</p><div style="text-align: left;"><p style="text-align: left;"><span style="font-size: large;"><b>les chemins <span data-darkreader-inline-color="" style="--darkreader-inline-color: #ff1a1a; color: red;">interdits</span></b></span> sont en rouge (gardent leur type défini avant)</p></div><p>
-</p></div><a href="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="74" data-original-width="85" src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" border="0"></a>
-ce sont les éléments OpenStreetMap suivants:<br>
-</div><div style="text-align: left;"><span data-darkreader-inline-color="" style="--darkreader-inline-color: #cf6e6e; color: #993333;">
-<span style="font-size: x-small;"><i>"private"
-</i></span></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #cf6e6e; color: #993333; font-size: x-small;"><i>"no"
-</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #cf6e6e; color: #993333; font-size: x-small;"><i>"forestry"
-</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #cf6e6e; color: #993333; font-size: x-small;"><i>"agricultural"
-</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #cf6e6e; color: #993333; font-size: x-small;"><i>"destination"
-</i></span><br><span data-darkreader-inline-color="" style="--darkreader-inline-color: #cf6e6e; color: #993333; font-size: x-small;"><i>"customers"
-</i></span><br></div>
+<b>les chemins non empierrés</b> sont en trait vert.<br>
+<a href="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s111/chemin_moyen.png" style="margin-left: auto; margin-right: auto;">
+<img data-original-height="88" data-original-width="111" src="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s16000/chemin_moyen.png" border="0"></a>
+<br>
+<br>
+<b>les chemins d'exploitation et les chemins non précisés dans OSM</b> sont en trait vert pointillés à un niveau de zoom plus proche.<br>
+<a href="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" style="margin-left: auto; margin-right: auto;">
+<img alt="" data-original-height="77" data-original-width="74" src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" border="0"></a>
+<br>
+Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait 
+continu.
+<br>
+<br>
+<b>les chemins interdits</b> sont en rouge (gardent leur type défini avant)<br>
+<a href="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="74" data-original-width="85" src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" border="0"></a>
+<br>
 <br>
 <span style="font-size: large;"><b>les sentiers</b></span> sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre
 <p>&nbsp;<a href="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" style="margin-left: auto; margin-right: auto;">
