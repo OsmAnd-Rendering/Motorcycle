@@ -32,13 +32,10 @@ continu.</td>
 ## Sentiers
 les sentiers sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre <br><img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />
 
-
-Texte normal suivi d’un [color=#26B260]texte coloré en vert[/color] dans un paragraphe.
-
 <table>
 <thead>
   <tr>
-    <th colspan="2"> des <b>points</b>[color=#26B260]verts [/color] pour un sentier facile<br> pour une moto d'enduro légère</th>
+    <th colspan="2">des <b>points</b> <span style="color:green;">verts</span> pour un sentier facile<br> pour une moto d'enduro légère</th>
     <th colspan="2">des <b>points</b> <span style="color:orange;">oranges</span> pour un sentier "technique"<br> pour une moto d'enduro légère</th>
   </tr>
 </thead>
