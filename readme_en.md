@@ -30,7 +30,7 @@ more details here : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-os
 | :-------------: | :-------------: | :-------------: |
 
 ---
-## ➡️[Legend](Legende.md)
+## ➡️[Legend](Legend.md)
 ---
 
 ## Download
