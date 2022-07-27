@@ -95,6 +95,9 @@ des <b>points noirs</b> pour un sentier impassable pour une moto d'enduro légè
 <a href="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="29" data-original-width="49" src="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" border="0"></a><br>
 <a href="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" style="display: block; padding: 1em 0px; text-align: left;"><img alt="" data-original-height="52" data-original-width="65" src="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.png" border="0"></a>
 <br>
+<br>
+suite de la légende https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/legende.md
+<br>
 
 ---
 
