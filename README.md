@@ -39,7 +39,164 @@ Applicable sur PC, Android et iOS.
 
 ---
 
+## Légende
+### les chemins carrossables considérés comme faciles sont en trait épais marron foncé (pointillé si un peu moins lisse)
 
+ 
+
+ils apparaissent en premier à un niveau de zoom éloigné.
+ce sont les éléments OpenStreetMap suivants:
+
+"tracktype=grade1"<br>
+"tracktype=grade2"<br>
+"smoothness=intermediate"<br>
+"smoothness=good"<br>
+"smoothness=excellent<br>
+"surface=paved"<br>
+"surface=asphalt"<br>
+"surface=concrete"<br>
+"surface=concrete:lanes"<br>
+"surface=concrete:plates"<br>
+"surface=paving_stones"<br>
+"surface=sett"<br>
+"surface=cobblestone"<br>
+"surface=compacted"<br>
+"surface=fine_gravel" <br>
+
+ et pour les pointillés<br>
+"tracktype=grade3"<br>
+"smoothness=bad"<br>
+"surface=gravel"<br>
+"surface=pebblestone"<br>
+
+### les chemins non empierrés sont en trait vert.
+
+ 
+ce sont les éléments OpenStreetMap suivants:<br>
+"tracktype=grade4"<br>
+"smoothness=very_bad"<br>
+"surface=unpaved"<br>
+"surface=ground"<br>
+"surface=dirt"<br>
+"surface=earth"<br>
+"mtb:scale=0"<br>
+"mtb:scale=1"<br>
+
+### les chemins d'exploitation et les chemins non précisés dans OSM sont en trait vert pointillés à un niveau de zoom plus proche.
+
+ 
+Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait continu.
+
+ce sont les éléments OpenStreetMap suivants:<br>
+"tracktype=grade5"<br>
+"smoothness=very_horrible"<br>
+"smoothness=horrible"<br>
+"surface=grass"<br>
+"surface=mud"<br>
+"surface=sand"<br>
+"mtb:scale=2"<br>
+"mtb:scale=3"<br>
+
+### les chemins interdits sont en rouge (gardent leur type défini avant)
+
+ce sont les éléments OpenStreetMap suivants:<br>
+"private"<br>
+"no"<br>
+"forestry"<br>
+"agricultural"<br>
+"destination"<br>
+"customers"<br>
+
+### les sentiers sont en trait fin noir pointillé
+auquel se superposent les informations de difficultés VTT et / ou pédestre
+
+ 
+des points verts pour un sentier facile pour une moto d'enduro légère<br>
+"mtb:scale=0"<br>
+"mtb:scale:imba=0"<br>
+
+ 
+des points oranges pour un sentier "technique" pour une moto d'enduro légère<br>
+"mtb:scale=1"<br>
+"mtb:scale:imba=1"<br>
+"sac_scale=hiking"<br>
+
+ 
+des points rouges pour un sentier difficile pour une moto d'enduro légère (franchissement)<br>
+"mtb:scale=2"<br>
+"mtb:scale=3"<br>
+"mtb:scale:imba=2"<br>
+"mtb:scale:imba=3"<br>
+"sac_scale=mountain_hiking"<br>
+
+ 
+des points noirs pour un sentier impassable pour une moto d'enduro légère<br>
+"mtb:scale=4<br>
+"mtb:scale:imba=4<br>
+"mtb:scale=5<br>
+"mtb:scale=6<br>
+"sac_scale=demanding_mountain_hiking"<br>
+"sac_scale=alpine_hiking"<br>
+"sac_scale=demanding_alpine_hiking"<br>
+"sac_scale=difficult_alpine_hiking"<br>
+
+
+
+vous pourrez aussi rencontrer très rarement des traits fins rouge qui apparaissent à un zoom plus élevé que les sentiers, ce sont des sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le routage "enduro" pourra vous y faire passer mais ... il n'existe probablement pas. 
+
+et enfin une dernière variante des sentiers qui s'affiche en marron clair car vous n'êtes pas censés les emprunter,  ce sont les "footway" pour OSM, des cheminements piéton exclusivement comme les trottoirs en ville mais qui sont souvent à tort identifié comme tel à la place de sentiers génériques en pleine nature.
+barrière: une icône selon le type aux zooms proches et un point rouge à zoom éloigné
+
+les balisages désactivables dans le menu du style
+icônes selon le type (GR rouge et blanc, tour de pays rouge et jaune, PR jaune) et surlignage des parcours en jaune pour pédestre et mauve pour VTT
+
+les routes
+autoroute
+
+profil autoroutier
+
+primaire
+
+secondaire
+
+tertiaire
+
+route / rue
+
+Les rues piétonnes et les places piétonnes sont en vert.
+Les voies de service sont en beige.
+
+
+tunnel
+
+pont
+
+voies ferrées
+
+désaffectée en vert sur laquelle peuvent se superposer les chemins.
+
+tunnel
+
+pont
+
+Quelques éléments remarquables (les autres sont facilement reconnaissables)
+les conduites d'eau forcée ou pipeline
+
+terrain militaire (hachures)
+
+zones protégées type Parc National ou Natura 2000
+
+carrière
+
+ligne électrique
+
+ruine
+
+maison isolée
+
+hameau
+
+---
 
 ## Installer le rendu
 <table>
@@ -61,4 +218,3 @@ Applicable sur PC, Android et iOS.
 
 ---
 
-## à venir
