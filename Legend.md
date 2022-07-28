@@ -79,7 +79,7 @@ VTT<br>
 ---
 
 ## Eléments remarquables
- <font size="1">Quelques éléments remarquables (les autres sont facilement reconnaissables)<br>
+ <font size="1">Quelques éléments remarquables (les autres sont facilement reconnaissables)<br></font>
 
 | conduites d'eau forcée | terrain militaire | 
 | :-------------: | :-------------: | 
@@ -96,6 +96,6 @@ VTT<br>
 | maison isolée | hameau |
 | :-------------: | :-------------: | 
 | <img src="https://1.bp.blogspot.com/-dIXcC-IyZNY/YB1dNeLMrdI/AAAAAAAAEbw/Kr6WGf02BWApYaR3obV8pqnbSsklv-IawCLcBGAsYHQ/s0/ville_maison.png" width="150" /> | <img src="https://1.bp.blogspot.com/-yH1u6Z-8feY/YB1d3D2YyWI/AAAAAAAAEb8/OY-6S-_BNY0qO6UXehanKgkjVggBAPg_ACLcBGAsYHQ/s0/ville_hameau.png" width="150" /> |
-</font>
+
 
 
