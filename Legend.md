@@ -11,7 +11,7 @@
 |<img src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" width="150" />|<img src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" width="150" />|
 
 
-<i>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait 
+###### <i>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait 
 continu.</i>
 
 ---
@@ -21,21 +21,18 @@ continu.</i>
 | :-------------: |
 |<img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />|
 
-|des <b>points <span style="color:green;">verts</span></b> <br>pour un sentier facile pour une moto d'enduro légère|des <b>points <span style="color:orange;">oranges</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère|
+|des <b>points <span style="color:green;">verts</span></b> <br>pour un sentier facile pour une moto d'enduro|des <b>points <span style="color:orange;">oranges</span></b> <br>pour un sentier "technique" pour une moto d'enduro|
 | :-------------: | :-------------: | 
 |<img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" />|<img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="130" />|
 
-|des <b>points <span style="color:red;">rouge</span></b> <br>pour un sentier difficile pour une moto d'enduro légère<br>(franchissement)|des <b>points <span style="color:gray;">noir</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère|
+|des <b>points <span style="color:red;">rouge</span></b> <br>pour un sentier difficile pour une moto d'enduro|des <b>points <span style="color:gray;">noir</span></b> <br>pour un sentier "impassable" pour une moto d'enduro|
 | :-------------: | :-------------: | 
 |<img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" />|<img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="120" />|
+<br>
 
-<br><i>vous pourrez aussi rencontrer très rarement des traits fins rouge qui apparaissent à un zoom plus élevé que les sentiers, ce sont des sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le 
-routage "enduro" pourra vous y faire passer mais ... il n'existe probablement pas.&nbsp;</p>
-<p>et enfin une dernière variante des sentiers qui
- s'affiche en marron clair car vous n'êtes pas censés les emprunter,&nbsp; ce
- sont les "footway" pour OSM, des cheminements piéton exclusivement 
-comme les trottoirs en ville mais qui sont souvent à tort identifié 
-comme tel à la place de sentiers génériques en pleine nature.</p></i> <br>
+###### <i>vous pourrez aussi rencontrer très rarement des traits fins rouge qui apparaissent à un zoom plus élevé que les sentiers, ce sont des sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le routage "enduro" pourra vous y faire passer mais ... il n'existe probablement pas
+###### et enfin une dernière variante des sentiers qui s'affiche en marron clair car vous n'êtes pas censés les emprunter, ce sont les "footway" pour OSM, des cheminements piéton exclusivement comme les trottoirs en ville mais qui sont souvent à tort identifié comme tel à la place de sentiers génériques en pleine nature.</i> <br>
+<br>
 
 ### barrière
 une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
