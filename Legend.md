@@ -76,8 +76,9 @@ VTT<br>
 
 | <img src="https://1.bp.blogspot.com/-v9JIlGQyY04/YB1fTNBit8I/AAAAAAAAEcI/y0XLKm7IjKQX2dLxHZf4UiGqmvlCuQgbgCLcBGAsYHQ/s0/balisage_GR.png" width="130" /> | <img src="https://1.bp.blogspot.com/-2_uR1MBI6i4/YB1fTEK6XAI/AAAAAAAAEcM/viiTU1aELfU--BqJzzx2eBlQLsdxqvcAwCLcBGAsYHQ/s0/balisage_PR.png" width="100" /> | 
 | :-------------: | :-------------: | 
-<br>
+
 | <img src="https://1.bp.blogspot.com/-KwuLIkdzr6w/YB1fTG9afrI/AAAAAAAAEcQ/HVoeu2oKI5YpwGiWMPqaPUKIWw_ZLvFHACLcBGAsYHQ/s0/balisage_tour-pays.png" width="130" /> | <img src="https://1.bp.blogspot.com/-BGUBHcmYT3o/YB1hZrCc8FI/AAAAAAAAEck/pWMR0K2vTFkiUUS_fUZbEnxWTUYxee-ZACLcBGAsYHQ/s0/balisage_vtt.png" width="150" /> |
+| :-------------: | :-------------: | 
 <br>
 
 ---
