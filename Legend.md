@@ -2,58 +2,33 @@
 
 ## Chemins
 
-<table>
-<thead>
-  <tr>
-    <td width="50%"><b>les chemins carrossables</b> <br> sont en trait épais marron foncé<br> (pointillé si un peu moins lisse)</td>
-    <td width="50%"><b>les chemins non empierrés</b> sont en trait vert</td>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><img src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" width="150" /> </td>
-    <td><img src="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s111/chemin_moyen.png" width="150" /></td>
-  </tr>
-  <tr>
-    <td><b>les chemins d'exploitation et les chemins sans précisions</b><br> sont en trait vert pointillés</td>
-    <td><b>les chemins interdits</b> <br>sont en rouge<br>(gardent leur type défini avant)</td>
-  </tr>
-  <tr>
-    <td><img src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" width="150" /></td>
-    <td><img src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" width="150" /></td>
-  </tr>
-</tbody>
-</table>
+| chemins carrossables | chemins non empierrés |
+| :-------------: | :-------------: | 
+| <img src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" width="150" /> | <img src="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s111/chemin_moyen.png" width="150" /> |
+
+|chemins d'exploitation <br>ou sans précisions|les chemins interdits|
+| :-------------: | :-------------: | 
+|<img src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" width="150" />|<img src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" width="150" />|
+
+
 <i>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait 
 continu.</i>
 
 ---
 
 ## Sentiers
-<b>les sentiers</b> sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre <br><img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />
+|<b>les sentiers</b> sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre |
+| :-------------: |
+|<img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />|
 
-<table>
-<thead>
-  <tr>
-    <td  width="50%">des <b>points <span style="color:green;">verts</span></b> <br>pour un sentier facile pour une moto d'enduro légère</th>
-    <td>des <b>points <span style="color:orange;">oranges</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" /></td>
-    <td><img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="130" /></td>
-  </tr>
-  <tr>
-    <td>des <b>points <span style="color:red;">rouge</span></b> <br>pour un sentier difficile pour une moto d'enduro légère<br>(franchissement)</th>
-    <td>des <b>points <span style="color:gray;">noir</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère</th>
-  </tr>
-  <tr>
-    <td><img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" /></td>
-    <td><img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="120" /></td>
-  </tr>
-</tbody>
-</table>
+|des <b>points <span style="color:green;">verts</span></b> <br>pour un sentier facile pour une moto d'enduro légère|des <b>points <span style="color:orange;">oranges</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère|
+| :-------------: | :-------------: | 
+|<img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" />|<img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="130" />|
+
+|des <b>points <span style="color:red;">rouge</span></b> <br>pour un sentier difficile pour une moto d'enduro légère<br>(franchissement)|des <b>points <span style="color:gray;">noir</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère|
+| :-------------: | :-------------: | 
+|<img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" />|<img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="120" />|
+
 <br><i>vous pourrez aussi rencontrer très rarement des traits fins rouge qui apparaissent à un zoom plus élevé que les sentiers, ce sont des sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le 
 routage "enduro" pourra vous y faire passer mais ... il n'existe probablement pas.&nbsp;</p>
 <p>et enfin une dernière variante des sentiers qui
