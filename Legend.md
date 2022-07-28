@@ -5,59 +5,58 @@
 <table>
 <thead>
   <tr>
-    <td width="50%">les chemins <b>carrossables</b> considérés comme faciles<br> sont en trait épais marron foncé<br> (pointillé si un peu moins lisse)</td>
+    <td width="50%"><b>les chemins carrossables</b> <br> sont en trait épais marron foncé<br> (pointillé si un peu moins lisse)</td>
     <td width="50%"><b>les chemins non empierrés</b> sont en trait vert</td>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td><img src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" width="122" /> <img src="https://1.bp.blogspot.com/--rn2omJqCFI/YB095SXw-HI/AAAAAAAAEXc/wSUP8PfkXWs6QryhW2FgRSJMWbuih0V_gCLcBGAsYHQ/s0/chemin_piste_moins.png" width="110" /></td>
+    <td><img src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" width="150" /> </td>
     <td><img src="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s111/chemin_moyen.png" width="150" /></td>
   </tr>
   <tr>
-    <td><b>les chemins d'exploitation et les chemins non précisés dans OSM</b><br> sont en trait vert pointillés à un niveau de zoom plus proche</td>
-    <td><b>les chemins interdits</b> sont en rouge (gardent leur type défini avant)</td>
+    <td><b>les chemins d'exploitation et les chemins sans précisions</b><br> sont en trait vert pointillés</td>
+    <td><b>les chemins interdits</b> <br>sont en rouge<br>(gardent leur type défini avant)</td>
   </tr>
   <tr>
-    <td><img src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" width="150" /><br>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait 
-continu.</td>
+    <td><img src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" width="150" /></td>
     <td><img src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" width="150" /></td>
   </tr>
 </tbody>
 </table>
+<i>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait 
+continu.</i>
 
 ---
 
 ## Sentiers
-les sentiers sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre <br><img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />
+<b>les sentiers</b> sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre <br><img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />
 
 <table>
 <thead>
   <tr>
-    <td  width="50%">des <b>points</b> <span style="color:green;">verts</span> pour un sentier facile<br> pour une moto d'enduro légère</th>
-    <td>des <b>points</b> <span style="color:orange;">oranges</span> pour un sentier "technique"<br> pour une moto d'enduro légère</th>
+    <td  width="50%">des <b>points <span style="color:green;">verts</span></b> <br>pour un sentier facile pour une moto d'enduro légère</th>
+    <td>des <b>points <span style="color:orange;">oranges</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère</th>
   </tr>
 </thead>
 <tbody>
   <tr>
-    <td><img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" /><p style="color:green;">mtb:scale=0<br>mtb:scale:imba=0</p></td>
-    <td><img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="150" /><p style="color:green;">mtb:scale=1<br>mtb:scale:imba=1<br>sac_scale=hiking</p></td>
+    <td><img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" /></td>
+    <td><img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="130" /></td>
   </tr>
   <tr>
-    <td>des <b>points</b> <span style="color:red;">rouge</span> pour un sentier difficile<br>pour une moto d'enduro légère<br>(franchissement)</th>
-    <td>des <b>points</b> <span style="color:gray;">noir</span> pour un sentier "technique"<br> pour une moto d'enduro légère</th>
+    <td>des <b>points <span style="color:red;">rouge</span></b> <br>pour un sentier difficile pour une moto d'enduro légère<br>(franchissement)</th>
+    <td>des <b>points <span style="color:gray;">noir</span></b> <br>pour un sentier "technique" pour une moto d'enduro légère</th>
   </tr>
   <tr>
-    <td><img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" /><p style="color:green;">mtb:scale=2<br>mtb:scale=3<br>mtb:scale:imba=2<br>mtb:scale:imba=3<br>sac_scale=mountain_hiking</p></td>
-    <td><img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="150" /><p style="color:green;">mtb:scale=4<br>mtb:scale=5<br>mtb:scale=6<br>mtb:scale:imba=4<br>sac_scale=demanding_mountain_hiking<br>sac_scale=alpine_hiking<br>sac_scale=demanding_alpine_hiking<br>sac_scale=difficult_alpine_hiking</p></td>
+    <td><img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" /></td>
+    <td><img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="120" /></td>
   </tr>
 </tbody>
 </table>
-<br>vous pourrez aussi rencontrer très rarement des traits fins rouge 
-qui apparaissent à un zoom plus élevé que les sentiers, ce sont des 
-sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le 
-routage "enduro" pourra vous y faire passer mais ... il n'existe 
-probablement pas.&nbsp;</p><p>et enfin une dernière variante des sentiers qui
+<br>vous pourrez aussi rencontrer très rarement des traits fins rouge qui apparaissent à un zoom plus élevé que les sentiers, ce sont des sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le 
+routage "enduro" pourra vous y faire passer mais ... il n'existe probablement pas.&nbsp;</p>
+<p>et enfin une dernière variante des sentiers qui
  s'affiche en marron clair car vous n'êtes pas censés les emprunter,&nbsp; ce
  sont les "footway" pour OSM, des cheminements piéton exclusivement 
 comme les trottoirs en ville mais qui sont souvent à tort identifié 
@@ -77,12 +76,8 @@ VTT<br>
 
 | <img src="https://1.bp.blogspot.com/-v9JIlGQyY04/YB1fTNBit8I/AAAAAAAAEcI/y0XLKm7IjKQX2dLxHZf4UiGqmvlCuQgbgCLcBGAsYHQ/s0/balisage_GR.png" width="100" /> | <img src="https://1.bp.blogspot.com/-2_uR1MBI6i4/YB1fTEK6XAI/AAAAAAAAEcM/viiTU1aELfU--BqJzzx2eBlQLsdxqvcAwCLcBGAsYHQ/s0/balisage_PR.png" width="100" /> | <img src="https://1.bp.blogspot.com/-KwuLIkdzr6w/YB1fTG9afrI/AAAAAAAAEcQ/HVoeu2oKI5YpwGiWMPqaPUKIWw_ZLvFHACLcBGAsYHQ/s0/balisage_tour-pays.png" width="100" /> | <img src="https://1.bp.blogspot.com/-BGUBHcmYT3o/YB1hZrCc8FI/AAAAAAAAEck/pWMR0K2vTFkiUUS_fUZbEnxWTUYxee-ZACLcBGAsYHQ/s0/balisage_vtt.png" width="130" /> |
 | :-------------: | :-------------: | :-------------: | :-------------: |
-
 <br>
-un exemple des différents balisages, icône ou référence / nom selon le 
-niveau de zoom (le vélo dans le rond blanc pour les itinéraires VTT).<br>
-<img src="https://1.bp.blogspot.com/-exeX47jqhkE/YHl78COV4-I/AAAAAAAAEhQ/I3XvrOUpvmkKBi8QpOHZ5aZRpA1k255AQCLcBGAsYHQ/w295-h640/balisages.jpg" width="250" />
-<br><br>
+
 
 ---
 ## Routes
@@ -97,7 +92,7 @@ niveau de zoom (le vélo dans le rond blanc pour les itinéraires VTT).<br>
 ---
 ## voies ferrées
 
-| voies ferrées | désaffectée en vert sur laquelle<br> peuvent se superposer les chemins | tunnel | pont |
+| voies ferrées | désaffectée | tunnel | pont |
 | :-------------: | :-------------: | :-------------: | :-------------: |
 | <img src="https://1.bp.blogspot.com/-9bmaXL7I5Qk/YB1Vn7EVtRI/AAAAAAAAEaA/9FaAuUIfrCEFZ1UB_S80Q1vX9Ya_KP6TwCLcBGAsYHQ/s0/voie_ferree.png" width="170" /> | <img src="https://1.bp.blogspot.com/-lGWedo3z8mc/YB1WBvez7RI/AAAAAAAAEaI/zZIwVKm1Y1ISAoQRgqQx5ZEbssPfQ1DUgCLcBGAsYHQ/s0/voie_ferree_desafectee.png" width="150" /> | <img src="https://1.bp.blogspot.com/-MXh4pXRREMY/YB1WN0ZmN-I/AAAAAAAAEaM/pJ-YjJ77vlwDkcDFytrU7YKV6Us5SVkWQCLcBGAsYHQ/s0/voie_ferree_tunnel.png" width="150" /> | <img src="https://1.bp.blogspot.com/-zW1HQZXLnRE/YB1WYR8M0bI/AAAAAAAAEaQ/6_ibC5ZIEHsCJDPpo5a6GiVJHy7ndPL6wCLcBGAsYHQ/s0/voie_ferree_pont.png" width="150" /> |
 
@@ -106,7 +101,7 @@ niveau de zoom (le vélo dans le rond blanc pour les itinéraires VTT).<br>
 ## Eléments remarquables
 Quelques éléments remarquables (les autres sont facilement reconnaissables)<br>
 
-| les conduites d'eau forcée<br> ou pipelines | terrain militaire<br> (hachures) | zones protégées type Parc<br> National ou Natura 2000 | carrière |
+| conduites d'eau forcée | terrain militaire | reserve naturelle | carrière |
 | :-------------: | :-------------: | :-------------: | :-------------: |
 | <img src="https://1.bp.blogspot.com/-9woAA4wbSdg/YB1bKgqm6JI/AAAAAAAAEa8/ogNaDqWsSvAPaaPYwe0VxctBXcOfMoKCgCLcBGAsYHQ/s0/eau_conduite-forcee.png" width="170" /> | <img src="https://1.bp.blogspot.com/-P4daDzQp1II/YB1bhI2Wl8I/AAAAAAAAEbE/r-zW5ZY77hM8viriXsWd2jmnEiaxrwJvwCLcBGAsYHQ/s0/terrain_militaire.png" width="150" /> | <img src="https://1.bp.blogspot.com/-geofTIuUdQg/YB1byDK1eqI/AAAAAAAAEbM/OtGVu9RXAl8E9FuqtX9cuHFlyBlTAsXTACLcBGAsYHQ/s0/reserve_parc.png" width="150" /> | <img src="https://1.bp.blogspot.com/-_tm5d2ctw8g/YB1cV-7hinI/AAAAAAAAEbY/-jn8CxUNcqcsf2oS0lhQiSWQh3Edvd76wCLcBGAsYHQ/s0/carriere.png" width="150" /> |
 
