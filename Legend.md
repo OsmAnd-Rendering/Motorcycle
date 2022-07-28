@@ -11,8 +11,7 @@
 |<img src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" width="150" />|<img src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" width="150" />|
 
 
-###### <i>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait 
-continu.</i>
+###### <i>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait continu.</i>
 
 ---
 
