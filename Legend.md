@@ -40,7 +40,7 @@ une icône selon le type aux zooms proches et un point rouge à zoom éloigné <
 | :-------------: | :-------------: |
 
 ### Balisages
- désactivables dans le menu du style<br>
+désactivables dans le menu du style<br>
 icônes selon le type (GR rouge et blanc, tour de pays rouge et jaune, PR
  jaune) et surlignage des parcours en jaune pour pédestre et mauve pour 
 VTT<br>
