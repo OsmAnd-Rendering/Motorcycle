@@ -7,7 +7,7 @@ Routing calculations for 3 types of motorcycles  :  [Routing](https://github.com
 
 osf files for automatic installation : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-more details here : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html)
+more details here [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
 ## Notable changes compared to standard styles:
 <br>
@@ -33,34 +33,8 @@ more details here : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-os
 ## ➡️[Legend](Legend.md)
 ---
 
-## Download
-Applicable on PC, Android and iOS.
-
-- Download the file by right clicking or long pressing [this link](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/enduro.render.xml)
-    - Download the target of the link.<br><br>
-
-
----
 
 ## Installation
 to update rendering and/or routings or to create routing profiles prefer the osf file method to restore, see [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-<table>
-    <thead>
-    <tr>
-        <th>Android</th>
-        <th>iOS</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td width="50%"><li> Using a file manager, <code>move the downloaded xml file</code> to the folder:<br><code>Android / data / net.osmand.plus / files / rendering</code><br><li>  <code>Close the Osmand application</code> with the android square button<br><li> Open Osmand, then in the left side menu,<code>select Set Map</code><br<li> Scroll down to <code>Map Style</code><br> <li> Select  <code>enduro</code>, your new rendering.<br><li> Done ! 🎉</td>
-        <td><li> Open your download, then choose <code>Open with OsmAnd</code>. your style has been imported!<br><li> Open OsmAnd, then in the left side menu, select on <code>Set Map</code><br><li> Scroll down to <code>Map Style</code><br><li> Select <code>enduro</code>, your new rendering.<br><li> Done ! 🎉</td>
-    </tr>
-    <tbody>
-</table>
-
-<br>
-
----
 
