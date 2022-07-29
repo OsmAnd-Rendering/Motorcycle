@@ -2678,17 +2678,17 @@
 
 			<case minzoom="8" tag="natural" value="desert" color="#fff7bf"/>
 
-				<!-- bois  #dfe9d3-->
-				<switch minzoom="8" >
-					<case tag="natural" value="wood"/>
-					<case tag="landuse" value="forest"/>
-					<case tag="natural" value="tree"/><!--
-					<case tag="natural" value="tree_row"/>-->
-					<apply color_0="#dce6d0"  >
-						<case maxzoom="11" color_0="#cfd9c3" />
-					</apply>
-					<apply_if nightMode="true" color_0="#202c20" strokeWidth_2="0:0" />
-				</switch>
+			<!-- bois  #dfe9d3-->
+			<switch minzoom="8" >
+				<case tag="natural" value="wood"/>
+				<case tag="landuse" value="forest"/>
+				<case tag="natural" value="tree"/><!--
+				<case tag="natural" value="tree_row"/>-->
+				<apply color="#dce6d0"  >
+					<case maxzoom="11" color="#cfd9c3" />
+				</apply>
+				<apply_if nightMode="true" color="#202c20" strokeWidth_2="0:0" />
+			</switch>
 
 			<!-- vegetation-->
 			<switch>
@@ -2700,10 +2700,10 @@
 					<case tag="natural" value="tundra" />
 					<case minzoom="15" tag="landuse" value="greenfield"/>
 					<case minzoom="15" tag="landuse" value="brownfield"/>
-					<apply color_0="#e6efd6" >
-						<case maxzoom="11" color_0="#d6dfc6" />
+					<apply color="#e6efd6" >
+						<case maxzoom="11" color="#d6dfc6" />
 					</apply>
-					<apply_if nightMode="true" color_0="#2c2f20" strokeWidth_2="0:0" />
+					<apply_if nightMode="true" color="#2c2f20" strokeWidth_2="0:0" />
 				</switch>
 				
 				<!-- vigne Ffefff-->
