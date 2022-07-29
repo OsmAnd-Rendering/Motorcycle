@@ -7,8 +7,7 @@ Calculs de routage pour 3 types de motos :  [Routing](https://github.com/OsmAnd-
 
 fichiers osf pour installation automatique : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-plus de détails ici : [osmtopo](https://osmtopo.blogspot.com/2021/02/style-pour-osmand.html)<br>
-ou dans le [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+plus de détails dans le [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
 ## Changements notables par rapport aux styles standard :
 <br>
