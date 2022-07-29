@@ -17,8 +17,9 @@ ou dans le [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 - Difficulté des sentiers à partir des tags VTT et pédestre<br>
 - Simplification pour lisibilité des itinéraires VTT/pédestre<br>
 - Réglages supplémentaires pour la lisibilité en roulant<br>
-<br><br>
+
 ---
+
 ## Screenshots<br>
 
 | <img src="https://1.bp.blogspot.com/-80KFHZxn-x0/YHhVVHgiDqI/AAAAAAAAEgw/MLuJSVUiiOQsHM9bJUrFQRJCdPtF02YmgCLcBGAsYHQ/s0/millau_cricri_50_1km.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-cEhzfD_lhDM/YHhTZ3UGs9I/AAAAAAAAEgo/C6xCHkJYfHg21bxSQ9YYdhXif-gmv-v5ACLcBGAsYHQ/s0/millau_cricri_50_2km.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-exeX47jqhkE/YHl78COV4-I/AAAAAAAAEhQ/I3XvrOUpvmkKBi8QpOHZ5aZRpA1k255AQCLcBGAsYHQ/s0/balisages.jpg" width="250" /> |
