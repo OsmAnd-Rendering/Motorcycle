@@ -35,6 +35,9 @@
 	<renderingProperty attr="contourColorScheme" name="Contour lines color scheme" description="Contour lines color scheme" type="string" possibleValues="white,yellow,green,light_brown,brown,dark_brown,red" defaultValueDescription="default"/>
 	<renderingProperty attr="contourWidth" name="Contour lines width" description="Contour lines width" type="string" possibleValues="thin,medium,thick" defaultValueDescription="default"/>
 	<renderingProperty attr="contourDensity" name="Contour lines density" description="Contour lines density" type="string" possibleValues="low,medium_w,high" defaultValueDescription="default"/>
+
+	<!-- pour OpenGL -->
+	<renderingProperty attr="engine_v1" type="boolean"/>
 	
 	<renderingAttribute name="defaultColor">
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
@@ -1193,7 +1196,7 @@
 			<apply_if nightMode="true" textColor="#ffffff" textHaloColor="#000000"/>
 		</switch>
 
-		<switch nameTag=""><!-- villes -->
+		<switch ><!-- villes nameTag=""-->
 			
 			<switch textColor="#000000" textWrapWidth="20" textBold="true" intersectionMargin="3" intersectionSizeFactor="1" intersectsWith="place">
 				<case minzoom="5" tag="place" value="city" nameTag="" textOrder="29"/>
@@ -1378,37 +1381,35 @@
 		</switch>
 
 		<!-- maison et ferme isolée -->
-		<switch minzoom="13" textWrapWidth="20" nameTag=""  intersectionMargin="1" intersectionSizeFactor="1" intersectsWith="place" textDy="-2">
+		<switch minzoom="13" textWrapWidth="20"  intersectionMargin="1" intersectionSizeFactor="1" intersectsWith="place" textDy="-2">
 			<case tag="place" value="isolated_dwelling"  />
 			<case tag="place" value="farm" />
-			<apply textColor="#000000" textItalic="false" textBold="false" textOrder="111" textHaloColor="#ffffff" >
+			<apply nameTag="" textColor="#000000" textItalic="false" textBold="false" textOrder="111" >
 				<case maxzoom="13" textSize="10" intersectionMargin="35"/>
 				<case maxzoom="14" textSize="10" intersectionMargin="15"/>
 				<case maxzoom="15" textSize="11" intersectionMargin="5"/>
 				<case minzoom="16" textSize="12"/>
 			</apply>
 				<apply_if  >
-					<case maxzoom="14" textHaloRadius="1" textHaloColor="#ffffff"/>
-					<case minzoom="15" textHaloRadius="2" textHaloColor="#ffffff"/>
+					<case maxzoom="14" textHaloRadius="3:3" textHaloColor="#99ffffff"/>
+					<case minzoom="15" textHaloRadius="4:4" textHaloColor="#99ffffff"/>
 				</apply_if>
 			<apply_if nightMode="true" textColor="#999999" textHaloColor="#000000" />
 		</switch>
 		
 		<switch>
 			<!-- sommet -->
-			<switch textColor="#cc0000" textWrapWidth="25" textHaloColor="#ffffff" textHaloRadius="2" textItalic="true" textBold="false" textMinDistance="50" intersectionMargin="5">
-				<case minzoom="13" tag="natural" value="peak" textOrder="59" />
-				<case minzoom="13" tag="natural" value="volcano" textOrder="59" />
-				<apply textSize="11" textDy="0">
-					<case maxzoom="13" nameTag="name"  intersectionMargin="30" intersectionSizeFactor="1" intersectsWith="natural" />
-					<case maxzoom="15" nameTag="" />
-					<case minzoom="16" nameTag="" nameTag2="ele" />
-					<case minzoom="16" nameTag="ele" />
+			<switch textColor="#cc0000" textWrapWidth="25" textHaloColor="#99ffffff" textHaloRadius="3" textItalic="true" textBold="false" >
+				<case minzoom="13" tag="natural" value="peak" textOrder="59" nameTag="" textMinDistance="250" />
+				<case minzoom="13" tag="natural" value="volcano" textOrder="59" nameTag=""/>
+				<apply  ><!---->
+					<case maxzoom="14" textSize="10" nameTag=""  />
+					<case minzoom="15" textSize="11" nameTag="" nameTag2="ele" />
 				</apply>
 			<apply_if maxzoom="13" textHaloColor="#99ffffff" />
 			</switch>
 			
-			<switch textColor="#cc0000" textWrapWidth="25" textHaloColor="#ffffff" textHaloRadius="2" textItalic="true" textBold="false" textMinDistance="50" intersectionMargin="5">
+			<switch textColor="#cc0000" textWrapWidth="25" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" textMinDistance="150" >
 				<case minzoom="13" tag="natural" value="hill" nameTag="" nameTag2="ele" textOrder="59" textSize="11"/>
 				<case minzoom="16" tag="natural" value="cave_entrance" textOrder="236"/><!--
 				<case minzoom="15" tag="natural" value="ridge" textItalic="true" textOnPath="true" textOrder="200"/>-->
@@ -1555,7 +1556,7 @@
 			</switch>
 
 			<!-- Tourism and Entertainment -->
-			<switch textSize="12" nameTag="" textColor="#000000" textHaloRadius="2:2" textHaloColor="#ffffff" textWrapWidth="20" textOrder="155">
+			<switch textSize="12" textColor="#000000" textHaloRadius="2:2" textHaloColor="#ffffff" textWrapWidth="20" textOrder="155">
 				<case minzoom="21" tag="amenity" value="place_of_worship" nameTag="name" textOrder="134"/>
 				<case minzoom="19" tag="tourism" value="artwork" nameTag="">
 					<apply_if additional="artwork_type=statue" icon="memorial_statue"/>
@@ -1577,7 +1578,7 @@
 			</switch>
 			
 			<!-- Historic / ruines-->
-			<switch lessDetailed="false" textSize="11" nameTag=""  textOrder="158" textColor="#339900"  textItalic="true"  textHaloRadius="1" textHaloColor="#ffffff" textDy="0" textWrapWidth="18">
+			<switch lessDetailed="false" textSize="11" textOrder="158" textColor="#339900"  textItalic="true"  textHaloRadius="1" textHaloColor="#ffffff" textDy="0" textWrapWidth="18">
 				<case minzoom="15" tag="historic" value="ruins" />
 				<case minzoom="16" tag="historic" value="archaeological_site"/>
 				<case minzoom="15" tag="historic" value="wayside_cross" textColor="#000000" textItalic="false" textSize="11" textOrder="44" />
@@ -1594,7 +1595,7 @@
 			</switch>
 						
 			<!-- landuse -->
-			<switch textSize="12" textColor="#388738" textItalic="true" textWrapWidth="20" textHaloRadius="2:2" textHaloColor="#ffffff" nameTag="">
+			<switch textSize="12" textColor="#388738" textItalic="true" textWrapWidth="20" textHaloRadius="2:2" textHaloColor="#ffffff" >
 				<case minzoom="15" tag="natural" value="wetland" textOrder="238"/>
 				<case minzoom="17" tag="natural" value="scrub" textOrder="244"/>
 				<case minzoom="15" tag="natural" value="sand" textOrder="244"/>
@@ -1628,10 +1629,10 @@
 				<case minzoom="22" tag="leisure" value="pitch" textOrder="254"/>
 				<case minzoom="22" tag="leisure" value="bleachers" textOrder="254"/>
 			</switch>
-			<switch textSize="10" textHaloRadius="2:1" textHaloColor="#99ffffff" textWrapWidth="20" textOrder="144">
+			<switch textSize="10" textHaloRadius="2:1" textHaloColor="#99ffffff" textWrapWidth="20" textOrder="144"><!--
 				<switch nameTag="">
 					<apply textColor="#000000"/>
-				</switch>
+				</switch>-->
 				<switch>
 					<case minzoom="15" tag="landuse" value="quarry" nameTag=""/>
 					<case minzoom="15" tag="landuse" value="landfill"/>
@@ -1816,7 +1817,7 @@
         </switch>				
 		
 		<switch textColor="#2665ff" textHaloColor="#ffffff" textItalic="true" textOnPath="false" textSize="11" textWrapWidth="14" >
-			<case minzoom="14" tag="waterway" value="river"  textOrder="50" />
+			<case minzoom="14" tag="waterway" value="river"  textOrder="50" textMinDistance="200"/>
 			<case minzoom="15" tag="waterway" value="dam"  textOrder="49" textOnPath="true"/>
 			<case minzoom="15" tag="waterway" value="canal" textOnPath="true" textOrder="51" textMinDistance="150" />
 			<case minzoom="16" tag="waterway" value="waterfall" additional="osmand_remarkable_waterfall=yes" nameTag2="height"  textOnPath="true" textOrder="217"/>
@@ -1945,7 +1946,8 @@
 				<case minzoom="14" icon="natural_volcano_big" shield="peakvolcano_big_shield">
 					<case additional="status=active" icon="natural_volcano_active_big" shield="volcano_active_big_shield"/>
 				</case>
-			</case><!---->
+			</case>
+			<!--
 			<apply_if additional="ele_limit=200" iconOrder="68"/>
 			<apply_if additional="ele_limit=500" iconOrder="67"/>
 			<apply_if additional="ele_limit=1000" iconOrder="66"/>
@@ -1963,9 +1965,10 @@
 			<apply_if additional="ele_limit=7000" iconOrder="54"/>
 			<apply_if additional="ele_limit=7500" iconOrder="53"/>
 			<apply_if additional="ele_limit=9000" iconOrder="52"/>
+			-->
 			<apply_if nightMode="true" shield="" />
-			<apply_if lessDetailed="true" maxzoom="13" icon="" shield="" />
-					<apply intersectionMargin="30" intersectionSizeFactor="30" intersectsWith="place"/>
+			<apply_if lessDetailed="true" maxzoom="13" icon="" shield="" /><!--
+			<apply intersectionMargin="30" intersectionSizeFactor="30" intersectsWith="place"/> merde en OpenGL-->
 		</switch>
 
 		<!-- Food and Drink -->
@@ -3673,14 +3676,22 @@
 			<switch minzoom="14" lessDetailed="false" >
 				<case tag="highway" value="path"/>
 				<case tag="highway" value="bridleway"/>
-				<apply >
+				<apply_if engine_v1="true">
 					<case maxzoom="14" strokeWidth_5="0.8:1" pathEffect_5="5_4" /> 
 					<case maxzoom="15" strokeWidth_5="1.1:1.1" pathEffect_5="6_5" /> 
 					<case maxzoom="16" strokeWidth_5="1.3:1.3" pathEffect_5="7_6" /> 
 					<case maxzoom="17" strokeWidth_5="1.5:1.5" pathEffect_5="8_7" /> 
 					<case minzoom="18" strokeWidth_5="1.7:1.7" pathEffect_5="9_8" />
 					<apply color_5="#000000"/>
-				</apply>
+				</apply_if>
+				<apply_if engine_v1="false">
+					<case maxzoom="14" strokeWidth_5="1.1:1.1" pathEffect_5="5_5" /> 
+					<case maxzoom="15" strokeWidth_5="1.5:1.5" pathEffect_5="6_6" /> 
+					<case maxzoom="16" strokeWidth_5="1.8:1.8" pathEffect_5="7_7" /> 
+					<case maxzoom="17" strokeWidth_5="2.2:2.2" pathEffect_5="8_8" /> 
+					<case minzoom="18" strokeWidth_5="2.4:2.4" pathEffect_5="9_9" />
+					<apply color_5="#000000"/>
+				</apply_if>
 				<apply_if additional="indoor=yes"	color_5="#00ff00ff" />
 				<apply_if additional="covered=yes" color_5="#33000000" />
 				<apply_if additional="footway=crossing" color_5="#00ff0000" />
@@ -3897,7 +3908,7 @@
 			<case minzoom="15" tag="route_hiking" value="" color="#ffffcc" shadowColor="#99ffffcc"  strokeWidth="0.1:1" />
 			<case minzoom="15" tag="route" value="hiking" color="#ffffcc" shadowColor="#99ffffcc"  strokeWidth="0.1:1" />
 			<case minzoom="15" tag="hiking" value="yes" color="#ffffcc" shadowColor="#99ffffcc"  strokeWidth="0.1:1" />
-				<apply>
+				<apply_if engine_v1="true">
 					<case maxzoom="13" shadowRadius="2:2" />
 					<case maxzoom="14" shadowRadius="2.5:2.5" />
 					<case maxzoom="15" shadowRadius="3:3" />
@@ -3907,8 +3918,18 @@
 					<case maxzoom="19" shadowRadius="5:5" />
 					<case maxzoom="20" shadowRadius="5.5:5.5" />
 					<case minzoom="21" shadowRadius="6:6" />
-				</apply>
-			<apply_if noPolygons="true" color="#30ffff00" shadowColor="#30ffff00"/>
+				</apply_if>
+				<apply_if engine_v1="false">
+					<case maxzoom="13" shadowRadius="4" />
+					<case maxzoom="14" shadowRadius="5" />
+					<case maxzoom="15" shadowRadius="6" />
+					<case maxzoom="16" shadowRadius="7" />
+					<case maxzoom="17" shadowRadius="8" />
+					<case maxzoom="18" shadowRadius="9" />
+					<case maxzoom="19" shadowRadius="10" />
+					<case maxzoom="20" shadowRadius="11" />
+					<case minzoom="21" shadowRadius="12" />
+				</apply_if>			<apply_if noPolygons="true" color="#30ffff00" shadowColor="#30ffff00"/>
 			<apply_if nightMode="true" color="#00ffff00" shadowColor="#22ffff66"  />
 			<apply_if lessDetailed="true" strokeWidth="0:0" shadowRadius="0"/>
 		</switch>
