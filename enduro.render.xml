@@ -365,19 +365,28 @@
 
 		<!-- Polygon 1-10-->
 			<switch area="true" point="false" addPoint="true" objectType="3" order="5">
-				<case tag="leisure" value="nature_reserve" order="10"/><!--
-				<case tag="landuse" value="military" order="10"/>-->
+				<switch engine_v1="false"><!-- fonctionne pas-->
+					<case cycle="true" tag="leisure" value="nature_reserve" order="100"/>
+					<case tag="leisure" value="nature_reserve" order="100"/>
+					<case cycle="true" tag="boundary" value="national_park" order="100" />
+					<case tag="boundary" value="national_park" order="100" />
+				</switch>
+				<switch engine_v1="true"><!-- ok-->
+					<case cycle="true" tag="leisure" value="nature_reserve" order="9"/>
+					<case tag="leisure" value="nature_reserve" order="9"/>
+				</switch>
 			</switch>
 			
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5">
 				
 				<case tag="amenity" value="parking" order="10"/>
-				<case tag="amenity" value="school" order="10"/><!---->
-				<case tag="leisure" value="nature_reserve" order="10" />
-				<case tag="leisure" value="" order="10"/>
+				<case tag="amenity" value="school" order="10"/><!--
+				<case tag="leisure" value="" order="10"/>-->
 				
-				<case tag="boundary" value="national_park" order="2" ignorePolygonArea="true"/><!-- -->
-				<case tag="boundary" value="protected_area" order="1"  ignorePolygonArea="true"/><!---->
+				<case tag="leisure" value="nature_reserve" order="9"/>
+				<case tag="boundary" value="national_park" order="9" />
+				<case tag="boundary" value="protected_area" order="9" />
+				
 				<case tag="boundary" value="forestry_compartment" order="9"/>
 				
 				<case tag="place" value="region" order="1" ignorePolygonArea="true"/>
@@ -528,11 +537,6 @@
 			</switch>
 
 		<!-- Line 11-100-->
-			<switch area="false" addPoint="true" objectType="3" order="80"><!--
-				<case tag="boundary" value="national_park" order="0"/>
-				<case tag="region:type" value="mountain_area" ignorePolygonArea="true"/>
-				<case tag="place" value="region" ignorePolygonArea="true"/>-->
-			</switch>
 
 			<switch area="false" addPoint="false" objectType="2" >
 				<case tag="natural" value="mountain_range" order="100"/>
@@ -769,8 +773,10 @@
 				<case tag="aeroway" value="" order="62"/>
 				<case tag="railway" value="station"/>
 				<case tag="public_transport" value="platform"/>
-				<case tag="boundary" value="" order="20"/>
-				<case tag="boundary" value="protected_area" order="79"/>
+				<case tag="boundary" value="" order="20"/><!---->
+				<case tag="boundary" value="protected_area" order="79"  ignorePolygonArea="true"/>
+				<case tag="boundary" value="national_park" order="79"  ignorePolygonArea="true"/>
+				<case tag="leisure" value="nature_reserve" order="79"  ignorePolygonArea="true"/>
 				<case tag="contour" value="elevation" order="13">
 					<apply_if contourDensity="medium_w" additional="contourtype=10m" order="-1"/>
 					<apply_if contourDensity="medium_w" additional="contourtype=50m" order="-1"/>
@@ -1290,7 +1296,7 @@
 
 			<!-- villages -->
 			<switch minzoom="10"  intersectionMargin="1" intersectionSizeFactor="1" intersectsWith="place">
-				<case tag="place" value="village" textOrder="42" textWrapWidth="20" textSize="10" textBold="true" textColor="#000000" />
+				<case tag="place" value="village" textOrder="42" textWrapWidth="20" textSize="10" textBold="true" textColor="#000000" nameTag=""/>
 				<apply textHaloColor="#ffffff" textDy="-5">
 					<case maxzoom="10" textSize="10" intersectionMargin="20" intersectionSizeFactor="1" />
 					<case maxzoom="11" textSize="10" intersectionMargin="10" intersectionSizeFactor="1"/>
@@ -1347,12 +1353,12 @@
 		</switch>
 		<switch textWrapWidth="20" textHaloColor="#ffffff" >
 			<switch textColor="#000000">
-				<case minzoom="13" tag="place" value="suburb" textBold="true" textItalic="true" textOrder="44" textColor="#666666"/>
+				<case minzoom="13" tag="place" value="suburb" nameTag="" textBold="true" textItalic="true" textOrder="44" textColor="#666666"/>
 				<case minzoom="14" tag="place" value="municipality" nameTag="" textBold="true"  textOrder="107"/>
 				<case minzoom="16" tag="place" value="borough" nameTag="" textBold="false" textOrder="45" textColor="#666666"/>
 				<case minzoom="17" tag="place" value="neighbourhood" nameTag="" textBold="false" textItalic="true" textOrder="47" textColor="#666666"/>
 				<case minzoom="17" tag="place" value="allotments" nameTag="" textOrder="113" />
-				<case minzoom="17" tag="place" value="quarter" textItalic="true" textOrder="46" textColor="#666666"/>
+				<case minzoom="17" tag="place" value="quarter" nameTag="" textItalic="true" textOrder="46" textColor="#666666"/>
 				<case minzoom="20" tag="place" value="plot" nameTag="" textOrder="254"/>
 				<apply intersectionSizeFactor="5" intersectsWith="place">
 					<case maxzoom="13" textSize="10" intersectionMargin="8" />
@@ -1371,7 +1377,7 @@
 
 		<!-- lieu dit (locality) -->
 		<switch minzoom="15" >
-			<case tag="place" value="locality" />
+			<case tag="place" value="locality" nameTag=""/>
 			<apply textHaloRadius="0" textHaloColor="#66336633" textItalic="true" textBold="true" textOrder="52" intersectionMargin="1"  intersectsWith="place">
 				<case maxzoom="15" textSize="10" textColor="#33003300"  intersectionSizeFactor="8"/>
 				<case maxzoom="16" textSize="14" textColor="#2f003300" intersectionSizeFactor="4"/>
@@ -1398,18 +1404,26 @@
 		</switch>
 		
 		<switch>
-			<!-- sommet -->
-			<switch textColor="#cc0000" textWrapWidth="25" textHaloColor="#99ffffff" textHaloRadius="3" textItalic="true" textBold="false" >
-				<case minzoom="13" tag="natural" value="peak" textOrder="59" nameTag="" textMinDistance="250" />
-				<case minzoom="13" tag="natural" value="volcano" textOrder="59" nameTag=""/>
-				<apply  ><!---->
+			<!-- cols -->
+			<switch minzoom="13" textWrapWidth="18" textHaloColor="#99ffffff" textHaloRadius="3:3" textItalic="true" textBold="false" >
+				<case tag="natural" value="saddle" nameTag="" textOrder="58" textColor="#000000"/>
+				<case tag="mountain_pass" value="yes" nameTag="" textBold="false" textOrder="44" textColor="#000000"/>
+				<apply  textMinDistance="250">
 					<case maxzoom="14" textSize="10" nameTag=""  />
 					<case minzoom="15" textSize="11" nameTag="" nameTag2="ele" />
 				</apply>
-			<apply_if maxzoom="13" textHaloColor="#99ffffff" />
+			</switch>
+			<!-- sommet -->
+			<switch textWrapWidth="18" textHaloColor="#99ffffff" textHaloRadius="3:3" textItalic="true" textBold="false" >
+				<case tag="natural" value="peak" textOrder="59" textColor="#cc0000"/>
+				<case tag="natural" value="volcano" textOrder="59" textColor="#cc0000"/>
+				<apply_if lessDetailed="false" textMinDistance="250">
+					<case minzoom="13" maxzoom="14" textSize="10" nameTag=""  />
+					<case minzoom="15" textSize="11" nameTag="" nameTag2="ele" />
+				</apply_if>
 			</switch>
 			
-			<switch textColor="#cc0000" textWrapWidth="25" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" textMinDistance="150" >
+			<switch textColor="#cc0000" textWrapWidth="25" textHaloColor="#99ffffff" textHaloRadius="3:3" textItalic="true" textBold="false" textMinDistance="150" >
 				<case minzoom="13" tag="natural" value="hill" nameTag="" nameTag2="ele" textOrder="59" textSize="11"/>
 				<case minzoom="16" tag="natural" value="cave_entrance" textOrder="236"/><!--
 				<case minzoom="15" tag="natural" value="ridge" textItalic="true" textOnPath="true" textOrder="200"/>-->
@@ -1418,19 +1432,19 @@
 				<case minzoom="15" tag="natural" value="crater" textColor="#4e0d0d"/>
 				<case minzoom="14" tag="natural" value="crevasse" textColor="#4e0d0d"/>
 				<case minzoom="15" tag="glacial" value="crevasse_zone" textColor="#4e0d0d"/>
-				<case minzoom="14" tag="natural" value="sinkhole" textColor="#4e0d0d"/>
-				<case minzoom="14" tag="natural" value="saddle" nameTag="" textOrder="60" />
+				<case minzoom="14" tag="natural" value="sinkhole" textColor="#4e0d0d"/><!--
+				<case minzoom="14" tag="natural" value="saddle" nameTag="" textOrder="60" />-->
 				<case minzoom="14" tag="natural" value="rock" nameTag="" textOrder="60" />
 				<case minzoom="16" tag="natural" value="stone" nameTag="" textOrder="60" />
-				<case minzoom="16" tag="natural" value="bare_rock" nameTag="" textOrder="60" />
-				<case minzoom="13" tag="mountain_pass" value="yes" nameTag="" textBold="false" textOrder="44" />
+				<case minzoom="16" tag="natural" value="bare_rock" nameTag="" textOrder="60" /><!--
+				<case minzoom="13" tag="mountain_pass" value="yes" nameTag="" textBold="false" textOrder="44" />-->
 				<apply textSize="11" textDy="0" intersectionMargin="20" intersectionSizeFactor="1" intersectsWith="place">
 					<case maxzoom="13" nameTag="name" />
 					<case maxzoom="15" nameTag="" />
 					<case minzoom="16" nameTag="" nameTag2="ele" />
 					<case minzoom="16" nameTag="ele" />
 				</apply>
-			<apply_if maxzoom="13" textHaloColor="#ccffffff" />
+			<apply_if  />
 			</switch>
 			
 			<!-- natural   textOrder="40"-->
@@ -1578,15 +1592,15 @@
 			</switch>
 			
 			<!-- Historic / ruines-->
-			<switch lessDetailed="false" textSize="11" textOrder="158" textColor="#339900"  textItalic="true"  textHaloRadius="1" textHaloColor="#ffffff" textDy="0" textWrapWidth="18">
-				<case minzoom="15" tag="historic" value="ruins" />
+			<switch lessDetailed="false" textSize="11" textOrder="158" textColor="#339900"  textItalic="true"  textHaloRadius="3:3" textHaloColor="#99ffffff" textWrapWidth="18" nameTag="">
+				<case minzoom="16" tag="historic" value="ruins" />
 				<case minzoom="16" tag="historic" value="archaeological_site"/>
-				<case minzoom="15" tag="historic" value="wayside_cross" textColor="#000000" textItalic="false" textSize="11" textOrder="44" />
+				<case minzoom="16" tag="historic" value="wayside_cross" textColor="#000000" textItalic="false" textSize="11" textOrder="44" />
 				<case minzoom="17" tag="historic" value="wayside_shrine"/>
-				<case minzoom="15" tag="abandoned:building" value=""/>
-				<case minzoom="15" tag="disused:building" value=""/>
+				<case minzoom="16" tag="abandoned:building" value="" nameTag="name"/>
+				<case minzoom="16" tag="disused:building" value=""/>
 				<case tag="abandoned" value="yes"/> 
-				<switch minzoom="15" tag="" value="" >
+				<switch minzoom="16" tag="" value="" >
 					<case additional="ruins=yes"   /> 
 					<apply />
 				</switch><!--
@@ -1744,7 +1758,7 @@
 		</switch>
 
 		<!-- protected area -->
-		<switch minzoom="9"  intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="" textOrder="1" >
+		<switch minzoom="9"  textOrder="1" ><!--  intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="" -->
 			<case tag="boundary" value="national_park"/>
 			<apply hideAccess="false" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" > 
 				<case maxzoom="10" textSize="11" textColor="#cccc0000" />
@@ -2995,8 +3009,10 @@
 			<apply color="#fff3e9"/>
 		</switch>
 
-		<!-- nature_reserve-->
+		<!-- nature_reserve bug OpenGL -->
 		<switch hideAccess="false">
+			<case tag="boundary" value="national_park" />
+			<case tag="boundary" value="protected_area" />
 			<case tag="leisure" value="nature_reserve" />
 			<apply minzoom="8" color_2="#88ffcccc" strokeWidth_2="1" color="#ffd0d0">
 				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1:1"/>
@@ -3008,9 +3024,6 @@
 			</apply>
 			<apply_if nightMode="true" color_2="#990000" />
 		</switch> 
-		<!-- test
-		<case tag="boundary" value="national_park" color="#33ff00ff"/>
-		<case tag="boundary" value="protected_area" color="#9900ffff"/>-->
 
 	</polygon>
 
@@ -4532,7 +4545,9 @@
 
 		<!-- frontière reserve pour voir name-->
 		<switch minzoom="10">
-			<case tag="boundary" value="protected_area" strokeWidth="0.1:0" color="#00ff0000"/>
+			<case tag="boundary" value="protected_area" strokeWidth="1" color="#0000ffff"/>
+			<case tag="boundary" value="national_park" strokeWidth="1" color="#0000ffff"/>
+			<case tag="leisure" value="nature_reserve" strokeWidth="1" color="#0000ffff"/>
 		</switch>
 
 		<case tag="osmand_change" value="delete"/> <!-- OSMC will break if delete -->
