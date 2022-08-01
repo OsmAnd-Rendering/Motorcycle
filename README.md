@@ -3,11 +3,11 @@
 # Motorcycle
 Render style axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap.
 
-Calculs de routage pour 3 types de motos :  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
+fichiers osf pour installation automatique : **[installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)**
 
-fichiers osf pour installation automatique : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+Calculs de routage pour 3 types de motos :  **[Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)**
 
-plus de détails dans le [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+plus de détails dans le **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 
 ## Changements notables par rapport aux styles standard :
 <br>
@@ -31,8 +31,8 @@ plus de détails dans le [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/w
 ## ➡️[Légende](Legend.md)
 
 ## Installation
-pour mettre à jour le rendu et/ou les routages ou pour créer les profils de routage préférez la méthode des fichiers osf à restaurer, voir [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+pour mettre à jour le rendu et/ou les routages ou pour créer les profils de routage préférez la méthode des fichiers osf à restaurer, voir **[installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)**
 
 ## documentation
-[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+**[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 
