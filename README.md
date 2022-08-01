@@ -22,9 +22,9 @@ Render style axé sur l'utilisation en moto tout terrain avec les chemins classi
 
 ## ➡️[Légende](Legend.md)
 
-## [installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+## ➡️[installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-## [documentation](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+## ➡️[documentation](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
-## [Détails sur les routages](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)**
+## ➡️[Détails sur les routages](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
 
