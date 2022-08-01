@@ -1,24 +1,17 @@
 🇫🇷 [Français](README.md)&emsp;`🇬🇧 English`
 
 # Motorcycle
-Render style focused on off-road motorcycle use with roads classified by "difficulty" linked to the type of machine and to the details present in OpenStreetMap.
-
-osf file for automatic installation : **[installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)**
-
-Routing calculations for 3 types of motorcycles  :  **[Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)**
-
-more details here **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
+Render style focused on off-road motorcycle use with roads classified by "difficulty" linked to the type of machine and to the details present in OpenStreetMap, as well as routings for 3 types of bikes (from the heaviest to the lightest).
 
 ## Notable changes compared to standard styles:
 <br>
-- Paths visually identified by rideability (colors)<br>
+- Tracks visually identified by rideability (colors)<br>
 - Useful / interesting POIs highlighted<br>
-- Difficulty of the trails from the mountain bike and pedestrian tags<br>
+- Difficulty of the paths from the mountain bike and pedestrian tags<br>
 - Simplification for legibility of mountain bike/pedestrian routes<br>
 - Additional settings for legibility while riding<br>
-<br><br>
+<br>
 
----
 
 ## Screenshots<br>
 
@@ -31,10 +24,9 @@ more details here **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)*
 
 ---
 ## ➡️[Legend](Legend.md)
----
 
+## ➡️[Installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-## Installation
-to update rendering and/or routings or to create routing profiles prefer the osf file method to restore, see **[Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)**
+## ➡️[documentation](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
-
+## ➡️[Routing details](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
