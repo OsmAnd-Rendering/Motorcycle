@@ -3,11 +3,11 @@
 # Motorcycle
 Render style focused on off-road motorcycle use with roads classified by "difficulty" linked to the type of machine and to the details present in OpenStreetMap.
 
-Routing calculations for 3 types of motorcycles  :  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
+osf file for automatic installation : **[installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)**
 
-osf files for automatic installation : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+Routing calculations for 3 types of motorcycles  :  **[Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)**
 
-more details here [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+more details here **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 
 ## Notable changes compared to standard styles:
 <br>
@@ -35,6 +35,6 @@ more details here [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
 
 ## Installation
-to update rendering and/or routings or to create routing profiles prefer the osf file method to restore, see [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+to update rendering and/or routings or to create routing profiles prefer the osf file method to restore, see **[Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)**
 
 
