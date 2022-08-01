@@ -1,7 +1,7 @@
 🇫🇷 [Français](README.md)&emsp;`🇬🇧 English`
 
 # Motorcycle
-Render style focused on off-road motorcycle use with roads classified by "difficulty" linked to the type of machine and to the details present in OpenStreetMap, as well as routings for 3 types of bikes (from the heaviest to the lightest).
+Display focused on off-road motorcycle use with roads classified by "difficulty" linked to the type of machine and to the details present in OpenStreetMap, as well as routings for 3 types of bikes (from the heaviest to the lightest).
 
 ## Notable changes compared to standard styles:
 <br>
