@@ -521,7 +521,7 @@
 				<case tag="abandoned:place" value="" order="9"/>
 				<case tag="abandoned:landuse" value="" order="9"/>
 				<case tag="abandoned:aeroway" value="runway"/>
-				<case tag="aeroway" value="runway"/>
+				<case tag="aeroway" value="runway" order="10"/>
 				<case tag="abandoned:aeroway" value="aerodrome" order="10"/>
 				<case tag="aerialway" value="station" ignorePolygonArea="true"/>
 				<case tag="aeroway" value="aerodrome" ignorePolygonArea="true">
@@ -1609,7 +1609,7 @@
 			</switch>
 						
 			<!-- landuse -->
-			<switch textSize="12" textColor="#388738" textItalic="true" textWrapWidth="20" textHaloRadius="2:2" textHaloColor="#ffffff" >
+			<switch minzoom="7" textSize="12" textItalic="true" textWrapWidth="20" textHaloRadius="3:3" textHaloColor="#99ffffff" nameTag="">
 				<case minzoom="15" tag="natural" value="wetland" textOrder="238"/>
 				<case minzoom="17" tag="natural" value="scrub" textOrder="244"/>
 				<case minzoom="15" tag="natural" value="sand" textOrder="244"/>
@@ -1626,7 +1626,7 @@
 				<case minzoom="17" tag="landuse" value="greenhouse_horticulture" textOrder="239"/>
 				<case minzoom="17" tag="landuse" value="conservation" textOrder="246"/>
 				<case minzoom="12" tag="natural" value="fell" textOrder="250"/>
-				<case minzoom="7" tag="natural" value="desert" textSize="11"/>									
+				<case tag="natural" value="desert" textSize="11"/>									
 				<switch minzoom="18" tag="boundary" value="forestry_compartment" textOrder="88" textDy="3">
 					<case nameTag="ref"/>
 					<case nameTag=""/>
@@ -1642,30 +1642,26 @@
 				<case minzoom="19" tag="leisure" value="stadium" textOrder="114"/>
 				<case minzoom="22" tag="leisure" value="pitch" textOrder="254"/>
 				<case minzoom="22" tag="leisure" value="bleachers" textOrder="254"/>
+				<apply textColor="#339933" />
 			</switch>
-			<switch textSize="10" textHaloRadius="2:1" textHaloColor="#99ffffff" textWrapWidth="20" textOrder="144"><!--
-				<switch nameTag="">
-					<apply textColor="#000000"/>
-				</switch>-->
-				<switch>
-					<case minzoom="15" tag="landuse" value="quarry" nameTag=""/>
-					<case minzoom="15" tag="landuse" value="landfill"/>
-					<case minzoom="17" tag="landuse" value="logging"/>
-					<case minzoom="17" tag="wood:lost" value="dead_wood"/>
-					<case minzoom="17" tag="wood:lost" value="windfall"/>
-					<case minzoom="20" tag="man_made" value="spoil_heap"/>
-					<case minzoom="20" tag="power" value="substation"/>
-					<case minzoom="20" tag="power" value="transformer"/>
-					<case minzoom="20" tag="man_made" value="wastewater_plant"/>
-					<case minzoom="20" tag="landuse" value="greenfield"/>
-					<case minzoom="20" tag="landuse" value="brownfield"/>
-					<apply textColor="#525252"/>
-				</switch>
+			<switch textSize="10" textHaloRadius="2:1" textHaloColor="#99ffffff" textWrapWidth="20" textOrder="144">
+				<case minzoom="15" tag="landuse" value="quarry" nameTag=""/>
+				<case minzoom="15" tag="landuse" value="landfill"/>
+				<case minzoom="17" tag="landuse" value="logging"/>
+				<case minzoom="17" tag="wood:lost" value="dead_wood"/>
+				<case minzoom="17" tag="wood:lost" value="windfall"/>
+				<case minzoom="20" tag="man_made" value="spoil_heap"/>
+				<case minzoom="20" tag="power" value="substation"/>
+				<case minzoom="20" tag="power" value="transformer"/>
+				<case minzoom="20" tag="man_made" value="wastewater_plant"/>
+				<case minzoom="20" tag="landuse" value="greenfield"/>
+				<case minzoom="20" tag="landuse" value="brownfield"/>
+				<apply textColor="#525252"/>
 			</switch>
-			<switch textHaloRadius="1">
+			<switch textHaloRadius="2:2">
 				<case minzoom="15" tag="abandoned:place" value="" textOrder="226"/>
 				<case minzoom="15" tag="abandoned:landuse" value="" textOrder="227"/>
-				<case minzoom="14" textSize="12" textColor="#990d2a" textWrapWidth="20" tag="landuse" value="military" nameTag="" textOrder="145"/>
+				<case minzoom="16" textSize="12" textColor="#990d2a" textWrapWidth="20" tag="landuse" value="military" nameTag="" textOrder="245"/>
 				<case minzoom="15" textSize="12" textColor="#990d2a" textWrapWidth="20" tag="military" value="danger_area" textOrder="146"/>
 				<apply textSize="13" textColor="#656565" textHaloRadius="1:1" textHaloColor="#bbffffff"/>
 				<apply textDy="10"/>
@@ -2584,14 +2580,14 @@
 
 			<!-- sport -->
 			<switch minzoom="13">
-				<case tag="leisure" value="stadium" color_2="#66cc99"/>
-				<case minzoom="13" tag="leisure" value="golf_course" color_2="#66cc99"/>
-				<case minzoom="15" tag="leisure" value="sports_centre" color_2="#66cc99"/>
-				<case minzoom="15" tag="leisure" value="pitch" color_2="#66cc99"/>
-				<case minzoom="16" tag="leisure" value="water_park" color_2="#66cc99"/>
-				<case minzoom="16" tag="leisure" value="bleachers" color_2="#66cc99"/>
-				<apply color="#e3ffd9" strokeWidth_2="0.5:1"/>
-				<apply_if nightMode="true" color="#224422" color_2="#000000"/>
+				<case tag="leisure" value="stadium" />
+				<case minzoom="13" tag="leisure" value="golf_course" />
+				<case minzoom="14" tag="leisure" value="sports_centre" />
+				<case minzoom="15" tag="leisure" value="pitch" />
+				<case minzoom="16" tag="leisure" value="water_park" />
+				<case minzoom="16" tag="leisure" value="bleachers" />
+				<apply color="#e3ffd9" color_2="#66cc99" strokeWidth_2="0.5:1"/>
+				<apply_if nightMode="true" color="#224422" color_2="#000000" />
 			</switch>
 
 			<!-- carriere -->
@@ -2618,7 +2614,7 @@
 				<case hideBuildings="false" minzoom="14" tag="aeroway" value="terminal" color="#222222"/>
 				<case minzoom="13" tag="aeroway" value="apron" color_2="#333333" strokeWidth_2="1:1"/>
 				<switch minzoom="13">
-					<case tag="aeroway" value="runway" color_2="#333333" strokeWidth_2="1:1"/>
+					<case tag="aeroway" value="runway" color="#999999" color_2="#333333" strokeWidth_2="1:1"/>
 					<case tag="abandoned:aeroway" value="runway" color_2="#66333333" strokeWidth_2="1:1" shader="diagonal_gray_shader"/>
 				</switch>
 				<case minzoom="18" tag="aeroway" value="helipad" color_2="#333333" strokeWidth_2="1:1"/>
