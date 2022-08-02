@@ -21,12 +21,21 @@ Display focused on off-road motorcycle use with roads classified by "difficulty"
 ### 
 | <img src="https://1.bp.blogspot.com/-4PDQS4TdN0U/YJzl-K4DbjI/AAAAAAAAEi0/tXv0eyXuGEMS93m2lxKqQqMrqMsf9busgCLcBGAsYHQ/w296-h640/PT%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-VDzxurdpIiI/YJzjwUlMM4I/AAAAAAAAEik/uZcepPSb630Fe-n55IIBL5TmeJz4ZSsfACLcBGAsYHQ/w296-h640/GT_sec%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-2jO-scaZT8k/YJzinm1gWHI/AAAAAAAAEic/7Qe9Xhfd9mIbINux-c_4Gw7iRT5DH4ugwCLcBGAsYHQ/w296-h640/GT%255B1%255D.jpg" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
+<br>
 
 ---
-## ➡️[Legend](Legend.md)
 
-## ➡️[Installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+## Installation instructions
+<br>
 
-## ➡️[documentation](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+- [installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)<br><br>
 
-## ➡️[Routing details](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
+---
+
+## Documentation
+
+- [Legend](Legend.md)
+
+- [General documentation](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+
+- [Routing details](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
