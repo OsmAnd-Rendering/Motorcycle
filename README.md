@@ -1,21 +1,21 @@
 `🇫🇷 Français`&emsp;🇬🇧 [English](readme_en.md)
 
 # Motorcycle
-Render style axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap.
+Render style based on off-road motorbike use, with the ways classified by "difficulty", according to the type of vehicle and the available information in OpenStreetMap.
 
-Calculs de routage pour 3 types de motos :  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
+Routing for 3 types of motorbikes:  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
 
-fichiers osf pour installation automatique : [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+osf files for auto-install: [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
-plus de détails dans le [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+More details in [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
-## Changements notables par rapport aux styles standard :
+## Significant variations from the standard styles:
 <br>
-- Chemins identifiés visuellement par carrossabilité (couleurs)<br>
-- POI utiles / intéressants mis en évidence<br>
-- Difficulté des sentiers à partir des tags VTT et pédestre<br>
-- Simplification pour lisibilité des itinéraires VTT/pédestre<br>
-- Réglages supplémentaires pour la lisibilité en roulant<br>
+- Visual identification of ways according to driveability (colour code)<br>
+- Useful / interesting POIs highlighted<br>
+- Difficulty of trails from MTB and pedestrian tags<br>
+- Simplification for legibility of MTB/pedestrian routes<br>
+- Additional settings for legibility when riding<br>
 
 ---
 
@@ -28,10 +28,10 @@ plus de détails dans le [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/w
 | <img src="https://1.bp.blogspot.com/-4PDQS4TdN0U/YJzl-K4DbjI/AAAAAAAAEi0/tXv0eyXuGEMS93m2lxKqQqMrqMsf9busgCLcBGAsYHQ/w296-h640/PT%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-VDzxurdpIiI/YJzjwUlMM4I/AAAAAAAAEik/uZcepPSb630Fe-n55IIBL5TmeJz4ZSsfACLcBGAsYHQ/w296-h640/GT_sec%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-2jO-scaZT8k/YJzinm1gWHI/AAAAAAAAEic/7Qe9Xhfd9mIbINux-c_4Gw7iRT5DH4ugwCLcBGAsYHQ/w296-h640/GT%255B1%255D.jpg" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
 
-## ➡️[Légende](Legend.md)
+## ➡️[Legend](Legend.md)
 
-## Installation
-pour mettre à jour le rendu et/ou les routages ou pour créer les profils de routage préférez la méthode des fichiers osf à restaurer, voir [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+## Install
+To update rendering and/or routings or to create routing profiles, preferably use the restore osf files method, see [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
 
 ## documentation
 [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
