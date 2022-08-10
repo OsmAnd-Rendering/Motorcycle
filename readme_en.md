@@ -5,7 +5,7 @@ Render style based on off-road motorbike use, with the ways classified by "diffi
 
 Routing for 3 types of motorbikes:  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
 
-osf files for auto-install: [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+osf files for auto-install: [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
 
 More details in [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
