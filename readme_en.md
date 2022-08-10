@@ -25,9 +25,7 @@ Render style based on off-road motorbike use, with the ways classified by "diffi
 
 ## ➡️[Legend](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/legend_EN.md)
 
-## Install
-To update rendering and/or routings or to create routing profiles, preferably use the restore osf files method, see [installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
+## ➡️[Install](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
 
-## documentation
-[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+## ➡️[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
