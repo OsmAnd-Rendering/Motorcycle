@@ -24,7 +24,7 @@
 
 	<routingProfile name="gros_trail" baseProfile="car" restrictionsAware="true" minSpeed="1" defaultSpeed="30.0" maxSpeed="90.0" sharpTurn="" slightTurn="" roundaboutTurn="" followSpeedLimitations="false" onewayAware="true">
 		
-		<parameter id="avoid_track" name="pas de chemins" description="?vite les chemins" type="boolean" default="false"/>
+		<parameter id="avoid_track" name="pas de chemins" description="evite les chemins" type="boolean" default="false"/>
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean" default="false"/>
 		<parameter id="avoid_mud" name="si chemins secs" description="ajoute chemins en terre" type="boolean" default="false"/>
 		<parameter id="avoid_toll" name="Avoid toll roads" description="Avoid toll roads" type="boolean"/>
