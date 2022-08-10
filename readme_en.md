@@ -32,7 +32,7 @@ More details in [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 ## ➡️[Legend](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/legend_EN.md)
 
 ## Install
-To update rendering and/or routings or to create routing profiles, preferably use the restore osf files method, see [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
+To update rendering and/or routings or to create routing profiles, preferably use the restore osf files method, see [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
 
 ## documentation
 [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
