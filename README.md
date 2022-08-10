@@ -26,7 +26,7 @@ Affichage ax√© sur l'utilisation en moto tout terrain avec les chemins classifi√
 ## Instructions d'installation
 <br>
 
-- [installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)<br><br>
+- [installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation.md)<br><br>
 
 ---
 
