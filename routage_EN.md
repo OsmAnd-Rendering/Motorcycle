@@ -1,4 +1,4 @@
-🇫🇷 [Français](README.md)&emsp;`🇬🇧 English`
+🇫🇷 [Français](routage.md)&emsp;`🇬🇧 English`
 
 # Motorcycle/routing
 Routing calculations for 3 types of motorcycle use, each of these routings calculates a route based on the information available in OpenStreetMap.
