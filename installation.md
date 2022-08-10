@@ -4,6 +4,8 @@
 
 # Première installation
 **1 fichier pour créer les 3 profils, installer le style et enfin installer les 3 routages**<br>
+**[le fonctionnement des routages est ici](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/routage.md)**<br>
+**[le fonctionnement du style est ici](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
 
 sur PC > clic droit et **"enregistrer la cible du lien"** **[installation](installation.osf)**<br>
 sur téléphone la manipulation est variable selon le navigateur et votre Android > **[appuyez sur le lien](installation.osf)** > dans la fenêtre qui s'ouvre ensuite vous verrez un bouton "**download**" ou **3 petits points** qui vous permettrons d'accéder à "**download**"<br>
