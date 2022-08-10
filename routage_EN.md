@@ -4,7 +4,7 @@
 Routing calculations for 3 types of motorcycle use, each of these routings calculates a route based on the information available in OpenStreetMap.
 <br>
 
-see here **[for the installation](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration#readme)**
+see here **[for the installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)**
 
 ## heavy trailbike 
 <b>will take you ONLY on the easy tracks (the brown ones) and if he can't find any, on the road and very small bits of some green tracks.</b>
@@ -101,4 +101,4 @@ well ... don't forget that it is perfectible and that in the best case it is bas
 <br>
 <br>
  
-more details in the **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/Routing)**
+more details in French in the **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--Routing)**
