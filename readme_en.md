@@ -21,11 +21,20 @@ Render style based on off-road motorbike use, with the ways classified by "diffi
 ### 
 | <img src="https://user-images.githubusercontent.com/83398215/183832776-3ed55db4-1ce4-4e79-8c3e-97a521e8722e.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832485-45b79c76-e6db-4ccb-b058-5220a79175e5.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832969-e00c8ae1-ec4a-472a-8a17-95958cdeab14.jpg" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
+
+---
+
+## Instructions d'installation
 <br>
 
-## ➡️[Legend](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/legend_EN.md)
+- [installation](installation_EN.md)<br><br>
 
-## ➡️[Install](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
+---
 
-## ➡️[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+## Documentation
 
+- [Legend](legend_EN.md)
+
+- [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+
+- [More about routing](routage_EN.md)
