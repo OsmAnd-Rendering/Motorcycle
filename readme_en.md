@@ -3,12 +3,6 @@
 # Motorcycle
 Render style based on off-road motorbike use, with the ways classified by "difficulty", according to the type of vehicle and the available information in OpenStreetMap.
 
-Routing for 3 types of motorbikes:  [Routing](https://github.com/OsmAnd-Rendering/Motorcycle/tree/routing)
-
-osf files for auto-install: [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
-
-More details in [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
-
 ## Significant variations from the standard styles:
 <br>
 - Visual identification of ways according to driveability (colour code)<br>
@@ -32,7 +26,7 @@ More details in [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 ## ➡️[Legend](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/legend_EN.md)
 
 ## Install
-To update rendering and/or routings or to create routing profiles, preferably use the restore osf files method, see [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
+To update rendering and/or routings or to create routing profiles, preferably use the restore osf files method, see [installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)
 
 ## documentation
 [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
