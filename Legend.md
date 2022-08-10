@@ -1,5 +1,5 @@
 # Légende
-[plus de détails dans le wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/le-style)
+[plus de détails dans le wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)
 
 ## Chemins
 
