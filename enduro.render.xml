@@ -8,8 +8,6 @@
 	<renderingProperty attr="baseAppMode" name="Default Rendering mode" description="Map optimization for respective User Profile based on base (parent) profile"
 		type="string" possibleValues="default, car, bicycle, pedestrian, public_transport, boat, ski"/>
 
-	<!-- OK -->
-
 	<!-- ajout cricri IGN -->
 	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="routes"/>
 
@@ -27,7 +25,7 @@
 
 	<renderingProperty attr="lessDetailed" name="moins de détails" description="moins de détails" type="boolean" possibleValues="" category="routes"/>
 	<renderingProperty attr="hideUnderground" name="Hide underground objects" description="Hide underground objects" type="boolean" possibleValues="" category="hide"/>
-	<renderingProperty attr="hideAccess" name="Hide access restrictions" description="Hide access type" type="boolean" possibleValues="" category="hide"/>
+	<renderingProperty attr="hideAccess" name="Hide access restrictions" description="Hide access type" type="boolean" possibleValues="" category="routes"/>
 	<renderingProperty attr="hideBuildings" name="Hide buildings" description="Hide buildings" type="boolean" possibleValues="" category="hide"/>
 	<renderingProperty attr="hideWaterPolygons" name="Hide water" description="Hide water polygons" type="boolean" possibleValues="" category="hide"/>
 	<renderingProperty attr="noPolygons" name="Hide polygons" description="Make all areal land features on map transparent" type="boolean" possibleValues="" category="hide"/>
