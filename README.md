@@ -36,4 +36,4 @@ Affichage axé sur l'utilisation en moto tout terrain avec les chemins classifi�
 
 - [Documentation générale](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
-- [Détails sur les routages](routage.md)
+- [fonctionnement des routages](routage.md)
