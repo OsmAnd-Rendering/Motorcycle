@@ -5,9 +5,9 @@
 # First installation
 1 file to create the 3 profiles, install the style and finally install the 3 routings<br>
 
-on PC > right click and "**save link target"** **[installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/configuration/installation.osf)**<br>
+on PC > right click and "**save link target"** **[installation](installation.osf)**<br>
 on phone the manipulation is variable according to the browser and your Android version >
- **[press on the link](https://github.com/OsmAnd-Rendering/Motorcycle/blob/configuration/installation.osf)** 
+ **[press on the link](installation.osf)** 
  in the window which opens then you will see a button "**download**" or **3 small points** which will allow you to reach "**download**"<br>
 
 ![first_install_dl](https://user-images.githubusercontent.com/83398215/182154084-077cbc2b-35f5-4fe1-acbe-f6842914da52.png)
