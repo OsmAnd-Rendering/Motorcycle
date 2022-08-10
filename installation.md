@@ -48,5 +48,5 @@ la mise à jour est terminée, fermez OsmAnd et relancez-le pour l'utiliser
 
 **NOTE** vous avez maintenant la possibilité de calculer des itinéraires selon n'importe lequel de ces profils.
 
-la méthodologie pour le faire vous-même est décrite dans le **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/installation)**
+la méthodologie pour le faire vous-même est décrite dans le **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--installation-manelle)**
 
