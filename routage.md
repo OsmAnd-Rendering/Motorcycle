@@ -1,4 +1,4 @@
-`🇫🇷 Français`&emsp;🇬🇧 [English](readme_EN.md)
+`🇫🇷 Français`&emsp;🇬🇧 [English](routage_EN.md)
 
 # Motorcycle/routing
 Des calculs de routage pour 3 types d'utilisation moto, chacun de ces routages calcule un itinéraire en fonction des infos disponibles dans OpenStreetMap.
