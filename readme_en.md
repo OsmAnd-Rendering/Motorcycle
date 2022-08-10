@@ -21,14 +21,15 @@ More details in [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
 
 ## Screenshots<br>
 
-| <img src="https://1.bp.blogspot.com/-80KFHZxn-x0/YHhVVHgiDqI/AAAAAAAAEgw/MLuJSVUiiOQsHM9bJUrFQRJCdPtF02YmgCLcBGAsYHQ/s0/millau_cricri_50_1km.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-cEhzfD_lhDM/YHhTZ3UGs9I/AAAAAAAAEgo/C6xCHkJYfHg21bxSQ9YYdhXif-gmv-v5ACLcBGAsYHQ/s0/millau_cricri_50_2km.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-exeX47jqhkE/YHl78COV4-I/AAAAAAAAEhQ/I3XvrOUpvmkKBi8QpOHZ5aZRpA1k255AQCLcBGAsYHQ/s0/balisages.jpg" width="250" /> |
+| <img src="https://user-images.githubusercontent.com/83398215/183831439-a7dd7cf4-dcf2-4445-8d46-e685157f93bf.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183831631-e2f86260-1324-4201-8042-be67361d5ef0.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832089-7a685512-f251-4986-81de-f92a765f964f.jpg" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
 
 ### 
-| <img src="https://1.bp.blogspot.com/-4PDQS4TdN0U/YJzl-K4DbjI/AAAAAAAAEi0/tXv0eyXuGEMS93m2lxKqQqMrqMsf9busgCLcBGAsYHQ/w296-h640/PT%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-VDzxurdpIiI/YJzjwUlMM4I/AAAAAAAAEik/uZcepPSb630Fe-n55IIBL5TmeJz4ZSsfACLcBGAsYHQ/w296-h640/GT_sec%255B1%255D.jpg" width="250" /> | <img src="https://1.bp.blogspot.com/-2jO-scaZT8k/YJzinm1gWHI/AAAAAAAAEic/7Qe9Xhfd9mIbINux-c_4Gw7iRT5DH4ugwCLcBGAsYHQ/w296-h640/GT%255B1%255D.jpg" width="250" /> |
+| <img src="https://user-images.githubusercontent.com/83398215/183832776-3ed55db4-1ce4-4e79-8c3e-97a521e8722e.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832485-45b79c76-e6db-4ccb-b058-5220a79175e5.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832969-e00c8ae1-ec4a-472a-8a17-95958cdeab14.jpg" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
+<br>
 
-## ➡️[Legend](Legend.md)
+## ➡️[Legend](Legend_EN.md)
 
 ## Install
 To update rendering and/or routings or to create routing profiles, preferably use the restore osf files method, see [Configuration](https://github.com/OsmAnd-Rendering/Motorcycle/tree/configuration)
