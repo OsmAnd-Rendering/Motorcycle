@@ -413,8 +413,8 @@
 			
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5">
 				<case tag="leisure" value="nature_reserve" order="10"/>
-				<case tag="boundary" value="protected_area" order="10"/>
-				<case tag="boundary" value="national_park" order="10"/>
+				<case tag="boundary" value="protected_area" order="1" ignorePolygonArea="true"/>
+				<case tag="boundary" value="national_park" order="1" ignorePolygonArea="true"/>
 
 				<case tag="amenity" value="parking" order="10"/>
 				<case tag="amenity" value="school" order="10"/>
@@ -3082,10 +3082,10 @@
 
 		<!-- nature_reserve-->
 		<switch hideAccess="false">
-			<case tag="boundary" value="national_park" />
-			<case tag="boundary" value="protected_area" />
+												
+												 
 			<case tag="leisure" value="nature_reserve" />
-			<apply minzoom="8" color_2="#88ffcccc" strokeWidth_2="1" color="#ffd0d0">
+			<apply minzoom="8" color_2="#88ffcccc" strokeWidth_2="1" color="#99ffd0d0">
 				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1:1"/>
 				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5:1"/>
 				<case maxzoom="11" color_2="#55ff6666" strokeWidth_2="2:1"/>
