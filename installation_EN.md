@@ -50,5 +50,5 @@ the update is finished, close OsmAnd and restart it to use it
 
 **NOTE** you now have the possibility to calculate routes according to any of these profiles.
 
-the methodology for doing it yourself is described in French in the **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--installation-manelle)**
+the methodology for doing it yourself is described in the **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AC%F0%9F%87%A7--Manual-install)**
 
