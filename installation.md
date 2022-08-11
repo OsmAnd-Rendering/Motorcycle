@@ -1,8 +1,8 @@
 `🇫🇷 Français`&emsp;🇬🇧 [English](installation_EN.md)
 
-# Installation
+# Téléchargement
 **1 fichier pour créer les 3 profils, installer le style et enfin installer les 3 routages**<br>
-**[le fonctionnement des routages est ici](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/routage.md)**<br>
+**[le fonctionnement des routages est ici](routage.md)**<br>
 **[le fonctionnement du style est ici](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
 
 sur PC > clic droit et **"enregistrer la cible du lien"** > **[installation](installation.osf)**<br>
@@ -18,6 +18,8 @@ trouvez le dossier dans lequel est votre fichier à l'aide du carré en haut à 
 choisissez-le<br>
 
 ## si OsmAnd s'est déjà ouvert
+passez à l'étape suivante
+
 # Pour une première installation complète
 dans la fenêtre suivante cochez les 2 cases à droite<br>
 
