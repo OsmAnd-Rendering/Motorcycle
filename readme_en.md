@@ -12,7 +12,7 @@ Render style based on off-road motorbike use, with the ways classified by "diffi
 - Additional settings for legibility when riding
 
 - **[More about routing](routage_EN.md)**
-- **[how the style works in French](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
+- **[how the style works](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AC%F0%9F%87%A7-The-render-style)**
 
 ---
 
