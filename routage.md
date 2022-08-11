@@ -65,37 +65,34 @@ Quand vous calculerez un itinéraire vous aurez accès à des infos sur votre pa
 proportion route / chemins (et sentiers pour "enduro")<br>
 type de chemin avec les couleurs correspondantes à celles de la carte avec le style appliqué.<br>
 
-Ici un exemple dans ma région (sud de Toulouse) entre <b>Castelnaudary</b> et <b>Mazamet</b> (environ 60 km à vol d'oiseau à travers "la montagne noire").<br>
+Ici un exemple dans ma région (sud Ouest) (environ 100 km à vol d'oiseau).<br>
 
 avec le routage "<b>gros trail</b>" sans options actives :<br>
 
-<img src="https://1.bp.blogspot.com/-2jO-scaZT8k/YJzinm1gWHI/AAAAAAAAEic/7Qe9Xhfd9mIbINux-c_4Gw7iRT5DH4ugwCLcBGAsYHQ/w296-h640/GT%255B1%255D.jpg" border="0">
-
+<img src="https://user-images.githubusercontent.com/83398215/184142138-352ff7ef-752a-4350-8592-ecd9433d629a.png" width="400">
 
 avec le routage "<b>gros trail</b>" et le switch "<b>si chemins secs</b> actif :<br>
 qui rajoute des chemins "**verts**" moins carrossables dans une faible proportion.<br>
+(notez que la proportion de route diminue)
 
-<img src="https://1.bp.blogspot.com/-VDzxurdpIiI/YJzjwUlMM4I/AAAAAAAAEik/uZcepPSb630Fe-n55IIBL5TmeJz4ZSsfACLcBGAsYHQ/w296-h640/GT_sec%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184142530-e9a10fd9-30d3-4b41-8bd9-331dbd30c0e4.png" width="400">
 
 Avec le routage "<b>petit_trail</b>" et le switch "<b>trie les chemins</b>" actif:<br>
 les résultats sont souvent très proche du "<b>gros_trail</b>" avec "<b>si chemins secs</b>" actif lorsque les chemins sont renseignés dans <b>OpenStreetMap</b>.<br>
-
-<img src="https://1.bp.blogspot.com/-MBjJMjwtXE8/YJzlMde6u4I/AAAAAAAAEis/U9_bZUoYHwIWkeWYLDMDDUXSGCLE9SBZgCLcBGAsYHQ/w296-h640/PT_tri%255B1%255D.jpg" border="0">
-
-Avec le routage "<b>petit_trail</b>" sans le switch "<b>trie les chemins</b>" actif:<br>
-ici très peu de différence, ça dépends de la proportion de chemins renseignés dans <b>OpenStreetMap</b>,<br>
+(mais le type de chemins "vert" change en étant moins "carrossable")
 dans le cas ou la majorité des chemins n'est pas précisée le "tri" des chemins impose plus de route à la place de chemins "difficiles".<br>
 
-<img src="https://1.bp.blogspot.com/-4PDQS4TdN0U/YJzl-K4DbjI/AAAAAAAAEi0/tXv0eyXuGEMS93m2lxKqQqMrqMsf9busgCLcBGAsYHQ/w296-h640/PT%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184142977-1e8ee439-8f1a-4301-ae64-ae093a758a44.png" width="400">
 
-le routage "<b>enduro</b>" avec le respect des interdictions absolues:<br>en rouge les sentiers.<br>
+Avec le routage "<b>petit_trail</b>" sans le switch "<b>trie les chemins</b>" actif:<br>
+la proportion de routes continue de diminuer, les chemins non renseignés dans OpenStreetMap deviennent plus important, jusqu'à représenter la majorité des chemins selon les régions plus ou moins renseignées dans osm.<br>
 
-<img src="https://1.bp.blogspot.com/-lPQmsAg-lZY/YJznCWYqokI/AAAAAAAAEi8/EQTPYrifkY4bNCRXaxVm4Ft8vxnBolyvACLcBGAsYHQ/w296-h640/enduro%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184143477-ba4297bc-d119-4e53-9cab-4f3fe16f45c4.png" width="400">
 
-le routage "<b>enduro</b>" sans respect des interdictions:<br>
-ce qui le fait "raccourcir" la totalité du parcours.<br>
+le routage "<b>enduro</b>" avec en rouge les sentiers.
 
-<img src="https://1.bp.blogspot.com/-3r9uNtRCBgo/YJznZdGuWcI/AAAAAAAAEjE/IQIYaEURhRkv0_W50QshOGITjjCx4U6AQCLcBGAsYHQ/w296-h640/enduro_no-interdit%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184144556-839f5010-b098-4bc4-9dfc-0c787869d131.png" width="400">
+
 
 bon ... n'oubliez pas que c'est perfectible et que dans le meilleur des 
 cas ça se base sur les informations ajoutées dans OpenStreetMap qui 
