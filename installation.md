@@ -5,7 +5,7 @@
 **[le fonctionnement des routages est ici](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/routage.md)**<br>
 **[le fonctionnement du style est ici](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
 
-sur PC > clic droit et **"enregistrer la cible du lien"** **[installation](installation.osf)**<br>
+sur PC > clic droit et **"enregistrer la cible du lien"** > **[installation](installation.osf)**<br>
 sur téléphone la manipulation est variable selon le navigateur et votre Android > **[appuyez sur le lien](installation.osf)** > dans la fenêtre qui s'ouvre ensuite vous verrez un bouton "**download**" ou **3 petits points** qui vous permettrons d'accéder à "**download**"<br>
 
 ![first_install_dl](https://user-images.githubusercontent.com/83398215/182154084-077cbc2b-35f5-4fe1-acbe-f6842914da52.png)
@@ -18,7 +18,7 @@ trouvez le dossier dans lequel est votre fichier à l'aide du carré en haut à 
 choisissez-le<br>
 
 ## si OsmAnd s'est déjà ouvert
-### Pour une première installation complète
+# Pour une première installation complète
 dans la fenêtre suivante cochez les 2 cases à droite<br>
 
 ![first_install](https://user-images.githubusercontent.com/83398215/182154351-9bb8b337-4d75-4c77-a511-f77afb36fd7d.png)<br>
@@ -28,7 +28,7 @@ les 3 profils ont été créés avec leurs fichiers associés, cliquez sur ferme
 
 ![first_install_fin](https://user-images.githubusercontent.com/83398215/182154557-21f53e4c-3804-4081-abe0-b0a31bdda1e6.png)
 
-### Pour une mise à jour du style ou des routages
+# Pour une mise à jour du style ou des routages
 lorsque OsmAnd vous pose la question, ne cochez **QUE** la case "**Ressources**"<br>
 
 ![install5](https://user-images.githubusercontent.com/83398215/182155123-20bb4d60-bb28-4f5f-8708-68fc4553a656.png)<br>
