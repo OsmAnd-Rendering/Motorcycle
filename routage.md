@@ -13,7 +13,8 @@ voir ici **[pour l'installation](installation.md)**
 - respecte les barrières (**points rouges** sur la carte)
 - les chemins "**privés**" sont gérés comme avec le profil par défaut d' OsmAnd.
 - les chemins "**interdits**" sont regroupés sous le switch "<b>pas d'interdiction</b>" dans "<b>Eviter les routes</b>".
-- il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>si chemins secs</b>" qui rajoute quelques chemins "**verts**" de la carte au cas ou il n'y aurai pas de chemins "**marrons**" à proximité.
+- :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>pas de chemins</b>" qui évite au maximum les chemins en restant sur les routes les plus petites possible.
+- :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>si chemins secs</b>" qui rajoute quelques chemins "**verts**" de la carte au cas ou il n'y aurai pas de chemins "**marrons**" à proximité.<br> :warning: Attention à la boue avec des pneus non adaptés !
 - les routes sont hiérarchisées permettant d'avancer plus vite sur de longues distances sans chemins.
 
 <i>(mettez des points intermédiaires pour "forcer" le détour par les "bons" chemins s'il n'y en à pas en ligne directe).</i>
@@ -27,7 +28,7 @@ voir ici **[pour l'installation](installation.md)**
 - les chemins "**privés**" sont gérés comme avec le profil par défaut d' OsmAnd.
 - les chemins "**interdits**" sont regroupés sous le switch "<b>pas d'interdiction</b>" dans "<b>Eviter les routes</b>".
 - privilégie les itinéraires de randonnée et VTT par rapport aux routes.
-- considère tous les chemins de la même façon (pas de carrossable ou de boueux) <b>SAUF</b> si le switch "<b>trie les chemins</b>" dans "<b>Eviter les routes</b>" est actif (coché) il va hiérarchiser les chemins du plus carrossable à inconnu.
+- considère tous les chemins de la même façon (pas de carrossable ou de boueux) <br>:bulb: <b>SAUF</b> si le switch "<b>trie les chemins</b>" dans "<b>Eviter les routes</b>" est actif (coché) il va hiérarchiser les chemins du plus carrossable à inconnu.
 <i><br>
  dans les faits il va pénaliser de plus en plus les chemins qui sont les moins praticables <br>pour aller d'un point A à un point B si 2 chemins à peu près équivalents en distance existent, le moteur de calcul du routage prendra le plus praticable, la proportion de route augmente si les chemins ne sont pas renseignés dans OpenStreetMap.</i>
 - considère toutes les routes au même niveau et donc tracera au plus direct.
