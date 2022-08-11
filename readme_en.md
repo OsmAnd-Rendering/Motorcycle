@@ -5,11 +5,14 @@ Render style based on off-road motorbike use, with the ways classified by "diffi
 
 ## Significant variations from the standard styles:
 <br>
-- Visual identification of ways according to driveability (colour code)<br>
-- Useful / interesting POIs highlighted<br>
-- Difficulty of trails from MTB and pedestrian tags<br>
-- Simplification for legibility of MTB/pedestrian routes<br>
-- Additional settings for legibility when riding<br>
+- Visual identification of ways according to driveability (colour code)
+- Useful / interesting POIs highlighted
+- Difficulty of trails from MTB and pedestrian tags
+- Simplification for legibility of MTB/pedestrian routes
+- Additional settings for legibility when riding
+
+- **[More about routing](routage_EN.md)**
+- **[how the style works in French](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
 
 ---
 
@@ -24,17 +27,15 @@ Render style based on off-road motorbike use, with the ways classified by "diffi
 
 ---
 
-## Instructions d'installation
-<br>
+## Installation instructions
 
-- [installation](installation_EN.md)<br><br>
+- **[installation](installation_EN.md)**
 
 ---
 
 ## Documentation
 
-- [Legend](legend_EN.md)
+- **[Legend](legend_EN.md)**
 
-- [wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+- **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 
-- [More about routing](routage_EN.md)
