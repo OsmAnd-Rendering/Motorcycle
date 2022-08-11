@@ -13,7 +13,7 @@ see here **[for the installation](https://github.com/OsmAnd-Rendering/Motorcycle
 - respect the barriers (**red dots** on the map)
 - the "**private**" tracks are managed as with the default profile of OsmAnd.
 - the "**forbidden**" tracks are grouped under the switch "<b>pas d'interdiction</b>" in "<b>Avoid roads</b>".
-- :bulb: there is another switch in "<b>Avoid roads</b>" to activate a mode "<b>si chemins secs</b>" which adds some "**green**" tracks to the map in case there are no "**brown**" tracks nearby.
+- :bulb: there is another switch in "<b>Avoid roads</b>" to activate a mode "<b>si chemins secs</b>" which adds some "**green**" tracks to the map in case there are no "**brown**" tracks nearby.<br> :warning: Beware of mud with unsuitable tires!
 - :bulb: there is another switch in "<b>Avoid roads</b>" to activate a "<b>pas de chemins</b>" mode which avoids tracks as much as possible by staying on the roads as small as possible.
 - the roads are hierarchical, allowing you to move faster over long distances without tracks.
 
@@ -72,7 +72,7 @@ with "<b>gros trail</b>" routing without active options :
 
 <img src="https://user-images.githubusercontent.com/83398215/184146944-df217706-ea94-48d3-8868-d2896fb4cd25.png" width="400">
 
-with "<b>gros trail</b>" routing and switch "<b>si chemins secs</b> active :<br>
+with "<b>gros trail</b>" routing and switch "<b>si chemins secs</b>" active :<br>
 which adds less passable "green" tracks in a small proportion.<br>
 (note that the proportion of road is decreasing)
 
