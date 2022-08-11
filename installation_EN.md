@@ -1,8 +1,6 @@
 🇫🇷 [Français](README.md)&emsp;`🇬🇧 English`
 
-# [update only](#style-or-routing-updates)
-
-# First installation
+# Download
 1 file to create the 3 profiles, install the style and finally install the 3 routings<br>
 
 on PC > right click and "**save link target"** **[installation](installation.osf)**<br>
@@ -20,6 +18,9 @@ find the folder where your file is using the square on the top right (download i
 choose it<br>
 
 ## if OsmAnd has already opened
+go to next step
+
+# For a complete first-time installation
 in the next window check the 2 boxes on the right<br>
 
 ![first_install](https://user-images.githubusercontent.com/83398215/182154351-9bb8b337-4d75-4c77-a511-f77afb36fd7d.png)<br>
@@ -29,7 +30,7 @@ the 3 profiles have been created with their associated files, click on close to 
 
 ![first_install_fin](https://user-images.githubusercontent.com/83398215/182154557-21f53e4c-3804-4081-abe0-b0a31bdda1e6.png)
 
-# style or routing updates
+# For a style or routing update
 same procedure as in the beginning **BUT** when OsmAnd asks you the question, check **ONLY** the box "**Resources**"<br>
 
 ![install5](https://user-images.githubusercontent.com/83398215/182155123-20bb4d60-bb28-4f5f-8708-68fc4553a656.png)<br>
