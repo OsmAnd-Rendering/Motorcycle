@@ -279,8 +279,8 @@
 		<case tag="highway" value="tertiary_link" attrColorValue="#000000" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="unclassified" attrColorValue="#000000" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="highway_class_road"/>
-		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="highway_class_street"/>
-		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="highway_class_street"/>
+		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="highway_class_road"/>
+		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="service" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="track" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="path" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
@@ -288,68 +288,50 @@
 		<case tag="highway" value="footway"  attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="bridleway" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="steps" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
-		<case tag="highway" value="cycleway" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
-		<case attrColorValue="#00ffff"/>
+		<case tag="highway" value="cycleway" attrColorValue="$trackColor" attrStringValue="highway_class_path"/><!--
+		<case tag="route" value="hiking" attrColorValue="$trackColor" attrStringValue="highway_class_path"/> iOS ?-->
+		<case attrColorValue="#ff0000"/>
 	</renderingAttribute>
-	<!-- dureté de la surface-->
-	<renderingAttribute name="routeInfo_surface"> <!---->
+	<!-- routeInfo_tracktype-->
+	<renderingAttribute name="routeInfo_tracktype"> <!-- dureté de la surface-->
 		<case additional="smoothness=impassable" attrColorValue="#ff0000" attrStringValue="sentier"/>
-		<case additional="smoothness=very_horrible" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="smoothness=horrible" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="route=hiking" attrColorValue="#ff0000" attrStringValue="sentier"/>
-		
-		<case additional="surface=grass" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=mud" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=sand" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=unpaved" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=ground" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=dirt" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=earth" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=pebblestone" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=gravel" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=paved" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=asphalt" attrColorValue="$trackColor" attrStringValue="route"/>
-		<case additional="surface=concrete" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=concrete:lanes" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=concrete:plates" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=paving_stones" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=sett" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=cobblestone" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=compacted" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="surface=fine_gravel" attrColorValue="$trackColor" attrStringValue="piste"/>
-		
-		<case additional="tracktype=grade1" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="tracktype=grade2" attrColorValue="$trackColor" attrStringValue="piste"/> 
-		<case additional="tracktype=grade3" attrColorValue="$trackColor" attrStringValue="piste"/>
-		<case additional="tracktype=grade4" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="tracktype=grade5" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		
-		<case tag="highway" value="track" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="smoothness=very_horrible" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="smoothness=horrible" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="surface=grass" attrColorValue="$trackColor_2" attrStringValue="herbe"/>
+		<case additional="surface=mud" attrColorValue="$trackColor_2" attrStringValue="boue"/>
+		<case additional="surface=sand" attrColorValue="$trackColor_2" attrStringValue="sable"/>
+		<case additional="surface=unpaved" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="surface=ground" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="surface=dirt" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="surface=earth" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="surface=pebblestone" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=gravel" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=paved" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=asphalt" attrColorValue="#000000" attrStringValue="route"/>
+		<case additional="surface=concrete" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=concrete:lanes" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=concrete:plates" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=paving_stones" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=sett" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=cobblestone" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=compacted" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="surface=fine_gravel" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case tag="highway" value="service" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="tracktype=grade1" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="tracktype=grade2" attrColorValue="$trackColor" attrStringValue="carrossable"/> 
+		<case additional="tracktype=grade3" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case additional="tracktype=grade4" attrColorValue="$trackColor_2" attrStringValue="selon météo"/>
+		<case additional="tracktype=grade5" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case tag="highway" value="track" attrColorValue="$trackColor_2" attrStringValue="chemin non précisé"/>
 		<case tag="highway" value="path" attrColorValue="#ff0000" attrStringValue="sentier"/>
 		<case tag="highway" value="footway" attrColorValue="#ff0000" attrStringValue="sentier"/>
 		<case tag="highway" value="bridleway" attrColorValue="#ff0000" attrStringValue="cavalier"/>
 		<case tag="highway" value="steps" attrColorValue="#ff0000" attrStringValue="escalier"/>
 		<case tag="highway" value="cycleway" attrColorValue="#ff0000" attrStringValue="piste cyclable"/>
 		<case tag="highway" value="pedestrian" attrColorValue="#ff0000" attrStringValue="piéton"/>
-		<case tag="highway" value="motorway" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="motorway_link" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="trunk"  attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="trunk_link"  attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="primary" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="primary_link" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="secondary" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="secondary_link" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="tertiary" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="tertiary_link" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="unclassified" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="route"/>
-		<case tag="highway" value="service" attrColorValue="$trackColor" attrStringValue="route"/><!--
-		<case tag="" value="" attrColorValue="#00ffff" attrStringValue="route"/>-->
-		<case attrColorValue="#00ffff"/>
+		<case attrColorValue="#000000" attrStringValue="route"/>
 	</renderingAttribute>
-	
+
 	<!-- input layer check tag, value, point, cycle, area -->
 	<!-- Order should be between 0 and 255 (integer) -->
 	<!-- output ! objectType point = 1, line = 2, polygon = 3 and order -->
