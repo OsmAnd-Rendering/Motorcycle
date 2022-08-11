@@ -1,4 +1,4 @@
-🇫🇷 [Français](README.md)&emsp;`🇬🇧 English`
+🇫🇷 [Français](installation.md)&emsp;`🇬🇧 English`
 
 # Download
 1 file to create the 3 profiles, install the style and finally install the 3 routings<br>
