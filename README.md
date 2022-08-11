@@ -5,11 +5,14 @@ Affichage axé sur l'utilisation en moto tout terrain avec les chemins classifi�
 
 ## Changements notables par rapport aux styles standard :
 
-- Chemins identifiés visuellement par carrossabilité (couleurs)<br>
-- POI utiles / intéressants mis en évidence<br>
-- Difficulté des sentiers à partir des tags VTT et pédestre<br>
-- Simplification pour lisibilité des itinéraires VTT/pédestre<br>
-- Réglages supplémentaires pour la lisibilité en roulant<br>
+- Chemins identifiés visuellement par carrossabilité (couleurs)
+- POI utiles / intéressants mis en évidence
+- Difficulté des sentiers à partir des tags VTT et pédestre
+- Simplification pour lisibilité des itinéraires VTT/pédestre
+- Réglages supplémentaires pour la lisibilité en roulant
+
+- **[fonctionnement du style](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
+- **[fonctionnement des routages](routage.md)**
 
 ## Screenshots<br>
 
@@ -24,18 +27,14 @@ Affichage axé sur l'utilisation en moto tout terrain avec les chemins classifi�
 ---
 
 ## Instructions d'installation
-<br>
 
-- [installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation.md)<br><br>
+- **[installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation.md)**
 
 ---
 
 ## Documentation
 
-- [Légende](Legend.md)
+- **[Légende](Legend.md)**
 
-- [Documentation générale](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)
+- **[Documentation générale](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 
-- [fonctionnement des routages](routage.md)
-
-- [fonctionnement du style](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)
