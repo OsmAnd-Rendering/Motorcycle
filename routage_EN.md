@@ -13,7 +13,8 @@ see here **[for the installation](https://github.com/OsmAnd-Rendering/Motorcycle
 - respect the barriers (**red dots** on the map)
 - the "**private**" tracks are managed as with the default profile of OsmAnd.
 - the "**forbidden**" tracks are grouped under the switch "<b>pas d'interdiction</b>" in "<b>Avoid roads</b>".
-- there is another switch in "<b>Avoid roads</b>" to activate a mode "<b>si chemins secs</b>" which adds some "**green**" tracks to the map in case there are no "**brown**" tracks nearby.
+- :bulb: there is another switch in "<b>Avoid roads</b>" to activate a mode "<b>si chemins secs</b>" which adds some "**green**" tracks to the map in case there are no "**brown**" tracks nearby.
+- :bulb: there is another switch in "<b>Avoid roads</b>" to activate a "<b>pas de chemins</b>" mode which avoids tracks as much as possible by staying on the roads as small as possible.
 - the roads are hierarchical, allowing you to move faster over long distances without tracks.
 
 <i>(put intermediate points to "force" the detour by the "good" tracks if there are none in direct line).</i>
@@ -27,7 +28,7 @@ see here **[for the installation](https://github.com/OsmAnd-Rendering/Motorcycle
 - the "**private**" tracks are managed as with the default profile of OsmAnd.
 - the "**forbidden**" tracks are grouped under the switch "<b>pas d'interdiction</b>" in "<b>Avoid roads</b>".
 - favors hiking and mountain bike routes over roads.
-- Considers all tracks the same (no drivable or muddy) <b>except</b> if the switch "<b>trie les chemins</b>" in "<b>Avoid roads</b>" is active (checked) it will prioritize the tracks from most drivable to unknown.
+- Considers all tracks the same (no drivable or muddy) <br>:bulb: <b>except</b> if the switch "<b>trie les chemins</b>" in "<b>Avoid roads</b>" is active (checked) it will prioritize the tracks from most drivable to unknown.
 <i><br>
 in fact it will penalize more and more the tracks which are the least practicable <br>
 to go from a point A to a point B if 2 tracks approximately equivalent in distance exist, the engine of calculation of routing will take the most practicable, the proportion of road increases if the tracks are not informed in OpenStreetMap</i>
@@ -65,37 +66,33 @@ When you calculate a route you will have access to information about your route<
 proportion road / tracks (and paths for "enduro")<br>
 type of tracks with the colors corresponding to those of the map with the applied style.<br>
 
-Here is an example in my region (south of Toulouse) between <b>Castelnaudary</b> and <b>Mazamet</b> (about 60 km as the crow flies through "la montagne noire).<br>
+Here is an example in my region (South West of France) (about 100 km as the crow flies ).<br>
 
-with "<b>gros trail</b>" routing without active options :<br>
+with "<b>gros trail</b>" routing without active options :
 
-<img src="https://1.bp.blogspot.com/-2jO-scaZT8k/YJzinm1gWHI/AAAAAAAAEic/7Qe9Xhfd9mIbINux-c_4Gw7iRT5DH4ugwCLcBGAsYHQ/w296-h640/GT%255B1%255D.jpg" border="0">
-
+<img src="https://user-images.githubusercontent.com/83398215/184146944-df217706-ea94-48d3-8868-d2896fb4cd25.png" width="400">
 
 with "<b>gros trail</b>" routing and switch "<b>si chemins secs</b> active :<br>
 which adds less passable "green" tracks in a small proportion.<br>
+(note that the proportion of road is decreasing)
 
-<img src="https://1.bp.blogspot.com/-VDzxurdpIiI/YJzjwUlMM4I/AAAAAAAAEik/uZcepPSb630Fe-n55IIBL5TmeJz4ZSsfACLcBGAsYHQ/w296-h640/GT_sec%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184147324-293b2a7a-99bd-4472-999f-9cec8422c684.png" width="400">
 
 with "<b>petit_trail</b>" routing and switch "<b>trie les chemins</b>" active:<br>
-the results are often very close to the "<b>gros_trail</b>" with "<b>si chemins secs</b>" Active when paths are populated in <b>OpenStreetMap.</b>.<br>
+the results are often very close to the "<b>gros_trail</b>" with "<b>si chemins secs</b>" Active when paths are populated in <b>OpenStreetMap.</b><br>
+(but the type of "green" paths changes by being less "passable")
+in the case where the majority of the tracks are not specified, the "sorting" of the tracks imposes more roads instead of "difficult" tracks.<br>
 
-<img src="https://1.bp.blogspot.com/-MBjJMjwtXE8/YJzlMde6u4I/AAAAAAAAEis/U9_bZUoYHwIWkeWYLDMDDUXSGCLE9SBZgCLcBGAsYHQ/w296-h640/PT_tri%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184147455-314db882-13e0-4541-81ab-704b6df65bc6.png" width="400">
 
 with "<b>petit_trail</b>" routing without the switch "<b>trie les chemins</b>" active:<br>
-here very little difference, it depends on the proportion of tracks informed in <b>OpenStreetMap</b>,<br>
-in case the majority of the tracks is not specified the "sorting" of the tracks imposes more roads instead of "unknown" tracks.<br>
+the proportion of roads continues to decrease, the tracks not populated in **OpenStreetMap** become more important, until representing the majority of the tracks according to the regions more or less populated in osm.<br>
 
-<img src="https://1.bp.blogspot.com/-4PDQS4TdN0U/YJzl-K4DbjI/AAAAAAAAEi0/tXv0eyXuGEMS93m2lxKqQqMrqMsf9busgCLcBGAsYHQ/w296-h640/PT%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184147989-424d0651-25a6-485a-8e5f-60a8cbbf6dd8.png" width="400">
 
-"<b>enduro</b>" routing with respect to absolute prohibitions:<br>in red the paths.<br>
+"<b>enduro</b>" in red the paths.
 
-<img src="https://1.bp.blogspot.com/-lPQmsAg-lZY/YJznCWYqokI/AAAAAAAAEi8/EQTPYrifkY4bNCRXaxVm4Ft8vxnBolyvACLcBGAsYHQ/w296-h640/enduro%255B1%255D.jpg" border="0">
-
-"<b>enduro</b>" routing without respecting prohibitions:<br>
-which makes him "shorten" the whole course.<br>
-
-<img src="https://1.bp.blogspot.com/-3r9uNtRCBgo/YJznZdGuWcI/AAAAAAAAEjE/IQIYaEURhRkv0_W50QshOGITjjCx4U6AQCLcBGAsYHQ/w296-h640/enduro_no-interdit%255B1%255D.jpg" border="0">
+<img src="https://user-images.githubusercontent.com/83398215/184148099-cba8bfe4-c741-4d47-9084-f507566e6c65.png" width="400">
 
 well ... don't forget that it is perfectible and that in the best case it is based on the information added in OpenStreetMap which may be obsolete (recently destroyed tracks) or based on a subjective impression of the person who filled it in (level of difficulty for example).
 <br>
