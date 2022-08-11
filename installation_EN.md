@@ -23,29 +23,28 @@ go to next step
 # For a complete first-time installation
 in the next window check the 2 boxes on the right<br>
 
-![first_install](https://user-images.githubusercontent.com/83398215/182154351-9bb8b337-4d75-4c77-a511-f77afb36fd7d.png)<br>
+![import_en](https://user-images.githubusercontent.com/83398215/184083008-61dcb1e8-20fe-4a64-a089-d41c0713cbbc.png)<br>
 and press "**continue**" (at the bottom)<br>
 
 the 3 profiles have been created with their associated files, click on close to finish.<br>
 
-![first_install_fin](https://user-images.githubusercontent.com/83398215/182154557-21f53e4c-3804-4081-abe0-b0a31bdda1e6.png)
+![import2_en](https://user-images.githubusercontent.com/83398215/184083483-908f0a37-e5a2-4c6b-965d-c976ce4a7e65.png)<br>
 
 # For a style or routing update
 When OsmAnd asks you the question, check **ONLY** the box "**Resources**"<br>
 
-![install5](https://user-images.githubusercontent.com/83398215/182155123-20bb4d60-bb28-4f5f-8708-68fc4553a656.png)<br>
+![import3_en](https://user-images.githubusercontent.com/83398215/184084116-98808b3d-9bb5-4553-92ac-b3bf36ace755.png)<br>
 
 in the next window
 
-![install6](https://user-images.githubusercontent.com/83398215/182155547-df4e2f7b-7331-40c0-a69d-80426840b37d.png)<br>
+![import4_en](https://user-images.githubusercontent.com/83398215/184084404-90609c9e-086b-456e-8ccb-e8370b2bd3a6.png)<br>
 
-
-![install7](https://user-images.githubusercontent.com/83398215/182155562-63eee0db-5fc3-4353-b0ec-8380c6172e39.png)<br>
+![import5_en](https://user-images.githubusercontent.com/83398215/184084626-4725ed89-2268-4461-98c7-83247bbef6d2.png)<br>
 validate the following choice "**Replace all**".
 
 the update is finished, close OsmAnd and restart it to use it
 
-![install8](https://user-images.githubusercontent.com/83398215/182156221-0c37cfbd-23dc-4929-8d84-80ef5a99662a.png)<br>
+![import6_en](https://user-images.githubusercontent.com/83398215/184084869-e2f24bc0-b06e-4d3c-b8fb-dd6c051d88c6.png)<br>
 <br>
 <br>
 
