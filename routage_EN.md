@@ -101,4 +101,4 @@ well ... don't forget that it is perfectible and that in the best case it is bas
 <br>
 <br>
  
-more details in French in the **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--Routing)**
+more details in the **[wiki]([https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--Routing](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AC%F0%9F%87%A7--Routing))**
