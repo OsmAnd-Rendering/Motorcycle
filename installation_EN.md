@@ -31,7 +31,7 @@ the 3 profiles have been created with their associated files, click on close to 
 ![first_install_fin](https://user-images.githubusercontent.com/83398215/182154557-21f53e4c-3804-4081-abe0-b0a31bdda1e6.png)
 
 # For a style or routing update
-same procedure as in the beginning **BUT** when OsmAnd asks you the question, check **ONLY** the box "**Resources**"<br>
+When OsmAnd asks you the question, check **ONLY** the box "**Resources**"<br>
 
 ![install5](https://user-images.githubusercontent.com/83398215/182155123-20bb4d60-bb28-4f5f-8708-68fc4553a656.png)<br>
 
