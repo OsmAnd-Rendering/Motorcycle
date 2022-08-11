@@ -1,4 +1,4 @@
-`🇫🇷 Français`&emsp;🇬🇧 [English](readme_EN.md)
+`🇫🇷 Français`&emsp;🇬🇧 [English](installation_EN.md)
 
 # Installation
 **1 fichier pour créer les 3 profils, installer le style et enfin installer les 3 routages**<br>
