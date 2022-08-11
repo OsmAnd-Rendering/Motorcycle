@@ -4,7 +4,7 @@
 Render style based on off-road motorbike use, with the ways classified by "difficulty", according to the type of vehicle and the available information in OpenStreetMap.
 
 ## Significant variations from the standard styles:
-<br>
+
 - Visual identification of ways according to driveability (colour code)
 - Useful / interesting POIs highlighted
 - Difficulty of trails from MTB and pedestrian tags
