@@ -27,8 +27,6 @@
 		<parameter id="avoid_track" name="pas de chemins" description="evite les chemins" type="boolean" default="false"/>
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean" default="false"/>
 		<parameter id="avoid_mud" name="si chemins secs" description="ajoute chemins en terre" type="boolean" default="false"/>
-		<parameter id="avoid_toll" name="Avoid toll roads" description="Avoid toll roads" type="boolean"/>
-		<parameter id="avoid_motorway" name="Avoid motorways" description="Avoid motorways" type="boolean"/>
 		<parameter id="avoid_borders" name="Avoid border crossing" description="Avoid crossing a border into another country" type="boolean"/>
 		<parameter id="avoid_ice_roads_fords" name="Avoid ice roads, fords" description="Avoid ice roads and fords" type="boolean"/>
 		<parameter id="allow_private" name="Allow private access" description="Allow access to private areas" type="boolean" default="false"/>
@@ -196,12 +194,6 @@
 
 		<way attribute="priority">
 		
-			<if param="avoid_motorway">
-				<select value="0.1" t="highway" v="motorway"/>
-				<select value="0.1" t="motorroad" v="yes"/>
-				<select value="0.1" t="highway" v="motorway_link"/>
-			</if>
-						
 			<select value="0.1" t="highway" v="motorway"/>
 			<select value="0.1" t="highway" v="motorway_link"/>
 			<select value="0.15" t="highway" v="trunk"/>
