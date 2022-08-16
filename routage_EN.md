@@ -4,7 +4,8 @@
 Routing calculations for 3 types of motorcycle use, each of these routings calculates a route based on the information available in OpenStreetMap.
 <br>
 
-see here **[for the installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)**
+see here **[for the installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation_EN.md)**<br>
+explanations in French on the categories of **[tracks](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
 
 ## heavy trailbike 
 <b>will take you ONLY on the easy tracks (the brown ones) and if he can't find any, on the road and very small bits of some green tracks.</b>
