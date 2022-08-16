@@ -4,7 +4,8 @@
 Des calculs de routage pour 3 types d'utilisation moto, chacun de ces routages calcule un itinéraire en fonction des infos disponibles dans OpenStreetMap.
 <br>
 
-voir ici **[pour l'installation](installation.md)**
+voir ici **[pour l'installation](installation.md)**<br>
+explications sur les catégories de **[chemins](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
 
 ## gros trail 
 <b>ne vous fera passer QUE par les chemins faciles (les marrons) et s'il n'en trouve pas, par la route et de tout petits bouts de certains chemins verts.</b>
