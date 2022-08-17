@@ -7,7 +7,7 @@ Render style based on off-road motorbike use, with the ways classified by "diffi
 
 - Visual identification of ways according to driveability (colour code) **[explanations in French](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
 - Useful / interesting POIs highlighted
-- Difficulty of trails from MTB and pedestrian tags
+- Difficulty of trails from MTB and pedestrian tags **[explanations in French](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/difficult%C3%A9-des-sentiers)**
 - Simplification for legibility of MTB/pedestrian routes
 - Additional settings for legibility when riding
 
