@@ -5,8 +5,7 @@ Affichage axé sur l'utilisation en moto tout terrain avec les chemins classifi�
 
 ## Changements notables par rapport aux styles standard :
 
-- Chemins identifiés visuellement par carrossabilité (couleurs) **[explications](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)
-)**
+- Chemins identifiés visuellement par carrossabilité (couleurs) **[explications](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
 - POI utiles / intéressants mis en évidence
 - Difficulté des sentiers à partir des tags VTT et pédestre
 - Simplification pour lisibilité des itinéraires VTT/pédestre
