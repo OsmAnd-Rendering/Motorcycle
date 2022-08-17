@@ -404,9 +404,13 @@
 				<case tag="boundary" value="protected_area" order="1" ignorePolygonArea="true"/>
 				<case tag="boundary" value="national_park" order="1" ignorePolygonArea="true"/>
 
+				<case tag="leisure" value="park" order="6"/>
+				<case tag="leisure" value="sports_centre" order="7"/>
+				<case tag="leisure" value="pitch" order="8"/>
+				<case tag="leisure" value="track" order="8"/>
 				<case tag="amenity" value="parking" order="10"/>
 				<case tag="amenity" value="school" order="10"/>
-		<!--	<case tag="leisure" value="" order="10"/>-->
+				<case tag="leisure" value="" order="10"/><!---->
 				
 				<case tag="boundary" value="forestry_compartment" order="10"/>
 				
@@ -480,15 +484,17 @@
 				<case tag="natural" value="scrub" order="7"/>
 				<case tag="natural" value="wood" order="7"/>
 				<case tag="natural" value="heath" order="8"/>
+				<case tag="natural" value="grassland" order="8"/>
 				<case tag="natural" value="stone"/>
 				<case tag="natural" value="bare_rock" order="9"/>
 				<case tag="natural" value="crevasse">
 					<apply_if lessDetailed="true" maxzoom="15" order="-1"/>
 				</case>
 				
-				<case tag="landuse" value="residential" order="8"/>
+				<case tag="landuse" value="residential" order="2"/>
 				<case tag="landuse" value="farmyard" order="8"/>
 				<case tag="landuse" value="farmland" order="8"/>
+				<case tag="landuse" value="grass" order="9"/>
 				<case tag="landuse" value="vineyard" order="9"/>
 				<case tag="landuse" value="forest" order="7"/>
 				<case tag="wood:lost" value="" order="7"/>
@@ -1641,15 +1647,15 @@
 				<case minzoom="15" tag="natural" value="sand" textOrder="244"/>
 				<case minzoom="17" tag="landuse" value="orchard" textOrder="239"/>
 				<case minzoom="17" tag="natural" value="heath" textOrder="245"/>
-				<case minzoom="17" tag="landuse" value="meadow" textOrder="243"/>
+				<case minzoom="18" tag="landuse" value="meadow" textOrder="243"/>
 				<case minzoom="18" tag="landuse" value="village_green" textOrder="243"/>
-				<case minzoom="17" tag="landuse" value="plant_nursery" textOrder="239"/>
+				<case minzoom="19" tag="landuse" value="plant_nursery" textOrder="239"/>
 				<case minzoom="19" tag="landuse" value="recreation_ground" textOrder="242"/>
 				<case minzoom="17" tag="landuse" value="farmland" textOrder="248"/>
-				<case minzoom="17" tag="landuse" value="grass" textOrder="247"/>
+				<case minzoom="18" tag="landuse" value="grass" textOrder="247"/>
 				<case minzoom="17" tag="natural" value="grassland" textOrder="250"/>
-				<case minzoom="17" tag="landuse" value="vineyard" textOrder="240"/>
-				<case minzoom="17" tag="landuse" value="greenhouse_horticulture" textOrder="239"/>
+				<case minzoom="17" tag="landuse" value="vineyard" textOrder="240"/><!--
+				<case minzoom="17" tag="landuse" value="greenhouse_horticulture" textOrder="239"/>-->
 				<case minzoom="17" tag="landuse" value="conservation" textOrder="246"/>
 				<case minzoom="12" tag="natural" value="fell" textOrder="250"/>
 				<case tag="natural" value="desert" textSize="11"/>									
@@ -1666,6 +1672,7 @@
 				<case minzoom="23" tag="leisure" value="park" textOrder="254"/>
 				<case minzoom="23" tag="leisure" value="common" textOrder="169"/>
 				<case minzoom="19" tag="leisure" value="stadium" textOrder="114"/>
+				<case minzoom="22" tag="leisure" value="sport_centre" textOrder="154"/>
 				<case minzoom="22" tag="leisure" value="pitch" textOrder="254"/>
 				<case minzoom="22" tag="leisure" value="bleachers" textOrder="254"/>
 				<apply textColor="#339933" />
@@ -2255,9 +2262,8 @@
 			<case minzoom="14" tag="tourism" value="cabin" icon="topo_cabin" shield="green_round_shield"/>
 			<case minzoom="14" tag="tourism" value="lean_to" icon="topo_lean_to" shield="green_round_shield"/>
 			<case minzoom="14" tag="tourism" value="wilderness_hut" icon="topo_wilderness_hut" shield="green_round_shield"/>
-			<case minzoom="15" tag="amenity" value="shelter" icon="topo_shelter" shield="green_round_shield" iconOrder="130" >
-				<apply_if additional="shelter_type=public_transport" icon="" shield="" />
-			</case>
+			<case minzoom="15" tag="amenity" value="shelter" icon="topo_shelter" shield="green_round_shield" iconOrder="130" />
+			<case minzoom="15" tag="shelter_type" value="public_transport" icon="" shield="" />
 			<apply_if minzoom="14" additional="drinking_water=yes" icon_2="topo_drinking_water_yes_map"/><!--
 			<apply_if minzoom="16" additional="drinking_water=no" icon_2="topo_drinking_water_no_map"/>-->
 		</switch>
@@ -2633,7 +2639,6 @@
 					<apply_if nightMode="true" color_2="#777777" />
 				</case>
 			</case>
-			<case minzoom="14" tag="leisure" value="track" color="#f3ffe9" color_2="#000000" cap_2="ROUND"/>
 			<case minzoom="12" tag="leisure" value="beach_resort" color="#e6d4a9" strokeWidth_2="0.5:1" color_2="#ad862b"/>
 			<case minzoom="12" tag="natural" value="beach" shader="beach3">
 				<apply_if nightMode="true" shader="beach2night"/>
@@ -2653,8 +2658,10 @@
 			<switch minzoom="13">
 				<case tag="leisure" value="stadium" />
 				<case minzoom="13" tag="leisure" value="golf_course" />
-				<case minzoom="14" tag="leisure" value="sports_centre" />
+				<case minzoom="13" tag="leisure" value="sports_centre" />
 				<case minzoom="15" tag="leisure" value="pitch" />
+				<case minzoom="16" tag="leisure" value="track" />
+				<case minzoom="16" tag="area:leisure" value="track"/>
 				<case minzoom="16" tag="leisure" value="water_park" />
 				<case minzoom="16" tag="leisure" value="bleachers" />
 				<apply color="#e3ffd9" color_2="#66cc99" strokeWidth_2="0.5:1"/>
@@ -3175,7 +3182,7 @@
 					<case maxzoom="11" strokeWidth="3" />
 					<case maxzoom="12" strokeWidth="4" />
 					<case maxzoom="13" strokeWidth="5" />
-					<case maxzoom="14" strokeWidth="6" strokeWidth_0="10"/>
+					<case maxzoom="14" strokeWidth="6" strokeWidth_0="10"/><!-- ponts -->
 					<case maxzoom="15" strokeWidth="8" strokeWidth_0="14"/>
 					<case maxzoom="16" strokeWidth="10" strokeWidth_0="16"/>
 					<case maxzoom="17" strokeWidth="12" strokeWidth_0="18"/>
@@ -3188,7 +3195,7 @@
 						<case maxzoom="10" shadowColor="#660000" />
 						<case minzoom="11" shadowColor="#000000" />
 					</apply>
-					<apply_if nightMode="true" color="#cc4f4f" shadowColor="#000000" /><!-- af6f6f -->
+					<apply_if nightMode="true" color="#cc4f4f" shadowColor="#000000" />
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cc3333"/>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
 				</apply>
@@ -3218,7 +3225,7 @@
 						<case minzoom="11" shadowColor="#000000" />
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#cc9900" shadowColor="#000000"/><!-- af8f6f -->
+					<apply_if nightMode="true" color="#cc9900" shadowColor="#000000"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cc9922"/>
 				</apply>
 			</switch>
@@ -3234,7 +3241,7 @@
 					<case maxzoom="13" strokeWidth="4.5" />
 					<case maxzoom="14" strokeWidth="5.5" strokeWidth_0="9.5"/>
 					<case maxzoom="15" strokeWidth="7.5" strokeWidth_0="13.5"/>
-					<case maxzoom="16" strokeWidth="9.5" strokeWidth_0="15.5"/>
+					<case maxzoom="16" strokeWidth="9.5"  strokeWidth_0="15.5"/>
 					<case maxzoom="17" strokeWidth="11.5" strokeWidth_0="17.5"/>
 					<case maxzoom="18" strokeWidth="13.5" strokeWidth_0="19.5"/>
 					<case maxzoom="19" strokeWidth="15.5" strokeWidth_0="21.5"/>
@@ -3245,7 +3252,7 @@
 						<case minzoom="11" shadowColor="#000000" />
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#cccc66" shadowColor="#000000"/><!-- afaf6f -->
+					<apply_if nightMode="true" color="#cccc66" shadowColor="#000000"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cccc66"/>
 				</apply>
 			</switch>
@@ -3263,7 +3270,7 @@
 					<case maxzoom="18" strokeWidth="8" strokeWidth_0="11"/>
 					<case maxzoom="19" strokeWidth="9" strokeWidth_0="12"/>
 					<case maxzoom="20" strokeWidth="10" strokeWidth_0="13"/>
-					<case minzoom="21" strokeWidth="11" strokeWidth_0="14"/>
+					<case minzoom="21" strokeWidth="11" strokeWidth_0="14" />
 					<apply color="#FFffff" >
 						<case maxzoom="12" shadowColor="#333333" />
 						<case minzoom="13" shadowColor="#000000" />
@@ -3279,7 +3286,7 @@
 				<case minzoom="12" tag="highway" value="residential" />
 				<case minzoom="13" tag="highway" value="living_street" />
 				<apply strokeWidth_0="0"> 
-					<case maxzoom="12" strokeWidth="1.4" />
+					<case maxzoom="12" strokeWidth="1.6" />
 					<case maxzoom="13" strokeWidth="2.2" />
 					<case maxzoom="14" strokeWidth="3" />
 					<case maxzoom="15" strokeWidth="4" />
@@ -3289,14 +3296,10 @@
 					<case maxzoom="19" strokeWidth="8" strokeWidth_0="11"/>
 					<case maxzoom="20" strokeWidth="9" strokeWidth_0="12"/>
 					<case minzoom="21" strokeWidth="10" strokeWidth_0="13"/>
-					<apply color="#ffffff" shadowColor="#444444" >
-						<case maxzoom="12" shadowColor="#666666" />
-						<case maxzoom="13" shadowColor="#555555" />					
-					</apply>
+					<apply color="#ffffff" shadowColor="#444444" />
 					<apply_if nightMode="true" color="#666666" />
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00444444"/>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#444444" shadowRadius="0"/>
-					<apply_if maxzoom="12" color="#cccccc" shadowColor="#444444"/>
 					<apply_if lessDetailed="true" maxzoom="12" strokeWidth="0"/>
 				</apply>
 			</switch>
@@ -3307,7 +3310,7 @@
 				<apply_if layer="-2" disable="true" />
 				<apply_if layer="-3" disable="true" />
 				<apply strokeWidth_0="0" >
-					<case maxzoom="12" strokeWidth="1.4" />
+					<case maxzoom="12" strokeWidth="1.6" />
 					<case maxzoom="13" strokeWidth="2.2" />
 					<case maxzoom="14" strokeWidth="3" />
 					<case maxzoom="15" strokeWidth="4" />
@@ -3317,14 +3320,10 @@
 					<case maxzoom="19" strokeWidth="8" strokeWidth_0="11"/>
 					<case maxzoom="20" strokeWidth="9" strokeWidth_0="12"/>
 					<case minzoom="21" strokeWidth="10" strokeWidth_0="13"/>
-					<apply color="#ffffff" shadowColor="#444444" >
-						<case maxzoom="12" shadowColor="#666666" />
-						<case maxzoom="13" shadowColor="#555555" />					
-					</apply>
+					<apply color="#ffffff" shadowColor="#444444" />
 					<apply_if additional="bridge=yes" color_0="#444444" shadowRadius="0"/>
 					<apply_if nightMode="true" color="#888888" color_0="#000000"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cfcccc"/>
-					<apply_if maxzoom="12" color="#cccccc" shadowColor="#444444"/>
 					<apply_if lessDetailed="true" maxzoom="12" strokeWidth="0"/>
 					<apply_if layer="-1" color="#66fff0e0" /> 
 				</apply>
@@ -3434,20 +3433,21 @@
 			
 			<!-- contour (:1) pour blueshacks-->
 			<apply  >
-				<case maxzoom="13" shadowRadius="0.8:1" />
-				<case maxzoom="14" shadowRadius="1:1" />
-				<case maxzoom="15" shadowRadius="1.2:1" />
-				<case maxzoom="16" shadowRadius="1.4:1" />
-				<case maxzoom="17" shadowRadius="1.6:1" />
-				<case maxzoom="18" shadowRadius="1.8:1" />
-				<case maxzoom="19" shadowRadius="2:1" />
-				<case minzoom="20" shadowRadius="2.2:1" />
+				<case maxzoom="12" shadowRadius="0.6:1" />
+				<case maxzoom="13" shadowRadius="1:1" />
+				<case maxzoom="14" shadowRadius="1.3:1" />
+				<case maxzoom="15" shadowRadius="1.5:1" />
+				<case maxzoom="16" shadowRadius="1.7:1" />
+				<case maxzoom="17" shadowRadius="1.9:1" />
+				<case maxzoom="18" shadowRadius="2.1:1" />
+				<case maxzoom="19" shadowRadius="2.3:1" />
+				<case minzoom="20" shadowRadius="2.5:1" />
 			</apply>
 
-			<apply_if nightMode="true" shadowColor="#000000" shadowRadius="2"/>
+			<apply_if nightMode="true" shadowColor="#000000" shadowRadius="2"/><!--
 			<apply_if maxzoom="12" tag="highway" value="residential" shadowRadius="0.6:1" cap="BUTT"/>
 			<apply_if maxzoom="13" tag="highway" value="living_street" shadowRadius="0.6:1" cap="BUTT"/>
-			<apply_if maxzoom="12"  tag="highway" value="service"  shadowRadius="0.6:1" cap="BUTT"/>
+			<apply_if maxzoom="12"  tag="highway" value="service"  shadowRadius="0.6:1" cap="BUTT"/>-->
 			
 		</switch>
 			
