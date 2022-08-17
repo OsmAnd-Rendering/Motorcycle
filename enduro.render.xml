@@ -3529,7 +3529,7 @@
 					<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="9_8" />
 					</apply>
 					<apply_if nightMode="true" color_5="#999999" />
-					<apply_if ign="true" pathEffect_5="" color_5="#000000">
+					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="true" maxzoom="14" strokeWidth_5="0" />
 					</apply_if>
 					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
@@ -3555,7 +3555,7 @@
 							<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="19_8"/> 
 							<apply_if nightMode="true" color_5="#009933"/>
 						</apply > 						
-					<apply_if ign="true" pathEffect_5="" color_5="#000000">
+					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="true" maxzoom="14" strokeWidth_5="0" />
 					</apply_if>
 					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
@@ -3581,7 +3581,7 @@
 						<case minzoom="18" strokeWidth_5="3.8" color_5="#66af00"/> 
 						<apply_if nightMode="true" color_5="#009933"/>
 					</apply > 
-					<apply_if ign="true" pathEffect_5="" color_5="#000000">
+					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="true" maxzoom="14" strokeWidth_5="0" />
 					</apply_if>
 					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
@@ -3616,7 +3616,7 @@
 					</apply_if>
 					<apply_if ign="true" pathEffect_5="">
 						<case noPolygons="true" maxzoom="14" strokeWidth_5="0" />
-						<case lessDetailed="false" color_5="#000000" />
+						<case lessDetailed="false" color_5="#114411" />
 					</apply_if>
 					<apply_if baseAppMode="pedestrian" pathEffect_5=""/> 
 				</switch>
@@ -3661,19 +3661,30 @@
 						<case minzoom="18" strokeWidth_5="4.4"/> 
 						<apply_if nightMode="true" color_5="#444400"/>
 					</apply_if>
-					<apply_if ign="true"  strokeWidth_5="0" color="#ffffff" color_0="#000000" color_5="#ffffff">
+					<apply_if ign="true"  strokeWidth_5="0" color="#ffffff" color_5="#ffffff">
 						<case maxzoom="11" strokeWidth="0" /> 
-						<case maxzoom="12" strokeWidth="2" strokeWidth_0="4" pathEffect_0="8_2" /> 
-						<case maxzoom="13" strokeWidth="2.5" strokeWidth_0="5" pathEffect_0="8_2"/>
-						<case maxzoom="14" strokeWidth="3" strokeWidth_0="5.5" pathEffect_0="17_5"/>
-						<case maxzoom="15" strokeWidth="3.5" strokeWidth_0="6.5" pathEffect_0="15_4"/>
-						<case maxzoom="16" strokeWidth="4" strokeWidth_0="7" pathEffect_0="17_5"/>
-						<case maxzoom="17" strokeWidth="4.5" strokeWidth_0="7.5" pathEffect_0="20_6"/>
-						<case maxzoom="18" strokeWidth="5" strokeWidth_0="8" pathEffect_0="25_7"/>
-						<case maxzoom="19" strokeWidth="5.5" strokeWidth_0="8.5" pathEffect_0="30_8"/>
-						<case maxzoom="20" strokeWidth="6" strokeWidth_0="9" pathEffect_0="35_9"/>
-						<case minzoom="21" strokeWidth="6.5" strokeWidth_0="9.5" pathEffect_0="40_10"/>
-						<apply_if noPolygons="true" maxzoom="12" strokeWidth="0" strokeWidth_0="0"/>
+						<case maxzoom="12" strokeWidth="2" pathEffect="8_3" /> 
+						<case maxzoom="13" strokeWidth="2.5" pathEffect="10_4"/>
+						<case maxzoom="14" strokeWidth="3" pathEffect="13_5"/>
+						<case maxzoom="15" strokeWidth="3.5" pathEffect="15_6"/>
+						<case maxzoom="16" strokeWidth="4" pathEffect="17_6"/>
+						<case maxzoom="17" strokeWidth="4.5" pathEffect="20_7"/>
+						<case maxzoom="18" strokeWidth="5" pathEffect="25_8"/>
+						<case maxzoom="19" strokeWidth="5.5" pathEffect="30_9"/>
+						<case maxzoom="20" strokeWidth="6" pathEffect="35_10"/>
+						<case minzoom="21" strokeWidth="6.5" pathEffect="40_11"/>
+						<apply_if noPolygons="true" maxzoom="12" strokeWidth="0" />
+						<apply  shadowColor="#000000">
+							<case maxzoom="12" shadowRadius="0.6:1" />
+							<case maxzoom="13" shadowRadius="1:1" />
+							<case maxzoom="14" shadowRadius="1.3:1" />
+							<case maxzoom="15" shadowRadius="1.5:1" />
+							<case maxzoom="16" shadowRadius="1.7:1" />
+							<case maxzoom="17" shadowRadius="1.9:1" />
+							<case maxzoom="18" shadowRadius="2.1:1" />
+							<case maxzoom="19" shadowRadius="2.3:1" />
+							<case minzoom="20" shadowRadius="2.5:1" />
+						</apply>
 					</apply_if>
 				</switch>
 
