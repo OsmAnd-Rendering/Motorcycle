@@ -16,7 +16,10 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 - les chemins "**interdits**" sont regroupés sous le switch "<b>pas d'interdiction</b>" dans "<b>Eviter les routes</b>".
 - :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>pas de chemins</b>" qui évite au maximum les chemins en restant sur les routes les plus petites possible.
 - :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>si chemins secs</b>" qui rajoute quelques chemins "**verts**" de la carte au cas ou il n'y aurai pas de chemins "**marrons**" à proximité.<br> :warning: Attention à la boue avec des pneus non adaptés !
-- les routes sont hiérarchisées permettant d'avancer plus vite sur de longues distances sans chemins.
+- considère toutes les routes au même niveau et donc tracera au plus direct.
+
+**:warning: dans les "Paramètres de l'itinéraire" ne cochez pas "utiliser un algorithme de routage A à 2 phase**<br>
+<i> sinon vous ne prendrez que de la route</i>
 
 <i>(mettez des points intermédiaires pour "forcer" le détour par les "bons" chemins s'il n'y en à pas en ligne directe).</i>
 <br>
