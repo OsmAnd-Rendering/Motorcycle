@@ -2300,8 +2300,8 @@
 		</switch>
 		
 		<!-- Barrieres -->
-		<switch hideAccess="false" lessDetailed="false" iconOrder="100">
-			<switch  >
+		<switch hideAccess="false"  iconOrder="100">
+			<switch  lessDetailed="false">
 				<switch>
 					<case minzoom="14" tag="barrier" value="gate" >
 						<apply_if maxzoom="14" icon="barrier_small_red_bold_2"/>
@@ -2321,6 +2321,11 @@
 						<case minzoom="14" tag="military" value="checkpoint" icon="military_checkpoint" shield="military_checkpoint_shield"/>
 						<case minzoom="14" tag="barrier" value="border_control" icon="barrier_border_control" shield="gray_round_shield" />
 						<case minzoom="14" tag="barrier" value="block" icon="barrier_block" shield="topo_barrier_block_shield"/>
+						<case minzoom="16" tag="barrier" value="entrance" icon="barrier_entrance" shield="barrier_entrance_shield"/>
+						<case minzoom="17" tag="barrier" value="cattle_grid" icon="barrier_cattle_grid" shield="barrier_cattle_grid_shield"/>
+						<case minzoom="16" tag="barrier" value="turnstile" icon="barrier_turnstile" shield="barrier_turnstile_shield" iconOrder="128"/>
+						<case minzoom="16" tag="barrier" value="horse_stile" icon="barrier_horse_stile" shield="barrier_horse_stile_shield"/>
+						<case minzoom="15" tag="barrier" value="sally_port" icon="barrier_sally_port" shield="barrier_sally_port_shield" iconOrder="138"/>
 						<apply_if minzoom="14" maxzoom="15" icon="barrier_small_red_bold_1" shield="" />
 						<apply_if minzoom="16" shield="red_round_shield" iconOrder="254"/>
 					</switch>
@@ -2330,25 +2335,11 @@
 						<apply_if minzoom="14" maxzoom="14" icon="barrier_small_brown_bold_2" shield="" iconVisibleSize="0"/>
 						<apply_if minzoom="15" maxzoom="15" icon="barrier_small_brown_bold_1" shield="" iconVisibleSize="0"/>
 					</switch>
-					<case minzoom="16" tag="barrier" value="entrance" icon="barrier_entrance" shield="barrier_entrance_shield"/>
-					<case minzoom="17" tag="barrier" value="cattle_grid" icon="barrier_cattle_grid" shield="barrier_cattle_grid_shield"/>
-					<case minzoom="16" tag="barrier" value="turnstile" icon="barrier_turnstile" shield="barrier_turnstile_shield" iconOrder="128"/>
-					<case minzoom="16" tag="barrier" value="horse_stile" icon="barrier_horse_stile" shield="barrier_horse_stile_shield"/>
-					<case minzoom="15" tag="barrier" value="sally_port" icon="barrier_sally_port" shield="barrier_sally_port_shield" iconOrder="138"/>
 				</switch>
-				<apply_if hideAccess="false">
-					<switch minzoom="14" maxzoom="15">
-						<case additional="access=private"/>
-						<case additional="access=no"/>
-						<apply iconVisibleSize="0" shield=""/>
-						<apply_if maxzoom="14" icon="barrier_small_red_bold_2"/>
-						<apply_if minzoom="15" maxzoom="15" icon="barrier_small_red_bold_1"/>
-					</switch>
-				</apply_if>
-				<apply_if hideAccess="false" minzoom="16" additional="access=private" icon_2="access_private_red_overlay"/>
-				<apply_if hideAccess="false" minzoom="16" additional="access=no" icon_2="access_private_red_overlay"/>
+				<apply_if minzoom="16" additional="access=private" icon_2="access_private_red_overlay"/>
+				<apply_if minzoom="16" additional="access=no" icon_2="access_private_red_overlay"/>
 			</switch>
-			<switch minzoom="17" iconVisibleSize="10" intersectionSizeFactor="0.8" intersectsWith="">
+			<switch lessDetailed="false" minzoom="17" iconVisibleSize="10" intersectionSizeFactor="0.8" intersectsWith="">
 				<switch tag="entrance" value="main">
 					<case maxzoom="17" icon="barrier_small_black_bold_3"/>
 					<case minzoom="18" icon="entrance_main_map" shield="barrier_entrance_small_shield"/>
