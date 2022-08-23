@@ -55,6 +55,7 @@
 				<select value="1"  t="motorcar" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="motorcar" v="no"/>
 				<select value="1"  t="motorcar" v="private"/>
 				<select value="1"  t="motorcar" v="destination"/>
 				<select value="1"  t="motorcar" v="customers"/>
@@ -76,6 +77,7 @@
 				<select value="1"  t="motor_vehicle" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="motor_vehicle" v="no"/>
 				<select value="1"  t="motor_vehicle" v="private"/>
 				<select value="1"  t="motor_vehicle" v="destination"/>
 				<select value="1"  t="motor_vehicle" v="customers"/>
@@ -97,6 +99,7 @@
 				<select value="1"  t="vehicle" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="vehicle" v="no"/>
 				<select value="1"  t="vehicle" v="private"/>
 				<select value="1"  t="vehicle" v="destination"/>
 				<select value="1"  t="vehicle" v="customers"/>
@@ -117,6 +120,7 @@
 				<select value="1"  t="access" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="access" v="no"/>
 				<select value="1"  t="access" v="private"/>
 				<select value="1"  t="access" v="destination"/>
 				<select value="1"  t="access" v="customers"/>
