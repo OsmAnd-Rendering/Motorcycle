@@ -2002,7 +2002,7 @@
 		</switch>
 
 		<!-- sommets -->
-		<switch ign="false">
+		<switch >
 			<case minzoom="12" tag="natural" value="peak" iconVisibleSize="24">
 				<case maxzoom="13" icon="natural_peak_night" shield="peakvolcano_white_shield" >
 					<apply_if additional="summit:cross=yes" icon="natural_peak_cross" shield="peakvolcano_cross_white_shield"/>
@@ -4008,10 +4008,10 @@
 			<case minzoom="12" tag="network_iwn" value=""  shadowColor="#ccffddaa"   />
 			<case minzoom="12" tag="network_nwn" value=""  shadowColor="#ccffddaa"  />
 			<case minzoom="13" tag="network_rwn" value=""  shadowColor="#ccffeeaa" />
-			<case minzoom="15" tag="network_lwn" value=""  shadowColor="#ccffffcc"   />
-			<case minzoom="15" tag="route_hiking" value=""  shadowColor="#ccffffcc"   />
-			<case minzoom="15" tag="route" value="hiking"  shadowColor="#ccffffcc"   />
-			<case minzoom="15" tag="hiking" value="yes"  shadowColor="#ccffffcc"   />
+			<case minzoom="15" tag="network_lwn" value=""  shadowColor="#ccffffaa"   />
+			<case minzoom="15" tag="route_hiking" value=""  shadowColor="#ccffffaa"   />
+			<case minzoom="15" tag="route" value="hiking"  shadowColor="#ccffffaa"   />
+			<case minzoom="15" tag="hiking" value="yes"  shadowColor="#ccffffaa"   />
 			<apply>
 				<case maxzoom="12" shadowRadius="5" />
 				<case maxzoom="13" shadowRadius="6" />
