@@ -3726,14 +3726,14 @@
 					<apply_if ign="true"  strokeWidth_5="0" color="#ffffff" color_0="#000000" ><!-- color_5="#ffffff" -->
 						<case noPolygons="false" maxzoom="11" strokeWidth="0" /> <!--  sans carte-->
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="1.2" color_5="#225522"/> 
-						<case noPolygons="false" maxzoom="13" strokeWidth_5="2"  color_5="#225522"/>
-						<case noPolygons="false" maxzoom="14" strokeWidth_5="2.5"  color_5="#225522"/>
-						<case noPolygons="false" maxzoom="15" strokeWidth_5="3"  color_5="#225522"/>
-						<case noPolygons="false" maxzoom="16" strokeWidth_5="3.5"  color_5="#225522"/>
-						<case noPolygons="false" maxzoom="17" strokeWidth_5="4"  color_5="#225522"/>
-						<case noPolygons="false" maxzoom="18" strokeWidth_5="4.5"  color_5="#225522"/>
-						<case noPolygons="false" maxzoom="19" strokeWidth_5="5"  color_5="#225522"/>
-						<case noPolygons="false" minzoom="20" strokeWidth_5="5.5"  color_5="#225522"/>
+						<case noPolygons="false" maxzoom="13" strokeWidth_5="2.5"  color_5="#225522"/>
+						<case noPolygons="false" maxzoom="14" strokeWidth_5="3"  color_5="#225522"/>
+						<case noPolygons="false" maxzoom="15" strokeWidth_5="3.5"  color_5="#225522"/>
+						<case noPolygons="false" maxzoom="16" strokeWidth_5="4"  color_5="#225522"/>
+						<case noPolygons="false" maxzoom="17" strokeWidth_5="4.5"  color_5="#225522"/>
+						<case noPolygons="false" maxzoom="18" strokeWidth_5="5"  color_5="#225522"/>
+						<case noPolygons="false" maxzoom="19" strokeWidth_5="5.5"  color_5="#225522"/>
+						<case noPolygons="false" minzoom="20" strokeWidth_5="6"  color_5="#225522"/>
 						<!-- pathEffect_0="9_4" 
 						<case noPolygons="false" maxzoom="14" strokeWidth="1.6" strokeWidth_0="5.4" pathEffect_0="12_5"/>
 						<case noPolygons="false" maxzoom="15" strokeWidth="2.2" strokeWidth_0="6.8" pathEffect_0="15_6"/>
@@ -3872,10 +3872,10 @@
 				</apply_if>
 				<apply_if ign="true" color_5="#114411">
 						<case noPolygons="true" maxzoom="14" strokeWidth_5="0" />
-						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="7_5" /> 
-						<case maxzoom="16" strokeWidth_5="3.5" pathEffect_5="15_7" /> 
-						<case maxzoom="17" strokeWidth_5="5.5" pathEffect_5="25_9" /> 
-						<case minzoom="18" strokeWidth_5="10" pathEffect_5="50_13" />
+						<case noPolygons="true" maxzoom="15" strokeWidth_5="2.6" pathEffect_5="7_5" /> 
+						<case noPolygons="true" maxzoom="16" strokeWidth_5="3.5" pathEffect_5="15_7" /> 
+						<case noPolygons="true" maxzoom="17" strokeWidth_5="5.5" pathEffect_5="25_9" /> 
+						<case noPolygons="true" minzoom="18" strokeWidth_5="10" pathEffect_5="50_13" />
 				</apply_if>
 				<apply_if baseAppMode="car" color_5="#66000000" /> 
 				<apply_if arriereplan="true" color_5="#afafaf" color="#000000" strokeWidth="0.1:1" shadowColor="#66000000" shadowRadius="5"/><!--  -->
