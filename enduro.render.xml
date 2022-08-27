@@ -49,7 +49,7 @@
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
 		<!-- To change default color completely you should do that also for tag="place" value="island" and tag="natural" value="land" (search this file) -->
 		<case noPolygons="true" attrColorValue="#00000000"/>
-		<case nightMode="true" attrColorValue="#222222"/>
+		<case nightMode="true" attrColorValue="#000000"/>
 		<case attrColorValue="#fff6e6"/><!-- fff6e6 dce6d0-->
 	</renderingAttribute>
 	<renderingAttribute name="rulerCircle">
@@ -965,7 +965,7 @@
 		</switch>
 					
 		<!-- hiking icon-->
-		<switch moreDetailed="true" >
+		<switch lessDetailed="false" >
 			<switch minzoom="12" textOnPath="false" textSize="10" textColor="#00ff0000" textOrder="70" >
 				<case tag="network_nwn" value=""  nameTag="hiking_route_ref"/>
 				<case tag="network_iwn" value=""  nameTag="hiking_ref"/>
@@ -976,22 +976,22 @@
 					<apply_if maxzoom="15"  textMinDistance="90"/>
 					<apply_if maxzoom="16"  textMinDistance="150"/>
 					<apply_if minzoom="17"  textMinDistance="250"/>
-				</apply>
-				<apply_if nightMode="true" textShield="osmc_white_upper"/>
+				</apply><!--
+				<apply_if nightMode="true" textShield="osmc_white_upper"/>-->
 			</switch>
 			<switch minzoom="13" textOnPath="false" textSize="10" textColor="#00ff0000" textOrder="71" >
 				<case tag="network_rwn" value=""  nameTag="hiking_route_name"/>
 				<apply textMinDistance="150">
 					<case icon="osmc_red_lower" textShield="osmc_yellow_bg" />
-				</apply>
-				<apply_if nightMode="true" textShield="osmc_orange_upper"/>
+				</apply><!--
+				<apply_if nightMode="true" textShield="osmc_orange_upper"/>-->
 			</switch>
 			<switch minzoom="14" textOnPath="false" textSize="10" textColor="#00ffffff" textOrder="72" >
 				<case minzoom="15" tag="network_lwn" value=""  nameTag="hiking_route_name"/>
 				<apply textMinDistance="200">
 					<case icon="osmc_yellow_lower" textShield="osmc_white_bg"/>
-				</apply>
-				<apply_if nightMode="true" textShield="osmc_white_upper"/>
+				</apply><!--
+				<apply_if nightMode="true" textShield="osmc_white_upper"/>-->
 			</switch>
 		</switch>
 
@@ -1007,7 +1007,7 @@
 		</switch> 
 
 		<!-- MTB icon -->
-		<switch moreDetailed="true" minzoom="14" textOnPath="false" textSize="10" textOrder="169"  >
+		<switch lessDetailed="false" minzoom="14" textOnPath="false" textSize="10" textOrder="169"  >
 				<case tag="route_mtb" value="" nameTag="bicycle_ref" nameTag2="mtb:name"/>
 				<case tag="route_mtb" value="" nameTag="bicycle_mtb:name" />
 				<case tag="route_mtb" value="" nameTag="" />
@@ -1433,7 +1433,7 @@
 					<case maxzoom="14" textHaloRadius="2:2" textHaloColor="#99ffffff"/>
 					<case minzoom="15" textHaloRadius="3:3" textHaloColor="#99ffffff"/>
 				</apply_if>
-			<apply_if nightMode="true" textColor="#999999" textHaloColor="#000000" />
+			<apply_if nightMode="true" textColor="#aaaaaa" textHaloColor="#000000" textHaloRadius="3:3" textBold="true" textItalic="true"/>
 			<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
 			<apply_if ign="true" noPolygons="true" textSize="0" />
 		</switch>
@@ -1459,7 +1459,10 @@
 				</apply_if>
 				<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
 			</switch>
-			
+			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="3:3"/>
+			<apply_if ign="true" noPolygons="true" textSize="0" />
+		</switch>
+		<switch>			
 			<switch lessDetailed="false" textColor="#cc0000" textWrapWidth="25" textHaloColor="#99ffffff" textHaloRadius="3:3" textItalic="true" textBold="false" textMinDistance="150" >
 				<case minzoom="13" tag="natural" value="hill" nameTag="" nameTag2="ele" textOrder="59" textSize="11"/>
 				<case minzoom="16" tag="natural" value="cave_entrance" textOrder="236"/>
@@ -2079,7 +2082,7 @@
 			<case minzoom="17" tag="shop" value="farm" icon="farm"/>
 			<case minzoom="17" tag="shop" value="furniture" icon="shop_furniture"/>
 			-->
-			<apply_if moreDetailed="false" maxzoom="15" icon=""/>
+			<apply_if lessDetailed="true" maxzoom="15" icon=""/>
 		</switch>
 
 		<!-- parking -->
@@ -2613,7 +2616,7 @@
 			</case>
 
 			<apply_if minzoom="16" strokeWidth_2="0.7:1"/>
-			<apply_if nightMode="true" color="#333333" color_2="#333333" />
+			<apply_if nightMode="true" color="#444444" strokeWidth_2="0" />
 		</switch>
 
 		<switch noPolygons="false" >
@@ -2931,8 +2934,7 @@
 			<case minzoom="16" tag="man_made" value="reinforced_slope" color="#d6d6d6"/>
 
 			<switch minzoom="14" tag="man_made" value="bunker_silo">
-				<case moreDetailed="false" minzoom="15"/>
-				<case moreDetailed="true"/>
+				<case lessDetailed="true" minzoom="15"/>
 				<apply color="$defaultColor" color_2="#AAAAAA" strokeWidth_2="0.7:1"/>
 			</switch>
 
@@ -3187,7 +3189,7 @@
 						<case maxzoom="10" shadowColor="#660000" />
 						<case minzoom="11" shadowColor="#000000" />
 					</apply>
-					<apply_if nightMode="true" color="#cc4f4f" shadowColor="#000000" />
+					<apply_if nightMode="true" color="#cc4f4f" shadowColor="#cc4f4f" />
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cc3333"/>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
 				</apply>
@@ -3217,7 +3219,7 @@
 						<case minzoom="11" shadowColor="#000000" />
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#cc9900" shadowColor="#000000"/>
+					<apply_if nightMode="true" color="#cc9900" shadowColor="#cc9900"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cc9922"/>
 				</apply>
 			</switch>
@@ -3244,7 +3246,7 @@
 						<case minzoom="11" shadowColor="#000000" />
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#cccc66" shadowColor="#000000"/>
+					<apply_if nightMode="true" color="#cccc66" shadowColor="#cccc66"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cccc66"/>
 				</apply>
 			</switch>
@@ -3268,7 +3270,7 @@
 						<case minzoom="13" shadowColor="#000000" />
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#888888" shadowColor="#000000"/>
+					<apply_if nightMode="true" color="#888888" shadowColor="#888888"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cccccc"/>
 					<apply_if ign="true">
 						<case noPolygons="true" maxzoom="13" strokeWidth="3" strokeWidth_0="7" /><!--avec cartes-->
@@ -3298,7 +3300,7 @@
 					<case maxzoom="20" strokeWidth="9" strokeWidth_0="12"/>
 					<case minzoom="21" strokeWidth="10" strokeWidth_0="13"/>
 					<apply color="#ffffff" shadowColor="#444444" />
-					<apply_if nightMode="true" color="#666666" />
+					<apply_if nightMode="true" color="#888888" shadowColor="#888888"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00444444"/>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#444444" shadowRadius="0"/>
 					<apply_if lessDetailed="true" maxzoom="12" strokeWidth="0"/>
@@ -3332,7 +3334,7 @@
 					<case minzoom="21" strokeWidth="10" strokeWidth_0="13"/>
 					<apply color="#ffffff" shadowColor="#444444" />
 					<apply_if additional="bridge=yes" color_0="#444444" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#888888" color_0="#000000"/>
+					<apply_if nightMode="true" color="#888888" shadowColor="#888888"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cfcccc"/>
 					<apply_if lessDetailed="true" maxzoom="12" strokeWidth="0"/>
 					<apply_if layer="-1" color="#66fff0e0" /> 
@@ -3462,8 +3464,8 @@
 				<case maxzoom="19" shadowRadius="2.3:1" />
 				<case minzoom="20" shadowRadius="2.5:1" />
 			</apply>
-
-			<apply_if nightMode="true" shadowColor="#000000" shadowRadius="2"/><!--
+			
+			<apply_if nightMode="true" shadowRadius="0"/><!--
 			<apply_if maxzoom="12" tag="highway" value="residential" shadowRadius="0.6:1" cap="BUTT"/>
 			<apply_if maxzoom="13" tag="highway" value="living_street" shadowRadius="0.6:1" cap="BUTT"/>
 			<apply_if maxzoom="12"  tag="highway" value="service"  shadowRadius="0.6:1" cap="BUTT"/>-->
@@ -4082,7 +4084,7 @@
 				<case minzoom="21" shadowRadius="10.5" />
 			</apply><!---->
 			<apply_if noPolygons="true" shadowColor="#999900"/>
-			<apply_if nightMode="true" shadowColor="#22ffff66"  />
+			<apply_if nightMode="true" shadowColor="#333300"  />
 			<apply_if lessDetailed="true" strokeWidth="0" /><!--
 			<apply_if ign="true" color="#ffbbff" shadowColor="#99ffbbff"/>-->
 			<apply_if ign="true" noPolygons="true" color="#ff00ff" shadowColor="#ff00ff" shadowRadius="0"/>
