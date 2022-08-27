@@ -3542,12 +3542,12 @@
 					<case additional="smoothness=impassable" />
 					<case additional="mtb:scale=5"  />
 					<case additional="mtb:scale=4"  />
-					<apply minzoom="13" color_5="#000000">
+					<apply minzoom="13" color_5="#000000" cap_2="ROUND" color_2="#000000">
 						<case maxzoom="14" strokeWidth_5="1.5" pathEffect_5="5_4" /> 
-						<case maxzoom="15" strokeWidth_5="2" pathEffect_5="6_5" /> 
-						<case maxzoom="16" strokeWidth_5="2.5" pathEffect_5="7_6" /> 
-						<case maxzoom="17" strokeWidth_5="3" pathEffect_5="8_7" /> 
-						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="9_8" />
+						<case maxzoom="15" strokeWidth_5="2" pathEffect_5="6_5"  strokeWidth_2="9" pathEffect_2="1_50"/> 
+						<case maxzoom="16" strokeWidth_5="2.5" pathEffect_5="7_6" strokeWidth_2="10" pathEffect_2="1_55"/> 
+						<case maxzoom="17" strokeWidth_5="3" pathEffect_5="8_7" strokeWidth_2="11" pathEffect_2="1_60"/> 
+						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="9_8" strokeWidth_2="12" pathEffect_2="1_60"/>
 					</apply>
 					<apply_if nightMode="true" color_5="#999999" />
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
@@ -3568,25 +3568,51 @@
 					<apply_if baseAppMode="bicycle" ign="false" color_5="#339933" /> 
 				</switch>
 
-				<!-- hard -->
-				<switch lessDetailed="false">
+					<!-- points hard -->
+				<switch lessDetailed="false" >
 					<case additional="mtb:scale=2" />
 					<case additional="mtb:scale=3" />
-					<case additional="surface=grass" />
 					<case additional="surface=mud" />
-					<case additional="surface=sand" />
 					<case additional="smoothness=very_horrible"/>
+					<apply minzoom="13" cap_2="ROUND" color_2="#ff0000"> 
+						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900" pathEffect_5="16_5" strokeWidth_2="9" pathEffect_2="1_50"/>
+						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900" pathEffect_5="17_6" strokeWidth_2="10" pathEffect_2="1_55"/>
+						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900" pathEffect_5="18_7" strokeWidth_2="11" pathEffect_2="1_60"/>
+						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="19_8" strokeWidth_2="12" pathEffect_2="1_60"/> 
+					</apply>
+					<apply_if nightMode="true" color_5="#009933"/>
+					<apply_if ign="true" pathEffect_5="" color_5="#114411">
+						<case noPolygons="false" maxzoom="12" strokeWidth_5="0" />
+						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5" />
+						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8" />
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="0" />
+						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1" />
+							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5" />
+						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4" />
+							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5" />
+						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7" />
+							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5" />
+						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0" /> 
+							<case noPolygons="true" minzoom="18" strokeWidth_5="10" /> 
+					</apply_if>
+					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
+					<apply_if baseAppMode="bicycle" ign="false" color_5="#339933" /> 
+				</switch>
+				<!-- hard -->
+				<switch lessDetailed="false">
+					<case additional="surface=grass" />
+					<case additional="surface=sand" />
 					<case additional="smoothness=horrible" />
 					<case additional="tracktype=grade5" />
 					<apply minzoom="13" > 
 						<case maxzoom="13" strokeWidth_5="1.4" color_5="#5ca300" pathEffect_5="10_4"/>
 						<case maxzoom="14" strokeWidth_5="1.9" color_5="#60a600" pathEffect_5="15_4"/>
-						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900" pathEffect_5="16_5"/>
-						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900" pathEffect_5="17_6"/>
-						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900" pathEffect_5="18_7"/>
-						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="19_8"/> 
-						<apply_if nightMode="true" color_5="#009933"/>
-					</apply > 						
+						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900" pathEffect_5="16_5" />
+						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900" pathEffect_5="17_6" />
+						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900" pathEffect_5="18_7" />
+						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="19_8" /> 
+					</apply>
+					<apply_if nightMode="true" color_5="#009933"/>
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0" />
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5" />
