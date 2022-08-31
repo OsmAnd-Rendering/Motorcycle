@@ -1903,7 +1903,6 @@
 	<point><!-- iconOrder règle la priorité, plus petit=prioritaire -->
 	
 		<switch nightMode="false" iconOrder="85">
-			<case minzoom="16" tag="tourism" value="attraction" icon="topo_viewpoint" shield="" iconVisibleSize="24" iconOrder="85"/>
 			<case minzoom="16" tag="tourism" value="information" icon="tourism_information" iconOrder="120" shield="information_shield">
 				<case additional="information=office" icon="information_office" shield="information_office_shield"/>
 				<case additional="information=audioguide" icon="information_audioguide" shield="information_audioguide_shield"/>
@@ -1912,6 +1911,9 @@
 				<case additional="information=map" icon="information_map" shield="information_map_shield"/>
 				<case additional="information=terminal" icon="information_terminal" shield="information_terminal_shield"/>
 			</case>
+		</switch>
+		<switch iconOrder="85">
+			<case minzoom="16" tag="tourism" value="attraction" icon="topo_viewpoint" shield="" iconVisibleSize="24" iconOrder="85"/>
 			<case minzoom="14" tag="amenity" value="fuel" icon="amenity_fuel" shield="blue_round_shield" iconOrder="43"/>
 			<case minzoom="16" tag="amenity" value="monastery" icon="religion_christian" shield="cross_shield" iconOrder="70"/>
 			<case minzoom="18" tag="amenity" value="toilets" icon="amenity_toilets" shield="gray_round_shield" iconOrder="50" iconVisibleSize="48"/>
