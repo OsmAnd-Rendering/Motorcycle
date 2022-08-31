@@ -21,11 +21,11 @@
 | :-------------: |
 |<img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />|
 
-| <b><span style="color:green;">Green</span> dots</b> <br>for easy path with an enduro bike|<b><span style="color:orange;">Orange</span> dots </b> <br>for « technical » path with an enduro bike|
+| **Green dots** <br>for easy path with an enduro bike|**Orange dots** <br>for « technical » path with an enduro bike|
 | :-------------: | :-------------: | 
 |<img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" />|<img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="130" />|
 
-|<b><span style="color:red;">Red</span> dots</b> <br>for difficult path with an enduro bike|<b><span style="color:gray;">Black</span> dots</b> <br>for "impassable" path with an enduro bike|
+|**Red dots** <br>for difficult path with an enduro bike|**Black (white in night mode) dots** <br>for "impassable" path with an enduro bike|
 | :-------------: | :-------------: | 
 |<img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" />|<img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="120" />|
 <br>

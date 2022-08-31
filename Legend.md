@@ -17,15 +17,15 @@
 ---
 
 ## Sentiers
-|<b>les sentiers</b> sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre |
+|**les sentiers** sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre |
 | :-------------: |
 |<img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />|
 
-|des <b>points <span style="color:green;">verts</span></b> <br>pour un sentier facile pour une moto d'enduro|des <b>points <span style="color:orange;">oranges</span></b> <br>pour un sentier "technique" pour une moto d'enduro|
+|des **points verts** <br>pour un sentier facile pour une moto d'enduro|des **points oranges** <br>pour un sentier "technique" pour une moto d'enduro|
 | :-------------: | :-------------: | 
 |<img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" />|<img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="130" />|
 
-|des <b>points <span style="color:red;">rouge</span></b> <br>pour un sentier difficile pour une moto d'enduro|des <b>points <span style="color:gray;">noir</span></b> <br>pour un sentier "impassable" pour une moto d'enduro|
+|des **points rouge** <br>pour un sentier difficile pour une moto d'enduro|des **points noir (blanc en mode nuit)** <br>pour un sentier "impassable" pour une moto d'enduro|
 | :-------------: | :-------------: | 
 |<img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" />|<img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="120" />|
 <br>
