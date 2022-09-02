@@ -190,14 +190,14 @@
 			<select value="20" t="surface" v="earth"/>
 			<select value="20" t="surface" v="unpaved"/>
 			<select value="20" t="surface" v="ground"/>
-			<select value="20" t="tracktype" v="grade5"/>			
+			<select value="30" t="tracktype" v="grade5"/>			
 			<select value="30" t="mtb:scale" v="0-"/>			
 			<select value="30" t="mtb:scale" v="0"/>			
 			<select value="30" t="mtb:scale" v="0+"/>			
-			<select value="30" t="tracktype" v="grade4"/>			
-			<select value="35" t="surface" v="compacted"/>
-			<select value="35" t="surface" v="gravel"/>
-			<select value="35" t="surface" v="pebblestone"/>
+			<select value="40" t="tracktype" v="grade4"/>			
+			<select value="40" t="surface" v="compacted"/>
+			<select value="40" t="surface" v="gravel"/>
+			<select value="40" t="surface" v="pebblestone"/>
 			<select value="40" t="surface" v="paved"/>
 			<select value="40" t="surface" v="paving_stones"/>
 			<select value="40" t="tracktype" v="grade3"/>
@@ -235,27 +235,28 @@
 			<select value="0.2" t="highway" v="living_street"/>
 
 			<if param="avoid_grade">
+				<select value="0.1" t="highway" v="path"/><!--sentiers non taggés-->
 				<select value="1.5" t="ford" v="yes"/>
 				<select value="1.25" t="smoothness" v="very_horrible"/>
 				<select value="1.5" t="smoothness" v="horrible"/>
-				<select value="1.5" t="surface" v="mud"/>
+				<select value="1.5" t="surface" v="mud"/><!-- conflit avec paths-->
 				<select value="1.5" t="surface" v="sand"/>
 				<select value="1.5" t="surface" v="grass"/>
 				<select value="1.75" t="surface" v="dirt"/>
 				<select value="1.75" t="surface" v="earth"/>
 				<select value="1.75" t="surface" v="unpaved"/>
 				<select value="1.75" t="surface" v="ground"/>
-				<select value="1.75" t="tracktype" v="grade5"/>			
 				<select value="1.75" t="surface" v="rock"/>
-				<select value="2" t="tracktype" v="grade4"/>			
-				<select value="2" t="surface" v="compacted"/>
-				<select value="2" t="surface" v="gravel"/>
-				<select value="2" t="surface" v="pebblestone"/>
-				<select value="2" t="surface" v="cobblestone"/>
-				<select value="2" t="surface" v="unhewn_cobblestone"/>
-				<select value="2" t="surface" v="paved"/>
-				<select value="2" t="surface" v="paving_stones"/>
-				<select value="2" t="tracktype" v="grade3"/>
+				<select value="2.5" t="tracktype" v="grade5"/>			
+				<select value="2.5" t="tracktype" v="grade4"/>			
+				<select value="2.5" t="surface" v="compacted"/>
+				<select value="2.5" t="surface" v="gravel"/>
+				<select value="2.5" t="surface" v="pebblestone"/>
+				<select value="2.5" t="surface" v="cobblestone"/>
+				<select value="2.5" t="surface" v="unhewn_cobblestone"/>
+				<select value="2.5" t="surface" v="paved"/>
+				<select value="2.5" t="surface" v="paving_stones"/>
+				<select value="2.5" t="tracktype" v="grade3"/>
 				<select value="2" t="surface" v="fine_gravel"/>
 				<select value="2" t="surface" v="asphalt"/>
 				<select value="2" t="surface" v="metal"/>
@@ -264,7 +265,7 @@
 				<select value="2" t="surface" v="concrete"/>
 				<select value="2" t="tracktype" v="grade2"/>
 				<select value="2" t="tracktype" v="grade1"/>
-				<select value="1.5" t="highway" v="track"/><!--chemins non taggés-->
+				<select value="3" t="highway" v="track"/><!--chemins non taggés-->
 			</if>
 			<select value="5" t="highway" v="track"/><!--chemins -->
 			<select value="5" t="mtb:scale" v="0-"/>
