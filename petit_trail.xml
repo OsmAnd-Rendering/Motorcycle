@@ -208,7 +208,7 @@
 			<select value="45" t="surface" v="chipseal"/>
 			<select value="45" t="tracktype" v="grade1"/>
 			<select value="20" t="highway" v="track"/><!-- 90 vmax profil / 20 v track = 4.5 max pour priority-->
-			<select value="20" t="highway" v="path"/><!-- sentier-->
+			<select value="5" t="highway" v="path"/><!-- sentier-->
 			<select value="45" t="highway" v="unclassified"/>
 			<select value="45" t="highway" v="road"/>
 			<select value="45" t="highway" v="service"/>
@@ -270,6 +270,7 @@
 			<select value="5" t="mtb:scale" v="0-"/>
 			<select value="5" t="mtb:scale" v="0"/>
 			<select value="5" t="mtb:scale" v="0+"/>
+			<select value="0.1" t="highway" v="path"/><!--sentiers non taggés-->
 			
 			<select value="0"/><!--tout le reste-->
 		</way>
