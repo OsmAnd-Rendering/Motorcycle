@@ -1865,7 +1865,7 @@
 		</switch>				
 		
 		<switch textColor="#2665ff" textHaloColor="#ffffff" textItalic="true" textOnPath="false" textSize="11" textWrapWidth="12" nameTag="">
-			<case minzoom="14" tag="waterway" value="river"  textOrder="50" textMinDistance="100"/>
+			<case minzoom="14" tag="waterway" value="river"  textOrder="50" textMinDistance="200" />
 			<case minzoom="17" tag="waterway" value="dam"  textOrder="249" textOnPath="true"/>
 			<case minzoom="15" tag="waterway" value="canal" textOnPath="true" textOrder="151" textMinDistance="300" />
 			<case minzoom="16" tag="waterway" value="waterfall" additional="osmand_remarkable_waterfall=yes" nameTag2="height"  textOnPath="true" textOrder="217"/>
@@ -3661,7 +3661,7 @@
 				<!-- carrossable -->
 				<switch >
 					<case additional="surface=pebblestone" />
-					<case additional="smoothness=very_bad" />
+					<case ign="false" additional="smoothness=very_bad" />
 					<case additional="tracktype=grade3" />
 					<apply minzoom="12" color_5="$trackColor" >
 						<case maxzoom="11" strokeWidth_5="0" /> 
