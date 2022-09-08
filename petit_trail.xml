@@ -218,6 +218,7 @@
 
 		<way attribute="priority">
 		
+			<select value="0.1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
 			<select value="0.1" t="highway" v="motorway"/>
 			<select value="0.1" t="highway" v="motorway_link"/>
 			<select value="0.15" t="highway" v="trunk"/>
