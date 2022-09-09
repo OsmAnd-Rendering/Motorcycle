@@ -28,11 +28,8 @@
 
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>
-			<select value="-1" t="construction" v="yes"/>
-			<select value="-1" t="smoothness" v="impassable"/><!--
-			<if param="avoid_sentier">
-				<select value="-1" t="highway" v="path"/>
-			</if>-->
+			<select value="-1" t="construction" v="yes"/><!--
+			<select value="-1" t="smoothness" v="impassable"/>-->
 			<select value="1" t="highway" v="path"/>
 			<select value="1" t="highway" v="footway"/>
 			<select value="1" t="highway" v="steps"/>
@@ -82,9 +79,11 @@
 			<select value="1"  t="vehicle" v="designated"/>
 
 			<if param="avoid_interdit">
+				<select value="1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
 				<select value="1"  t="access" v="private"/>
 				<select value="1"  t="access" v="no"/>
 			</if>
+			<select value="-1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
 			<select value="-1" t="access" v="no"/>
 			<select value="-1"  t="access" v="private"/>
 			<select value="1"  t="access" v="destination"/>
@@ -186,11 +185,11 @@
 			<select value="0.1" t="mtb:scale" v="6"/>
 			<select value="0.1" t="mtb:scale" v="5"/>
 			<select value="0.1" t="mtb:scale" v="4"/>
+			<select value="0.25" t="smoothness" v="impassable"/>
 			<select value="0.25" t="sac_scale" v="mountain_hiking"  />
 			<select value="0.25" t="mtb:scale" v="3"/>
 			<select value="0.3" t="highway" v="steps"/><!--escalier -->
 			<select value="0.75" t="mtb:scale" v="2"/>
-				<select value="0.1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
 				<select value="3" t="mtb" v="designated" /><!-- VTT -->
 				<select value="3" t="route" v="mtb"/><!-- circuits VTT -->
 				<select value="3" t="route_mtb" /><!-- circuits VTT -->

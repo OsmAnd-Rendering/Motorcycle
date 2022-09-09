@@ -129,12 +129,14 @@
 				<select value="1"  t="access" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
 				<select value="1"  t="access" v="private"/>
 				<select value="1"  t="access" v="destination"/>
 				<select value="1"  t="access" v="customers"/>
 				<select value="1" t="access" v="agricultural"/>
 				<select value="1" t="access" v="forestry"/>
 			</if>
+			<select value="-1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
 			<select value="-1" t="access" v="no"/>
 			<select value="-1"  t="access" v="private"/>
 			<select value="-1"  t="access" v="destination"/>
@@ -222,7 +224,6 @@
 
 		<way attribute="priority">
 		
-			<select value="0.1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
 			<select value="0.1" t="highway" v="motorway"/>
 			<select value="0.1" t="highway" v="motorway_link"/>
 			<select value="0.15" t="highway" v="trunk"/>
