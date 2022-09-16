@@ -40,7 +40,7 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 <i>( ne mettez pas de points trop éloignés pour accélérer le calcul -tous les 100 km par exemple )</i>
  
 ## enduro
-<b>vous fera passer partout sauf escaliers et pistes cyclables et bien sur les points noirs (impassables ^^).</b><br>
+<b>vous fera passer partout sauf pistes cyclables et bien sur les points noirs (impassables ^^).</b><br>
 - tous les switchs sont inactifs (tout est actif, les gués, les routes gelées, l'accès au privé etc)
 - respecte les interdictions "**no**" et "**private**" <b>SAUF</b> si le switch "<b>Pas d'interdit</b>" est actif.
 - respecte les barrières absolues (chaine, portail etc)
