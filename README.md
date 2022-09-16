@@ -7,7 +7,7 @@ Affichage axé sur l'utilisation en moto tout terrain avec les chemins classifi�
 
 - Chemins identifiés visuellement par carrossabilité (couleurs) **[explications](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
 - POI utiles / intéressants mis en évidence
-- Difficulté des sentiers à partir des tags VTT et pédestre **[explications](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/difficult%C3%A9-des-sentiers)**
+- Difficulté des sentiers à partir des tags VTT et pédestre **[explications](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/difficult%C3%A9-des-sentiers---chemins)**
 - Simplification pour lisibilité des itinéraires VTT/pédestre
 - Réglages supplémentaires pour la lisibilité en roulant
 
