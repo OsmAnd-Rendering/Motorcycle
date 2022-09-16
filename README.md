@@ -14,7 +14,7 @@ Affichage de la carte offline (vectorielle) axé sur l'utilisation en moto tout 
 - **[fonctionnement du style](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
 - **[fonctionnement des routages](routage.md)**
 
-## Screenshots<br>
+## Copies d'écran<br>
 
 | <img src="https://user-images.githubusercontent.com/83398215/183831439-a7dd7cf4-dcf2-4445-8d46-e685157f93bf.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183831631-e2f86260-1324-4201-8042-be67361d5ef0.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832089-7a685512-f251-4986-81de-f92a765f964f.jpg" width="250" /> |
 | :-------------: | :-------------: | :-------------: |
