@@ -1,7 +1,7 @@
 `🇫🇷 Français`&emsp;🇬🇧 [English](readme_en.md)
 
 # Motorcycle
-Affichage axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap, ainsi que des routages pour 3 types de motos (de la plus lourde à la plus légère).
+Affichage de la carte offline (vectorielle) axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap, en corrélation avec les calculs de routage pour 3 types de motos (de la plus lourde à la plus légère).
 
 ## Changements notables par rapport aux styles standard :
 
