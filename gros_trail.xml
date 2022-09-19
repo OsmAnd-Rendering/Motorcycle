@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<osmand_routing_config defaultProfile="car" name="gros_trail">
+<osmand_routing_config defaultProfile="gros_trail" name="gros_trail">
 	<!-- 1. parameters of routing and different tweaks Influence on A* : -->
 	<!-- f(x) + heuristicCoefficient*g(X) -->
 	<attribute name="heuristicCoefficient" value="3.4" /><!-- 1.4 meilleur choix si très peu de chemins mais calcul long plante sur mon tél
@@ -21,7 +21,7 @@
 	<!-- recalculate smart using old route within N-meters (0 recalculate fresh, default 10km)  -->
 	<attribute name="recalculateDistanceHelp" value="100000" />
 
-	<routingProfile name="gros_trail" baseProfile="car" restrictionsAware="true" minSpeed="1" defaultSpeed="40" maxSpeed="110" sharpTurn="" slightTurn="" roundaboutTurn="" followSpeedLimitations="false" onewayAware="true">
+	<routingProfile name="gros_trail" baseProfile="gros_trail" restrictionsAware="true" minSpeed="1" defaultSpeed="40" maxSpeed="110" followSpeedLimitations="false" onewayAware="true">
 		
 		<parameter id="avoid_track" name="pas de chemins" description="evite les chemins" type="boolean" default="false"/>
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean" default="false"/>
@@ -33,40 +33,30 @@
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>
 			<select value="-1" t="construction" v="yes"/>
-			<select value="-1" t="smoothness" v="impassable"/>
-			<select value="-1" t="highway" v="path"/>
-			<select value="-1" t="highway" v="footway"/>
-			<select value="-1" t="highway" v="cycleway"/>
-			<select value="-1" t="mtb:scale" v="2"/>
-			<select value="-1" t="mtb:scale" v="3"/>
-			<select value="-1" t="mtb:scale" v="4"/>
-			<select value="-1" t="mtb:scale" v="5"/>
-			<select value="-1" t="mtb:scale" v="6"/>
 
-			<if param="avoid_track">
+			<if param="avoid_track"><!-- pas de chemins -->
 				<select value="1" t="tracktype" v="grade1"/>
 				<select value="1" t="tracktype" v="grade2"/>
 				<select value="-1" t="highway" v="track"/>
 			</if>
 
-			<if param="avoid_mud">
+			<if param="avoid_mud"><!-- si chemins secs -->
 				<select value="1" t="ford" v="yes"/>
 			</if>
-			<select value="-1" t="ford" v="yes"/>
 			
 			<if param="avoid_ice_roads_fords">
 				<select value="-1" t="ice_road" v="yes"/>
 				<select value="-1" t="winter_road" v="yes"/>
-				<select value="-1" t="ford" v="yes"/>
 			</if>
-			<select value="-1" t="toll" v="yes">
-				<if param="avoid_toll"/>
-			</select>
+			<if param="avoid_toll">
+				<select value="-1" t="toll" v="yes"/>
+			</if>
 	
 			<if param="allow_private">
 				<select value="1"  t="motorcar" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="motorcar" v="no"/>										   
 				<select value="1"  t="motorcar" v="private"/>
 				<select value="1"  t="motorcar" v="destination"/>
 				<select value="1"  t="motorcar" v="customers"/>
@@ -88,6 +78,7 @@
 				<select value="1"  t="motor_vehicle" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="motor_vehicle" v="no"/>												
 				<select value="1"  t="motor_vehicle" v="private"/>
 				<select value="1"  t="motor_vehicle" v="destination"/>
 				<select value="1"  t="motor_vehicle" v="customers"/>
@@ -109,6 +100,7 @@
 				<select value="1"  t="vehicle" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="vehicle" v="no"/>										  
 				<select value="1"  t="vehicle" v="private"/>
 				<select value="1"  t="vehicle" v="destination"/>
 				<select value="1"  t="vehicle" v="customers"/>
@@ -130,6 +122,7 @@
 			</if>
 			<if param="avoid_interdit">
 				<select value="1" t="bicycle" v="designated" /><!-- circuits velo/ voie verte -->
+				<select value="1" t="access" v="no"/>										 
 				<select value="1"  t="access" v="private"/>
 				<select value="1"  t="access" v="destination"/>
 				<select value="1"  t="access" v="customers"/>
@@ -241,7 +234,7 @@
 			<select value="0.2" t="highway" v="living_street"/>
 
 
-			<if param="avoid_mud">
+			<if param="avoid_mud"><!-- si chemins secs -->
 				<select value="0.5" t="ford" v="yes"/>
 				<select value="0.25" t="smoothness" v="very_horrible"/>
 				<select value="0.5" t="smoothness" v="horrible"/>
@@ -252,8 +245,9 @@
 				<select value="1" t="surface" v="earth"/>
 				<select value="1" t="surface" v="unpaved"/>
 				<select value="1" t="surface" v="ground"/>
-				<select value="1" t="tracktype" v="grade5"/>			
+
 				<select value="1.75" t="surface" v="rock"/>
+				<select value="1" t="tracktype" v="grade5"/>			
 				<select value="2" t="tracktype" v="grade4"/>			
 				<select value="2" t="surface" v="compacted"/>
 				<select value="2" t="surface" v="gravel"/>
@@ -273,7 +267,7 @@
 				<select value="2" t="tracktype" v="grade1"/>
 				<select value="1" t="highway" v="track"/><!--chemins non taggés-->
 			</if>
-			<if param="avoid_track">
+			<if param="avoid_track"><!-- pas de chemins -->
 				<select value="0.75" t="highway" v="unclassified"/>
 				<select value="0.75" t="highway" v="road"/>
 				<select value="1" t="highway" v="service"/>
@@ -415,14 +409,7 @@
 
 		</point>
 
-		<way attribute="penalty_transition"><!--
-			<select value="100" t="surface" v="mud"/>
-			<select value="100" t="surface" v="sand"/>
-			<select value="50" t="ford" v="yes"/>
-			<select value="50" t="surface" v="grass"/>
-			<select value="0" t="highway" v="track"/>
-
-			<select value="100"/> give highway penalty to use mostly footways if available-->
+		<way attribute="penalty_transition">
 		</way>
 
 	</routingProfile>
