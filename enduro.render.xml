@@ -275,10 +275,10 @@
 		<case tag="highway" value="trunk_link"  attrColorValue="#000000" attrStringValue="highway_class_motorway"/>
 		<case tag="highway" value="primary"  attrColorValue="#000000" attrStringValue="highway_class_state_road"/>
 		<case tag="highway" value="primary_link"  attrColorValue="#000000" attrStringValue="highway_class_state_road"/>
-		<case tag="highway" value="secondary" attrColorValue="#000000" attrStringValue="highway_class_road"/>
-		<case tag="highway" value="secondary_link" attrColorValue="#000000" attrStringValue="highway_class_road"/>
-		<case tag="highway" value="tertiary" attrColorValue="#000000" attrStringValue="highway_class_road"/>
-		<case tag="highway" value="tertiary_link" attrColorValue="#000000" attrStringValue="highway_class_road"/>
+		<case tag="highway" value="secondary" attrColorValue="#000000" attrStringValue="highway_class_state_road"/>
+		<case tag="highway" value="secondary_link" attrColorValue="#000000" attrStringValue="highway_class_state_road"/>
+		<case tag="highway" value="tertiary" attrColorValue="#000000" attrStringValue="highway_class_state_road"/>
+		<case tag="highway" value="tertiary_link" attrColorValue="#000000" attrStringValue="highway_class_state_road"/>
 		<case tag="highway" value="unclassified" attrColorValue="#000000" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="highway_class_road"/>
@@ -308,8 +308,8 @@
 		<case additional="surface=earth" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
 		<case additional="surface=pebblestone" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=gravel" attrColorValue="$trackColor" attrStringValue="carrossable"/>
-		<case additional="surface=paved" attrColorValue="$trackColor" attrStringValue="carrossable"/>
-		<case additional="surface=asphalt" attrColorValue="#000000" attrStringValue="route"/>
+		<case additional="surface=paved" attrColorValue="$trackColor" attrStringValue="carrossable"/><!--
+		<case additional="surface=asphalt" attrColorValue="#000000" attrStringValue="route"/>-->
 		<case additional="surface=concrete" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=concrete:lanes" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=concrete:plates" attrColorValue="$trackColor" attrStringValue="carrossable"/>
@@ -327,6 +327,10 @@
 		<case additional="tracktype=grade3" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="tracktype=grade4" attrColorValue="#999900" attrStringValue="selon météo"/>
 		<case additional="tracktype=grade5" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case tag="highway" value="unclassified" attrColorValue="#000000" attrStringValue="routasse"/>
+		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="routasse"/>
+		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="routasse"/>
+		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="routasse"/>
 		<case tag="highway" value="service" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case tag="highway" value="track" attrColorValue="#00ff99" attrStringValue="chemin non précisé"/>
 		<case tag="highway" value="path" attrColorValue="#ff0000" attrStringValue="sentier"/>
