@@ -3,10 +3,8 @@
 <!-- style pour l'utilisation offroad en véhicule motorisé par cricri, vous pouvez me trouver sur le forum https://www.terre-bitume.org/ sous le pseudo "cricri" ou sur cette adresse   grosmono500@hotmail.com -->
 
 	<!-- ajouts depuis "default" pour test sur IOS-->
-	<renderingProperty attr="appMode" name="Rendering mode" description="Map optimization for respective User Profile"
-		type="string" possibleValues=""/> <!-- linked to profiles -->
-	<renderingProperty attr="baseAppMode" name="Default Rendering mode" description="Map optimization for respective User Profile based on base (parent) profile"
-		type="string" possibleValues="default, car, bicycle, pedestrian, public_transport, boat, ski"/>
+	<renderingProperty attr="appMode" name="Rendering mode" description="Map optimization for respective User Profile" type="string" possibleValues=""/> <!-- linked to profiles -->
+	<renderingProperty attr="baseAppMode" name="Default Rendering mode" description="Map optimization for respective User Profile based on base (parent) profile" type="string" possibleValues="default, car, bicycle, pedestrian, public_transport, boat, ski"/>
 
 	<!-- ajout cricri IGN -->
 	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="routes"/>
@@ -267,7 +265,7 @@
 	<renderingConstant name="black" value="#000000"/>
 	<renderingConstant name="white" value="#ffffff"/>
 
-<!-- type de route a tester sur iOS (risque de plantage à cause des mots francisés) -->
+<!-- type de route a tester sur iOS (risque de plantage à cause des mots francisés) --><!--
 	<renderingAttribute name="routeInfo_roadClass"> 
 		<case tag="highway" value="motorway" attrColorValue="#000000" attrStringValue="highway_class_motorway"/>
 		<case tag="highway" value="motorway_link" attrColorValue="#000000" attrStringValue="highway_class_motorway"/>
@@ -283,17 +281,16 @@
 		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="highway_class_road"/>
-		<case tag="highway" value="service" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
+		<case tag="highway" value="service" attrColorValue="#663300" attrStringValue="highway_class_road"/>
 		<case tag="highway" value="track" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="path" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="pedestrian" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="footway"  attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="bridleway" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case tag="highway" value="steps" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
-		<case tag="highway" value="cycleway" attrColorValue="$trackColor" attrStringValue="highway_class_path"/><!--
-		<case tag="route" value="hiking" attrColorValue="$trackColor" attrStringValue="highway_class_path"/> iOS ?-->
+		<case tag="highway" value="cycleway" attrColorValue="$trackColor" attrStringValue="highway_class_path"/>
 		<case attrColorValue="#ff0000"/>
-	</renderingAttribute>
+	</renderingAttribute>-->
 	<!-- routeInfo_tracktype-->
 	<renderingAttribute name="routeInfo_tracktype"> <!-- dureté de la surface-->
 		<case additional="smoothness=impassable" attrColorValue="#ff0000" attrStringValue="sentier"/>
@@ -308,8 +305,7 @@
 		<case additional="surface=earth" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
 		<case additional="surface=pebblestone" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=gravel" attrColorValue="$trackColor" attrStringValue="carrossable"/>
-		<case additional="surface=paved" attrColorValue="$trackColor" attrStringValue="carrossable"/><!--
-		<case additional="surface=asphalt" attrColorValue="#000000" attrStringValue="route"/>-->
+		<case additional="surface=paved" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=concrete" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=concrete:lanes" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=concrete:plates" attrColorValue="$trackColor" attrStringValue="carrossable"/>
@@ -327,11 +323,11 @@
 		<case additional="tracktype=grade3" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="tracktype=grade4" attrColorValue="#999900" attrStringValue="selon météo"/>
 		<case additional="tracktype=grade5" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
-		<case tag="highway" value="unclassified" attrColorValue="#000000" attrStringValue="routasse"/>
-		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="routasse"/>
-		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="routasse"/>
-		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="routasse"/>
-		<case tag="highway" value="service" attrColorValue="$trackColor" attrStringValue="carrossable"/>
+		<case tag="highway" value="unclassified" attrColorValue="#000000" attrStringValue="petite route"/>
+		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="petite route"/>
+		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="petite route"/>
+		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="petite route"/>
+		<case tag="highway" value="service" attrColorValue="#000000" attrStringValue="petite route"/>
 		<case tag="highway" value="track" attrColorValue="#00ff99" attrStringValue="chemin non précisé"/>
 		<case tag="highway" value="path" attrColorValue="#ff0000" attrStringValue="sentier"/>
 		<case tag="highway" value="footway" attrColorValue="#ff0000" attrStringValue="sentier"/>
