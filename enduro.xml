@@ -12,9 +12,6 @@
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>
 			<select value="-1" t="construction" v="yes"/>
-			<select value="1" t="highway" v="path"/>
-			<select value="1" t="highway" v="footway"/>
-			<select value="1" t="highway" v="steps"/>
 			<if param="avoid_interdit">
 				<select value="1" t="motorcar" v="private"/>
 				<select value="1" t="motorcar" v="no"/>
@@ -81,6 +78,9 @@
 			<select value="1" t="highway" v="track"/>
 			<select value="1" t="highway" v="service"/>
 			<select value="1" t="highway" v="living_street"/>
+			<select value="1" t="highway" v="path"/>
+			<select value="1" t="highway" v="footway"/>
+			<select value="1" t="highway" v="steps"/>
 			<select value="-1"/>
 		</way>
 

@@ -218,7 +218,7 @@
 				<select value="2" t="surface" v="concrete"/>
 				<select value="2" t="tracktype" v="grade2"/>
 				<select value="2" t="tracktype" v="grade1"/>
-				<select value="1" t="highway" v="track"/><!--chemins non taggés-->
+				<select value="0.5" t="highway" v="track"/><!--chemins non taggés-->
 			</if>
 			<if param="avoid_track"><!-- pas de chemins -->
 				<select value="0.75" t="highway" v="unclassified"/>

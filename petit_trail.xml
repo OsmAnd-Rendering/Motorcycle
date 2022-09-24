@@ -9,6 +9,7 @@
 		<parameter id="avoid_grade" name="trie les chemins" description="priorité aux chemins carrossables" type="boolean" default="true"/>
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean" default="false"/>
 		<parameter id="avoid_borders" name="Avoid border crossing" description="Avoid crossing a border into another country" type="boolean"/>
+		<parameter id="avoid_sentier" name="pour tracer" description="pour tracer" type="boolean" default="false"/>
 		<parameter id="allow_private" name="Allow private access" description="Allow access to private areas" type="boolean" default="false"/>
 
 		<way attribute="access">
@@ -173,6 +174,12 @@
 		</way>
 
 		<way attribute="priority">
+			<if param="avoid_sentier">
+				<select value="0.25" t="highway" v="path"/><!--sentiers -->
+				<select value="1" t="highway" v="track"/><!--chemins -->
+				<select value="0.75" t="highway" v="service"/><!--chemins -->
+				<select value="0.25" t="highway"/><!--routes -->
+			</if>
 			<select value="0.1" t="highway" v="motorway"/>
 			<select value="0.1" t="highway" v="motorway_link"/>
 			<select value="0.15" t="highway" v="trunk"/>
