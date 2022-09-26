@@ -6,8 +6,8 @@
 	<attribute name="recalculateDistanceHelp" value="100000" />
 
 	<routingProfile name="enduro" baseProfile="enduro" restrictionsAware="true" minSpeed="1" defaultSpeed="40" maxSpeed="110" followSpeedLimitations="false" onewayAware="true">
-		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean" default="false"/>
-		<parameter id="avoid_sentier" name="pour tracer" description="pour tracer" type="boolean" default="false"/>
+		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean"/>
+		<parameter id="avoid_sentier" name="pour tracer" description="pour tracer" type="boolean"/>
 
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>

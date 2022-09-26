@@ -6,23 +6,21 @@
 	<attribute name="recalculateDistanceHelp" value="100000"/>
 
 	<routingProfile name="gros_trail" baseProfile="gros_trail" restrictionsAware="true" minSpeed="1" defaultSpeed="40" maxSpeed="110" followSpeedLimitations="false" onewayAware="true">
-		<parameter id="avoid_track" name="pas de chemins" description="evite les chemins" type="boolean" default="false"/>
-		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean" default="false"/>
-		<parameter id="avoid_mud" name="si chemins secs" description="ajoute chemins en terre" type="boolean" default="false"/>
+		<parameter id="avoid_track" name="pas de chemins" description="evite les chemins" type="boolean"/>
+		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean"/>
+		<parameter id="avoid_mud" name="si chemins secs" description="ajoute chemins en terre" type="boolean"/>
 		<parameter id="avoid_borders" name="Avoid border crossing" description="Avoid crossing a border into another country" type="boolean"/>
 		<parameter id="avoid_ice_roads_fords" name="Avoid ice roads, fords" description="Avoid ice roads and fords" type="boolean"/>
-		<parameter id="allow_private" name="Allow private access" description="Allow access to private areas" type="boolean" default="false"/>
+		<parameter id="allow_private" name="Allow private access" description="Allow access to private areas" type="boolean"/>
 
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>
 			<select value="-1" t="construction" v="yes"/>
+			<select value="1" t="ford" v="yes"/>
 			<if param="avoid_track"><!-- pas de chemins -->
 				<select value="1" t="tracktype" v="grade1"/>
 				<select value="1" t="tracktype" v="grade2"/>
 				<select value="-1" t="highway" v="track"/>
-			</if>
-			<if param="avoid_mud"><!-- si chemins secs -->
-				<select value="1" t="ford" v="yes"/>
 			</if>
 			<if param="avoid_ice_roads_fords">
 				<select value="-1" t="ice_road" v="yes"/>
@@ -56,7 +54,7 @@
 				<select value="1" t="vehicle" v="customers"/>
 				<select value="1" t="vehicle" v="agricultural"/>
 				<select value="1" t="vehicle" v="forestry"/>
-				<select value="1" t="bicycle" v="designated"/><!-- circuits velo/ voie verte -->
+				<select value="1" t="bicycle" v="designated"/><!-- circuits velo / voie verte -->
 				<select value="1" t="access" v="no"/>
 				<select value="1" t="access" v="private"/>
 				<select value="1" t="access" v="destination"/>
@@ -93,7 +91,7 @@
 			<select value="1" t="vehicle" v="yes"/>
 			<select value="1" t="vehicle" v="permissive"/>
 			<select value="1" t="vehicle" v="designated"/>
-			<select value="-1" t="bicycle" v="designated"/><!-- circuits velo/ voie verte -->
+			<select value="-1" t="bicycle" v="designated"/><!-- circuits velo / voie verte -->
 			<select value="-1" t="access" v="no"/>
 			<select value="-1" t="access" v="private"/>
 			<select value="-1" t="access" v="destination"/>
@@ -169,7 +167,7 @@
 			<select value="45" t="highway" v="road"/>
 			<select value="45" t="highway" v="service"/>
 			<select value="45" t="highway" v="residential"/>
-			<select value="60" t="highway" v=""/>		<!-- vitesse moyenne toutes routes-->	
+			<select value="60" t="highway" v=""/><!-- vitesse moyenne toutes routes -->
 		</way>
 
 		<way attribute="priority">
@@ -218,7 +216,7 @@
 				<select value="2" t="surface" v="concrete"/>
 				<select value="2" t="tracktype" v="grade2"/>
 				<select value="2" t="tracktype" v="grade1"/>
-				<select value="0.5" t="highway" v="track"/><!--chemins non taggés-->
+				<select value="0.5" t="highway" v="track"/><!-- chemins sans tags -->
 			</if>
 			<if param="avoid_track"><!-- pas de chemins -->
 				<select value="0.75" t="highway" v="unclassified"/>
@@ -258,8 +256,8 @@
 			<select value="2" t="surface" v="asphalt"/>
 			<select value="2" t="surface" v="concrete"/>
 			<select value="2" t="tracktype" v="grade1"/>
-			<select value="0.5" t="highway" v="track"/><!--chemins non taggés-->
-			<select value="0"/><!--tout le reste-->
+			<select value="0.5" t="highway" v="track"/><!--chemins sans tags -->
+			<select value="0"/><!-- tout le reste -->
 		</way>
 
 		<point attribute="obstacle">
