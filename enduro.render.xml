@@ -810,19 +810,19 @@
 				</case>
 				<case tag="lit" value="" order="12"/>
 				<case tag="bridge" value="yes" order="86"/>
-				<case tag="tunnel" value="yes" order="10"/>
-				<case tag="route_bicycle" value="" order="10"/>
-				<case tag="route_mtb" value="" order="15"/>
-				<case tag="route" value="mtb" order="15"/>
-				<case tag="network_iwn" value="" order="14"/>
-				<case tag="network_nwn" value="" order="13"/>
-				<case tag="network_rwn" value="" order="12"/>
-				<case tag="network_lwn" value="" order="11"/>
-				<case tag="route_hiking" value="" order="11"/>
-				<case tag="route_foot" value="" order="11"/>
-				<case tag="route_walking" value="" order="11"/>
-				<case tag="route" value="hiking" order="11"/>
-				<case tag="hiking" value="yes" order="11"/>
+				<case tag="tunnel" value="yes" order="11"/>
+				<case tag="route_bicycle" value="" order="11"/>
+				<case tag="route_mtb" value="" order="11"/>
+				<case tag="route" value="mtb" order="11"/>
+				<case tag="network_iwn" value="" order="15"/>
+				<case tag="network_nwn" value="" order="14"/>
+				<case tag="network_rwn" value="" order="13"/>
+				<case tag="network_lwn" value="" order="12"/>
+				<case tag="route_hiking" value="" order="12"/>
+				<case tag="route_foot" value="" order="12"/>
+				<case tag="route_walking" value="" order="12"/>
+				<case tag="route" value="hiking" order="12"/>
+				<case tag="hiking" value="yes" order="12"/>
 				<case tag="fixme_tag" value="yes" order="12"/>
 				<case tag="note_tag" value="yes" order="11"/>
 			</switch>
