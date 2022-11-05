@@ -1411,7 +1411,7 @@
 				<case maxzoom="16" textSize="14" textColor="#2f003300"/>
 				<case minzoom="17" textSize="18" textColor="#20003300"/>
 			</apply>
-			<apply_if nightMode="true" textColor="#33339933"/>
+			<apply_if nightMode="true" textColor="#66339933"/>
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 
@@ -1425,7 +1425,7 @@
 				<case maxzoom="15" textSize="10" intersectionMargin="5"/>
 				<case minzoom="16" textSize="12" intersectionMargin="2"/>
 			</apply>
-			<apply_if nightMode="true" textColor="#aaaaaa" textHaloColor="#000000" textHaloRadius="2" textBold="true" textItalic="true" >
+			<apply_if nightMode="true" textColor="#888888" textHaloColor="#000000" textHaloRadius="2" textBold="true" textItalic="true" >
 				<case maxzoom="14" textSize="0"/>
 			</apply_if>
 			<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
@@ -2154,7 +2154,7 @@
 					<apply>
 						<case minzoom="14" icon="building_map" shield="building_shield"/>
 					</apply>
-					<apply_if nightMode="true" minzoom="14" icon="building_map" shield="building_shield"/>
+					<apply_if nightMode="true" minzoom="15" icon="building_map" shield="building_shield"/>
 				</case>
 			</switch>
 		
