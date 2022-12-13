@@ -46,7 +46,7 @@
 	<renderingAttribute name="defaultColor">
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
 		<!-- To change default color completely you should do that also for tag="place" value="island" and tag="natural" value="land" (search this file) -->
-		<case noPolygons="true" attrColorValue="#00000000"/>
+		<case noPolygons="true" attrColorValue="#000000"/>
 		<case nightMode="true" attrColorValue="#000000"/>
 		<case attrColorValue="#fff6e6"/><!-- fff6e6 dce6d0-->
 	</renderingAttribute>
@@ -2825,7 +2825,7 @@
 					<apply_if minzoom="14" maxzoom="14" color="#ddFFF6E6"/>
 					<apply_if minzoom="15" maxzoom="15" color="#bbFFF6E6"/>
 					<apply_if minzoom="16" color="#99FFF6E6"/>
-					<apply_if nightMode="true" color="#222222"/>
+					<apply_if nightMode="true" color="#000000"/>
 				</switch>
 				
 				<!-- prairie -->
