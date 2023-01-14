@@ -105,9 +105,9 @@
 	<renderingAttribute name="shadowRendering">
 	<!-- 0 - no shadow, 1 - one step, 2 - blur shadow, 3 - solid shadow -->
 		<!-- next line ensures bridges stand out ok -->
-		<case minzoom="14" nightMode="false" attrIntValue="3" shadowColor="#969696"/>
-		<case minzoom="14" attrIntValue="3" shadowColor="#464646"/>
-		<case minzoom="8" maxzoom="13" attrIntValue="3" shadowColor="#969696"/>-
+		<case minzoom="14" nightMode="false" attrIntValue="3" shadowColor="#000000"/>
+		<case minzoom="14" attrIntValue="3" shadowColor="#000000"/>
+		<case minzoom="8" maxzoom="13" attrIntValue="3" shadowColor="#000000"/>-
 		<case attrIntValue="3" shadowColor="#000000"/>
 	</renderingAttribute>
 
@@ -227,7 +227,7 @@
 		<case attrColorValue="#66af00"/>
 	</renderingAttribute>
 	
-	<renderingConstant name="null" value="#00000000"/>
+	<renderingConstant name="null" value="#000000"/>
 
 	<renderingAttribute name="contourLineColor">
 		<case contourColorScheme="white" attrColorValue="#1c996633"/>
@@ -3097,6 +3097,10 @@
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
 		</switch> 
 
+		<switch nightMode="true">
+			<case tag="natural" value="land" />
+			<apply color="#000000"/>
+		</switch>
 	</polygon>
 
 	<line>
