@@ -3396,6 +3396,7 @@
 							<case noPolygons="true" minzoom="19" shadowRadius="8"/>
 						</apply>
 					</apply_if>
+					<apply_if arriereplan="true" shadowColor="#99000000" shadowRadius="5"/>
 				</apply>
 			</switch>	
 
@@ -3515,7 +3516,7 @@
 			</apply>
 
 			<apply_if nightMode="true" shadowRadius="0"/>
-			<apply_if tag="highway" value="service" shadowRadius="0"/>
+			<apply_if arriereplan="false" tag="highway" value="service" shadowRadius="0"/>
 
 		</switch>
 
