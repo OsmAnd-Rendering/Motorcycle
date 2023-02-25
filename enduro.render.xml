@@ -3590,14 +3590,20 @@
 					<case additional="smoothness=impassable"/>
 					<case additional="mtb:scale=5"/>
 					<case additional="mtb:scale=4"/>
-					<apply minzoom="13" color_5="#000000">
+					<apply_if engine_v1="true" minzoom="13" color_5="#000000">
 						<case maxzoom="14" strokeWidth_5="1.5" pathEffect_5="5_4"/> 
 						<case maxzoom="15" strokeWidth_5="2" pathEffect_5="6_5"/> 
 						<case maxzoom="16" strokeWidth_5="2.5" pathEffect_5="7_6"/> 
 						<case maxzoom="17" strokeWidth_5="3" pathEffect_5="8_7"/> 
 						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="9_8"/>
-					</apply>
-					<apply_if nightMode="true" color_5="#999999"/>
+					</apply_if>
+					<apply_if engine_v1="false" minzoom="13" color_5="#000000">
+						<case maxzoom="14" strokeWidth_5="1.5" pathEffect_5="5_3"/> 
+						<case maxzoom="15" strokeWidth_5="2" pathEffect_5="7_5"/> 
+						<case maxzoom="16" strokeWidth_5="2.5" pathEffect_5="9_7"/> 
+						<case maxzoom="17" strokeWidth_5="3" pathEffect_5="11_9"/> 
+						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="13_11"/>
+					</apply_if>					<apply_if nightMode="true" color_5="#999999"/>
 					<apply_if arriereplan="true" color_5="#999999"/>
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
@@ -3624,15 +3630,22 @@
 					<case additional="smoothness=horrible"/>
 					<case additional="smoothness=very_horrible"/>
 					<case additional="tracktype=grade5"/>
-					<apply minzoom="13"> 
+					<apply_if engine_v1="true" minzoom="13"> 
 						<case maxzoom="13" strokeWidth_5="1.4" color_5="#5ca300" pathEffect_5="10_4"/>
 						<case maxzoom="14" strokeWidth_5="1.9" color_5="#60a600" pathEffect_5="15_4"/>
 						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900" pathEffect_5="16_5"/>
 						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900" pathEffect_5="17_6"/>
 						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900" pathEffect_5="18_7"/>
 						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="19_8"/> 
-					</apply>
-					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
+					</apply_if>
+					<apply_if engine_v1="false" minzoom="13"> 
+						<case maxzoom="13" strokeWidth_5="1.4" color_5="#5ca300" pathEffect_5="6_3"/>
+						<case maxzoom="14" strokeWidth_5="1.9" color_5="#60a600" pathEffect_5="8_3"/>
+						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900" pathEffect_5="14_4"/>
+						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900" pathEffect_5="20_4"/>
+						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900" pathEffect_5="28_5"/>
+						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="35_6"/> 
+					</apply_if>					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
 					<apply_if baseAppMode="bicycle" ign="false" color_5="#339933"/> 
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
@@ -3697,7 +3710,7 @@
 					<case additional="surface=pebblestone"/>
 					<case ign="false" additional="smoothness=very_bad"/>
 					<case additional="tracktype=grade3"/>
-					<apply minzoom="12" color_5="$trackColor">
+					<apply_if engine_v1="true" minzoom="12" color_5="$trackColor">
 						<case maxzoom="11" strokeWidth_5="0"/> 
 						<case maxzoom="12" strokeWidth_5="1.4" pathEffect_5="6_2"/> 
 						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="10_3"/> 
@@ -3706,8 +3719,17 @@
 						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="40_6"/> 
 						<case maxzoom="17" strokeWidth_5="3.4" pathEffect_5="55_7"/> 
 						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="70_8"/> 
-					</apply>
-					<apply_if baseAppMode="pedestrian" pathEffect_5=""/> 
+					</apply_if>
+					<apply_if engine_v1="false" minzoom="12" color_5="$trackColor">
+						<case maxzoom="11" strokeWidth_5="0"/> 
+						<case maxzoom="12" strokeWidth_5="1.4" pathEffect_5="5_2"/> 
+						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="6_3"/> 
+						<case maxzoom="14" strokeWidth_5="2.2" pathEffect_5="8_3"/> 
+						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="14_4"/> 
+						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/> 
+						<case maxzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/> 
+						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 
+					</apply_if>					<apply_if baseAppMode="pedestrian" pathEffect_5=""/> 
 					<apply_if lessDetailed="true" color_5="#afbf9f" pathEffect_5="">
 						<case maxzoom="11" strokeWidth_5="0"/> 
 						<case maxzoom="12" strokeWidth_5="0"/> 
@@ -3820,17 +3842,21 @@
 						<case maxzoom="12" strokeWidth_5="0"/>
 						<case maxzoom="13" strokeWidth_5="1.4" color_5="#5ca300"/>
 						<case maxzoom="14" strokeWidth_5="1.9" color_5="#60a600"/>
-						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900">
-							<apply_if track="false" ign="false" lessDetailed="false" pathEffect_5="20_8"/><!-- color_2="#66ff99" strokeWidth_2="2:0.7" -->
+						<case maxzoom="15" strokeWidth_5="2.5" color_5="#63a900">
+							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="20_8"/>
+							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="15_4"/>
 						</case>
-						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900">
-							<apply_if track="false" ign="false" lessDetailed="false" pathEffect_5="30_10"/><!-- color_2="#66ff99" strokeWidth_2="1.8:1.2" -->
+						<case maxzoom="16" strokeWidth_5="2.9" color_5="#63a900">
+							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="30_10"/>
+							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="20_5"/>
 						</case>
-						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900">
-							<apply_if track="false" ign="false" lessDetailed="false" pathEffect_5="40_12"/><!-- color_2="#66ff99" strokeWidth_2="1.8:1.8" -->
+						<case maxzoom="17" strokeWidth_5="3.3" color_5="#63a900">
+							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="40_12"/>
+							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="25_6"/>
 						</case>
-						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00"> 
-							<apply_if track="false" ign="false" lessDetailed="false" pathEffect_5="50_14"/><!-- color_2="#66ff99" strokeWidth_2="2:2" -->
+						<case minzoom="18" strokeWidth_5="3.7" color_5="#66af00"> 
+							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="50_14"/>
+							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="30_7"/>
 						</case>
 					</apply> 
 					<apply_if baseAppMode="pedestrian" ign="false" strokeWidth_2="0" color_5="#339933" pathEffect_5=""/><!-- pour enduro-->
