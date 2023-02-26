@@ -3290,8 +3290,8 @@
 					<apply_if nightMode="true" color="#999999" shadowColor="#999999"/>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00cccccc"/>
 					<apply_if ign="true">
-						<case noPolygons="true" maxzoom="13" strokeWidth="3" strokeWidth_0="7"/><!--avec cartes-->
-						<case noPolygons="true" maxzoom="14" strokeWidth="6" strokeWidth_0="12"/>
+						<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" /><!--avec cartes-->
+						<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" />
 						<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7"/>
 						<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10"/>
 						<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18"/>
@@ -3322,8 +3322,8 @@
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#444444" shadowRadius="0"/>
 					<apply_if lessDetailed="true" maxzoom="12" strokeWidth="0"/>
 					<apply_if ign="true">
-						<case noPolygons="true" maxzoom="13" strokeWidth="3" strokeWidth_0="7"/><!--avec cartes-->
-						<case noPolygons="true" maxzoom="14" strokeWidth="6" strokeWidth_0="12"/>
+						<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" /><!--avec cartes-->
+						<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" />
 						<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7"/>
 						<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10"/>
 						<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18"/>
@@ -3377,8 +3377,8 @@
 						<case noPolygons="false" maxzoom="18" strokeWidth="4.5" color="#225522"/>
 						<case noPolygons="false" maxzoom="19" strokeWidth="5" color="#225522"/>
 						<case noPolygons="false" minzoom="20" strokeWidth="5.5" color="#225522"/>
-						<case noPolygons="true" maxzoom="13" strokeWidth="3" strokeWidth_0="7" pathEffect_0="12_4"/><!--avec cartes-->
-						<case noPolygons="true" maxzoom="14" strokeWidth="6" strokeWidth_0="12" pathEffect_0="14_5"/>
+						<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" pathEffect_0="12_4"/><!--avec cartes-->
+						<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" pathEffect_0="14_5"/>
 						<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7" pathEffect_0="15_6"/>
 						<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10" pathEffect_0="20_7"/>
 						<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18" pathEffect_0="31_9"/>
@@ -3811,8 +3811,8 @@
 						<case noPolygons="false" maxzoom="18" strokeWidth_5="4.5" color_5="#225522"/>
 						<case noPolygons="false" maxzoom="19" strokeWidth_5="5" color_5="#225522"/>
 						<case noPolygons="false" minzoom="20" strokeWidth_5="5.5" color_5="#225522"/>
-						<case noPolygons="true" maxzoom="13" strokeWidth="3" strokeWidth_0="7" pathEffect_0="12_4"/><!--avec cartes-->
-						<case noPolygons="true" maxzoom="14" strokeWidth="6" strokeWidth_0="12" pathEffect_0="14_5"/>
+						<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" pathEffect_0="12_4"/><!--avec cartes-->
+						<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" pathEffect_0="14_5"/>
 						<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7" pathEffect_0="15_6"/>
 						<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10" pathEffect_0="20_7"/>
 						<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18" pathEffect_0="31_9"/>
