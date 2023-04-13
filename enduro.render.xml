@@ -949,24 +949,16 @@
 
 		<!-- balisage chemin -->
 		<!-- hiking name -->
-		<switch minzoom="18" lessDetailed="false" textWrapWidth="20" >
-			<case tag="network_iwn" value="" nameTag="hiking_route_name"/>
-			<case tag="network_nwn" value="" nameTag="hiking_route_name"/>
-			<case tag="network_rwn" value="" nameTag="hiking_route_name"/>
-			<case tag="network_lwn" value="" nameTag="hiking_route_name"/>
-			<case tag="route_hiking" value="" nameTag="hiking_route_name"/><!--
-			<case tag="route_bicycle" value="" nameTag=""/>-->
-			<apply  >
-				<case textColor="#663300" textHaloColor="#ffffff" textHaloRadius="1" textOnPath="true" textSize="11" textOrder="80" textDy=""/>
-			</apply>
-			<apply_if nightMode="true" textColor="#eecc00" textHaloColor="#000000"/>
+		<switch minzoom="10" lessDetailed="false" >
+			<case tag="route_hiking" value="" nameTag="hiking_route_name"/>
+			<apply textSize="0" />
 		</switch>
 					
 		<!-- hiking icon-->
 		<switch lessDetailed="false" >
 			<switch minzoom="12" textOnPath="false" textSize="10" textColor="#00ff0000" textOrder="70" >
 				<case tag="network_nwn" value="" nameTag="hiking_route_ref"/>
-				<case tag="network_iwn" value="" nameTag="hiking_ref"/>
+				<case tag="network_iwn" value="" nameTag="hiking_route_ref"/>
 				<apply >
 					<case icon="osmc_red_lower" textShield="osmc_white_bg"/>
 					<apply_if maxzoom="13" textMinDistance="10"/>
@@ -974,30 +966,37 @@
 					<apply_if maxzoom="15" textMinDistance="90"/>
 					<apply_if maxzoom="16" textMinDistance="150"/>
 					<apply_if minzoom="17" textMinDistance="250"/>
-				</apply><!--
-				<apply_if nightMode="true" textShield="osmc_white_upper"/>-->
+				</apply>
 			</switch>
 			<switch minzoom="13" textOnPath="false" textSize="10" textColor="#00ff0000" textOrder="71" >
-				<case tag="network_rwn" value="" nameTag="hiking_route_name"/>
+				<case tag="network_rwn" value="" nameTag="hiking_route_ref"/>
 				<apply textMinDistance="150">
 					<case icon="osmc_red_lower" textShield="osmc_yellow_bg"/>
-				</apply><!--
-				<apply_if nightMode="true" textShield="osmc_orange_upper"/>-->
+				</apply>
 			</switch>
 			<switch minzoom="14" textOnPath="false" textSize="10" textColor="#00ffffff" textOrder="72" >
-				<case minzoom="15" tag="network_lwn" value="" nameTag="hiking_route_name"/>
+				<case minzoom="15" tag="network_lwn" value="" nameTag="hiking_route_ref"/>
 				<apply textMinDistance="200">
 					<case icon="osmc_yellow_lower" textShield="osmc_white_bg"/>
-				</apply><!--
-				<apply_if nightMode="true" textShield="osmc_white_upper"/>-->
+				</apply>
 			</switch>
 		</switch>
 
+		<!-- velo ref-->
+		<switch minzoom="10" >
+			<case tag="route_bicycle" value="" nameTag="bicycle_ref" textOrder="43" textColor="#ffff00"/><!-- ok en engine V1
+			<case tag="route_mtb" value="" nameTag="bicycle_ref" nameTag2="mtb:name" textOrder="43" textColor="#00ffff"/>
+			<case tag="route_mtb" value="" nameTag="bicycle_mtb:name" textOrder="43" textColor="#ff0000"/>-->
+			<apply>
+				<case textSize="0"/>
+			</apply>
+		</switch> 
+		
 		<!-- MTB ref-->
 		<switch minzoom="18" lessDetailed="false" textWrapWidth="25" textOrder="80">
 			<case tag="route_mtb" value="" nameTag="bicycle_ref" nameTag2="mtb:name" textDy="12" textColor="#ff0000"/>
 			<case tag="route_mtb" value="" nameTag="bicycle_mtb:name" textDy="-24" textColor="#00ff00"/><!--
-			<case tag="route_mtb" value="" nameTag="" textDy="-12" textColor="#003366"/>-->
+			<case tag="route" value="mtb" nameTag="" textDy="-12" textColor="#003366"/>-->
 			<apply textHaloColor="#ffffff" textHaloRadius="3" textOnPath="true" textSize="11"/>
 			<apply_if nightMode="true" textHaloColor="#000000" textColor="#6699cc"/>
 		</switch> 
@@ -1006,7 +1005,7 @@
 		<switch lessDetailed="false" minzoom="14" textOnPath="false" textSize="10" textOrder="169" >
 				<case tag="route_mtb" value="" nameTag="bicycle_ref" nameTag2="mtb:name"/>
 				<case tag="route_mtb" value="" nameTag="bicycle_mtb:name"/>
-				<case tag="route_mtb" value="" nameTag=""/>
+				<case tag="route" value="mtb" nameTag=""/>
 				<apply textColor="#00ffffff">
 					<case icon="osmc_blue_bicycle" textShield="osmc_blue_circle_bg"/>
 					<apply_if maxzoom="14" textMinDistance="60"/>
@@ -4199,12 +4198,12 @@
 		</switch>
 
 		<!-- balisages pedestre -->
-		<switch balisage="false" cap="ROUND" strokeWidth="0.1"><!--  color="#ffffcc" -->
+		<switch balisage="false" cap="ROUND" strokeWidth="0.1">
 			<case minzoom="12" tag="network_iwn" value="" shadowColor="#ffddaa" color="#ccffddaa"/>
 			<case minzoom="12" tag="network_nwn" value="" shadowColor="#ffddaa" color="#ccffddaa"/>
 			<case minzoom="13" tag="network_rwn" value="" shadowColor="#ffeeaa" color="#ccffeeaa"/>
-			<case minzoom="15" tag="network_lwn" value="" shadowColor="#ffffaa" color="#ccffffaa"/><!--
-			<case minzoom="15" tag="route_hiking" value="" shadowColor="#ffffaa" color="#ccffffaa"/>-->
+			<case minzoom="15" tag="network_lwn" value="" shadowColor="#ffffaa" color="#ccffffaa"/>
+			<case minzoom="15" tag="route_hiking" value="" shadowColor="#ffffaa" color="#ccffffaa"/>
 			<case minzoom="15" tag="route" value="hiking" shadowColor="#ffffaa" color="#ccffffaa"/>
 			<case minzoom="15" tag="hiking" value="yes" shadowColor="#ffffaa" color="#ccffffaa"/>
 			<apply>
@@ -4221,8 +4220,7 @@
 			</apply>
 			<apply_if noPolygons="true" shadowColor="#444400"/>
 			<apply_if nightMode="true" shadowColor="#444400"/>
-			<apply_if lessDetailed="true" strokeWidth="0"/><!--
-			<apply_if ign="true" color="#ffbbff" shadowColor="#99ffbbff"/>-->
+			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" color="#ff00ff" shadowColor="#ff00ff" shadowRadius="0"/>
 		</switch>
 
