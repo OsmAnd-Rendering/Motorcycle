@@ -46,7 +46,7 @@
 	<renderingAttribute name="defaultColor">
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
 		<!-- To change default color completely you should do that also for tag="place" value="island" and tag="natural" value="land" (search this file) -->
-		<case noPolygons="true" attrColorValue="#000000"/>
+		<case noPolygons="true" attrColorValue="#00000000"/>
 		<case nightMode="true" attrColorValue="#000000"/>
 		<case attrColorValue="#fff6e6"/><!-- fff6e6 dce6d0-->
 	</renderingAttribute>
@@ -293,16 +293,16 @@
 	</renderingAttribute>-->
 	<!-- routeInfo_tracktype-->
 	<renderingAttribute name="routeInfo_tracktype"> <!-- dureté de la surface-->
-		<case additional="smoothness=impassable" attrColorValue="#ff0000" attrStringValue="sentier"/>
-		<case additional="smoothness=very_horrible" attrColorValue="$trackColor_2" attrStringValue="raviné"/>
-		<case additional="smoothness=horrible" attrColorValue="$trackColor_2" attrStringValue="raviné"/>
-		<case additional="surface=grass" attrColorValue="$trackColor_2" attrStringValue="herbe"/>
-		<case additional="surface=mud" attrColorValue="$trackColor_2" attrStringValue="boue"/>
-		<case additional="surface=sand" attrColorValue="$trackColor_2" attrStringValue="sable"/>
-		<case additional="surface=unpaved" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
-		<case additional="surface=ground" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
-		<case additional="surface=dirt" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
-		<case additional="surface=earth" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="smoothness=impassable" attrColorValue="#66ff99" attrStringValue="sentier"/>
+		<case additional="smoothness=very_horrible" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="smoothness=horrible" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=grass" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=mud" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=sand" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=unpaved" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=ground" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=dirt" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=earth" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
 		<case additional="surface=pebblestone" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=gravel" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="surface=paved" attrColorValue="$trackColor" attrStringValue="carrossable"/>
@@ -321,16 +321,16 @@
 		<case additional="tracktype=grade1" attrColorValue="$trackColor" attrStringValue="carrossable"/>
 		<case additional="tracktype=grade2" attrColorValue="$trackColor" attrStringValue="carrossable"/> 
 		<case additional="tracktype=grade3" attrColorValue="$trackColor" attrStringValue="carrossable"/>
-		<case additional="tracktype=grade4" attrColorValue="#999900" attrStringValue="selon météo"/>
-		<case additional="tracktype=grade5" attrColorValue="$trackColor_2" attrStringValue="sol nu"/>
+		<case additional="tracktype=grade4" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="tracktype=grade5" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
 		<case tag="highway" value="unclassified" attrColorValue="#000000" attrStringValue="petite route"/>
 		<case tag="highway" value="road" attrColorValue="#000000" attrStringValue="petite route"/>
 		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="petite route"/>
 		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="petite route"/>
 		<case tag="highway" value="service" attrColorValue="#000000" attrStringValue="petite route"/>
-		<case tag="highway" value="track" attrColorValue="#00ff99" attrStringValue="chemin non précisé"/>
-		<case tag="highway" value="path" attrColorValue="#ff0000" attrStringValue="sentier"/>
-		<case tag="highway" value="footway" attrColorValue="#ff0000" attrStringValue="sentier"/>
+		<case tag="highway" value="track" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case tag="highway" value="path" attrColorValue="#66ff99" attrStringValue="sentier"/>
+		<case tag="highway" value="footway" attrColorValue="#ff0000" attrStringValue="piéton"/>
 		<case tag="highway" value="bridleway" attrColorValue="#ff0000" attrStringValue="cavalier"/>
 		<case tag="highway" value="steps" attrColorValue="#ff0000" attrStringValue="escalier"/>
 		<case tag="highway" value="cycleway" attrColorValue="#ff0000" attrStringValue="piste cyclable"/>
@@ -425,8 +425,9 @@
 					<case tag="" value=""/>
 				</switch>
 
-				<case tag="barrier" value="" order="10"/>
+				<case tag="barrier" value="" order="10"/><!--
 				<case tag="barrier" value="wall" />
+				<case tag="barrier" value="fence" /> ignorePolygonArea="true" -->
 
 				<case tag="amenity" value="shelter" order="10"/>
 
@@ -1017,7 +1018,7 @@
 		</switch>
 
 		<!-- routes ref cricri-->
-		<switch ign="false" textWrapWidth="10" textSize="9" textBold="true" textHaloRadius="0" cap="ROUND">
+		<switch ign="false" textWrapWidth="10" textSize="9" textBold="true" textHaloRadius="0" cap="ROUND" textMinDistance="150">
 			<switch minzoom="7" textSize="10" textOrder="249" >
 				<case tag="highway" value="" nameTag="int_ref"/>
 				<apply textColor="#ffffff" >
@@ -2068,27 +2069,25 @@
 		<switch nightMode="false" shield="purple_round_shield" iconOrder="160" iconVisibleSize="24">
 			<case minzoom="17" tag="shop" value="bicycle" icon="shop_bicycle"/>
 			<case minzoom="16" tag="shop" value="car" icon="shop_car"/>
-			<case minzoom="16" tag="shop" value="car_repair" icon="shop_car_repair">
-				<case additional="service=tyres" icon="service_tyres"/>
-			</case>
-			<case minzoom="16" tag="shop" value="car_parts" icon="shop_car_parts"/>
 			<case minzoom="17" tag="shop" value="doityourself" icon="shop_doityourself" iconVisibleSize="32"/>
 			<case minzoom="17" tag="shop" value="electrical" icon="electrical"/>
 			<case minzoom="18" tag="shop" value="energy" icon="energy"/>
 			<case minzoom="19" tag="shop" value="fireplace" icon="shop_fireplace"/>
 			<case minzoom="17" tag="shop" value="gas" icon="gas"/>
 			<case minzoom="17" tag="shop" value="general" icon="shop_general"/>
-			<case minzoom="17" tag="shop" value="motorcycle" icon="shop_motorcycle"/>
-			<case minzoom="15" tag="shop" value="motorcycle_repair" icon="motorcycle_repair"/>
 			<case minzoom="17" tag="shop" value="outdoor" icon="outdoor"/>
 			<case minzoom="15" tag="shop" value="supermarket" icon="shop_supermarket" iconVisibleSize="22" iconOrder="157"/>
-			<case minzoom="17" tag="shop" value="tyres" icon="tyres"/><!--
-			<case minzoom="17" tag="shop" value="coffee" icon="coffee"/>
-			<case minzoom="15" tag="shop" value="department_store" icon="shop_department_store" iconVisibleSize="32" iconOrder="158"/>
-			<case minzoom="17" tag="shop" value="fabric" icon="fabric"/>
-			<case minzoom="17" tag="shop" value="farm" icon="farm"/>
-			<case minzoom="17" tag="shop" value="furniture" icon="shop_furniture"/>
-			-->
+			<apply_if lessDetailed="true" maxzoom="15" icon=""/>
+		</switch>
+		<!-- Shops -->
+		<switch shield="purple_round_shield" iconOrder="160" iconVisibleSize="24">
+			<case minzoom="16" tag="shop" value="car_repair" icon="shop_car_repair">
+				<case additional="service=tyres" icon="service_tyres"/>
+			</case>
+			<case minzoom="16" tag="shop" value="car_parts" icon="shop_car_parts"/>
+			<case minzoom="17" tag="shop" value="motorcycle" icon="shop_motorcycle"/>
+			<case minzoom="15" tag="shop" value="motorcycle_repair" icon="motorcycle_repair"/>
+			<case minzoom="17" tag="shop" value="tyres" icon="tyres"/>
 			<apply_if lessDetailed="true" maxzoom="15" icon=""/>
 		</switch>
 
@@ -2786,8 +2785,7 @@
 			<switch minzoom="8">
 				<case tag="natural" value="wood"/>
 				<case tag="landuse" value="forest"/>
-				<case tag="natural" value="tree"/><!--
-				<case tag="natural" value="tree_row"/>-->
+				<case tag="natural" value="tree"/>
 				<apply color="#dce6d0">
 					<case maxzoom="11" color="#cfd9c3"/>
 				</apply>
@@ -3022,17 +3020,17 @@
 				<apply color="#77999999" color_2="#888888" cap_2="SQUARE"/>
 			</case>
 			<switch minzoom="16">
-				<case tag="barrier" value="fence"/>
-				<case tag="barrier" value="wall"/>
-				<apply color="$null" color_2="#ff6666">
-					<case maxzoom="16" strokeWidth_2="0.8:1" pathEffect_2="1_3"/>
-					<case maxzoom="17" strokeWidth_2="0.9:1" pathEffect_2="1_3"/>
-					<case maxzoom="18" strokeWidth_2="1:1" pathEffect_2="1_3"/>
-					<case maxzoom="19" strokeWidth_2="1.1:1.1" pathEffect_2="1_4"/>
-					<case minxzoom="20" strokeWidth_2="1.2:1.2" pathEffect_2="1_5"/>
+				<case tag="barrier" value="wall" color="#999999" color_2="#00ff6666"/>
+				<case tag="barrier" value="fence" color="#00999999" color_2="#ff6666"/>
+				<apply >
+					<case maxzoom="16" strokeWidth_2="2" pathEffect_2="1_3"/>
+					<case maxzoom="17" strokeWidth_2="2.2" pathEffect_2="1_3"/>
+					<case maxzoom="18" strokeWidth_2="2.4" pathEffect_2="1_3"/>
+					<case maxzoom="19" strokeWidth_2="2.6" pathEffect_2="1_4"/>
+					<case minxzoom="20" strokeWidth_2="2.8" pathEffect_2="1_5"/>
 				</apply>
 			</switch>
-
+			
 		</switch>
 
 		<switch noPolygons="false" nightMode="false">
@@ -4010,6 +4008,14 @@
 					<case ign="true" color="#999999"/>
 				</apply_if>
 			</switch>	
+			
+			<!-- sidewalk trottoir pas pris en compte-->
+			<switch minzoom="14" >
+				<case tag="footway" value="sidewalk"/>
+				<apply>
+					<case minzoom="10" strokeWidth="0" color="#35330000"/>
+				</apply>
+			</switch>	
 
 			<!--grimpette -->
 			<apply difficulte="false">
@@ -4355,11 +4361,11 @@
 			<case tag="barrier" value="kent_carriage_gap"/>
 			<case tag="waterway" value="rapids" pathEffect="2_2"/>
 			<apply>
-				<case maxzoom="16" strokeWidth="0.8:1" pathEffect="1_3"/>
-				<case maxzoom="17" strokeWidth="0.9:1" pathEffect="1_3"/>
-				<case maxzoom="18" strokeWidth="1:1" pathEffect="1_3"/>
-				<case maxzoom="19" strokeWidth="1.1:1.1" pathEffect="1_4"/>
-				<case minxzoom="20" strokeWidth="1.2:1.2" pathEffect="1_5"/>
+				<case maxzoom="16" strokeWidth="2" pathEffect="1_3"/>
+				<case maxzoom="17" strokeWidth="2.2" pathEffect="1_3"/>
+				<case maxzoom="18" strokeWidth="2.4" pathEffect="1_3"/>
+				<case maxzoom="19" strokeWidth="2.6" pathEffect="1_4"/>
+				<case minxzoom="20" strokeWidth="2.8" pathEffect="1_5"/>
 			</apply>
 			<apply/>
 			<apply_if nightMode="true" color="#000000"/>
@@ -4372,9 +4378,9 @@
 		</case>
 
 		<!-- haie-->
-		<switch nightMode="false">
-			<case minzoom="16" tag="barrier" value="hedge" color="#dfe9d3" strokeWidth="0.1:1" shadowColor="#dfe9d3"/><!-- couleur foret-->
-			<case minzoom="15" tag="natural" value="tree_row" color="#dfe9d3" strokeWidth="0.1:1" shadowColor="#dfe9d3"/>
+		<switch nightMode="false" cap="ROUND">
+			<case minzoom="16" tag="barrier" value="hedge" color="#dce6d0" strokeWidth="0.1:1" shadowColor="#dce6d0"/><!-- couleur foret-->
+			<case minzoom="15" tag="natural" value="tree_row" color="#dce6d0" strokeWidth="0.1:1" shadowColor="#dce6d0"/>
 			<apply>
 				<case maxzoom="16" shadowRadius="1.5:1"/>
 				<case maxzoom="17" shadowRadius="2.5:1"/>
