@@ -959,6 +959,8 @@
 		<!-- velo ref-->
 		<switch minzoom="10" >
 			<case tag="route_bicycle" value="" nameTag="bicycle_ref" />
+			<case tag="route_mtb" value="" nameTag="bicycle_mtb:name" /><!-- ? -->
+			<case tag="route_mtb" value="" nameTag="mtb:name" /><!-- ? -->
 			<apply textSize="0"/>
 		</switch> 
 
