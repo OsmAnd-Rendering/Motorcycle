@@ -2750,7 +2750,8 @@
 				<apply color="#dce6d0">
 					<case maxzoom="11" color="#cfd9c3"/>
 				</apply>
-				<apply_if nightMode="true" color="#202c20" strokeWidth_2="0:0"/>
+				<apply_if nightMode="true" color="#202c20" strokeWidth_2="0"/>
+				<apply_if lessDetailed="true" strokeWidth_2="0"/>
 			</switch>
 
 			<!-- vegetation-->
@@ -2766,7 +2767,8 @@
 					<apply color="#e6efd6">
 						<case maxzoom="11" color="#d6dfc6"/>
 					</apply>
-					<apply_if nightMode="true" color="#2c2f20" strokeWidth_2="0:0"/>
+					<apply_if nightMode="true" color="#2c2f20" strokeWidth_2="0"/>
+					<apply_if lessDetailed="true" strokeWidth_2="0"/>
 				</switch>
 				
 				<!-- vigne -->
@@ -2775,7 +2777,8 @@
 					<apply_if minzoom="14" maxzoom="14" color="#ddFff3ff"/>
 					<apply_if minzoom="15" maxzoom="15" color="#bbFff3ff"/>
 					<apply_if minzoom="16" color="#99Fff3ff"/>
-					<apply_if nightMode="true" color="#292029" strokeWidth_2="0:0"/>
+					<apply_if nightMode="true" color="#292029" strokeWidth_2="0"/>
+					<apply_if lessDetailed="true" strokeWidth_2="0"/>
 				</switch>
 				
 				<!-- cultures -->
@@ -2802,10 +2805,11 @@
 						<apply_if minzoom="14" maxzoom="14" color="#ddf3ffe3"/>
 						<apply_if minzoom="15" maxzoom="15" color="#bbf3ffe3"/>
 						<apply_if minzoom="16" color="#99f3ffe3"/>-->
-						<apply_if nightMode="true" color="#303f3f" strokeWidth_2="0:0"/>
+						<apply_if nightMode="true" color="#303f3f" strokeWidth_2="0"/>
+						<apply_if lessDetailed="true" strokeWidth_2="0"/>
 					</switch>
 
-					<apply_if>
+					<apply_if lessDetailed="false">
 						<case maxzoom="11" color_2="#33999999" strokeWidth_2="0"/>
 						<case maxzoom="12" color_2="#22999999" strokeWidth_2="0.7:1"/>
 						<case maxzoom="13" color_2="#33999999" strokeWidth_2="0.7:1"/>
@@ -3301,18 +3305,7 @@
 				<case tag="highway" value="service"/>
 				<apply_if layer="-2" disable="true"/>
 				<apply_if layer="-3" disable="true"/>
-				<apply strokeWidth_0="0"><!-- ponts
-					<case maxzoom="12" strokeWidth="1.6" pathEffect="6_2"/>
-					<case maxzoom="13" strokeWidth="2.2" pathEffect="8_3"/>
-					<case maxzoom="14" strokeWidth="3" pathEffect="10_4"/>
-					<case maxzoom="15" strokeWidth="4" pathEffect="12_5"/>
-					<case maxzoom="16" strokeWidth="5" pathEffect="14_6" strokeWidth_0="8.5"/>
-					<case maxzoom="17" strokeWidth="6" pathEffect="16_7" strokeWidth_0="9"/>
-					<case maxzoom="18" strokeWidth="7" pathEffect="18_8" strokeWidth_0="10"/>
-					<case maxzoom="19" strokeWidth="8" pathEffect="20_9" strokeWidth_0="11"/>
-					<case maxzoom="20" strokeWidth="9" pathEffect="22_10" strokeWidth_0="12"/>
-					<case minzoom="21" strokeWidth="10" pathEffect="24_11" strokeWidth_0="13"/>
-					<apply color="#ffffff" shadowColor="#444444" cap="BUTT"/>-->
+				<apply strokeWidth_0="0">
 					<apply minzoom="12" color="$trackColor">
 						<case maxzoom="11" strokeWidth="0"/> 
 						<case maxzoom="12" strokeWidth="1.4"/> 
@@ -3359,7 +3352,6 @@
 							<case noPolygons="true" minzoom="19" shadowRadius="8"/>
 						</apply>
 					</apply_if>
-					<apply_if arriereplan="true" shadowColor="#99000000" shadowRadius="5"/>
 				</apply>
 			</switch>	
 
@@ -3488,8 +3480,9 @@
 				<case maxzoom="19" shadowRadius="2.3"/>
 				<case minzoom="20" shadowRadius="2.5"/>
 			</apply_if>
-			<apply_if nightMode="true" shadowRadius="0"/>
-			<apply_if arriereplan="false" tag="highway" value="service" shadowRadius="0"/>
+			<apply_if nightMode="true" shadowRadius="0"/><!---->
+			<apply_if arriereplan="false" ign="false" tag="highway" value="service" shadowRadius="0"/>
+			<apply_if arriereplan="true" tag="highway" value="service" shadowColor="#99000000" shadowRadius="4"/>
 
 		</switch>
 
@@ -4069,7 +4062,7 @@
 			</case>
 
 			<!-- interdiction -->
-			<apply hideAccess="false" lessDetailed="false">
+			<apply hideAccess="false" >
 				<switch>
 					<case additional="access=private"/>
 					<case additional="access=no"/>
@@ -4080,8 +4073,10 @@
 					<case additional="motorcar=private"/>
 					<case additional="motorcar=no"/>
 					<apply color_5="#ff3333">
-						<apply_if nightMode="true" color_5="#cc0000"/>
-						<apply_if ign="true" color_0="#cc0000"/>
+						<case lessDetailed="true" nightMode="true" color_5="#660000"/>
+						<case lessDetailed="true" nightMode="false" color_5="#ff9999"/>
+						<case nightMode="true" color_5="#cc0000"/>
+						<case ign="true" color_5="#cc0000"/>
 					</apply>
 				</switch>
 				<switch>
@@ -4098,8 +4093,10 @@
 					<case additional="motor_vehicle=agricultural"/>
 					<case additional="access=agricultural"/>
 					<apply color_5="#ff3333">
-						<apply_if nightMode="true" color_5="#cc0000"/>
-						<apply_if ign="true" color_0="#cc0000"/>
+						<case lessDetailed="true" nightMode="true" color_5="#660000"/>
+						<case lessDetailed="true" nightMode="false" color_5="#ff9999"/>
+						<case nightMode="true" color_5="#cc0000"/>
+						<case ign="true" color_5="#cc0000"/>
 					</apply>
 				</switch>
 			</apply> 
@@ -4119,7 +4116,8 @@
 			</apply_if>
 
 			<apply_if tag="railway" value="" additional="bridge=yes" strokeWidth__1="0" strokeWidth_0="0"/>
-			<!--<apply_if nightMode="true" color="#222222"/>-->
+			<!--<apply_if nightMode="true" color="#222222"/>
+			<apply_if tag="disused:highway" value="" color_5="#00000000"/>-->
 		</switch>
 
 		<!-- balisage vélo -->
