@@ -3,7 +3,7 @@
 # Affichage et calculs d'itinéraires moto tout terrain
 Modifie l'affichage de la carte offline (vectorielle) pour l'utilisation en moto tout terrain avec les chemins visuellement classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap, permet des calculs de routage "tout terrain" pour 3 types de motos (de la plus lourde à la plus légère).
 
-(rien d'irréversible, les profils et la configuration Osmand existante ne sont pas modifiés)
+(le processus d'installation créé 3 nouveaux profils avec leur configuration et leur guidage, les profils et la configuration Osmand existante ne sont pas modifiés)
 
 ## Changements notables par rapport aux styles standard :
 
