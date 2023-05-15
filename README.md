@@ -1,7 +1,7 @@
 `🇫🇷 Français`&emsp;🇬🇧 [English](readme_en.md)
 
 # Affichage et calculs d'itinéraires moto tout terrain
-Modifie l'affichage de la carte offline (vectorielle) axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap, permet des calculs de routage pour 3 types de motos (de la plus lourde à la plus légère).
+Modifie l'affichage de la carte offline (vectorielle) pour l'utilisation en moto tout terrain avec les chemins visuellement classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap, permet des calculs de routage "tout terrain" pour 3 types de motos (de la plus lourde à la plus légère).
 
 ## Changements notables par rapport aux styles standard :
 
