@@ -5,6 +5,8 @@ Modifies the display of the offline map (vector) for off-road motorcycle use wit
 
 (the installation process creates 3 new profiles with their configuration and guidance, the existing Osmand profiles and configuration are not modified)
 
+example in video https://youtu.be/mj46qerdwTs
+
 ## Significant variations from the standard styles:
 
 - Visual identification of ways according to driveability (colour code) **[explanations in French](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
