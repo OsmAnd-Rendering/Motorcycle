@@ -40,5 +40,7 @@ exemple en vidéo **https://youtu.be/mj46qerdwTs**
 
 - **[Légende](Legend.md)**
 
+- **[Trucs et astuces](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/Trucs-et-astuces-OsmAnd)**
+
 - **[Documentation générale](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 
