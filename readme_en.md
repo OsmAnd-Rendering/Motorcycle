@@ -5,7 +5,7 @@ Modifies the display of the offline map (vector) for off-road motorcycle use wit
 
 (the installation process creates 3 new profiles with their configuration and guidance, the existing Osmand profiles and configuration are not modified)
 
-example in video **https://youtu.be/mj46qerdwTs**
+example in video **[https://youtu.be/mj46qerdwTs](https://youtu.be/07nj4LoACdc)**
 
 ## Significant variations from the standard styles:
 
