@@ -5,7 +5,7 @@ Modifie l'affichage de la carte offline (vectorielle) pour l'utilisation en moto
 
 ( le processus d'installation créé 3 nouveaux profils avec leur configuration et leur guidage, les profils et la configuration Osmand existante ne sont pas modifiés )
 
-exemple en vidéo **https://youtu.be/mj46qerdwTs**
+exemple en vidéo **[https://youtu.be/mj46qerdwTs](https://youtu.be/07nj4LoACdc)**
 
 ## Changements notables par rapport aux styles standard :
 
