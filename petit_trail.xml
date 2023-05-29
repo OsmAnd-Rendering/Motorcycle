@@ -4,26 +4,40 @@
 	<attribute name="zoomToLoadTiles" value="16" />
 	<attribute name="planRoadDirection" value="1" />
 	<attribute name="recalculateDistanceHelp" value="100000" />
-
+	<!-- routing for GPX ? -->
+		<!-- MAIN parameter to approximate (35m good for custom recorded tracks)-->
+		<attribute name="minPointApproximation" value = "50"/>
+		<!-- don't search subsegments shorter than specified distance (also used to step back for car turns) -->
+		<attribute name="minStepApproximation" value = "100"/>
+		<!-- This parameter could speed up or slow down evaluation (better to make bigger for long routes and smaller for short)-->
+		<attribute name="maxStepApproximation" value= "3000"/>
+		<!-- Parameter to smoother the track itself (could be 0 if it's not recorded track) -->
+		<attribute name="smoothenPointsNoRoute" value = "5"/>
+		<!-- NEW ROUTING API -->
+		
 	<routingProfile name="petit_trail" baseProfile="petit_trail" restrictionsAware="true" minSpeed="1" defaultSpeed="40" maxSpeed="110" followSpeedLimitations="false" onewayAware="true">
 		<parameter id="avoid_grade" name="trie les chemins" description="priorité aux chemins carrossables" type="boolean"/>
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean"/>
 		<parameter id="avoid_borders" name="Avoid border crossing" description="Avoid crossing a border into another country" type="boolean"/>
 		<parameter id="avoid_sentier" name="pour tracer" description="pour tracer" type="boolean"/>
 		<parameter id="allow_private" name="Allow private access" description="Allow access to private areas" type="boolean"/>
+		<parameter id="avoid_track" name="moins de route" description="pour trajet de moins de 200 km" type="boolean"/>
 
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>
 			<select value="-1" t="construction" v="yes"/>
 			<select value="-1" t="smoothness" v="impassable"/>
-			<select value="1" t="highway" v="path"/>
-			<select value="-1" t="highway" v="footway"/>
-			<select value="-1" t="highway" v="cycleway"/>
 			<select value="-1" t="mtb:scale" v="2"/>
 			<select value="-1" t="mtb:scale" v="3"/>
 			<select value="-1" t="mtb:scale" v="4"/>
 			<select value="-1" t="mtb:scale" v="5"/>
-			<select value="-1" t="mtb:scale" v="6"/>
+			<select value="-1" t="sac_scale " v="mountain_hiking "/>
+			<select value="-1" t="sac_scale " v="demanding_mountain_hiking "/>
+			<select value="-1" t="sac_scale " v="alpine_hiking "/>
+			<select value="-1" t="sac_scale " v="demanding_alpine_hiking "/>
+			<select value="-1" t="sac_scale " v="difficult_alpine_hiking "/>
+			<select value="-1" t="highway" v="footway"/>
+			<select value="-1" t="highway" v="cycleway"/>
 			<select value="1" t="ford" v="yes"/>
 			<if param="avoid_toll">
 				<select value="-1" t="toll" v="yes"/>
@@ -62,8 +76,8 @@
 				<select value="1" t="access" v="forestry"/>
 			</if>
 			<select value="-1" t="motorcar" v="no"/>
-			<select value="-1"  t="motorcar" v="private"/>
-			<select value="-1"  t="motorcar" v="destination"/>
+			<select value="-1" t="motorcar" v="private"/>
+			<select value="-1" t="motorcar" v="destination"/>
 			<select value="-1" t="motorcar" v="customers"/>
 			<select value="-1" t="motorcar" v="agricultural"/>
 			<select value="-1" t="motorcar" v="forestry"/>
@@ -112,6 +126,7 @@
 			<select value="1" t="highway" v="tertiary_link"/>
 			<select value="1" t="highway" v="unclassified"/>
 			<select value="1" t="highway" v="road"/>
+			<select value="1" t="highway" v="path"/>
 			<select value="1" t="highway" v="residential"/>
 			<select value="1" t="highway" v="track"/>
 			<select value="1" t="highway" v="service"/>
@@ -139,39 +154,42 @@
 		</way>
 
 		<way attribute="speed" type="speed">
-			<select value="5" t="surface" v="mud"/>
-			<select value="5" t="ford" v="yes"/>
-			<select value="10" t="surface" v="grass"/>
-			<select value="10" t="surface" v="sand"/>
-			<select value="10" t="surface" v="dirt"/>
-			<select value="20" t="surface" v="earth"/>
-			<select value="20" t="surface" v="unpaved"/>
-			<select value="20" t="surface" v="ground"/>
-			<select value="30" t="tracktype" v="grade5"/>
-			<select value="30" t="mtb:scale" v="0-"/>
+			<select value="30" t="sac_scale " v="hiking"/>
 			<select value="30" t="mtb:scale" v="0"/>
-			<select value="30" t="mtb:scale" v="0+"/>
+			<select value="10" t="mtb:scale" v="1"/>
+			<select value="5" t="highway" v="path"/><!-- sentier-->
+			<select value="10" t="smoothness" v="very_horrible"/>
+			<select value="10" t="surface" v="mud"/>
+			<select value="10" t="ford" v="yes"/>
+			<select value="20" t="surface" v="grass"/>
+			<select value="20" t="surface" v="sand"/>
+			<select value="30" t="surface" v="dirt"/>
+			<select value="30" t="surface" v="earth"/>
+			<select value="30" t="surface" v="unpaved"/>
+			<select value="30" t="surface" v="ground"/>
+			<select value="30" t="tracktype" v="grade5"/><!---->
+			<select value="30" t="mtb:scale" v="0"/>
 			<select value="40" t="tracktype" v="grade4"/>
-			<select value="40" t="surface" v="compacted"/>
 			<select value="40" t="surface" v="gravel"/>
 			<select value="40" t="surface" v="pebblestone"/>
-			<select value="40" t="surface" v="paved"/>
-			<select value="40" t="surface" v="paving_stones"/>
 			<select value="40" t="tracktype" v="grade3"/>
-			<select value="45" t="surface" v="fine_gravel"/>
-			<select value="45" t="surface" v="asphalt"/>
-			<select value="45" t="surface" v="concrete"/>
-			<select value="45" t="tracktype" v="grade2"/>
-			<select value="45" t="surface" v="chipseal"/>
-			<select value="45" t="tracktype" v="grade1"/>
+			<select value="55" t="surface" v="compacted"/>
+			<select value="55" t="surface" v="paved"/>
+			<select value="40" t="surface" v="paving_stones"/>
+			<select value="55" t="surface" v="fine_gravel"/>
+			<select value="55" t="surface" v="asphalt"/>
+			<select value="55" t="surface" v="concrete"/>
+			<select value="55" t="tracktype" v="grade2"/>
+			<select value="55" t="surface" v="chipseal"/>
+			<select value="55" t="tracktype" v="grade1"/>
 			<select value="20" t="highway" v="track"/><!-- 90 vmax profil/ 20 v track = 4.5 max pour priority-->
-			<select value="5" t="highway" v="path"/><!-- sentier-->
 			<select value="45" t="highway" v="unclassified"/>
 			<select value="45" t="highway" v="road"/>
 			<select value="45" t="highway" v="service"/>
 			<select value="45" t="highway" v="residential"/>
-			<select value="60" t="highway" v=""/><!-- vitesse moyenne toutes routes-->
-		</way>
+			<select value="60" t="highway" v=""/><!--
+			<select value="0"/>tout le reste-->
+			</way>
 
 		<way attribute="priority">
 			<if param="avoid_sentier">
@@ -182,58 +200,71 @@
 			</if>
 			<select value="0.1" t="highway" v="motorway"/>
 			<select value="0.1" t="highway" v="motorway_link"/>
-			<select value="0.15" t="highway" v="trunk"/>
-			<select value="0.15" t="highway" v="trunk_link"/>
-			<select value="0.2" t="highway" v="primary"/>
-			<select value="0.2" t="highway" v="primary_link"/>
-			<select value="0.2" t="highway" v="secondary"/>
-			<select value="0.2" t="highway" v="secondary_link"/>
-			<select value="0.2" t="highway" v="tertiary"/>
-			<select value="0.2" t="highway" v="tertiary_link"/>
-			<select value="0.5" t="highway" v="unclassified"/>
-			<select value="0.5" t="highway" v="road"/>
-			<select value="0.5" t="highway" v="service"/>
-			<select value="0.5" t="highway" v="residential"/>
-			<select value="0.2" t="highway" v="living_street"/>
+			<select value="0.1" t="highway" v="trunk"/>
+			<select value="0.1" t="highway" v="trunk_link"/>
+			<select value="0.15" t="highway" v="primary"/>
+			<select value="0.15" t="highway" v="primary_link"/>
+			<select value="0.25" t="highway" v="secondary"/>
+			<select value="0.25" t="highway" v="secondary_link"/>
+			<if param="avoid_track"><!-- encore plus de chemins -->
+				<select value="0.25" t="highway" v="tertiary"/>
+				<select value="0.25" t="highway" v="tertiary_link"/>
+				<select value="0.35" t="highway" v="unclassified"/>
+				<select value="0.35" t="highway" v="road"/>
+				<select value="0.5" t="highway" v="service"/>
+				<select value="0.5" t="highway" v="residential"/>
+				<select value="0.35" t="highway" v="living_street"/>
+			</if>
+			<select value="0.5" t="highway" v="tertiary"/>
+			<select value="0.5" t="highway" v="tertiary_link"/>
+			<select value="0.75" t="highway" v="unclassified"/>
+			<select value="0.75" t="highway" v="road"/>
+			<select value="0.75" t="highway" v="service"/>
+			<select value="0.75" t="highway" v="residential"/>
+			<select value="0.5" t="highway" v="living_street"/>
 			<if param="avoid_grade"><!-- trie les chemins -->
-				<select value="0.1" t="highway" v="path"/><!--sentiers non taggés-->
-				<select value="1.5" t="ford" v="yes"/>
-				<select value="1.25" t="smoothness" v="very_horrible"/>
-				<select value="1.5" t="smoothness" v="horrible"/>
-				<select value="1.5" t="surface" v="mud"/><!-- conflit avec paths-->
-				<select value="1.5" t="surface" v="sand"/>
-				<select value="1.5" t="surface" v="grass"/>
-				<select value="1.75" t="surface" v="dirt"/>
-				<select value="1.75" t="surface" v="earth"/>
-				<select value="1.75" t="surface" v="unpaved"/>
-				<select value="1.75" t="surface" v="ground"/>
-				<select value="1.75" t="surface" v="rock"/>
-				<select value="2.5" t="tracktype" v="grade5"/>
-				<select value="2.5" t="tracktype" v="grade4"/>
-				<select value="2.5" t="surface" v="compacted"/>
-				<select value="2.5" t="surface" v="gravel"/>
-				<select value="2.5" t="surface" v="pebblestone"/>
-				<select value="2.5" t="surface" v="cobblestone"/>
-				<select value="2.5" t="surface" v="unhewn_cobblestone"/>
-				<select value="2.5" t="surface" v="paved"/>
-				<select value="2.5" t="surface" v="paving_stones"/>
-				<select value="2.5" t="tracktype" v="grade3"/>
+				<select value="1" t="ford" v="yes"/>
+				<select value="0.75" t="sac_scale " v="hiking"/>
+				<select value="0.75" t="mtb:scale" v="0"/>
+				<select value="0.5" t="mtb:scale" v="1"/>
+				<select value="0.1" t="highway" v="path"/>
+				<select value="0.15" t="smoothness" v="very_horrible"/>
+				<select value="1.25" t="smoothness" v="horrible"/>
+				<select value="0.5" t="surface" v="mud"/><!-- conflit avec paths-->
+				<select value="0.5" t="surface" v="sand"/>
+				<select value="0.5" t="surface" v="grass"/>
+				<select value="0.75" t="surface" v="dirt"/>
+				<select value="0.75" t="surface" v="earth"/>
+				<select value="0.75" t="surface" v="unpaved"/>
+				<select value="0.75" t="surface" v="ground"/>
+				<select value="0.75" t="surface" v="rock"/>
+				<select value="0.75" t="tracktype" v="grade5"/>
+				<select value="2" t="tracktype" v="grade4"/>
+				<select value="2" t="surface" v="compacted"/>
+				<select value="2" t="surface" v="gravel"/>
+				<select value="2" t="surface" v="pebblestone"/>
+				<select value="2" t="surface" v="cobblestone"/>
+				<select value="2" t="surface" v="unhewn_cobblestone"/>
+				<select value="2" t="surface" v="paved"/>
+				<select value="2" t="surface" v="paving_stones"/>
+				<select value="2" t="tracktype" v="grade3"/>
 				<select value="2" t="surface" v="fine_gravel"/>
 				<select value="2" t="surface" v="asphalt"/>
 				<select value="2" t="surface" v="metal"/>
 				<select value="2" t="surface" v="chipseal"/>
 				<select value="2" t="surface" v="wood"/>
-				<select value="2" t="surface" v="concrete"/>
 				<select value="2" t="tracktype" v="grade2"/>
+				<select value="2" t="surface" v="concrete"/>
 				<select value="2" t="tracktype" v="grade1"/>
-				<select value="3" t="highway" v="track"/><!--chemins non taggés-->
-			</if>
+				<select value="0.75" t="highway" v="track"/><!--20 chemins non taggés-->
+			</if><!--
+			<select value="3.5" t="mtb:scale" v="0"/>-->
 			<select value="5" t="highway" v="track"/><!--chemins -->
-			<select value="5" t="mtb:scale" v="0-"/>
-			<select value="5" t="mtb:scale" v="0"/>
-			<select value="5" t="mtb:scale" v="0+"/>
-			<select value="0.1" t="highway" v="path"/><!--sentiers non taggés-->
-			<select value="0"/><!--tout le reste-->
+			<select value="3.5" t="sac_scale " v="hiking"/><!-- 30 -->
+			<select value="3.5" t="mtb:scale" v="0"/><!-- 30 -->
+			<select value="2.5" t="mtb:scale" v="1"/><!-- 10 -->
+			<select value="0.1" t="highway" v="path"/><!--sentiers non taggés--><!--
+			<select value="0"/>tout le reste-->
 		</way>
 		
 		<point attribute="obstacle">

@@ -36,10 +36,6 @@
 	<renderingProperty attr="contourWidth" name="Contour lines width" description="Contour lines width" type="string" possibleValues="thin,medium,thick" defaultValueDescription="default"/>
 	<renderingProperty attr="contourDensity" name="Contour lines density" description="Contour lines density" type="string" possibleValues="low,medium_w,high" defaultValueDescription="default"/>
 
-	<renderingProperty attr="OSMMapperAssistantFixme" name="Fixme tags" description="Show fixme tags" type="boolean" possibleValues="" category="osm_assistant"/>
-	<renderingProperty attr="OSMMapperAssistantNote" name="Note tags" description="Show note tags" type="boolean" possibleValues="" category="osm_assistant"/>
-	<renderingProperty attr="OSMMapperAssistantIconsLowZooms" name="Icons at low zooms" description="Schematic display of icons at low zooms" type="boolean" possibleValues="" category="osm_assistant"/>
-	<renderingProperty attr="OSMMapperAssistantWaterwayTunnels" name="Waterway tunnels" description="Don't hide waterway tunnels" type="boolean" possibleValues="" category="osm_assistant"/>
 	<!-- pour OpenGL -->
 	<renderingProperty attr="engine_v1" type="boolean"/>
 	
@@ -117,8 +113,8 @@
 	<!-- color_2 used for route direction arrows -->
 	<!-- color_3 used for turn arrows on the route -->
 	<renderingAttribute name="route" >
-		<case color_0="#00000000" strokeWidth_0="12" color="#336600ff" strokeWidth="12" color_2="#00990099" strokeWidth_2="12" color_3="#999900ff" strokeWidth_3="8">
-			<apply_if nightMode="true" color="#4400ffff" color_2="#0000ffff" color_3="#00ffff"/>
+		<case color_0="#00000000" strokeWidth_0="12" color="#336600ff" strokeWidth="12" color_2="#000000" strokeWidth_2="12" color_3="#000000" strokeWidth_3="12">
+			<apply_if nightMode="true" color="#00000000" color_2="#ffffff" color_3="#ffffff"/>
 		</case>
 	</renderingAttribute>
 
@@ -134,9 +130,7 @@
 			<case currentTrackColor="translucent_lightblue" color="#6600ffff"/>
 			<case currentTrackColor="translucent_blue" color="#664e4eff"/>
 			<case currentTrackColor="translucent_purple" color="#66a71de1"/>
-			<case color="#ff0000">
-				<apply_if roadStyle="germanRoadAtlas" color="#aa0088"/> <!-- does not works -->
-			</case>
+			<case color="#6600ffff" />
 			<apply cap="ROUND">
 				<case currentTrackWidth="thin">
 					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
@@ -161,9 +155,7 @@
 					<apply_if minzoom="20" strokeWidth="30"/>
 					<apply_if additional="routePoints=true" pathEffect="8_15"/>
 				</case>
-				<case>
-					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
-					<apply_if minzoom="6" strokeWidth="2"/>
+				<case strokeWidth="24">
 					<apply_if additional="routePoints=true" pathEffect="5_4"/>
 				</case>
 			</apply>
@@ -348,8 +340,6 @@
 				<!-- point has order 128 -->
 				<case tag="" value=""/>
 
-				<case tag="fixme_tag" value="yes"/>
-				<case tag="note_tag" value="yes"/>
 				<case tag="ford" value="yes"/>
 				<case tag="ford" value="stepping_stones"/>
 				<case tag="waterway" value="waterfall"/>
@@ -394,13 +384,16 @@
 			<!-- Polygon 1-10-->
 			<switch area="true" point="false" addPoint="true" objectType="3" order="10">
 				<case tag="leisure" value="nature_reserve" order="10"/>
-				<case tag="boundary" value="national_park" order="10"/>
+			</switch>
+
+			<switch cycle="false" point="false" addPoint="false" objectType="2" order="9"><!-- pour voir contour park -->
+				<case tag="boundary" value="national_park" order="10" />
 			</switch>
 			
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5">
+				<case tag="boundary" value="protected_area" order="9" /><!-- ignorePolygonArea="true" -->
 				<case tag="leisure" value="nature_reserve" order="10"/>
-				<case tag="boundary" value="protected_area" order="9" ignorePolygonArea="true"/>
-				<case tag="boundary" value="national_park" order="8" /><!-- ignorePolygonArea="true" -->
+				<case tag="boundary" value="national_park" order="10" /><!-- pas vu en opengl ! -->
 
 				<case tag="leisure" value="park" order="6"/>
 				<case tag="leisure" value="sports_centre" order="7"/>
@@ -556,8 +549,6 @@
 				<case tag="railway" value="station" ignorePolygonArea="true"/>
 				<case tag="railway" value="yard" ignorePolygonArea="true"/>
 				<case tag="addr:housenumber" value="" ignorePolygonAsPointArea="true"/>
-				<case tag="fixme_tag" value="yes" order="11"/>
-				<case tag="note_tag" value="yes" order="10"/>
 				<case tag="" value="" order="0"/>
 			</switch>
 
@@ -822,8 +813,6 @@
 				<case tag="route_walking" value="" order="12"/>
 				<case tag="route" value="hiking" order="12"/>
 				<case tag="hiking" value="yes" order="12"/>
-				<case tag="fixme_tag" value="yes" order="12"/>
-				<case tag="note_tag" value="yes" order="11"/>
 			</switch>
 			<apply_if hideUnderground="true">
 				<apply_if layer="-1" order="-1"/>
@@ -875,36 +864,10 @@
 			</case>
 		</switch>
 
-		<!-- OSM mapper -->
-		<switch minzoom="15" intersectionSizeFactor="0" intersectionMargin="0">
-			<switch OSMMapperAssistantFixme="true" tag="fixme_tag" value="yes" nameTag="fixme" textColor="#ffffff" textHaloColor="#ccf800e0" textWrapWidth="20" textOrder="1">
-				<case maxzoom="15" textSize="10" textDy="-40"/>
-				<case minzoom="16" textSize="11" textDy="-50"/>
-				<apply_if engine_v1="true">
-					<case maxzoom="15" textDy="-33"/>
-					<case minzoom="16" textDy="-50"/>
-				</apply_if>
-				<apply_if nightMode="true" textColor="#7f0a7e" textHaloColor="#ffdcff"/>
-			</switch>
-			<switch OSMMapperAssistantNote="true">
-				<case tag="note_tag" value="yes" nameTag="note"/>
-				<apply textColor="#ffffff" textHaloColor="#cc347b4c" textOrder="33" textWrapWidth="20">
-					<apply_if minzoom="16" textSize="11" textDy="30"/>
-					<apply_if engine_v1="true" minzoom="16" textDy="24"/>
-					<apply_if nightMode="true" textColor="#008b12" textHaloColor="#deffe3"/>
-				</apply>
-			</switch>
-			<case minzoom="17" OSMMapperAssistantNote="true" tag="osm_note" value="yes" textColor="#ffffff" textHaloColor="#ff5757" textSize="11" textOrder="5" textWrapWidth="30">
-				<apply_if engine_v1="true" textDy="8"/>
-				<apply_if nightMode="true" textColor="#ff5757" textHaloColor="#ffe9e9"/>
-			</case>
-			<apply textBold="true" textHaloRadius="2"/>
-		</switch>
-
 		<!-- track name -->
 		<switch minzoom="18" textBold="false" textDy="10" textOrder="43">
 			<case tag="highway" value="track" nameTag="" textMinDistance="10"/>
-			<apply textOnPath="true" textSize="10" textColor="#663300" textHaloColor="#99ffffff" textHaloRadius="2:2">
+			<apply textOnPath="true" textSize="10" textColor="#663300" textHaloColor="#99ffffff" textHaloRadius="2">
 			</apply>
 			<apply_if nightMode="true" textColor="#cccccc" textHaloColor="#000000" textHaloRadius="3" textDy="0"/>
 		</switch>
@@ -1505,15 +1468,15 @@
 					<apply textDy="9"/>
 				</case>
 			</switch>
-			<switch textOrder="43" textWrapWidth="20">
+			<switch textOrder="1" ><!-- intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="any" -->
 				<case minzoom="14" tag="landuse" value="forest"/>
 				<case minzoom="14" tag="natural" value="wood"/>
 				<apply textBold="true" textItalic="true" nameTag="" >
 					<case maxzoom="14" textSize="10" textColor="#3f000000"/>
-					<case maxzoom="15" textSize="12" textColor="#33000000"/>
-					<case maxzoom="16" textSize="16" textColor="#2f000000"/>
-					<case maxzoom="17" textSize="22" textColor="#22000000"/>
-					<case minzoom="18" textSize="30" textColor="#22000000"/>
+					<case maxzoom="15" textSize="14" textColor="#33000000"/>
+					<case maxzoom="16" textSize="18" textColor="#2f000000"/>
+					<case maxzoom="17" textSize="32" textColor="#22000000"/>
+					<case minzoom="18" textSize="40" textColor="#22000000"/>
 				</apply>
 				<apply_if nightMode="true" textSize="0"/>
 			</switch>
@@ -1753,7 +1716,7 @@
 		</switch>
 
 		<!-- protected area -->
-		<switch minzoom="9" textOrder="1" intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith=""><!--  -->
+		<switch minzoom="9" textOrder="51" ><!-- intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="" -->
 			<case tag="boundary" value="national_park"/>
 			<apply hideAccess="false" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" > 
 				<case maxzoom="10" textSize="11" textColor="#cccc0000"/>
@@ -1891,32 +1854,6 @@
 
 		<switch tag="building" value="chapel" icon="religion_christian" shield="cross_shield" iconVisibleSize="48">
 			<case minzoom="14" iconOrder="46" intersectionSizeFactor="0.7"/>
-		</switch>
-<!--osm-->
-		<switch iconVisibleSize="0" intersectionSizeFactor="0" iconOrder="128">
-			<switch OSMMapperAssistantFixme="true" minzoom="12" tag="fixme_tag" value="yes">
-				<case maxzoom="12" icon="fixme_tag_lowzoom_yes"/>
-				<case maxzoom="15" icon="fixme_tag_lowzoom2_yes"/>
-				<case minzoom="16" icon="fixme_tag_yes" icon_shift_px="0.5" icon_shift_py="-0.5"/>
-			</switch>
-			<switch OSMMapperAssistantNote="true" minzoom="12" tag="osm_note" value="yes">
-				<case maxzoom="12" icon="osm_note_dot"/>
-				<case maxzoom="17" icon="osm_note_dot_2"/>
-			</switch>
-			<case OSMMapperAssistantNote="true" minzoom="16" tag="note_tag" value="yes" icon="note_tag_yes" icon_shift_px="-0.5" icon_shift_py="-0.5"/>
-		</switch>
-
-		<switch OSMMapperAssistantIconsLowZooms="true" minzoom="16" iconVisibleSize="30" intersectionSizeFactor="0.5">
-			<case tag="amenity" value="" icon="stub_amenity" iconOrder="171"/>
-			<case tag="club" value="" icon="stub_club" iconOrder="163"/>
-			<case tag="craft" value="" icon="stub_craft" iconOrder="164"/>
-			<case tag="emergency" value="" icon="stub_emergency" iconOrder="131"/>
-			<case tag="healthcare" value="" icon="stub_healthcare" iconOrder="165"/>
-			<case tag="historic" value="" icon="stub_historic" iconOrder="150"/>
-			<case tag="office" value="" icon="stub_office" iconOrder="152"/>
-			<case tag="man_made" value="" icon="stub_man_made" iconOrder="162"/>
-			<case tag="shop" value="" icon="stub_shop" iconOrder="160"/>
-			<case tag="tourism" value="" icon="stub_tourism" iconOrder="153"/>
 		</switch>
 
 		<!-- Sport, leisure -->
@@ -2174,16 +2111,16 @@
 				<case maxzoom="14" icon="" shield=""/>
 			</apply_if>
 		</switch>
-		<switch iconOrder="5" iconVisibleSize="48">
+		<switch iconOrder="5" iconVisibleSize="24">
 			<case minzoom="12" tag="building" value="" additional="object_type=node" icon="building_map" shield="building_shield" iconOrder="128" intersectionSizeFactor="0.8">
 				<apply_if lessDetailed="false" intersectionSizeFactor="0.6"/>
 			</case>
-			<switch minzoom="12" >
+			<switch minzoom="14" ><!--
 				<case tag="natural" value="wood"/>
 				<case tag="landuse" value="forest"/>
-				<apply icon="wood" shield=""/><!-- topo_wood_shield -->
+				<apply icon="wood" shield=""/> topo_wood_shield 
 				<apply_if maxzoom="15" textLength="0" icon=""/>
-				<apply_if lessDetailed="true" textLength="0" icon=""/>
+				<apply_if lessDetailed="true" textLength="0" icon=""/>-->
 			</switch>
 			<switch minzoom="17" >
 				<case tag="leisure" value="park"/>
@@ -2204,11 +2141,12 @@
 					<apply intersectionSizeFactor="0.9"/>
 				</switch>
 			</switch>
-			<case minzoom="14" tag="" value="">
+			<case minzoom="15" tag="" value="">
 				<apply_if additional="ruins=yes" icon="osmc_green_l" shield="" iconOrder="158"/>
 				<apply_if nightMode="true" shield=""/>
 			</case>
-			<case minzoom="14" tag="historic" value="ruins" icon="osmc_green_l" shield="" iconOrder="158" color="#00ff00" color_0="#00ff00" color_1="#00ff00" color_2="#00ff00">
+			<case minzoom="15" tag="historic" value="ruins" icon="osmc_green_l" shield="" iconOrder="158" color="#00ff00" color_0="#00ff00" color_1="#00ff00" color_2="#00ff00">
+				<apply_if maxzoom="14" icon=""/>
 			</case>
 		</switch>
 		<!-- mines -->
@@ -2472,20 +2410,6 @@
 
 	<!-- PRIORITY Input to filter : zoom [minzoom, maxzoom], tag, value -->
 	<polygon>
-	
-		<switch minzoom="12">
-			<case OSMMapperAssistantFixme="true" tag="fixme_tag" value="yes" color_2="#77f800e0"/>
-			<case OSMMapperAssistantNote="true" tag="note_tag" value="yes" color_2="#00CC24"/>
-			<apply>
-				<case maxzoom="14" strokeWidth_2="2:2"/>
-				<case maxzoom="15" strokeWidth_2="3:3"/>
-				<case maxzoom="16" strokeWidth_2="4:4"/>
-				<case maxzoom="17" strokeWidth_2="5:5"/>
-				<case maxzoom="18" strokeWidth_2="6:6"/>
-				<case minzoom="19" strokeWidth_2="7:7"/>
-			</apply>
-			<apply color="$null"/>
-		</switch>
 
 		<!-- Buildings -->
 		<switch hideBuildings="false" arriereplan="false" minzoom="15" color_2="#000000">
@@ -3052,17 +2976,25 @@
 		<!-- nature_reserve-->
 		<switch hideAccess="false">
 			<case tag="leisure" value="nature_reserve"/>
+			<case tag="boundary" value="national_park"/>
 			<apply minzoom="8" color_2="#88ffcccc" strokeWidth_2="1" color="#99ffd0d0">
-				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1:1"/>
-				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5:1"/>
-				<case maxzoom="11" color_2="#55ff6666" strokeWidth_2="2:1"/>
-				<case maxzoom="12" color_2="#44ff5555" strokeWidth_2="3:1"/>
-				<case maxzoom="13" color_2="#30ff0000" strokeWidth_2="4:1"/>
-				<case minzoom="14" color_2="#20ff0000" strokeWidth_2="5:1"/>
+				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1"/>
+				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5"/>
+				<case maxzoom="11" color_2="#55ff6666" strokeWidth_2="2"/>
+				<case maxzoom="12" color_2="#44ff5555" strokeWidth_2="3"/>
+				<case maxzoom="13" color_2="#30ff0000" strokeWidth_2="4"/>
+				<case minzoom="14" color_2="#20ff0000" strokeWidth_2="5"/>
 			</apply>
 			<apply_if nightMode="true" color_2="#990000" color="#660000"/>
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
 		</switch> 
+
+		<!-- national park 
+		<switch hideAccess="false">
+			<case tag="boundary" value="national_park"/>
+			<apply minzoom="8" color_2="#00ffff" strokeWidth_2="5" color="#9900ffff">
+			</apply>
+		</switch> -->
 
 		<switch nightMode="true">
 			<case tag="natural" value="land" />
@@ -3073,19 +3005,6 @@
 	<line>
 		<case minzoom="1" tag="natural" value="coastline_broken" color="#111111" strokeWidth=":1"/>
 		<case minzoom="5" tag="natural" value="coastline_line" color="#4580cf" strokeWidth=":1"/>
-
-		<switch minzoom="12">
-			<case OSMMapperAssistantFixme="true" tag="fixme_tag" value="yes" color="#aaf800e0"/>
-			<case OSMMapperAssistantNote="true" tag="note_tag" value="yes" color="#00CC24"/>
-			<apply>
-				<case maxzoom="14" strokeWidth="4:4"/>
-				<case maxzoom="15" strokeWidth="6:6"/>
-				<case maxzoom="16" strokeWidth="8:8"/>
-				<case maxzoom="17" strokeWidth="10:10"/>
-				<case maxzoom="18" strokeWidth="12:12"/>
-				<case minzoom="19" strokeWidth="14:14"/>
-			</apply>
-		</switch>
 
 		<!-- autoroute -->
 		<switch cap="ROUND">
@@ -4395,7 +4314,7 @@
 			</switch>
 
 			<!-- riviere -->
-			<switch minzoom="10" strokeWidth="0.1:1">
+			<switch minzoom="10" strokeWidth="0">
 				<case tag="waterway" value="river"/>
 					<apply_if additional="tunnel=flooded" pathEffect="2_5"/>
 					<apply_if additional="tunnel=yes" pathEffect="2_5"/>
@@ -4404,15 +4323,18 @@
 					<apply_if additional="tunnel=culvert" pathEffect="2_5"/>
 					<apply_if additional="layer=-1" pathEffect="2_5"/>
 					<apply_if additional="layer=-2" disable="true"/>
-					<apply>
-						<case maxzoom="12" shadowRadius="0.8:1"/>
-						<case minzoom="13" shadowRadius="1:1"/>
+					<apply strokeWidth="0.1">
+						<case maxzoom="12" shadowRadius="0.9"/>
+						<case maxzoom="13" shadowRadius="1.1"/>
+						<case maxzoom="14" shadowRadius="1.3"/>
+						<case maxzoom="15" shadowRadius="1.5"/>
+						<case minzoom="16" shadowRadius="1.7"/>
 					</apply>
 				<apply_if ign="true" noPolygons="true" strokeWidth="0"/>
 			</switch>
 
 			<!-- canal -->
-			<switch minzoom="10" strokeWidth="0.1:1">
+			<switch minzoom="10" strokeWidth="0">
 				<case tag="waterway" value="canal"/>
 					<apply_if additional="tunnel=flooded" pathEffect="2_5"/>
 					<apply_if additional="tunnel=yes" pathEffect="2_5"/>
@@ -4420,10 +4342,13 @@
 					<apply_if additional="tunnel=avalanche_protector" pathEffect="2_5"/>
 					<apply_if additional="layer=-1" pathEffect="2_5"/>
 					<apply_if additional="layer=-2" disable="true"/>
-				<apply>
-					<case maxzoom="12" shadowRadius="0.8:1"/>
-					<case minzoom="13" shadowRadius="1:1"/>
-				</apply>
+					<apply strokeWidth="0.1">
+						<case maxzoom="12" shadowRadius="0.9"/>
+						<case maxzoom="13" shadowRadius="1.1"/>
+						<case maxzoom="14" shadowRadius="1.3"/>
+						<case maxzoom="15" shadowRadius="1.5"/>
+						<case minzoom="16" shadowRadius="1.7"/>
+					</apply>
 				<apply_if ign="true" noPolygons="true" strokeWidth="0"/>
 			</switch>
 
@@ -4723,6 +4648,21 @@
 			</apply>
 		</switch>
 
+		<!-- parc national pas vu en polygone par opengl -->
+		<switch engine_v1="false" hideAccess="false" minzoom="8">
+			<case tag="boundary" value="national_park"/>
+			<apply color="#66ff6666">
+				<case maxzoom="10" strokeWidth="6"/>
+				<case maxzoom="11" strokeWidth="8"/>
+				<case maxzoom="11" strokeWidth="10"/>
+				<case maxzoom="12" strokeWidth="12"/>
+				<case maxzoom="13" strokeWidth="14"/>
+				<case maxzoom="14" strokeWidth="17"/>
+v				<case minzoom="15" strokeWidth="20"/>
+			</apply>
+			<apply_if nightMode="true" color="#990000" />
+		</switch>
+		
 		<case tag="osmand_change" value="delete"/> <!-- OSMC will break if delete -->
 	</line>
 
