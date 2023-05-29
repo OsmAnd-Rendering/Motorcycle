@@ -1,7 +1,11 @@
 🇫🇷 [Français](README.md) `🇬🇧 English`&emsp;
 
-# Motorcycle
-Render style based on off-road motorbike use, with the ways classified by "difficulty", according to the type of vehicle and the available information in OpenStreetMap.
+# Display and calculation of off-road motorcycle routes
+Modifies the display of the offline map (vector) for off-road motorcycle use with the paths visually classified by "difficulty" related to the type of vehicle and the details present in OpenStreetMap, allows "off-road" routing calculations for 3 types of motorcycles (from the heaviest to the lightest).
+
+(the installation process creates 3 new profiles with their configuration and guidance, the existing Osmand profiles and configuration are not modified)
+
+example in video **[https://youtu.be/mj46qerdwTs](https://youtu.be/07nj4LoACdc)**
 
 ## Significant variations from the standard styles:
 

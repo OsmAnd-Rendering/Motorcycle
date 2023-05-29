@@ -1,7 +1,11 @@
 `🇫🇷 Français`&emsp;🇬🇧 [English](readme_en.md)
 
-# Motorcycle
-Affichage de la carte offline (vectorielle) axé sur l'utilisation en moto tout terrain avec les chemins classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap, en corrélation avec les calculs de routage pour 3 types de motos (de la plus lourde à la plus légère).
+# Affichage et calculs d'itinéraires moto tout terrain
+Modifie l'affichage de la carte offline (vectorielle) pour l'utilisation en moto tout terrain avec les chemins visuellement classifiés par "difficulté" liée au type d'engin et aux précisions présentes dans OpenStreetMap, permet des calculs de routage "tout terrain" pour 3 types de motos (de la plus lourde à la plus légère).
+
+( le processus d'installation créé 3 nouveaux profils avec leur configuration et leur guidage, les profils et la configuration Osmand existante ne sont pas modifiés )
+
+exemple en vidéo **[https://youtu.be/mj46qerdwTs](https://youtu.be/07nj4LoACdc)**
 
 ## Changements notables par rapport aux styles standard :
 
@@ -35,6 +39,8 @@ Affichage de la carte offline (vectorielle) axé sur l'utilisation en moto tout 
 ## Documentation
 
 - **[Légende](Legend.md)**
+
+- **[Trucs et astuces](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/Trucs-et-astuces-OsmAnd)**
 
 - **[Documentation générale](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 

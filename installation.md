@@ -29,7 +29,7 @@ les 3 profils ont été créés avec leurs fichiers associés, cliquez sur ferme
 ![first_install_fin](https://user-images.githubusercontent.com/83398215/182154557-21f53e4c-3804-4081-abe0-b0a31bdda1e6.png)
 
 # Pour une mise à jour du style ou des routages
-lorsque OsmAnd vous pose la question, ne cochez **QUE** la case "**Ressources**"<br>
+lorsque OsmAnd vous pose la question, ne cochez **QUE** la case "**Ressources**" pour ne pas "écraser" les profils que vous avez probablement modifiés<br>
 
 ![install5](https://user-images.githubusercontent.com/83398215/182155123-20bb4d60-bb28-4f5f-8708-68fc4553a656.png)<br>
 
