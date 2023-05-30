@@ -1,6 +1,6 @@
 `🇫🇷 Français`&emsp;🇬🇧 [English](routage_EN.md)
 
-# Motorcycle/routing
+# Calcul d'itinéraire
 Des calculs de routage pour 3 types d'utilisation moto, chacun de ces routages calcule un itinéraire en fonction des infos disponibles dans OpenStreetMap.
 <br>
 
@@ -17,9 +17,7 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 - :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>pas de chemins</b>" qui évite au maximum les chemins en restant sur les routes les plus petites possible.
 - :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>si chemins secs</b>" qui rajoute quelques chemins "**verts**" de la carte au cas ou il n'y aurai pas de chemins "**marrons**" à proximité.<br> :warning: Attention à la boue avec des pneus non adaptés !
 - considère toutes les routes au même niveau et donc tracera au plus direct.
-
-**:warning: dans les "Paramètres de l'itinéraire" ne cochez pas "utiliser un algorithme de routage A à 2 phase**<br>
-<i> sinon vous ne prendrez que de la route</i>
+- :bulb: il y-à 2 autres switchs dans "<b>Eviter les routes</b>" pour activer un mode "<b>moins de route</b>" et "<b>encore moins de route</b>" qui permettent l'un ou l'autre de trouver plus de chemins si vous faites un trajet de moins de 200 km pour le premier et 100 km pour le second.<br> :warning: le temps de calcul est augmenté et le risque de plantage de l'appli aussi !
 
 <i>(mettez des points intermédiaires pour "forcer" le détour par les "bons" chemins s'il n'y en à pas en ligne directe).</i>
 <br>
@@ -31,12 +29,14 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 - respecte les barrières (**points rouges** sur la carte)
 - les chemins "**privés**" sont gérés comme avec le profil par défaut d' OsmAnd.
 - les chemins "**interdits**" sont regroupés sous le switch "<b>pas d'interdiction</b>" dans "<b>Eviter les routes</b>".
-- privilégie les itinéraires de randonnée et VTT par rapport aux routes.
+- dissuade d'empreinter les chemins trop difficiles (vous pouvez poser un point de passage dessus pour les prendre délibéremment).
+- autorise le passage sur les sentiers "faciles" points verts sur la carte.
 - considère tous les chemins de la même façon (pas de carrossable ou de boueux) <br>:bulb: <b>SAUF</b> si le switch "<b>trie les chemins</b>" dans "<b>Eviter les routes</b>" est actif (coché) il va hiérarchiser les chemins du plus carrossable à inconnu.
 <i><br>
  dans les faits il va pénaliser de plus en plus les chemins qui sont les moins praticables <br>pour aller d'un point A à un point B si 2 chemins à peu près équivalents en distance existent, le moteur de calcul du routage prendra le plus praticable, la proportion de route augmente si les chemins ne sont pas renseignés dans OpenStreetMap.</i>
 - considère toutes les routes au même niveau et donc tracera au plus direct.
-
+- :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>moins de route</b>" qui permet de trouver plus de chemins si vous faites un trajet de moins de 200 km .<br> :warning: le temps de calcul est augmenté et le risque de plantage de l'appli aussi !
+ 
 <i>( ne mettez pas de points trop éloignés pour accélérer le calcul -tous les 100 km par exemple )</i>
  
 ## enduro
