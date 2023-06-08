@@ -710,7 +710,7 @@
 					<apply_if layer="-1" order="18"/>
 					<apply_if additional="layer=-2" order="17"/>
 				</case>
-				<case tag="highway" value="cycleway" order="60">
+				<case tag="highway" value="cycleway" order="18">
 					<apply_if layer="1" order="108"/>
 					<apply_if additional="layer=2" order="136"/>
 					<apply_if additional="layer=3" order="143"/>
@@ -3465,6 +3465,12 @@
 
 		<!-- chemins & sentiers -->
 		<switch strokeWidth="0.1">
+			<!-- vélo-->
+			<switch minzoom="13" >
+				<case tag="highway" value="cycleway"/>
+				<apply strokeWidth="3" color="#99ff0000"/>
+			</switch>	
+
 			<!-- chemins -->	
 			<switch tag="highway" value="track"	>
 
@@ -3810,7 +3816,6 @@
 					</apply><!--
 					<apply_if nightMode="true" color_3="#000000"/>-->
 				</apply_if>
-				<apply_if baseAppMode="car" color_5="#66000000"/> 
 				<apply_if ign="true" color_5="#114411">
 					<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
 					<case noPolygons="true" maxzoom="15" strokeWidth_5="2.6" pathEffect_5="7_5"/> 
@@ -3824,10 +3829,9 @@
 				</apply_if>
 			</switch>			
 
-			<!-- footway/ cycleway -->
+			<!-- footway -->
 			<switch minzoom="14" lessDetailed="false">
 				<case tag="highway" value="footway"/>
-				<case tag="highway" value="cycleway"/>
 				<apply>
 					<case maxzoom="14" strokeWidth="1.5" pathEffect="5_4" color="#55330000"/> 
 					<case maxzoom="15" strokeWidth="2" pathEffect="7_6" color="#50330000"/> 
@@ -3859,8 +3863,7 @@
 				<apply_if additional="indoor=yes" strokeWidth="0"/>
 				<apply_if additional="location=roof" strokeWidth="0"/>
 				<apply_if additional="level=1" strokeWidth="0"/>
-				<apply_if baseAppMode="pedestrian" color="#000000"/><!-- pour profil enduro-->
-				<apply_if baseAppMode="car" color="#669966"/> 		
+				<apply_if additional="bicycle=designated" color="#ccff0000" pathEffect="" strokeWidth="3"/>
 				<apply_if arriereplan="true" color="#afafaf" shadowColor="#66000000" shadowRadius="5"/><!-- -->
 				<apply_if ign="true" color_5="#114411">
 					<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
@@ -3871,6 +3874,7 @@
 				</apply_if>
 				<apply_if nightMode="true" color="#666666"><!-- onewayArrowsColor="#00330000" -->
 					<case ign="true" color="#999999"/>
+					<case additional="bicycle=designated" color="#ccff0000" pathEffect="" strokeWidth="3"/>
 				</apply_if>
 			</switch>	
 			
@@ -3994,6 +3998,7 @@
 					<case additional="motor_vehicle=no"/>
 					<case additional="motorcar=private"/>
 					<case additional="motorcar=no"/>
+					<case additional="bicycle=designated"/>
 					<apply color_5="#ff3333" color_3="#00000000">
 						<case lessDetailed="true" nightMode="true" color_5="#660000"/>
 						<case lessDetailed="true" nightMode="false" color_5="#ff9999"/>
