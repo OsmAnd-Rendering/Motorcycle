@@ -18,6 +18,10 @@
 	<routingProfile name="VTT" baseProfile="VTT" restrictionsAware="true" minSpeed="1" defaultSpeed="5" maxSpeed="60" followSpeedLimitations="false" onewayAware="true">
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean"/>
 		<parameter id="avoid_chemin" name="velo route" description="pas de chemin" type="boolean"/>
+		<parameter id="relief_smoothness_factor_more_plains" group="relief_smoothness_factor" name="More plains" description="" type="boolean"/>
+		<parameter id="relief_smoothness_factor_plains" group="relief_smoothness_factor" name="Plains" description="" type="boolean" default="true"/>
+		<parameter id="relief_smoothness_factor_hills" group="relief_smoothness_factor" name="Hills" description="" type="boolean"/>
+		<parameter id="height_obstacles" name="Use elevation data" description="Use terrain elevation data provided by SRTM, ASTER and EU-DEM" type="boolean" default="false"/>
 
 		<way attribute="access">
 			<select value="-1" t="osmand_change" v="delete"/>
@@ -103,6 +107,82 @@
 			<select value="5" t="highway" v="steps"/>
 			<select value="5" t="highway" v="footway"/>
 			<select value="15" t="highway" v=""/>		<!-- vitesse moyenne toutes routes-->	
+		</way>
+
+		<way attribute="obstacle_srtm_alt_speed">
+			<if param="height_obstacles">
+				<gt value1="-100" value2=":incline">
+					<select value="-1" t="osmand_highway_integrity_brouting_low" v="yes"/>
+					<select value="-1" t="highway" v="path"/>
+					<select value="-1" t="highway" v="track"/>
+				</gt>
+				<gt value1="-25" value2=":incline">
+					<select value="180" t="osmand_highway_integrity_brouting_low" v="yes"/>
+					<select value="180" t="highway" v="path"/>
+					<select value="170" t="highway" v="track"/>
+				</gt>
+				<gt value1="-17" value2=":incline">
+					<select value="150" t="osmand_highway_integrity_brouting_low" v="yes"/>
+					<select value="150" t="highway" v="path"/>
+					<select value="140" t="highway" v="track"/>
+				</gt>
+				<gt value1="-9" value2=":incline">
+					<select value="30" t="osmand_highway_integrity_brouting_low" v="yes"/>
+					<select value="30" t="highway" v="path"/>
+					<select value="25" t="highway" v="track"/>
+				</gt>
+				<gt value1="-3" value2=":incline">
+					<select value="2" t="osmand_highway_integrity_brouting_low" v="yes"/>
+					<select value="2" t="highway" v="path"/>
+					<select value="2" t="highway" v="track"/>
+				</gt>
+				<if param="relief_smoothness_factor_more_plains">
+					<gt value1="3" value2=":incline">
+						<select value="2"/>
+					</gt>
+					<gt value1="7" value2=":incline">
+						<select value="12"/>
+					</gt>
+					<gt value1="13" value2=":incline">
+						<select value="30"/>
+					</gt>
+					<gt value1="25" value2=":incline">
+						<select value="50"/>
+					</gt>
+					<select value="74"/>
+				</if>
+				<if param="relief_smoothness_factor_hills">
+					<gt value1="0" value2=":incline">
+						<select value="128"/>
+					</gt>
+					<gt value1="3" value2=":incline">
+						<select value="64"/>
+					</gt>
+					<gt value1="7" value2=":incline">
+						<select value="17"/>
+					</gt>
+					<gt value1="13" value2=":incline">
+						<select value="10"/>
+					</gt>
+					<gt value1="25" value2=":incline">
+						<select value="8"/>
+					</gt>
+					<select value="2"/>
+				</if>
+				<gt value1="3" value2=":incline">
+					<select value="2"/>
+				</gt>
+				<gt value1="7" value2=":incline">
+					<select value="8"/>
+				</gt>
+				<gt value1="13" value2=":incline">
+					<select value="16"/>
+				</gt>
+				<gt value1="25" value2=":incline">
+					<select value="32"/>
+				</gt>
+				<select value="48"/>
+			</if>
 		</way>
 
 		<way attribute="priority">
