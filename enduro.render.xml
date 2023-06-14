@@ -216,7 +216,7 @@
 		<case attrColorValue="#996600"/>
 	</renderingAttribute>
 	<renderingAttribute name="trackColor_2">
-		<case attrColorValue="#66af00"/>
+		<case attrColorValue="#009900"/>
 	</renderingAttribute>
 	
 	<renderingConstant name="null" value="#000000"/>
@@ -3005,28 +3005,28 @@
 
 		<!-- autoroute -->
 		<switch cap="ROUND">
-			<case tag="highway" value="motorway" color="#ffff66" shadowColor="#ff0000">
-				<apply_if nightMode="true" color="#999933" shadowColor="#cc3333"/>
+			<case tag="highway" value="motorway" color="#ffff66" shadowColor="#ff0000" color_0="#ff0000">
+				<apply_if nightMode="true" color="#cccc99" shadowColor="#cc3333" color_0="#cc3333"/>
 				<apply_if additional="oneway=yes" onewayArrowsColor="#00cccc99"/>
 			</case>
-			<case tag="highway" value="motorway_link" color="#ffff66" shadowColor="#ff0000">
-				<apply_if nightMode="true" color="#999933" shadowColor="#cc3333"/>
+			<case tag="highway" value="motorway_link" color="#ffff66" shadowColor="#ff0000" color_0="#ff0000">
+				<apply_if nightMode="true" color="#cccc99" shadowColor="#cc3333" color_0="#cc3333"/>
 				<apply_if additional="oneway=yes" onewayArrowsColor="#00cccc99"/>
 			</case>
-			<case tag="highway" value="trunk" color="#ffffff" shadowColor="#ff0000">
-				<apply_if nightMode="true" color="#c0c0c0" shadowColor="#cc3333"/>
+			<case tag="highway" value="trunk" color="#ffffff" shadowColor="#ff0000" color_0="#ff0000">
+				<apply_if nightMode="true" color="#c0c0c0" shadowColor="#cc3333" color_0="#cc3333"/>
 				<apply_if additional="oneway=yes" onewayArrowsColor="#00c0c0c0"/>
 			</case>
-			<case tag="highway" value="trunk_link" color="#ffffff" shadowColor="#ff0000">
-				<apply_if nightMode="true" color="#c0c0c0" shadowColor="#cc3333"/>
+			<case tag="highway" value="trunk_link" color="#ffffff" shadowColor="#ff0000" color_0="#ff0000">
+				<apply_if nightMode="true" color="#c0c0c0" shadowColor="#cc3333" color_0="#cc3333"/>
 				<apply_if additional="oneway=yes" onewayArrowsColor="#00c0c0c0"/>
 			</case>
 			<apply>
 				<case maxzoom="7" strokeWidth="2" />
 				<case maxzoom="11" strokeWidth="2.5" />
-				<case maxzoom="12" strokeWidth="3" strokeWidth_0="9" color_0="#ff0000"/>
-				<case maxzoom="13" strokeWidth="3.5" strokeWidth_0="9.5" color_0="#ff0000"/>
-				<case maxzoom="14" strokeWidth="4" strokeWidth_0="10" color_0="#ff0000"/>
+				<case maxzoom="12" strokeWidth="3" strokeWidth_0="7" />
+				<case maxzoom="13" strokeWidth="3.5" strokeWidth_0="7.5" />
+				<case maxzoom="14" strokeWidth="4" strokeWidth_0="8" />
 				<case maxzoom="15" strokeWidth="4.5" />
 				<case maxzoom="16" strokeWidth="5"/>
 				<case maxzoom="17" strokeWidth="5.5"/>
@@ -3035,6 +3035,7 @@
 				<case maxzoom="20" strokeWidth="7"/>
 				<case minzoom="21" strokeWidth="7.5"/>
 			</apply>
+			<apply_if nightMode="true" strokeWidth_0="0"/>
 
 			<!-- tunnels -->
 			<apply_if additional="tunnel=yes" pathEffect="7_7" pathEffect_0="7_7" cap="BUTT" cap_0="BUTT"/>
@@ -3508,8 +3509,7 @@
 						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
 							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
 					</apply_if>
-					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
-					<apply_if baseAppMode="bicycle" ign="false" color_5="#339933"/> 
+					<apply_if arriereplan="true" color_5="#cccccc" />
 				</switch>
 
 				<!-- hard -->
@@ -3519,23 +3519,22 @@
 					<case additional="smoothness=horrible"/>
 					<case additional="smoothness=very_horrible"/>
 					<case additional="tracktype=grade5"/>
-					<apply_if engine_v1="true" minzoom="13"> 
-						<case maxzoom="13" strokeWidth_5="1.4" color_5="#5ca300" pathEffect_5="10_4"/>
-						<case maxzoom="14" strokeWidth_5="1.9" color_5="#60a600" pathEffect_5="15_4"/>
-						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900" pathEffect_5="16_5"/>
-						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900" pathEffect_5="17_6"/>
-						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900" pathEffect_5="18_7"/>
-						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="19_8"/> 
+					<apply_if engine_v1="true" minzoom="13" color_5="$trackColor_2"> 
+						<case maxzoom="13" strokeWidth_5="1.4" pathEffect_5="10_4"/>
+						<case maxzoom="14" strokeWidth_5="1.9" pathEffect_5="15_4"/>
+						<case maxzoom="15" strokeWidth_5="2.3" pathEffect_5="16_5"/>
+						<case maxzoom="16" strokeWidth_5="2.7" pathEffect_5="17_6"/>
+						<case maxzoom="17" strokeWidth_5="3.1" pathEffect_5="18_7"/>
+						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="19_8"/> 
 					</apply_if>
-					<apply_if engine_v1="false" minzoom="13"> 
-						<case maxzoom="13" strokeWidth_5="1.4" color_5="#5ca300" pathEffect_5="6_3"/>
-						<case maxzoom="14" strokeWidth_5="1.9" color_5="#60a600" pathEffect_5="8_3"/>
-						<case maxzoom="15" strokeWidth_5="2.3" color_5="#63a900" pathEffect_5="14_4"/>
-						<case maxzoom="16" strokeWidth_5="2.7" color_5="#63a900" pathEffect_5="20_4"/>
-						<case maxzoom="17" strokeWidth_5="3.1" color_5="#63a900" pathEffect_5="28_5"/>
-						<case minzoom="18" strokeWidth_5="3.5" color_5="#66af00" pathEffect_5="35_6"/> 
-					</apply_if>					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
-					<apply_if baseAppMode="bicycle" ign="false" color_5="#339933"/> 
+					<apply_if engine_v1="false" minzoom="13" color_5="$trackColor_2"> 
+						<case maxzoom="13" strokeWidth_5="1.4" pathEffect_5="6_3"/>
+						<case maxzoom="14" strokeWidth_5="1.9" pathEffect_5="8_3"/>
+						<case maxzoom="15" strokeWidth_5="2.3" pathEffect_5="14_4"/>
+						<case maxzoom="16" strokeWidth_5="2.7" pathEffect_5="20_4"/>
+						<case maxzoom="17" strokeWidth_5="3.1" pathEffect_5="28_5"/>
+						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="35_6"/> 
+					</apply_if>
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
@@ -3553,6 +3552,7 @@
 					<apply_if nightMode="true" color_5="#00cc66">
 						<case ign="true" color_5="#00cc66"/>
 					</apply_if>
+					<apply_if arriereplan="true" color_5="#00ff00" />
 				</switch>
 
 				<!-- medium -->
@@ -3564,17 +3564,15 @@
 					<case additional="surface=dirt"/>
 					<case additional="surface=earth"/>
 					<case additional="tracktype=grade4"/>
-					<apply minzoom="13"> 
+					<apply minzoom="13" color_5="$trackColor_2"> 
 						<case maxzoom="12" strokeWidth_5="0"/> 
-						<case maxzoom="13" strokeWidth_5="1.8" color_5="#60a600"/>
-						<case maxzoom="14" strokeWidth_5="2.2" color_5="#63a900"/>
-						<case maxzoom="15" strokeWidth_5="2.6" color_5="#63a900"/>
-						<case maxzoom="16" strokeWidth_5="3" color_5="#63a900"/>
-						<case minzoom="17" strokeWidth_5="3.4" color_5="#66af00"/> 
-						<case minzoom="18" strokeWidth_5="3.8" color_5="#66af00"/> 
+						<case maxzoom="13" strokeWidth_5="1.8" />
+						<case maxzoom="14" strokeWidth_5="2.2" />
+						<case maxzoom="15" strokeWidth_5="2.6" />
+						<case maxzoom="16" strokeWidth_5="3" />
+						<case minzoom="17" strokeWidth_5="3.4" /> 
+						<case minzoom="18" strokeWidth_5="3.8" /> 
 					</apply> 
-					<apply_if baseAppMode="pedestrian" ign="false" color_5="#339933" pathEffect_5=""/> 
-					<apply_if baseAppMode="bicycle" ign="false" color_5="#339933"/> 
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
@@ -3592,6 +3590,7 @@
 					<apply_if nightMode="true" color_5="#00cc66">
 						<case ign="true" color_5="#00cc66"/>
 					</apply_if>
+					<apply_if arriereplan="true" color_5="#00ff00" />
 				</switch>
 
 				<!-- carrossable -->
@@ -3636,6 +3635,7 @@
 					<apply_if nightMode="true" color_5="#cc9966">
 						<case ign="true" color_5="#00cc66"/>
 					</apply_if>
+					<apply_if arriereplan="true" color_5="#cc9900" />
 				</switch>
 
 				<!-- facile -->
@@ -3712,34 +3712,36 @@
 						<case ign="true" color_5="#00cc66"/>
 						<case lessDetailed="true" color_5="#006600"/>
 					</apply_if>
+					<apply_if arriereplan="true" color_5="#cc9900" />
 				</switch>
 
 				<!-- sans info idem hard + pointillés si option active -->
 				<switch lessDetailed="false">
 					<case/>
-					<apply minzoom="13"> 
-						<case maxzoom="12" strokeWidth_5="0"/>
-						<case maxzoom="13" strokeWidth_5="1.4" color_5="#5ca300"/>
-						<case maxzoom="14" strokeWidth_5="1.9" color_5="#60a600"/>
-						<case maxzoom="15" strokeWidth_5="2.5" color_5="#63a900">
-							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="20_8"/>
-							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="15_4"/>
-						</case>
-						<case maxzoom="16" strokeWidth_5="2.9" color_5="#63a900">
-							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="30_10"/>
-							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="20_5"/>
-						</case>
-						<case maxzoom="17" strokeWidth_5="3.3" color_5="#63a900">
-							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="40_12"/>
-							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="25_6"/>
-						</case>
-						<case minzoom="18" strokeWidth_5="3.7" color_5="#66af00"> 
-							<apply_if engine_v1="true" track="false" ign="false" lessDetailed="false" pathEffect_5="50_14"/>
-							<apply_if engine_v1="false" track="false" ign="false" lessDetailed="false" pathEffect_5="30_7"/>
-						</case>
+					<apply minzoom="13" color_5="$trackColor_2"> 
+						<case maxzoom="13" strokeWidth_5="1.8" />
+						<case maxzoom="14" strokeWidth_5="2.2" />
+						<case maxzoom="15" strokeWidth_5="2.6" />
+						<case maxzoom="16" strokeWidth_5="3" />
+						<case maxzoom="17" strokeWidth_5="3.4" />
+						<case minzoom="18" strokeWidth_5="3.8" /> 
 					</apply> 
-					<apply_if baseAppMode="pedestrian" ign="false" strokeWidth_2="0" color_5="#339933" pathEffect_5=""/><!-- pour enduro-->
-					<apply_if baseAppMode="bicycle" ign="false" color_5="#339933"/> 
+					<apply_if track="false" engine_v1="true">
+						<case maxzoom="13" pathEffect_5="10_4"/>
+						<case maxzoom="14" pathEffect_5="15_4"/>
+						<case maxzoom="15" pathEffect_5="16_5"/>
+						<case maxzoom="16" pathEffect_5="17_6"/>
+						<case maxzoom="17" pathEffect_5="18_7"/>
+						<case minzoom="18" pathEffect_5="19_8"/> 
+					</apply_if>
+					<apply_if track="false" engine_v1="false" > 
+						<case maxzoom="13" pathEffect_5="6_3"/>
+						<case maxzoom="14" pathEffect_5="8_3"/>
+						<case maxzoom="15" pathEffect_5="14_4"/>
+						<case maxzoom="16" pathEffect_5="20_4"/>
+						<case maxzoom="17" pathEffect_5="28_5"/>
+						<case minzoom="18" pathEffect_5="35_6"/> 
+					</apply_if>
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
@@ -3757,6 +3759,7 @@
 					<apply_if nightMode="true" color_5="#00cc66">
 						<case ign="true" color_5="#00cc66"/>
 					</apply_if>
+					<apply_if arriereplan="true" color_5="#00ff00" />
 				</switch>
 					
 				<!-- pont -->
@@ -3999,12 +4002,11 @@
 					<case additional="motorcar=private"/>
 					<case additional="motorcar=no"/>
 					<case additional="bicycle=designated"/>
-					<apply color_5="#ff3333" color_3="#00000000">
-						<case lessDetailed="true" nightMode="true" color_5="#660000"/>
-						<case lessDetailed="true" nightMode="false" color_5="#ff9999"/>
-						<case nightMode="true" color_5="#cc0000"/>
-						<case ign="true" color_5="#cc0000"/>
-					</apply>
+					<apply color_5="#ff3333" color_3="#00000000"/>
+					<apply_if lessDetailed="true" nightMode="true" color_5="#660000"/>
+					<apply_if lessDetailed="true" nightMode="false" color_5="#ff9999"/>
+					<apply_if nightMode="true" color_5="#cc4f4f"/>
+					<apply_if ign="true" color_5="#cc0000"/>
 				</switch>
 				<switch>
 					<case additional="vehicle=destination"/>
