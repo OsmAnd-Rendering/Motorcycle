@@ -47,15 +47,27 @@
 		<case attrColorValue="#fff6e6"/><!-- fff6e6 dce6d0-->
 	</renderingAttribute>
 	<renderingAttribute name="rulerCircle">
-		<case color="#222222" strokeWidth="1:1" shadowRadius="1:1" shadowColor="#44f1eae4" strokeWidth_2="" color_2="#000000" strokeWidth_3="2:1" color_3="#99f1eae4"/>
+		<!-- color - circle color
+		strokeWidth - circle width
+		shadowRadius - circle shadow radius
+		shadowColor - circle shadow color
+		strokeWidth_2 - dummy for text color
+		color_2 - text color
+		strokeWidth_3 - text shadow radius
+		color_3 - text shadow color
+		 -->
+		 <case color="#99000000" strokeWidth="1" shadowRadius="4" shadowColor="#99ffffff" strokeWidth_2="" color_2="#000000" strokeWidth_3="5" color_3="#ffffff">
+			<apply_if nightMode="true" color="#99ffffff" strokeWidth="1" shadowRadius="3" shadowColor="#66000000" strokeWidth_2="" color_2="#ffffff" strokeWidth_3="5" color_3="#000000"/>
+		</case>
 	</renderingAttribute>
 	<renderingAttribute name="rulerCircleAlt">
-		<case color="#aaffffff" strokeWidth="1:1" shadowRadius="1:1" shadowColor="#33222222" strokeWidth_2="" color_2="#000000" strokeWidth_3="2:1" color_3="#99f1eae4"/>
+		<case color="#99ffffff" strokeWidth="1" shadowRadius="3" shadowColor="#66000000" strokeWidth_2="" color_2="#ffffff" strokeWidth_3="5" color_3="#000000">
+			<apply_if nightMode="false" color="#99000000" strokeWidth="1" shadowRadius="4" shadowColor="#99ffffff" strokeWidth_2="" color_2="#000000" strokeWidth_3="5" color_3="#ffffff"/>
+		</case>
 	</renderingAttribute>
 
 	<renderingAttribute name="rulerLine">
-		<case color="#000000" strokeWidth="3" pathEffect="5_3">
-			<apply_if nightMode="true" color="#aaaaaa"/>
+		<case color="#ff0000" strokeWidth="6" pathEffect="10_5">
 		</case>
 	</renderingAttribute>
 
@@ -65,18 +77,18 @@
 		color_2 - stroke color
 		strokeWidth_2 - font stroke width
 		-->
-		<case color="#000000" strokeWidth="" color_2="#99f1eae4" strokeWidth_2="4">
-			<apply_if nightMode="true" color="#333333" color_2="#aaaaaa"/>
+		<case color="#ff0000" strokeWidth="" color_2="#99ffffff" strokeWidth_2="8">
+			<apply_if nightMode="true" color="#ff0000" color_2="#99000000"/>
 		</case>
 	</renderingAttribute>
 
-	<renderingAttribute name="measureDistanceLine">
-		<case color="#536dfe" strokeWidth="2" pathEffect="5_3"/>
-		<apply_if nightMode="true" color="#ff8800"/>
+	<renderingAttribute name="measureDistanceLine"><!-- ligne planif itineraire -->
+		<case color="#66ff00ff" strokeWidth="24" />
+		<apply_if nightMode="true" color="#66ff00ff"/>
 	</renderingAttribute>
 
 	<renderingAttribute name="markerGuideline">
-		<case color="#555555" strokeWidth="2" pathEffect="5_3"/>
+		<case color="#555555" strokeWidth="8" pathEffect="5_3"/>
 		<apply_if nightMode="true" color="#55ff55" color_2="#aa66ff"/>
 	</renderingAttribute>
 
@@ -86,7 +98,7 @@
 		color_2 - route line
 		strokeWidth_2 - route line
 		-->
-		<case color="#536dfe" strokeWidth="2" pathEffect="5_3" color_2="#CC536dfe" strokeWidth_2="3" pathEffect_2="10_3"/>
+		<case color="#536dfe" strokeWidth="8" pathEffect="5_3" color_2="#CC536dfe" strokeWidth_2="12" pathEffect_2="10_3"/>
 		<apply_if nightMode="true" color="#536dfe" color_2="#CC536dfe"/>
 	</renderingAttribute>
 
@@ -135,13 +147,11 @@
 				<case currentTrackWidth="thin">
 					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
 					<apply_if minzoom="6" strokeWidth="2"/>
-					<apply_if additional="routePoints=true" pathEffect="5_4"/>
 				</case>
 				<case currentTrackWidth="medium">
 					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
 					<apply_if minzoom="6" maxzoom="11" strokeWidth="3"/>
 					<apply_if minzoom="12" strokeWidth="5"/>
-					<apply_if additional="routePoints=true" pathEffect="8_7"/>
 				</case>
 				<case currentTrackWidth="bold">
 					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
@@ -153,11 +163,8 @@
 					<apply_if minzoom="16" maxzoom="17" strokeWidth="18"/>
 					<apply_if minzoom="18" maxzoom="19" strokeWidth="24"/>
 					<apply_if minzoom="20" strokeWidth="30"/>
-					<apply_if additional="routePoints=true" pathEffect="8_15"/>
 				</case>
-				<case strokeWidth="24">
-					<apply_if additional="routePoints=true" pathEffect="5_4"/>
-				</case>
+				<case strokeWidth="24"/>
 			</apply>
 		</switch>
 	</renderingAttribute>
