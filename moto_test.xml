@@ -236,7 +236,8 @@
 			<!--		-->
 			<select value="1.25" t="smoothness" v="excellent"/>
 			<select value="1.25" t="smoothness" v="good"/>
-			<select value="0.75" t="smoothness" v="intermediate"/><!--
+			<select value="0.75" t="smoothness" v="intermediate"/>
+			<!--
 			<select value="0.5" t="lane_markings" v="no"/>-->
 			<select value="0.25" t="smoothness" v="bad"/>		
 			<select value="0.3" t="width" v="4"/>		
