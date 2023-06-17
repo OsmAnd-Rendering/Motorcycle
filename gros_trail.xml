@@ -212,7 +212,7 @@
 			<select value="0.1" t="highway" v="trunk_link"/>
 			<select value="0.15" t="highway" v="primary"/>
 			<select value="0.15" t="highway" v="primary_link"/>
-			<if param="avoid_route"><!-- plus de chemins pour courte distance -->
+			<if param="avoid_route"><!-- encore plus de chemins pour courte distance -->
 				<select value="0.15" t="highway" v="secondary"/>
 				<select value="0.15" t="highway" v="secondary_link"/>
 				<select value="0.2" t="highway" v="tertiary"/>

@@ -43,7 +43,7 @@
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
 		<!-- To change default color completely you should do that also for tag="place" value="island" and tag="natural" value="land" (search this file) -->
 		<case noPolygons="true" attrColorValue="#00000000"/>
-		<case nightMode="true" attrColorValue="#000000"/>
+		<case nightMode="true" attrColorValue="#00000000"/>
 		<case attrColorValue="#fff6e6"/><!-- fff6e6 dce6d0-->
 	</renderingAttribute>
 	<renderingAttribute name="rulerCircle">
@@ -222,36 +222,42 @@
 	<renderingConstant name="null" value="#000000"/>
 
 	<renderingAttribute name="contourLineColor">
-		<case contourColorScheme="white" attrColorValue="#1c996633"/>
-		<case contourColorScheme="yellow" attrColorValue="#44FFF29E"/>
-		<case contourColorScheme="green" attrColorValue="#44669966"/>
-		<case contourColorScheme="light_brown" attrColorValue="#22996666"/>
-		<case contourColorScheme="brown" attrColorValue="#33996666"/>
-		<case contourColorScheme="dark_brown" attrColorValue="#44996666"/>
-		<case contourColorScheme="red" attrColorValue="#44ff0000"/>
-		<case attrColorValue="#3f888888"/>
+		<case contourColorScheme="white" attrColorValue="#99ffffff"/>
+		<case contourColorScheme="yellow" attrColorValue="#99FFff99"/>
+		<case contourColorScheme="green" attrColorValue="#9999cc99"/>
+		<case contourColorScheme="light_brown" attrColorValue="#99ccaaaa"/>
+		<case contourColorScheme="brown" attrColorValue="#99bb9999"/>
+		<case contourColorScheme="dark_brown" attrColorValue="#99886666"/>
+		<case contourColorScheme="red" attrColorValue="#99ff6666"/>
+		<case attrColorValue="#33666666">
+			<apply_if nightMode="true" attrColorValue="#99666666"/>
+		</case>
 	</renderingAttribute>
 
 	<renderingAttribute name="contourLineColor50">
-		<case contourColorScheme="white" attrColorValue="#21996633"/>
-		<case contourColorScheme="yellow" attrColorValue="#49FFF29E"/>
-		<case contourColorScheme="green" attrColorValue="#49669966"/>
-		<case contourColorScheme="light_brown" attrColorValue="#29996666"/>
-		<case contourColorScheme="brown" attrColorValue="#39996666"/>		
-		<case contourColorScheme="dark_brown" attrColorValue="#49996666"/>
-		<case contourColorScheme="red" attrColorValue="#49ff0000"/>
-		<case attrColorValue="#49888888"/>
+		<case contourColorScheme="white" attrColorValue="#99ffffff"/>
+		<case contourColorScheme="yellow" attrColorValue="#99FFff99"/>
+		<case contourColorScheme="green" attrColorValue="#9999cc99"/>
+		<case contourColorScheme="light_brown" attrColorValue="#99ccaaaa"/>
+		<case contourColorScheme="brown" attrColorValue="#99bb9999"/>
+		<case contourColorScheme="dark_brown" attrColorValue="#99886666"/>
+		<case contourColorScheme="red" attrColorValue="#99ff6666"/>
+		<case attrColorValue="#33666666">
+			<apply_if nightMode="true" attrColorValue="#99666666"/>
+		</case>
 	</renderingAttribute>
 
 	<renderingAttribute name="contourLineColor100">
-		<case contourColorScheme="white" attrColorValue="#26996633"/>
-		<case contourColorScheme="yellow" attrColorValue="#4fFFF29E"/>
-		<case contourColorScheme="green" attrColorValue="#4f669966"/>
-		<case contourColorScheme="light_brown" attrColorValue="#2f996666"/>
-		<case contourColorScheme="brown" attrColorValue="#3f996666"/>		
-		<case contourColorScheme="dark_brown" attrColorValue="#4f996666"/>
-		<case contourColorScheme="red" attrColorValue="#4fff0000"/>
-		<case attrColorValue="#4f888888"/>
+		<case contourColorScheme="white" attrColorValue="#99ffffff"/>
+		<case contourColorScheme="yellow" attrColorValue="#99FFff99"/>
+		<case contourColorScheme="green" attrColorValue="#9999cc99"/>
+		<case contourColorScheme="light_brown" attrColorValue="#99ccaaaa"/>
+		<case contourColorScheme="brown" attrColorValue="#99bb9999"/>
+		<case contourColorScheme="dark_brown" attrColorValue="#99886666"/>
+		<case contourColorScheme="red" attrColorValue="#99ff6666"/>
+		<case attrColorValue="#33666666">
+			<apply_if nightMode="true" attrColorValue="#99666666"/>
+		</case>
 	</renderingAttribute>
 		
 	<renderingConstant name="black" value="#000000"/>
@@ -793,12 +799,7 @@
 				<case tag="boundary" value="protected_area" order="79" ignorePolygonArea="true"/>
 				<case tag="boundary" value="national_park" order="81" ignorePolygonArea="true"/>
 				<case tag="leisure" value="nature_reserve" order="80" ignorePolygonArea="true"/>
-				<case tag="contour" value="elevation" order="13">
-					<apply_if contourDensity="medium_w" additional="contourtype=10m" order="-1"/>
-					<apply_if contourDensity="medium_w" additional="contourtype=50m" order="-1"/>
-					<apply_if contourDensity="low" additional="contourtype=10m" order="-1"/>
-					<apply_if contourDensity="low" additional="contourtype=20m" order="-1"/>
-				</case>
+				<case tag="contour" value="elevation" order="11"/>
 				<case tag="lit" value="" order="12"/>
 				<case tag="bridge" value="yes" order="86"/>
 				<case tag="tunnel" value="yes" order="11"/>
@@ -1665,7 +1666,7 @@
 			<case minzoom="14" contourLines=""/>
 			<case minzoom="15" contourLines="15"/>
 			<case minzoom="16" contourLines="16"/>
-			<apply lessDetailed="false">
+			<apply >
 				<case minzoom="13" maxzoom="13" 	additional="contourtype=100m" textColor="#afafaf" textSize="7" textBold="true" textMinDistance="100"/>
 				<case minzoom="14" maxzoom="14" 	additional="contourtype=100m" textColor="#afafaf" textSize="8" textBold="true" textMinDistance="100"/>
 
@@ -1681,19 +1682,6 @@
 				<case minzoom="17" maxzoom="17" 	additional="contourtype=50m" textColor="#99999999" textSize="11"/>
 				<case minzoom="17" maxzoom="17" 	additional="contourtype=100m" textColor="#99afafaf" textSize="11" textBold="true"/>
 				
-				<case minzoom="18" 					additional="contourtype=10m" textColor="#7f999999" textSize="12"/>
-				<case minzoom="18" 					additional="contourtype=20m" textColor="#7f999999" textSize="12"/>
-				<case minzoom="18" 					additional="contourtype=50m" textColor="#7f999999" textSize="12"/>
-				<case minzoom="18" 					additional="contourtype=100m" textColor="#7fafafaf" textSize="12" textBold="true"/>
-			</apply>
-			<apply lessDetailed="true">
-				<case minzoom="16" maxzoom="16" 	additional="contourtype=50m" textColor="#cc999999" textSize="10"/>
-				<case minzoom="15" maxzoom="16" 	additional="contourtype=100m" textColor="#ccafafaf" textSize="10" textBold="true"/>
-
-				<case minzoom="17" maxzoom="17" 	additional="contourtype=20m" textColor="#99999999" textSize="11"/>
-				<case minzoom="17" maxzoom="17" 	additional="contourtype=50m" textColor="#99999999" textSize="11"/>
-				<case minzoom="17" maxzoom="17" 	additional="contourtype=100m" textColor="#99afafaf" textSize="11" textBold="true"/>
-
 				<case minzoom="18" 					additional="contourtype=10m" textColor="#7f999999" textSize="12"/>
 				<case minzoom="18" 					additional="contourtype=20m" textColor="#7f999999" textSize="12"/>
 				<case minzoom="18" 					additional="contourtype=50m" textColor="#7f999999" textSize="12"/>
@@ -2993,9 +2981,9 @@
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
 		</switch> 
 
-		<switch nightMode="true">
+		<switch nightMode="true"><!--
 			<case tag="natural" value="land" />
-			<apply color="#000000"/>
+			<apply color="#000000"/>-->
 		</switch>
 	</polygon>
 
@@ -3467,7 +3455,7 @@
 		<!-- chemins & sentiers -->
 		<switch strokeWidth="0.1">
 			<!-- vélo-->
-			<switch minzoom="13" >
+			<switch minzoom="13" lessDetailed="false">
 				<case tag="highway" value="cycleway"/>
 				<apply strokeWidth="3" color="#99ff0000"/>
 			</switch>	
@@ -4070,8 +4058,8 @@
 				<case maxzoom="20" shadowRadius="10"/>
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
-			<apply_if noPolygons="true" shadowColor="#440044"/>
-			<apply_if nightMode="true" shadowColor="#440044"/>
+			<apply_if noPolygons="true" color="#440044" shadowColor="#440044"/>
+			<apply_if nightMode="true" color="#440044" shadowColor="#440044"/>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" shadowRadius="0"/>
 			<apply_if><!-- enlève balisage sous tag mtb:scale -->
@@ -4100,8 +4088,8 @@
 				<case maxzoom="20" shadowRadius="10"/>
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
-			<apply_if noPolygons="true" shadowColor="#444400"/>
-			<apply_if nightMode="true" shadowColor="#444400"/>
+			<apply_if noPolygons="true" color="#444400" shadowColor="#444400"/>
+			<apply_if nightMode="true" color="#444400" shadowColor="#444400"/>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" color="#ff00ff" shadowColor="#ff00ff" shadowRadius="0"/>
 		</switch>
@@ -4399,7 +4387,7 @@
 		</switch>
 
 		<!-- contour elevation -->
-		<switch lessDetailed="false" nightMode="false" tag="contour" value="elevation">
+		<switch lessDetailed="false" tag="contour" value="elevation">
 			<case minzoom="13" contourLines="13"/>
 			<case minzoom="14" contourLines="14"/>
 			<case minzoom="14" contourLines=""/>
@@ -4446,125 +4434,28 @@
 				</switch>
 			</apply_if>
 			<apply_if additional="contourtype=100m">
-				<case contourWidth="thin" strokeWidth="1.3:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="1.4:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="1.5:1">
-				</case>
-				<case strokeWidth="1.3"/>
+				<case contourWidth="thin" strokeWidth="2"/>
+				<case contourWidth="medium" strokeWidth="2.2"/>
+				<case contourWidth="thick" strokeWidth="2.4"/>
+				<case strokeWidth="2"/>
 			</apply_if>
 			<apply_if additional="contourtype=10m">
-				<case contourWidth="thin" strokeWidth="0.6:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="0.7:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="0.8:1">
-				</case>
-				<case strokeWidth="0.6"/>
+				<case contourWidth="thin" strokeWidth="1.1"/>
+				<case contourWidth="medium" strokeWidth="1.3"/>
+				<case contourWidth="thick" strokeWidth="1.5"/>
+				<case strokeWidth="1"/>
 			</apply_if>
 			<apply_if additional="contourtype=20m">
-				<case contourWidth="thin" strokeWidth="0.6:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="0.7:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="0.8:1">
-				</case>
-				<case strokeWidth="0.6"/>
+				<case contourWidth="thin" strokeWidth="1.1"/>
+				<case contourWidth="medium" strokeWidth="1.3"/>
+				<case contourWidth="thick" strokeWidth="1.5"/>
+				<case strokeWidth="1"/>
 			</apply_if>
 			<apply_if additional="contourtype=50m">
-				<case contourWidth="thin" strokeWidth="0.9:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="1.0:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="1.1:1">
-				</case>
-				<case strokeWidth="0.6"/>
-			</apply_if>
-			<apply_if ign="true" noPolygons="true" strokeWidth="0"/>
-		</switch>
-		<!-- contour elevation moins details-->
-		<switch  tag="contour" value="elevation">
-			<case minzoom="13" contourLines="13"/>
-			<case minzoom="14" contourLines="14"/>
-			<case minzoom="14" contourLines=""/>
-			<case minzoom="15" contourLines="15"/>
-			<case minzoom="16" contourLines="16"/>
-			<apply_if contourLines="13">
-				<switch>
-					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
-					<case minzoom="15" additional="contourtype=100m" color="$contourLineColor100"/>
-				</switch>
-			</apply_if>
-			<apply_if contourLines="14">
-				<switch>
-					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
-					<case minzoom="15" additional="contourtype=100m" color="$contourLineColor100"/>
-				</switch>
-			</apply_if>
-			<apply_if contourLines="">
-				<switch>
-					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
-					<case minzoom="15" additional="contourtype=100m" color="$contourLineColor100"/>
-				</switch>
-			</apply_if>
-			<apply_if contourLines="15">
-				<switch>
-					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
-					<case minzoom="15" additional="contourtype=100m" color="$contourLineColor100"/>
-				</switch>
-			</apply_if>
-			<apply_if contourLines="16">
-				<switch>
-					<case minzoom="16" additional="contourtype=10m" color="$contourLineColor"/>
-					<case minzoom="16" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="16" additional="contourtype=50m" color="$contourLineColor50"/>
-					<case minzoom="16" additional="contourtype=100m" color="$contourLineColor100"/>
-				</switch>
-			</apply_if>
-			<apply_if additional="contourtype=100m">
-				<case contourWidth="thin" strokeWidth="1.3:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="1.4:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="1.5:1">
-				</case>
-				<case strokeWidth="1.3"/>
-			</apply_if>
-			<apply_if additional="contourtype=10m">
-				<case contourWidth="thin" strokeWidth="0.6:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="0.7:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="0.8:1">
-				</case>
-				<case strokeWidth="0.6"/>
-			</apply_if>
-			<apply_if additional="contourtype=20m">
-				<case contourWidth="thin" strokeWidth="0.6:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="0.7:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="0.8:1">
-				</case>
-				<case strokeWidth="0.6"/>
-			</apply_if>
-			<apply_if additional="contourtype=50m">
-				<case contourWidth="thin" strokeWidth="0.9:1">
-				</case>
-				<case contourWidth="medium" strokeWidth="1.0:1">
-				</case>
-				<case contourWidth="thick" strokeWidth="1.1:1">
-				</case>
-				<case strokeWidth="0.6"/>
+				<case contourWidth="thin" strokeWidth="1.5"/>
+				<case contourWidth="medium" strokeWidth="1.7"/>
+				<case contourWidth="thick" strokeWidth="1.9"/>
+				<case strokeWidth="1"/>
 			</apply_if>
 			<apply_if ign="true" noPolygons="true" strokeWidth="0"/>
 		</switch>
@@ -4676,7 +4567,7 @@ v				<case minzoom="8" strokeWidth="30"/>
 			</apply>
 		</switch>-->
 		
-		<case tag="note_tag" value="yes" color="#66ff0000" strokeWidth="1"/>
+		<case lessDetailed="false" tag="note_tag" value="yes" color="#66ff0000" strokeWidth="1"/>
 
 		<case tag="osmand_change" value="delete"/> <!-- OSMC will break if delete -->
 	</line>
