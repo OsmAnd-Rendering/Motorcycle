@@ -88,7 +88,7 @@
 	</renderingAttribute>
 
 	<renderingAttribute name="markerGuideline">
-		<case color="#555555" strokeWidth="8" pathEffect="5_3"/>
+		<case color="#555555" strokeWidth="24" />
 		<apply_if nightMode="true" color="#55ff55" color_2="#aa66ff"/>
 	</renderingAttribute>
 
@@ -98,24 +98,24 @@
 		color_2 - route line
 		strokeWidth_2 - route line
 		-->
-		<case color="#536dfe" strokeWidth="8" pathEffect="5_3" color_2="#CC536dfe" strokeWidth_2="12" pathEffect_2="10_3"/>
+		<case color="#536dfe" strokeWidth="12" color_2="#CC536dfe" strokeWidth_2="24" />
 		<apply_if nightMode="true" color="#536dfe" color_2="#CC536dfe"/>
 	</renderingAttribute>
 
 	<renderingAttribute name="rulerLine">
-		<case color="#000000" strokeWidth="3" pathEffect="4_4"/>
+		<case color="#ff0000" strokeWidth="24" />
 	</renderingAttribute>
 
 	<renderingAttribute name="measureDistanceLine">
-		<case color="#AA7A0079" strokeWidth="3" pathEffect="5_4"/>
+		<case color="#ff0000" strokeWidth="24" />
 	</renderingAttribute>
 
 	<renderingAttribute name="shadowRendering">
 	<!-- 0 - no shadow, 1 - one step, 2 - blur shadow, 3 - solid shadow -->
-		<!-- next line ensures bridges stand out ok -->
+		<!-- next line ensures bridges stand out ok 
 		<case minzoom="14" nightMode="false" attrIntValue="3" shadowColor="#000000"/>
 		<case minzoom="14" attrIntValue="3" shadowColor="#000000"/>
-		<case minzoom="8" maxzoom="13" attrIntValue="3" shadowColor="#000000"/>-
+		<case minzoom="8" maxzoom="13" attrIntValue="3" shadowColor="#000000"/>-->
 		<case attrIntValue="3" shadowColor="#000000"/>
 	</renderingAttribute>
 
@@ -142,16 +142,16 @@
 			<case currentTrackColor="translucent_lightblue" color="#6600ffff"/>
 			<case currentTrackColor="translucent_blue" color="#664e4eff"/>
 			<case currentTrackColor="translucent_purple" color="#66a71de1"/>
-			<case color="#6600ffff" />
+			<case color="#66ff00ff" />
 			<apply cap="ROUND">
 				<case currentTrackWidth="thin">
 					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
-					<apply_if minzoom="6" strokeWidth="2"/>
+					<apply_if minzoom="6" strokeWidth="8"/>
 				</case>
 				<case currentTrackWidth="medium">
 					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
 					<apply_if minzoom="6" maxzoom="11" strokeWidth="3"/>
-					<apply_if minzoom="12" strokeWidth="5"/>
+					<apply_if minzoom="12" strokeWidth="15"/>
 				</case>
 				<case currentTrackWidth="bold">
 					<apply_if minzoom="3" maxzoom="5" strokeWidth="1"/>
@@ -238,6 +238,7 @@
 		<case contourColorScheme="red" attrColorValue="#99ff6666"/>
 		<case attrColorValue="#33666666">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
+			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
 	</renderingAttribute>
 
@@ -251,6 +252,7 @@
 		<case contourColorScheme="red" attrColorValue="#99ff6666"/>
 		<case attrColorValue="#33666666">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
+			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
 	</renderingAttribute>
 
@@ -264,6 +266,7 @@
 		<case contourColorScheme="red" attrColorValue="#99ff6666"/>
 		<case attrColorValue="#33666666">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
+			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
 	</renderingAttribute>
 		
@@ -299,11 +302,11 @@
 	<!-- routeInfo_tracktype-->
 	<renderingAttribute name="routeInfo_tracktype"> <!-- dureté de la surface-->
 		<case additional="smoothness=impassable" attrColorValue="#66ff99" attrStringValue="sentier"/>
-		<case additional="smoothness=very_horrible" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="smoothness=very_horrible" attrColorValue="$trackColor_2" attrStringValue="mauvais chemin"/>
 		<case additional="smoothness=horrible" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=grass" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=mud" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
-		<case additional="surface=sand" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
+		<case additional="surface=grass" attrColorValue="$trackColor_2" attrStringValue="mauvais chemin"/>
+		<case additional="surface=mud" attrColorValue="$trackColor_2" attrStringValue="mauvais chemin"/>
+		<case additional="surface=sand" attrColorValue="$trackColor_2" attrStringValue="mauvais chemin"/>
 		<case additional="surface=unpaved" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
 		<case additional="surface=ground" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
 		<case additional="surface=dirt" attrColorValue="$trackColor_2" attrStringValue="chemin"/>
@@ -1264,13 +1267,13 @@
 				<apply_if minzoom="10" additional="population_rounded=2500" textColor="#000000" textOrder="38"/>
 				<apply_if minzoom="11" additional="population_rounded=1000" textColor="#000000" textOrder="39"/>
 				<apply_if minzoom="11" additional="population_rounded=500" textColor="#000000" textOrder="40"/>
-				<apply_if minzoom="12" additional="population_rounded=100" textColor="#000000" textOrder="41"/>
-				<apply_if minzoom="13" additional="population_rounded=50" textColor="#000000" textOrder="42"/>
+				<apply_if ign="false" minzoom="12" additional="population_rounded=100" textColor="#000000" textOrder="41"/>
+				<apply_if ign="false" minzoom="13" additional="population_rounded=50" textColor="#000000" textOrder="42"/>
 				<apply_if >
 					<case maxzoom="12" textHaloRadius="1" textHaloColor="#ffffff"/>
 					<case minzoom="13" textHaloRadius="2" textHaloColor="#ffffff"/>
-				</apply_if>
-				<apply_if ign="true" noPolygons="true" textSize="0"/>
+				</apply_if><!--
+				<apply_if ign="true" noPolygons="true" textSize="0"/>-->
 			</switch>
 
 			<switch minzoom="14">
@@ -1412,11 +1415,11 @@
 			</switch>
 			
 			<!-- natural -->
-			<switch minzoom="9" maxzoom="14" textOrder="1" intersectsWith="any" intersectionSizeFactor="0.1" intersectionMargin="0.1"> 
+			<switch minzoom="10" maxzoom="14" textOrder="1" > <!-- intersectsWith="any" intersectionSizeFactor="0.1" intersectionMargin="0.1" -->
 				<case tag="region:type" value="mountain_area" nameTag=""/>
 				<case tag="natural" value="mountain_area" nameTag=""/>
 				<case tag="natural" value="mountain_range" nameTag=""/>
-				<apply textColor="#66990000" textBold="true" textItalic="true" textHaloColor="#99ffffff" textHaloRadius="4" textOnPath="true">
+				<apply textBold="true" textItalic="true" textHaloColor="#99ffffff" textHaloRadius="4" textOnPath="true">
 					<case maxzoom="11" textSize="12" textColor="#88990000" textHaloColor="#88ffffff"/>
 					<case maxzoom="12" textSize="16" textColor="#77990000" textHaloColor="#77ffffff"/>
 					<case maxzoom="13" textSize="22" textColor="#66990000" textHaloColor="#66ffffff"/>
@@ -1443,7 +1446,7 @@
 			<switch minzoom="13" textOrder="9" intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="any">			
 				<case tag="natural" value="valley"/>
 				<case tag="natural" value="sinkhole"/>
-				<apply textColor="#99336600" textBold="false" textItalic="true" textHaloColor="#99ffffff" textHaloRadius="4" textOnPath="true" >
+				<apply textColor="#99336600" textBold="true" textItalic="true" textHaloColor="#99ffffff" textHaloRadius="4" textOnPath="true" >
 					<case maxzoom="13" textSize="10" textDy="0"/>
 					<case maxzoom="14" textSize="11" textDy="0"/>
 					<case maxzoom="15" textSize="12" textDy="0"/>
@@ -2937,7 +2940,7 @@
 
 		<!-- water -->
 		<switch color="#7ad1ed">
-			<switch>
+			<switch arriereplan="false">
 				<case minzoom="1" tag="natural" value="coastline"/>
 				<case minzoom="10" tag="natural" value="water"/>
 				<case minzoom="10" tag="landuse" value="reservoir"/>
@@ -3017,7 +3020,9 @@
 				<apply_if additional="oneway=yes" onewayArrowsColor="#00c0c0c0"/>
 			</case>
 			<apply>
-				<case maxzoom="7" strokeWidth="2" />
+				<case maxzoom="6" strokeWidth="1.25" />
+				<case maxzoom="7" strokeWidth="1.5" />
+				<case maxzoom="8" strokeWidth="2" />
 				<case maxzoom="11" strokeWidth="2.5" />
 				<case maxzoom="12" strokeWidth="3" strokeWidth_0="7" />
 				<case maxzoom="13" strokeWidth="3.5" strokeWidth_0="7.5" />
@@ -3033,25 +3038,28 @@
 			<apply_if nightMode="true" strokeWidth_0="0"/>
 
 			<!-- tunnels -->
-			<apply_if additional="tunnel=yes" pathEffect="7_7" pathEffect_0="7_7" cap="BUTT" cap_0="BUTT"/>
-			<apply_if additional="covered=yes" pathEffect="7_7" pathEffect_0="7_7" cap="BUTT" cap_0="BUTT"/>
-			
-			<!-- ponts -->
-			<apply_if additional="bridge=yes" minzoom="13" shadowRadius="0" color_0="#990000" cap="ROUND">
-				<case maxzoom="13" strokeWidth_0="9.5"/>
-				<case maxzoom="14" strokeWidth_0="10"/>
-				<case maxzoom="15" strokeWidth_0="10.5"/>
-				<case maxzoom="16" strokeWidth_0="11"/>
-				<case maxzoom="17" strokeWidth_0="11.5"/>
-				<case maxzoom="18" strokeWidth_0="12"/>
-				<case maxzoom="19" strokeWidth_0="12.5"/>
-				<case maxzoom="20" strokeWidth_0="13"/>
-				<case minzoom="21" strokeWidth_0="13.5"/>
-			</apply_if>
+			<apply_if maxzoom="14" additional="tunnel=yes" strokeWidth="0"/>
+			<apply_if minzoom="15" additional="tunnel=yes" pathEffect="7_7" pathEffect_0="7_7" cap="BUTT" cap_0="BUTT"/>
+			<apply_if minzoom="15" additional="covered=yes" pathEffect="7_7" pathEffect_0="7_7" cap="BUTT" cap_0="BUTT"/>
 			
 			<apply>
-				<case shadowRadius="3"/>
+				<case maxzoom="8" shadowRadius="2"/>
+				<case maxzoom="9" shadowRadius="2.5"/>
+				<case minzoom="10" shadowRadius="3"/>
 			</apply>
+			
+			<!-- ponts -->
+			<apply_if additional="bridge=yes" minzoom="13" cap="ROUND" color__2="#990000" shadowRadius="0"><!-- shadowColor="#990000" 
+				<case maxzoom="13" strokeWidth__2="9"/>-->
+				<case maxzoom="14" strokeWidth__2="9.5"/>
+				<case maxzoom="15" strokeWidth__2="10"/>
+				<case maxzoom="16" strokeWidth__2="10.5"/>
+				<case maxzoom="17" strokeWidth__2="11.5"/>
+				<case maxzoom="18" strokeWidth__2="12"/>
+				<case maxzoom="19" strokeWidth__2="12.5"/>
+				<case maxzoom="20" strokeWidth__2="13"/>
+				<case minzoom="21" strokeWidth__2="13.5"/>
+			</apply_if>
 
 		</switch>
 		
@@ -4066,6 +4074,7 @@
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
 			<apply_if noPolygons="true" color="#440044" shadowColor="#440044"/>
+			<apply_if arriereplan="true" color="#99ddddff" shadowColor="#99ddddff"/>
 			<apply_if nightMode="true" color="#440044" shadowColor="#440044"/>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" shadowRadius="0"/>
@@ -4096,6 +4105,7 @@
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
 			<apply_if noPolygons="true" color="#444400" shadowColor="#444400"/>
+			<apply_if arriereplan="true" color="#99ffff00" shadowColor="#99ffff00"/>
 			<apply_if nightMode="true" color="#444400" shadowColor="#444400"/>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" color="#ff00ff" shadowColor="#ff00ff" shadowRadius="0"/>

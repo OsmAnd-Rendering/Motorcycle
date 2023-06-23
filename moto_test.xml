@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <osmand_routing_config defaultProfile="moto" name="moto_test">
-	<attribute name="heuristicCoefficient" value="3.4" />
+	<attribute name="heuristicCoefficient" value="1.4" />
 	<attribute name="zoomToLoadTiles" value="16" />
 	<attribute name="memoryLimitInMB" value="" />
 	<attribute name="nativeMemoryLimitInMB" value="" />
-	<attribute name="planRoadDirection" value="0" />
+	<attribute name="planRoadDirection" value="1" />
 	<attribute name="recalculateDistanceHelp" value="100000" />
 	
 	<!-- sharpTurn=virage serré / slightTurn=Léger virage-->
-	<routingProfile name="moto_test" baseProfile="moto" restrictionsAware="true" followSpeedLimitations="true" minSpeed="5" defaultSpeed="60" maxSpeed="150" sharpTurn="60" slightTurn="60" roundaboutTurn="20" onewayAware="true">
+	<routingProfile name="moto_test" baseProfile="moto" restrictionsAware="true" followSpeedLimitations="false" minSpeed="5" defaultSpeed="30" maxSpeed="200" sharpTurn="200" slightTurn="60" roundaboutTurn="30" onewayAware="true">
 		<!-- guidage GPX ? />-->
 		<attribute name="minPointApproximation" value = "5"/>
 		<attribute name="minStepApproximation" value = "100"/>
 		<attribute name="maxStepApproximation" value= "3000"/>
 		<attribute name="smoothenPointsNoRoute" value = "5"/>
 		
-		<parameter id="avoid_routasse" name="preferer routasse" description="preferer routasses" type="boolean" />
+		<parameter id="avoid_routasse" name="petites routes" description="petites routes" type="boolean" />
+		<parameter id="avoid_routasse2" name="routasses" description="preferer routasses" type="boolean" />
 		<parameter id="avoid_toll" name="Avoid toll roads" description="Avoid toll roads" type="boolean"/>
 		<parameter id="avoid_borders" name="Avoid border crossing" description="Avoid crossing a border into another country" type="boolean"/>
 		<parameter id="allow_private" name="Allow private access" description="Allow access to private areas for cars" type="boolean" /><!--
@@ -156,19 +157,39 @@
 			<select value="-1" t="motor_vehicle:forward" v="no"/>
 		</way>
 
-		<way attribute="speed" type="speed">
-			<select value="110" t="highway" v="motorway"/>
-			<select value="100" t="highway" v="motorway_link"/>
+		<way attribute="penalty_transition">
+			<!-- cost in time when you change the route from motorway to primary or from primary
+				 to living_street, but not other way around. Calculated as difference between values -->
+			<!--	-->		
+			<select value="150" t="highway" v="motorway"/>
+			<select value="150" t="highway" v="motorway_link"/>
 			<select value="100" t="highway" v="trunk"/>
+			<select value="100" t="highway" v="trunk_link"/>
+			<select value="50" t="highway" v="primary"/>
+			<select value="50" t="highway" v="primary_link"/>
+			<select value="0" t="highway" v="secondary"/>
+			<select value="0" t="highway" v="secondary_link"/>
+			<select value="50" t="highway" v="tertiary"/>
+			<select value="50" t="highway" v="tertiary_link"/>
+			<select value="100" t="highway" v="unclassified"/>
+			<select value="150" t="highway" v="residential"/>
+			<select value="200" t="highway" v="service"/>
+			<select value="200"/> 
+		</way>
+		
+		<way attribute="speed" type="speed">
+			<select value="130" t="highway" v="motorway"/>
+			<select value="110" t="highway" v="motorway_link"/>
+			<select value="110" t="highway" v="trunk"/>
 			<select value="90" t="highway" v="trunk_link"/>
-			<select value="60" t="highway" v="primary"/>
+			<select value="80" t="highway" v="primary"/>
 			<select value="60" t="highway" v="primary_link"/>
-			<select value="70" t="highway" v="secondary"/>
-			<select value="70" t="highway" v="secondary_link"/>
-			<select value="60" t="highway" v="tertiary"/>
-			<select value="60" t="highway" v="tertiary_link"/>
-			<select value="50" t="highway" v="unclassified"/>
-			<select value="50" t="highway" v="road"/>
+			<select value="80" t="highway" v="secondary"/>
+			<select value="80" t="highway" v="secondary_link"/>
+			<select value="80" t="highway" v="tertiary"/>
+			<select value="80" t="highway" v="tertiary_link"/>
+			<select value="80" t="highway" v="unclassified"/>
+			<select value="80" t="highway" v="road"/>
 			<select value="50" t="highway" v="residential"/>
 			<select value="15" t="highway" v="track"/>
 
@@ -176,17 +197,16 @@
 			<select value="30" t="highway" v="living_street"/>
 			<select value="15" t="route" v="ferry"/>
 			<select value="60" t="route" v="shuttle_train"/>
-			<select value="5" />
 		</way>
 		
 		<way attribute="obstacle_srtm_alt_speed"><!-- court circuite les priorités roads
 			<if param="height_obstacles">
-				<gt value1="-9" value2=":incline">
-					<select value="120"/>
+				<gt value1="-6" value2=":incline">
+					<select value="20"/>
 				</gt>
 
-				<gt value1="9" value2=":incline">
-					<select value="120"/>
+				<gt value1="6" value2=":incline">
+					<select value="20"/>
 				</gt>
 				<select value="0"/>
 			</if>-->
@@ -216,22 +236,34 @@
 			<select value="0.2" t="highway" v="trunk_link"/>
 			
 			<if param="avoid_routasse"><!-- preferer petite route -->
+				<select value="0.5" t="tracktype" v="grade1"/>
+				<select value="0.1" t="highway" v="track"/>
+				<select value="0.5" t="highway" v="primary"/>
+				<select value="0.5" t="highway" v="primary_link"/>
+				<select value="1.15" t="highway" v="secondary"/>
+				<select value="1.15" t="highway" v="secondary_link"/>
+				<select value="1.5" t="highway" v="tertiary"/>
+				<select value="1.5" t="highway" v="tertiary_link"/>
+				<select value="0.5" t="highway" v="unclassified"/>
 				<select value="0.5" t="highway" v="road"/>
 				<select value="0.5" t="highway" v="residential"/>
-				<select value="0.5" t="highway" v="service"/>
-				<select value="0.5" t="highway" v="living_street"/>
-				<select value="0.1" t="highway" v="track"/>
+				<select value="0.25" t="highway" v="living_street"/>
+				<select value="0.25" t="highway" v="service"/>
+			</if>
+			<if param="avoid_routasse2"><!-- preferer routasses -->
 				<select value="0.5" t="tracktype" v="grade1"/>
-				<select value="0.5" t="highway" v="unclassified"/><!--
-				<select value="2.5" t="route_hiking"/>  balisages	
-				<select value="2.5" t="route_bicycle"/>
-				<select value="2.5" t="route_mtb"/>-->
-				<select value="0.75" t="highway" v="primary"/>
-				<select value="0.75" t="highway" v="primary_link"/>
-				<select value="1.5" t="highway" v="secondary"/>
-				<select value="1.5" t="highway" v="secondary_link"/>
+				<select value="0.1" t="highway" v="track"/>
+				<select value="0.35" t="highway" v="primary"/>
+				<select value="0.35" t="highway" v="primary_link"/>
+				<select value="0.75" t="highway" v="secondary"/>
+				<select value="0.75" t="highway" v="secondary_link"/>
 				<select value="1.25" t="highway" v="tertiary"/>
 				<select value="1.25" t="highway" v="tertiary_link"/>
+				<select value="0.85" t="highway" v="unclassified"/>
+				<select value="0.85" t="highway" v="road"/>
+				<select value="0.25" t="highway" v="residential"/>
+				<select value="0.2" t="highway" v="living_street"/>
+				<select value="0.2" t="highway" v="service"/>
 			</if>
 			<!--		-->
 			<select value="1.25" t="smoothness" v="excellent"/>
@@ -253,16 +285,13 @@
 			<select value="0.2" t="highway" v="service"/>
 			<select value="0.15" t="highway" v="living_street"/>
 			
-			<select value="0.1" t="highway" v="track"/><!--
-			<select value="3" t="route_hiking"/>
-			<select value="2.5" t="route_bicycle"/>
-			<select value="2" t="route_mtb"/>-->
+			<select value="0.1" t="highway" v="track"/>
 
 			<select value="0.9" t="highway" v="primary"/>
 			<select value="0.9" t="highway" v="primary_link"/>
 			<select value="1.15" t="highway" v="secondary"/>
-			<select value="1.15" t="highway" v="secondary_link"/>
-			<select value="0.1" />
+			<select value="1.15" t="highway" v="secondary_link"/><!--
+			<select value="0.1" />-->
 		</way>
 
 		<point attribute="obstacle_time"><!-- juste pour le calcul ETA -->
@@ -276,21 +305,23 @@
 		</point>
 
 		<point attribute="obstacle">
-			<!--
-			<if param="avoid_routasse">
-				<select value="50" t="highway" v="traffic_signals"/>
-				<select value="200" t="highway" v="speed_camera"/>
-				<select value="10" t="traffic_calming"/>
-				<select value="5"  t="highway" v="give_way"/>
-				<select value="15"  t="highway" v="stop"/>
-			</if>-->
-			<select value="15"  t="highway" v="stop"/>
-			<select value="5"  t="highway" v="give_way"/>
-			<select value="10" t="traffic_calming"/>
-			<select value="50" t="highway" v="traffic_signals"/>
+			<if param="avoid_routasse"><!--
+				<select value="10"  t="highway" v="stop"/>
+				<select value="5"  t="highway" v="give_way"/>-->
+				<select value="0" t="traffic_calming"/>
+				<select value="0" t="highway" v="traffic_signals"/>
+				<select value="0" t="highway" v="speed_camera"/>
+			</if>
+			<if param="avoid_routasse2"><!--
+				<select value="10"  t="highway" v="stop"/>
+				<select value="5"  t="highway" v="give_way"/>-->
+				<select value="0" t="traffic_calming"/>
+				<select value="0" t="highway" v="traffic_signals"/>
+				<select value="0" t="highway" v="speed_camera"/>
+			</if>
+			<select value="20" t="traffic_calming"/>
+			<select value="75" t="highway" v="traffic_signals"/>
 			<select value="400" t="highway" v="speed_camera"/>
-			
-			<select value="0" t="ford"/>
 		</point>
 	</routingProfile>
 
