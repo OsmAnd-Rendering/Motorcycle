@@ -36,8 +36,8 @@
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
 		<!-- To change default color completely you should do that also for tag="place" value="island" and tag="natural" value="land" (search this file) -->
 		<case noPolygons="true" attrColorValue="#00000000"/>
-		<case nightMode="true" attrColorValue="#00000000"/>
-		<case attrColorValue="#fff6e6"/><!-- fff6e6 dce6d0-->
+		<case nightMode="true" attrColorValue="#000000"/>
+		<case attrColorValue="#FcF9Ef"/>
 	</renderingAttribute>
 	<renderingAttribute name="rulerCircle">
 		<!-- color - circle color
@@ -218,7 +218,21 @@
 	<renderingAttribute name="trackColor_2">
 		<case attrColorValue="#009900"/>
 	</renderingAttribute>
-	
+
+	<!-- couverture sol -->
+	<renderingAttribute name="foret">
+		<case attrColorValue="#ccdfc6"/><!-- dce6d0 -->
+	</renderingAttribute>
+	<renderingAttribute name="broussaille">
+		<case attrColorValue="#dcdfc9"/><!-- e6efd6 -->
+	</renderingAttribute>
+	<renderingAttribute name="vigne">
+		<case attrColorValue="#Fcecfc"/><!-- Ffe0ff -->
+	</renderingAttribute>
+	<renderingAttribute name="culture">
+		<case attrColorValue="#FcF9Ef"/><!-- FFF6E6 -->
+	</renderingAttribute>
+		
 	<renderingConstant name="null" value="#000000"/>
 
 	<renderingAttribute name="contourLineColor">
@@ -932,10 +946,10 @@
 			<case tag="route_mtb" value="" nameTag="bicycle_ref" />
 			<apply textColor="#00ffffff">
 				<case icon="osmc_blue_bicycle" textShield="osmc_blue_circle_bg"/>
-				<apply_if maxzoom="14" textMinDistance="60"/>
-				<apply_if maxzoom="15" textMinDistance="90"/>
-				<apply_if maxzoom="16" textMinDistance="150"/>
-				<apply_if minzoom="17" textMinDistance="250"/>
+				<apply_if maxzoom="14" textMinDistance="60" intersectionMargin="5"/>
+				<apply_if maxzoom="15" textMinDistance="90" intersectionMargin="30"/>
+				<apply_if maxzoom="16" textMinDistance="150" intersectionMargin="60"/>
+				<apply_if minzoom="17" textMinDistance="250" intersectionMargin="100"/>
 			</apply>
 			<apply_if lessDetailed="true" icon="" textShield=""/>
 		</switch>
@@ -1285,36 +1299,51 @@
 			<apply_if engine_v1="false" textDy="-6"/>-->
 		</switch>
 		
-		<switch>
-			<!-- cols -->
-			<switch minzoom="13" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
-				<case tag="natural" value="saddle" nameTag="" textOrder="58" textColor="#000000"/>
-				<case tag="mountain_pass" value="yes" nameTag="" textBold="false" textOrder="44" textColor="#000000"/>
-				<apply textMinDistance="250">
-					<case maxzoom="13" textSize="9" nameTag=""/>
-					<case maxzoom="14" textSize="10" nameTag=""/>
-					<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
-				</apply>
-				<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
-				<apply_if engine_v1="false" textDy="-6"/>
-			</switch>
-			<!-- sommet -->
-			<switch minzoom="13" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
-				<case tag="natural" value="peak" textOrder="59" textColor="#cc0000"/>
-				<case tag="natural" value="volcano" textOrder="59" textColor="#cc0000"/>
-				<apply_if lessDetailed="false" textMinDistance="250">
-					<case maxzoom="13" textSize="9" nameTag=""/>
-					<case maxzoom="14" textSize="10" nameTag=""/>
-					<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
-				</apply_if>
-				<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
-				<apply_if engine_v1="false" textDy="-6"/>
-			</switch>
+		<!-- cols -->
+		<switch minzoom="13" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
+			<case tag="natural" value="saddle" nameTag="" textOrder="58" textColor="#000000"/>
+			<apply textMinDistance="250">
+				<case maxzoom="13" textSize="9" nameTag=""/>
+				<case maxzoom="14" textSize="10" nameTag=""/>
+				<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
+			</apply>
+			<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
+			<apply_if engine_v1="false" textDy="-6"/>
 			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2">
 				<case maxzoom="15" textSize="0"/>
 			</apply_if>
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
+		<!-- cols routier -->
+		<switch minzoom="12" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
+			<case tag="mountain_pass" value="yes" nameTag="" textBold="false" textOrder="44" textColor="#000000"/>
+			<apply textMinDistance="100">
+				<case maxzoom="13" textSize="9" nameTag=""/>
+				<case maxzoom="14" textSize="10" nameTag=""/>
+				<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
+			</apply>
+			<apply_if engine_v1="false" textDy="-6"/>
+			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2">
+			</apply_if>
+			<apply_if ign="true" noPolygons="true" textSize="0"/>
+		</switch>
+		<!-- sommet -->
+		<switch minzoom="13" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
+			<case tag="natural" value="peak" textOrder="59" textColor="#cc0000"/>
+			<case tag="natural" value="volcano" textOrder="59" textColor="#cc0000"/>
+			<apply_if lessDetailed="false" textMinDistance="250">
+				<case maxzoom="13" textSize="9" nameTag=""/>
+				<case maxzoom="14" textSize="10" nameTag=""/>
+				<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
+			</apply_if>
+			<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
+			<apply_if engine_v1="false" textDy="-6"/>
+			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2">
+				<case maxzoom="15" textSize="0"/>
+			</apply_if>
+			<apply_if ign="true" noPolygons="true" textSize="0"/>
+		</switch>
+		
 		<switch>			
 			<switch lessDetailed="false" textColor="#cc0000" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" textMinDistance="150" >
 				<case minzoom="13" tag="natural" value="hill" nameTag="" nameTag2="ele" textOrder="59" textSize="11"/>
@@ -2052,11 +2081,10 @@
 					<apply intersectionSizeFactor="0.9"/>
 				</switch>
 			</switch>
-			<case minzoom="15" tag="" value="">
+			<case lessDetailed="false" minzoom="15" tag="" value="">
 				<apply_if additional="ruins=yes" icon="osmc_green_l" shield="" iconOrder="158"/>
-				<apply_if nightMode="true" shield=""/>
 			</case>
-			<case minzoom="15" tag="historic" value="ruins" icon="osmc_green_l" shield="" iconOrder="158" color="#00ff00" color_0="#00ff00" color_1="#00ff00" color_2="#00ff00">
+			<case lessDetailed="false" minzoom="15" tag="historic" value="ruins" icon="osmc_green_l" shield="" iconOrder="158" color="#00ff00" color_0="#00ff00" color_1="#00ff00" color_2="#00ff00">
 				<apply_if maxzoom="14" icon=""/>
 			</case>
 		</switch>
@@ -2586,20 +2614,17 @@
 
 			<case minzoom="8" tag="natural" value="desert" color="#fff7bf"/>
 
-			<!-- bois -->
-			<switch minzoom="8">
-				<case tag="natural" value="wood"/>
-				<case tag="landuse" value="forest"/>
-				<case tag="natural" value="tree"/>
-				<apply color="#dce6d0">
-					<case maxzoom="11" color="#cfd9c3"/>
-				</apply>
-				<apply_if nightMode="true" color="#202c20" />
-				<apply_if lessDetailed="true" />
-			</switch>
 
 			<!-- vegetation-->
 			<switch>
+				<!-- bois -->
+				<switch minzoom="8">
+					<case tag="natural" value="wood"/>
+					<case tag="landuse" value="forest"/>-->
+					<case tag="natural" value="tree"/>
+					<apply color="$foret">
+					</apply>
+				</switch>
 				
 				<!-- maquis -->
 				<switch minzoom="10">
@@ -2608,61 +2633,39 @@
 					<case tag="natural" value="tundra"/>
 					<case minzoom="15" tag="landuse" value="greenfield"/>
 					<case minzoom="15" tag="landuse" value="brownfield"/>
-					<apply color="#e6efd6">
-						<case maxzoom="11" color="#d6dfc6"/>
+					<apply color="$broussaille">
 					</apply>
-					<apply_if nightMode="true" color="#2c2f20" />
 				</switch>
 				
 				<!-- vigne -->
 				<switch minzoom="10">
-					<case tag="landuse" value="vineyard" color="#Fff3ff"/>
-					<apply_if minzoom="14" maxzoom="14" color="#ddFff3ff"/>
-					<apply_if minzoom="15" maxzoom="15" color="#bbFff3ff"/>
-					<apply_if minzoom="16" color="#99Fff3ff"/>
-					<apply_if nightMode="true" color="#292029" />
+					<case tag="landuse" value="vineyard" color="$vigne"/>
 				</switch>
 				
 				<!-- cultures -->
-				<switch minzoom="8" color="#FFF6E6">
+				<switch minzoom="8">
 					<case tag="landuse" value="farmland"/>
 					<case minzoom="10" tag="landuse" value="allotments"/>
 					<case minzoom="6" tag="natural" value="land"/>
 					<case minzoom="12" tag="landuse" value="orchard"/>
 					<case minzoom="12" tag="landuse" value="plant_nursery"/>
-					<apply_if minzoom="14" maxzoom="14" color="#ddFFF6E6"/>
-					<apply_if minzoom="15" maxzoom="15" color="#bbFFF6E6"/>
-					<apply_if minzoom="16" color="#99FFF6E6"/>
-					<apply_if nightMode="true" color="#000000"/>
+					<apply color="$culture"/>
 				</switch>
 				
 				<!-- prairie -->
 				<switch minzoom="10">
-						<case tag="natural" value="grassland"/>
-						<case tag="landuse" value="meadow"/>
-						<case tag="natural" value="fell"/>
-						<apply color="#f3ffe3">
-							<case maxzoom="11" color="#e3efd3"/>
-						</apply><!--
-						<apply_if minzoom="14" maxzoom="14" color="#ddf3ffe3"/>
-						<apply_if minzoom="15" maxzoom="15" color="#bbf3ffe3"/>
-						<apply_if minzoom="16" color="#99f3ffe3"/>-->
-						<apply_if nightMode="true" color="#303f3f" />
-					</switch>
-
-					<apply_if lessDetailed="false"><!--
-						<case maxzoom="11" color_2="#33999999" strokeWidth_2="0"/>
-						<case maxzoom="12" color_2="#22999999" strokeWidth_2="0.7:1"/>
-						<case maxzoom="13" color_2="#33999999" strokeWidth_2="0.7:1"/>
-						<case maxzoom="14" color_2="#33999999" strokeWidth_2="0.7:1"/>
-						<case maxzoom="15" color_2="#22999999" strokeWidth_2="0.7:1"/>
-						<case minzoom="16" color_2="#11999999" strokeWidth_2="0.7:1"/>-->
-					</apply_if>
+					<case tag="natural" value="grassland"/>
+					<case tag="landuse" value="meadow"/>
+					<case tag="natural" value="fell"/>
+					<apply color="#f3ffe3">
+					</apply>
+				</switch>
 			</switch>
-
+			
+			<!-- haie -->
 			<switch minzoom="12">
 				<case tag="natural" value="tree_row"/>
-				<apply color_2="#dce6d0">
+				<apply color_2="$foret">
 					<case maxzoom="13" strokeWidth_2="3"/>
 					<case maxzoom="14" strokeWidth_2="4"/>
 					<case maxzoom="15" strokeWidth_2="6"/>
@@ -2811,7 +2814,7 @@
 			<case minzoom="4" tag="natural" value="bay"/>
 
 			<!-- barrière -->
-			<case minzoom="15" tag="barrier" value="hedge" color="#00dce6d0" color_2="#dce6d0" cap_2="ROUND">
+			<case minzoom="15" tag="barrier" value="hedge" color="#00dce6d0" color_2="$foret" cap_2="ROUND">
 				<case maxzoom="15" strokeWidth_2="4" pathEffect_2=""/>
 				<case maxzoom="16" strokeWidth_2="6" pathEffect_2=""/>
 				<case minzoom="17" strokeWidth_2="9" pathEffect_2=""/>
@@ -4176,8 +4179,8 @@
 
 		<!-- haie-->
 		<switch nightMode="false" cap="ROUND">
-			<case minzoom="16" tag="barrier" value="hedge" color="#dce6d0" strokeWidth="0.1:1" shadowColor="#dce6d0"/><!-- couleur foret-->
-			<case minzoom="15" tag="natural" value="tree_row" color="#dce6d0" strokeWidth="0.1:1" shadowColor="#dce6d0"/>
+			<case minzoom="16" tag="barrier" value="hedge" color="$foret" strokeWidth="0.1:1" shadowColor="$foret"/><!-- couleur foret-->
+			<case minzoom="15" tag="natural" value="tree_row" color="$foret" strokeWidth="0.1:1" shadowColor="$foret"/>
 			<apply>
 				<case maxzoom="16" shadowRadius="1.5:1"/>
 				<case maxzoom="17" shadowRadius="2.5:1"/>
