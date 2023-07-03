@@ -20,11 +20,13 @@
 	<renderingProperty attr="noPolygons" name="Hide polygons" description="Make all areal land features on map transparent" type="boolean" possibleValues="" category="hide"/>
 	<renderingProperty attr="noAdminboundaries" name="Hide boundaries" description="Suppress display of admin levels 5-9" type="boolean" possibleValues="" category="hide"/>
 
-	<!--
-	<renderingProperty attr="contourLines" name="Show contour lines" description="Select minimum zoom level to display in map if available. Separate contour file may be needed." type="string" possibleValues="disabled,16,15,14,13" defaultValueDescription="default14" category="details"/>-->
+
 	
 	<renderingProperty attr="currentTrackColor" name="Current GPX color" description="Color of the currently recording track" type="string" possibleValues="red,orange,lightblue,blue,purple,translucent_red,translucent_orange,translucent_lightblue,translucent_blue,translucent_purple" defaultValueDescription="default"/>
 	<renderingProperty attr="currentTrackWidth" name="Current GPX width" description="Width of the currently recording track" type="string" possibleValues="thin,medium,bold" defaultValueDescription="default"/>
+
+	<renderingProperty attr="contourLines" name="Show contour lines" description="Select minimum zoom level to display in map if available. Separate contour file may be needed."
+		type="string" possibleValues="disabled,16,15,14,13,12,11" defaultValueDescription="default13" category="details"/>
 	<renderingProperty attr="contourColorScheme" name="Contour lines color scheme" description="Contour lines color scheme" type="string" possibleValues="white,yellow,green,light_brown,brown,dark_brown,red" defaultValueDescription="default"/>
 	<renderingProperty attr="contourWidth" name="Contour lines width" description="Contour lines width" type="string" possibleValues="thin,medium,thick" defaultValueDescription="default"/>
 	<renderingProperty attr="contourDensity" name="Contour lines density" description="Contour lines density" type="string" possibleValues="low,medium_w,high" defaultValueDescription="default"/>
@@ -1226,13 +1228,11 @@
 		<!--hameau etc -->
 		<switch textWrapWidth="20" textHaloColor="#ccffffff" >
 			<switch textColor="#444444">
-				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="45" intersectionMargin="2"/>
+				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="45" />
 				<apply ><!-- intersectionSizeFactor="5" intersectsWith="place" -->
-					<case maxzoom="13" textSize="10" intersectionMargin="8"/>
-					<case maxzoom="14" textSize="11" intersectionMargin="7"/>
-					<case maxzoom="15" textSize="12" intersectionMargin="6"/>
-					<case maxzoom="16" textSize="13" intersectionMargin="5"/>
-					<case minzoom="17" textSize="14" intersectionMargin="3"/>
+					<case maxzoom="13" textSize="10" intersectionMargin="30"/>
+					<case maxzoom="14" textSize="11" intersectionMargin="15"/>
+					<case minzoom="15" textSize="13" intersectionMargin="5"/>
 				</apply>
 				<apply_if >
 					<case maxzoom="13" textHaloRadius="1" textHaloColor="#ffffff"/>
@@ -1281,7 +1281,7 @@
 		</switch>
 
 		<!-- maison et ferme isolée -->
-		<switch minzoom="13" textWrapWidth="20" >
+		<switch minzoom="14" textWrapWidth="20" >
 			<case tag="place" value="isolated_dwelling"/>
 			<case tag="place" value="farm"/>
 			<apply nameTag="" textColor="#666666" textItalic="true" textBold="true" textOrder="111" textHaloRadius="2" textHaloColor="#99ffffff">
@@ -1300,12 +1300,11 @@
 		</switch>
 		
 		<!-- cols -->
-		<switch minzoom="13" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
-			<case tag="natural" value="saddle" nameTag="" textOrder="58" textColor="#000000"/>
+		<switch minzoom="13" textWrapWidth="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" >
+			<case tag="natural" value="saddle" nameTag="" textOrder="58" textColor="#cc0000"/>
 			<apply textMinDistance="250">
 				<case maxzoom="13" textSize="9" nameTag=""/>
-				<case maxzoom="14" textSize="10" nameTag=""/>
-				<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
+				<case minzoom="14" textSize="10" nameTag=""/>
 			</apply>
 			<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
 			<apply_if engine_v1="false" textDy="-6"/>
@@ -1315,20 +1314,19 @@
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 		<!-- cols routier -->
-		<switch minzoom="12" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
-			<case tag="mountain_pass" value="yes" nameTag="" textBold="false" textOrder="44" textColor="#000000"/>
+		<switch minzoom="12" textWrapWidth="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" >
+			<case tag="mountain_pass" value="yes" nameTag="" textOrder="44" textColor="#000000"/>
 			<apply textMinDistance="100">
 				<case maxzoom="13" textSize="9" nameTag=""/>
-				<case maxzoom="14" textSize="10" nameTag=""/>
-				<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
+				<case minzoom="14" textSize="10" nameTag=""/>
 			</apply>
 			<apply_if engine_v1="false" textDy="-6"/>
-			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2">
-			</apply_if>
+			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2"/>
+			<apply_if lessDetailed="true" textSize="11" />
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 		<!-- sommet -->
-		<switch minzoom="13" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" >
+		<switch minzoom="13" textWrapWidth="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" intersectionMargin="50">
 			<case tag="natural" value="peak" textOrder="59" textColor="#cc0000"/>
 			<case tag="natural" value="volcano" textOrder="59" textColor="#cc0000"/>
 			<apply_if lessDetailed="false" textMinDistance="250">
@@ -2546,8 +2544,8 @@
 			
 		</switch>
 
+		<!-- area -->
 		<switch noPolygons="false" nightMode="false">
-			<!-- area: -->
 			<switch>
 				<switch minzoom="12">
 					<case tag="area:highway" value="motorway"/>
