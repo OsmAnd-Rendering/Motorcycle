@@ -173,14 +173,13 @@
 	
 	<renderingAttribute name="polygonMinSizeToDisplay">
 		<!-- Minimum polygon size in pixels -->
-		<case lessDetailed="true" attrIntValue="150"/>
-		<case minzoom="13" attrIntValue="10"/>
-		<case attrIntValue="150"/>
+		<case lessDetailed="true" attrIntValue="50"/>
+		<case attrIntValue="10"/>
 	</renderingAttribute>
 
 	<renderingAttribute name="roadDensityZoomTile">
 		<!-- 8 (=1 pixel tile) down to 0 (=large tile) -->
-		<case minzoom="12" attrIntValue="4"/>
+		<case minzoom="14" attrIntValue="4"/>
 		<case attrIntValue="3"/>
 	</renderingAttribute>
 
@@ -958,41 +957,62 @@
 
 		<!-- routes ref -->
 		<switch ign="false" textSize="10" textBold="true" textHaloRadius="5" cap="SQUARE" nameTag="route_road_#SEQ_ref" seq="1:10">
-			<switch minzoom="7" textOrder="249" >
+			<switch minzoom="7" textOrder="39" >
 				<case tag="highway" value="motorway" />
 				<apply textColor="#ffffff" >
 					<case textHaloColor="#327ae6" />
 				</apply>
+				<apply_if additional="route_road_#SEQ_shield_color=green" nameTag="route_road_#SEQ_ref" >
+					<apply textHaloColor="#00cc00" />
+				</apply_if>
 			</switch>
-			<switch minzoom="8" textOrder="250" >
+			<switch minzoom="8" textOrder="40" >
 				<case tag="highway" value="trunk" />
 				<apply textColor="#ffffff" >
 					<case textHaloColor="#df6666" />
 				</apply>
+				<apply_if additional="route_road_#SEQ_shield_color=green" nameTag="route_road_#SEQ_ref" >
+					<apply textHaloColor="#00cc00" />
+				</apply_if>
 			</switch>
-			<switch minzoom="10" textOrder="251" >
+			<switch minzoom="10" textOrder="41" >
 				<case tag="highway" value="primary" />
 				<apply textColor="#ffffff" >
 					<case textHaloColor="#df6666" />
 				</apply>
+				<apply_if additional="route_road_#SEQ_shield_color=green" nameTag="route_road_#SEQ_ref" >
+					<apply textHaloColor="#00cc00" />
+				</apply_if>
 			</switch>
-			<switch minzoom="12" textOrder="252" >
+			<switch minzoom="12" textOrder="42" >
 				<case tag="highway" value="secondary" />
 				<apply textColor="#000000" >
 					<case textHaloColor="#ffaf66" />
 				</apply>
+				<apply_if additional="route_road_#SEQ_shield_color=green" nameTag="route_road_#SEQ_ref" >
+					<apply textHaloColor="#00cc00" />
+				</apply_if>
 			</switch>
-			<switch minzoom="14" textOrder="253" >
+			<switch minzoom="14" textOrder="63" >
 				<case tag="highway" value="tertiary" />
 				<apply textColor="#000000" intersectionMargin="25">
 					<case textHaloColor="#ffee00" />
 				</apply>
+				<apply_if nightMode="true" textHaloColor="#cccc66" >
+					<case maxzoom="16" textSize="0" />
+				</apply_if>
+				<apply_if additional="route_road_#SEQ_shield_color=green" nameTag="route_road_#SEQ_ref" >
+					<apply textHaloColor="#00cc00" />
+				</apply_if>
 			</switch>
-			<switch minzoom="16" textOrder="254" >
+			<switch minzoom="16" textOrder="144" >
 				<case tag="highway" value="unclassified" />
 				<apply textColor="#000000" intersectionMargin="25">
 					<case textHaloColor="#ffffff" />
 				</apply>
+				<apply_if nightMode="true" textHaloColor="#cccccc" >
+					<case maxzoom="16" textSize="0" />
+				</apply_if>
 			</switch>
 			<apply_if maxzoom="13" textMinDistance="5"/>
 			<apply_if maxzoom="14" textMinDistance="10"/>
@@ -1227,12 +1247,12 @@
 
 		<!--hameau etc -->
 		<switch textWrapWidth="20" textHaloColor="#ccffffff" >
-			<switch textColor="#444444">
+			<switch textColor="#666666">
 				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="45" />
 				<apply ><!-- intersectionSizeFactor="5" intersectsWith="place" -->
 					<case maxzoom="13" textSize="10" intersectionMargin="30"/>
 					<case maxzoom="14" textSize="11" intersectionMargin="15"/>
-					<case minzoom="15" textSize="13" intersectionMargin="5"/>
+					<case minzoom="15" textSize="12" intersectionMargin="5"/>
 				</apply>
 				<apply_if >
 					<case maxzoom="13" textHaloRadius="1" textHaloColor="#ffffff"/>
@@ -1276,27 +1296,32 @@
 				<case maxzoom="16" textSize="14" textColor="#2f003300"/>
 				<case minzoom="17" textSize="18" textColor="#20003300"/>
 			</apply>
-			<apply_if nightMode="true" textColor="#66339933"/>
+			<apply_if nightMode="true" textColor="#66339933">
+				<case maxzoom="16" textSize="0" />
+			</apply_if>
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 
 		<!-- maison et ferme isolée -->
-		<switch minzoom="14" textWrapWidth="20" >
+		<switch minzoom="14" textWrapWidth="20" textDy="-12">
 			<case tag="place" value="isolated_dwelling"/>
 			<case tag="place" value="farm"/>
-			<apply nameTag="" textColor="#666666" textItalic="true" textBold="true" textOrder="111" textHaloRadius="2" textHaloColor="#99ffffff">
-				<case maxzoom="13" textSize="9" intersectionMargin="10"/><!--  -->
-				<case maxzoom="14" textSize="9" intersectionMargin="5"/><!--  -->
-				<case maxzoom="15" textSize="10" /><!-- intersectionMargin="5" -->
+			<apply nameTag="" textColor="#444444" textItalic="false" textBold="false" textOrder="111" textHaloRadius="1" textHaloColor="#ffffff">
+				<case maxzoom="13" textSize="10" intersectionMargin="10"/><!--  -->
+				<case maxzoom="14" textSize="10" intersectionMargin="5"/><!--  -->
+				<case maxzoom="15" textSize="11" /><!-- intersectionMargin="5" -->
 				<case minzoom="16" textSize="12" /><!-- intersectionMargin="2" -->
 			</apply>
 			<apply_if nightMode="true" textColor="#999999" textHaloColor="#000000" textHaloRadius="2" textBold="false" textItalic="true" >
 				<case maxzoom="17" textSize="0"/>
 				<case minzoom="18" textSize="12"/><!-- intersectionMargin="2" -->
 			</apply_if>
+			<apply_if arriereplan="true" textColor="#cccccc" textHaloColor="#000000" textHaloRadius="2" textBold="false" textItalic="true" >
+				<case maxzoom="15" textSize="0"/>
+				<case minzoom="16" textSize="12"/>
+			</apply_if>
 			<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
-			<apply_if ign="true" noPolygons="true" textSize="0"/><!--
-			<apply_if engine_v1="false" textDy="-6"/>-->
+			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 		
 		<!-- cols -->
@@ -1317,8 +1342,8 @@
 		<switch minzoom="12" textWrapWidth="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" >
 			<case tag="mountain_pass" value="yes" nameTag="" textOrder="44" textColor="#000000"/>
 			<apply textMinDistance="100">
-				<case maxzoom="13" textSize="9" nameTag=""/>
-				<case minzoom="14" textSize="10" nameTag=""/>
+				<case maxzoom="13" textSize="10" nameTag=""/>
+				<case minzoom="14" textSize="11" nameTag=""/>
 			</apply>
 			<apply_if engine_v1="false" textDy="-6"/>
 			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2"/>
@@ -1712,34 +1737,30 @@
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 
-		<switch textColor="#2665ff" textHaloColor="#99ffffff" textItalic="true" textSize="11">
-			<switch minzoom="14" textOrder="49" textWrapWidth="12"  >
-				<case tag="landuse" value="reservoir" intersectionSizeFactor="0.7">
-					<apply_if additional="leisure=marina" minzoom="16"/>
-					<apply_if additional="water=pond" minzoom="18"/>
-					<apply_if additional="water=canal" minzoom="18"/>
-				</case>
-				<case tag="natural" value="water" intersectionSizeFactor="1.3">
-					<apply_if additional="leisure=marina" minzoom="16"/>
-					<apply_if additional="water=pond" minzoom="18"/>
-					<apply_if additional="water=canal" minzoom="18"/>
-					<apply_if additional="seamark=lock_basin" minzoom="20"/>
-				</case>
-				<apply>
-					<case maxzoom="13" textHaloRadius="1" textHaloColor="#99ffffff" intersectionMargin="35"/>
-					<case minzoom="14" textHaloRadius="2" textHaloColor="#99ffffff" intersectionMargin="15"/>
-				</apply>
-			</switch>
+
+		<switch textColor="#2665ff" textHaloColor="#99ffffff" textItalic="true" textSize="11" textHaloRadius="2" >
+			<case minzoom="14" tag="landuse" value="reservoir" />
+			<case tag="natural" value="water"  nameTag=""/>
+			<apply textOrder="49" textWrapWidth="12">
+				<case maxzoom="14" intersectionMargin="25"/>
+				<case minzoom="15" intersectionMargin="200"/>
+			</apply>
+			<apply_if additional="leisure=marina" minzoom="16"/>
+			<apply_if additional="water=pond" minzoom="18"/>
+			<apply_if additional="water=canal" minzoom="18"/>
+			<apply_if additional="water=lock" minzoom="19"/>
+			<apply_if additional="seamark=lock_basin" minzoom="19"/>
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 			<apply_if nightMode="true" textColor="#6699ff" textHaloColor="#000000" textHaloRadius="2"/>
+			<apply_if arriereplan="true" textColor="#99ccff" textHaloColor="#000000" textHaloRadius="2"/>
 		</switch>
 		
 		<switch textColor="#2665ff" textHaloColor="#99ffffff" textItalic="true" textOnPath="false" textSize="11" textWrapWidth="12" nameTag="">
-			<case minzoom="14" tag="waterway" value="river" textOrder="50" textMinDistance="200"/>
-			<case minzoom="14" tag="waterway" value="canal" textOrder="48" textMinDistance="200"/>
+			<case minzoom="14" tag="waterway" value="river" textOrder="50" textMinDistance="300"/>
+			<case minzoom="14" tag="waterway" value="canal" textOrder="48" textMinDistance="400"/>
 			<case minzoom="17" tag="waterway" value="dam" textOrder="249" textOnPath="true"/>
 			<case minzoom="16" tag="waterway" value="waterfall" additional="osmand_remarkable_waterfall=yes" nameTag2="height" textOnPath="true" textOrder="217"/>
-			<case minzoom="18" tag="waterway" value="stream" textOnPath="true" textOrder="206"/><!-- -->
+			<case minzoom="18" tag="waterway" value="stream" textOnPath="true" textOrder="206" textMinDistance="300"/><!-- -->
 			<case minzoom="18" tag="landuse" value="basin" textOrder="218"/>
 			<case minzoom="18" tag="landuse" value="salt_pond" textOrder="218"/>
 			<case minzoom="19" tag="man_made" value="water_tap" textOrder="218"/>
@@ -1756,7 +1777,7 @@
 			</apply>
 			<apply_if minzoom="16" textOnPath="true" textSize="12"/>
 			<apply_if nightMode="true" textColor="#6699ff" textHaloColor="#000000" textHaloRadius="1"/>
-
+			<apply_if arriereplan="true" textColor="#99ccff" textHaloColor="#000000" textHaloRadius="1"/>
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 		
@@ -2462,6 +2483,7 @@
 				<apply_if nightMode="true" color="#665228"/>
 			</case>
 
+			<apply_if minzoom="15" maxzoom="15" strokeWidth_2="2" color="#000000" color_2="#000000"/><!---->
 			<apply_if minzoom="16" strokeWidth_2="1"/><!---->
 			<apply_if nightMode="true" color="#cccccc" color_2="#cccccc" strokeWidth_2="2">
 				<case maxzoom="15" strokeWidth_2="5" color="#ffffff" color_2="#ffffff"/>
@@ -3318,9 +3340,18 @@
 				<case maxzoom="19" shadowRadius="2.3"/>
 				<case minzoom="20" shadowRadius="2.5"/>
 			</apply_if>
-			<apply_if nightMode="true" shadowColor="#000000"/><!--shadowRadius="0"
-			<apply_if arriereplan="false" ign="false" tag="highway" value="service" shadowRadius="0"/>
-			<apply_if arriereplan="true" tag="highway" value="service" shadowColor="#99000000" shadowRadius="4"/>-->
+			<apply_if arriereplan="true" shadowColor="#000000" >
+				<case maxzoom="12" shadowRadius="1.4"/>
+				<case maxzoom="13" shadowRadius="1.6"/>
+				<case maxzoom="14" shadowRadius="1.8"/>
+				<case maxzoom="15" shadowRadius="2"/>
+				<case maxzoom="16" shadowRadius="2.2"/>
+				<case maxzoom="17" shadowRadius="2.4"/>
+				<case maxzoom="18" shadowRadius="2.6"/>
+				<case maxzoom="19" shadowRadius="2.8"/>
+				<case minzoom="20" shadowRadius="3"/>
+			</apply_if>
+			<apply_if nightMode="true" shadowColor="#000000"/>
 
 		</switch>
 
@@ -3389,7 +3420,7 @@
 			<!-- vélo-->
 			<switch minzoom="13" lessDetailed="false">
 				<case tag="highway" value="cycleway"/>
-				<apply strokeWidth="3" color="#99ff0000"/>
+				<apply strokeWidth_5="3" color_5="$trackColor"/>
 			</switch>	
 
 			<!-- chemins -->	
@@ -3696,7 +3727,7 @@
 				</apply_if>
 
 				<apply_if additional="oneway=yes" onewayArrowsColor="#00ff0000"/>
-				<apply_if arriereplan="true" color="#000000" shadowColor="#99000000" shadowRadius="5"/>
+				<apply_if arriereplan="true" color="#000000" shadowColor="#99000000" shadowRadius="4"/>
 			</switch>	
 
 			<!-- sentier -->
@@ -3746,7 +3777,7 @@
 					<case noPolygons="true" maxzoom="17" strokeWidth_5="5.5" pathEffect_5="25_9"/> 
 					<case noPolygons="true" minzoom="18" strokeWidth_5="10" pathEffect_5="50_13"/>
 				</apply_if>
-				<apply_if arriereplan="true" color_5="#afafaf" color="#000000" shadowColor="#66000000" shadowRadius="5"/><!-- -->
+				<apply_if arriereplan="true" color_5="#afafaf" color="#000000" shadowColor="#66000000" shadowRadius="4"/><!-- -->
 				<apply_if nightMode="true" color_5="#999999">
 					<case ign="true" color_5="#999999"/>
 				</apply_if>
@@ -3761,7 +3792,6 @@
 					<case maxzoom="16" strokeWidth="2.5" pathEffect="9_8" color="#45330000"/> 
 					<case maxzoom="17" strokeWidth="3" pathEffect="11_10" color="#40330000"/> 
 					<case minzoom="18" strokeWidth="3.5" pathEffect="13_12" color="#35330000"/>
-					<apply/>
 				</apply>
 				<apply_if layer="-1">
 					<case maxzoom="15" pathEffect="1_2"/>
@@ -3785,9 +3815,15 @@
 				<apply_if additional="footway=sidewalk" strokeWidth="0"/>
 				<apply_if additional="indoor=yes" strokeWidth="0"/>
 				<apply_if additional="location=roof" strokeWidth="0"/>
-				<apply_if additional="level=1" strokeWidth="0"/>
-				<apply_if additional="bicycle=designated" color="#ccff0000" pathEffect="" strokeWidth="3"/>
-				<apply_if arriereplan="true" color="#afafaf" shadowColor="#66000000" shadowRadius="5"/><!-- -->
+				<apply_if additional="level=1" strokeWidth="0"/><!---->
+				<apply_if additional="bicycle=designated" >
+					<case maxzoom="14" strokeWidth_5="1.5" pathEffect_5="5_4" color_5="#55330000"/> 
+					<case maxzoom="15" strokeWidth_5="2" pathEffect_5="7_6" color_5="#50330000"/> 
+					<case maxzoom="16" strokeWidth_5="2.5" pathEffect_5="9_8" color_5="#45330000"/> 
+					<case maxzoom="17" strokeWidth_5="3" pathEffect_5="11_10" color_5="#40330000"/> 
+					<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="13_12" color_5="#35330000"/>
+				</apply_if>
+				<apply_if arriereplan="true" color="#afafaf" shadowColor="#66000000" shadowRadius="4"/><!-- -->
 				<apply_if ign="true" color_5="#114411">
 					<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
 					<case noPolygons="true" maxzoom="15" strokeWidth_5="2.6" pathEffect_5="7_5"/> 
@@ -3921,7 +3957,10 @@
 					<case additional="motor_vehicle=no"/>
 					<case additional="motorcar=private"/>
 					<case additional="motorcar=no"/>
-					<case additional="bicycle=designated"/>
+					<case tag="highway" value="cycleway"/>
+					<case tag="highway" value="footway"><!--
+						<apply_if additional="bicycle=designated" color_5="#00ffff"/>-->
+					</case>
 					<apply color_5="#ff3333" color_3="#00000000"/>
 					<apply_if lessDetailed="true" nightMode="true" color_5="#660000"/>
 					<apply_if lessDetailed="true" nightMode="false" color_5="#ff9999"/>
@@ -3972,7 +4011,7 @@
 		<!-- balisage vélo -->
 		<switch minzoom="10" color="#0000ffff">
 			<case tag="route_bicycle" value=""/>
-			<apply minzoom="10" strokeWidth="0.1:1"/>
+			<apply minzoom="10" strokeWidth="0.1"/>
 		</switch>
 
 		<!-- balisage VTT -->
@@ -3990,9 +4029,8 @@
 				<case maxzoom="20" shadowRadius="10"/>
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
-			<apply_if noPolygons="true" color="#440044" shadowColor="#440044"/>
-			<apply_if arriereplan="true" color="#99ddddff" shadowColor="#99ddddff"/>
-			<apply_if nightMode="true" color="#440044" shadowColor="#440044"/>
+			<apply_if arriereplan="true" color="#99dd99ff" shadowColor="#99dd99ff"/>
+			<apply_if nightMode="true" color="#99dd99ff" shadowColor="#99dd99ff"/>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" shadowRadius="0"/>
 			<apply_if><!-- enlève balisage sous tag mtb:scale -->
@@ -4021,9 +4059,8 @@
 				<case maxzoom="20" shadowRadius="10"/>
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
-			<apply_if noPolygons="true" color="#444400" shadowColor="#444400"/>
-			<apply_if arriereplan="true" color="#99ffff00" shadowColor="#99ffff00"/>
-			<apply_if nightMode="true" color="#444400" shadowColor="#444400"/>
+			<apply_if arriereplan="true" color="#99ffff00" shadowColor="#99ffff00" strokeWidth="0.1"/>
+			<apply_if nightMode="true" color="#66cc9900" shadowColor="#66cc9900"/>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" color="#ff00ff" shadowColor="#ff00ff" shadowRadius="0"/>
 		</switch>
