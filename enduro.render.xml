@@ -1309,11 +1309,10 @@
 		<switch minzoom="14" textWrapWidth="20" textDy="-12">
 			<case tag="place" value="isolated_dwelling"/>
 			<case tag="place" value="farm"/>
-			<apply nameTag="" textColor="#444444" textItalic="false" textBold="false" textOrder="111" textHaloRadius="1" textHaloColor="#ffffff">
-				<case maxzoom="13" textSize="10" intersectionMargin="10"/><!--  -->
-				<case maxzoom="14" textSize="10" intersectionMargin="5"/><!--  -->
-				<case maxzoom="15" textSize="11" /><!-- intersectionMargin="5" -->
-				<case minzoom="16" textSize="12" /><!-- intersectionMargin="2" -->
+			<apply nameTag="" textColor="#444444" textItalic="false" textBold="false" textOrder="111" textHaloRadius="2" textHaloColor="#ccffffff">
+				<case maxzoom="14" textSize="10" intersectionMargin="5" textHaloColor="#99ffffff"/>
+				<case maxzoom="15" textSize="11" />
+				<case minzoom="16" textSize="12" />
 			</apply>
 			<apply_if nightMode="true" textColor="#999999" textHaloColor="#000000" textHaloRadius="2" textBold="false" textItalic="true" >
 				<case maxzoom="17" textSize="0"/>
@@ -1726,7 +1725,7 @@
 		</switch>
 
 		<!-- water -->
-		<switch textColor="#2665ff" textHaloRadius="1" textHaloColor="#99ffffff" textItalic="true">
+		<switch textColor="#2665ff" textHaloRadius="2" textHaloColor="#ccffffff" textItalic="true">
 			<case minzoom="2" tag="place" value="ocean" textWrapWidth="17" textOrder="3" textSize="14" textBold="true">
 				<apply_if minzoom="3" textWrapWidth="20"/>
 			</case>
@@ -1741,11 +1740,11 @@
 		</switch>
 
 
-		<switch textColor="#2665ff" textHaloColor="#99ffffff" textItalic="true" textSize="11" textHaloRadius="2" >
+		<switch textColor="#2665ff" textHaloColor="#ccffffff" textItalic="true" textSize="11" textHaloRadius="2" >
 			<case minzoom="14" tag="landuse" value="reservoir" />
 			<case tag="natural" value="water"  nameTag=""/>
 			<apply textOrder="49" textWrapWidth="12">
-				<case maxzoom="14" intersectionMargin="25"/>
+				<case maxzoom="14" intersectionMargin="25" textHaloColor="#99ffffff"/>
 				<case minzoom="15" intersectionMargin="200"/>
 			</apply>
 			<apply_if additional="leisure=marina" minzoom="16"/>
@@ -1758,7 +1757,7 @@
 			<apply_if arriereplan="true" textColor="#99ccff" textHaloColor="#000000" textHaloRadius="2"/>
 		</switch>
 		
-		<switch textColor="#2665ff" textHaloColor="#99ffffff" textItalic="true" textOnPath="false" textSize="11" textWrapWidth="12" nameTag="">
+		<switch textColor="#2665ff" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textOnPath="false" textSize="11" textWrapWidth="12" nameTag="">
 			<case minzoom="14" tag="waterway" value="river" textOrder="50" textMinDistance="300"/>
 			<case minzoom="14" tag="waterway" value="canal" textOrder="48" textMinDistance="400"/>
 			<case minzoom="17" tag="waterway" value="dam" textOrder="249" textOnPath="true"/>
@@ -1774,9 +1773,9 @@
 			<case minzoom="20" tag="man_made" value="reinforced_slope" color="#d6d6d6" textOrder="218"/>
 			<case minzoom="21" tag="natural" value="spring" textOrder="214"/>
 			<apply>
-				<case maxzoom="13" textHaloRadius="1" textHaloColor="#99ffffff" intersectionMargin="25"/>
-				<case maxzoom="14" textHaloRadius="2" textHaloColor="#99ffffff" intersectionMargin="15"/>
-				<case minzoom="15" textHaloRadius="2" textHaloColor="#99ffffff" intersectionMargin="6"/>
+				<case maxzoom="13" intersectionMargin="25" textHaloColor="#66ffffff"/>
+				<case maxzoom="14" intersectionMargin="15" textHaloColor="#99ffffff"/>
+				<case minzoom="15" intersectionMargin="6"/>
 			</apply>
 			<apply_if minzoom="16" textOnPath="true" textSize="12"/>
 			<apply_if nightMode="true" textColor="#6699ff" textHaloColor="#000000" textHaloRadius="1"/>
@@ -3006,9 +3005,7 @@
 			<!-- en construction -->
 			<apply_if additional="construction=yes" cap="BUTT">
 				<apply strokeWidth_0="0">
-					<case maxzoom="11" strokeWidth="0" />
-					<case maxzoom="12" strokeWidth="2" pathEffect="10_5"/>
-					<case maxzoom="13" strokeWidth="3" pathEffect="11_6"/>
+					<case maxzoom="13" strokeWidth="0" />
 					<case maxzoom="14" strokeWidth="4" pathEffect="12_7"/>
 					<case maxzoom="15" strokeWidth="5" pathEffect="13_8"/>
 					<case maxzoom="16" strokeWidth="6" pathEffect="14_9"/>
@@ -3019,8 +3016,8 @@
 					<case minzoom="21" strokeWidth="11" pathEffect="19_14"/>
 					<apply color="#99ffffff" shadowColor="#55000000"/>
 				</apply>
-				<apply_if nightMode="true" color="#000000" shadowColor="#000000"/>
-				<apply_if additional="bridge=yes" color_0="#33000000"/>
+				<apply_if nightMode="true" color="#333333" shadowColor="#666666"/>
+				<apply_if additional="bridge=yes" color="#66ffffff" color__2="#55000000" /><!---->
 			</apply_if>	
 
 		</switch>
@@ -3129,7 +3126,7 @@
 					<case maxzoom="20" strokeWidth="9" strokeWidth_0="12"/>
 					<case minzoom="21" strokeWidth="10" strokeWidth_0="13"/>
 					<apply color="#FFffff">
-						<case maxzoom="12" shadowColor="#666666"/>
+						<case maxzoom="12" shadowColor="#444444"/>
 						<case minzoom="13" shadowColor="#000000"/>
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
@@ -3147,7 +3144,7 @@
 				</apply>
 			</switch>
 			
-			<!-- residential -->
+			<!-- residential & service -->
 			<switch>
 				<case minzoom="12" tag="highway" value="residential"/>
 				<case minzoom="12" tag="highway" value="service"/>
@@ -3171,72 +3168,17 @@
 					<apply_if additional="oneway=yes" onewayArrowsColor="#00444444"/>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#444444" shadowRadius="0"/>
 					<apply_if lessDetailed="true" maxzoom="12" strokeWidth="0"/>
-					<apply_if ign="true">
-						<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" /><!--avec cartes-->
-						<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" />
-						<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7"/>
-						<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10"/>
-						<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18"/>
-						<case noPolygons="true" maxzoom="18" strokeWidth="12" strokeWidth_0="26"/>
-						<case noPolygons="true" minzoom="19" strokeWidth="18" strokeWidth_0="34"/>
+					<apply_if ign="true" color_0="#000000"><!--avec cartes-->
+						<case noPolygons="true" maxzoom="13" strokeWidth_0="0" />
+						<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="4.6" />
+						<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="4.8"/>
+						<case noPolygons="true" maxzoom="16" strokeWidth="6" strokeWidth_0="8"/>
+						<case noPolygons="true" maxzoom="17" strokeWidth="12" strokeWidth_0="15"/>
+						<case noPolygons="true" maxzoom="18" strokeWidth="20" strokeWidth_0="30"/>
+						<case noPolygons="true" minzoom="19" strokeWidth="30" strokeWidth_0="40"/>
 					</apply_if>
 				</apply>
 			</switch>
-
-			<!-- voie de service -->
-			<switch minzoom="12"><!-- 				
-				<case tag="highway" value="service"/>-->
-				<apply_if layer="-2" disable="true"/>
-				<apply_if layer="-3" disable="true"/>
-				<apply strokeWidth_0="0">
-					<apply minzoom="12" color="$trackColor">
-						<case maxzoom="11" strokeWidth="0"/> 
-						<case maxzoom="12" strokeWidth="1.4"/> 
-						<case maxzoom="13" strokeWidth="1.8"/>
-						<case maxzoom="14" strokeWidth="2.2"/>
-						<case maxzoom="15" strokeWidth="2.6"/>
-						<case maxzoom="16" strokeWidth="3"/>
-						<case minzoom="17" strokeWidth="3.4"/> 
-						<case minzoom="18" strokeWidth="3.8"/> 
-					</apply>
-
-					<apply_if additional="bridge=yes" color_0="#444444" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#999999" shadowColor="#999999" pathEffect=""/>
-					<apply_if additional="oneway=yes" onewayArrowsColor="#00cfcccc"/>
-					<apply_if lessDetailed="true" maxzoom="12" strokeWidth="0"/>
-					<apply_if layer="-1" color="#66fff0e0"/> 
-					<apply_if ign="true" strokeWidth_5="0" color="#ffffff" color_0="#000000"><!-- color_5="#ffffff" -->
-						<case noPolygons="false" maxzoom="11" strokeWidth="0"/> <!-- sans carte-->
-						<case noPolygons="false" maxzoom="12" strokeWidth="1.2" color="#225522"/> 
-						<case noPolygons="false" maxzoom="13" strokeWidth="2" color="#225522"/>
-						<case noPolygons="false" maxzoom="14" strokeWidth="2.5" color="#225522"/>
-						<case noPolygons="false" maxzoom="15" strokeWidth="3" color="#225522"/>
-						<case noPolygons="false" maxzoom="16" strokeWidth="3.5" color="#225522"/>
-						<case noPolygons="false" maxzoom="17" strokeWidth="4" color="#225522"/>
-						<case noPolygons="false" maxzoom="18" strokeWidth="4.5" color="#225522"/>
-						<case noPolygons="false" maxzoom="19" strokeWidth="5" color="#225522"/>
-						<case noPolygons="false" minzoom="20" strokeWidth="5.5" color="#225522"/>
-						<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" pathEffect_0="12_4"/><!--avec cartes-->
-						<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" pathEffect_0="14_5"/>
-						<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7" pathEffect_0="15_6"/>
-						<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10" pathEffect_0="20_7"/>
-						<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18" pathEffect_0="31_9"/>
-						<case noPolygons="true" maxzoom="18" strokeWidth="12" strokeWidth_0="26" pathEffect_0="44_9"/>
-						<case noPolygons="true" minzoom="19" strokeWidth="18" strokeWidth_0="34" pathEffect_0="57_10"/>
-						<apply_if noPolygons="true" maxzoom="12" strokeWidth="0"/>
-						<apply shadowColor="#ddeedd">
-							<case noPolygons="true" maxzoom="12" shadowRadius="0"/><!--avec cartes-->
-							<case noPolygons="true" maxzoom="13" shadowRadius="2"/>
-							<case noPolygons="true" maxzoom="14" shadowRadius="3"/>
-							<case noPolygons="true" maxzoom="15" shadowRadius="2"/>
-							<case noPolygons="true" maxzoom="16" shadowRadius="2.6"/>
-							<case noPolygons="true" maxzoom="17" shadowRadius="5"/>
-							<case noPolygons="true" maxzoom="18" shadowRadius="7"/>
-							<case noPolygons="true" minzoom="19" shadowRadius="8"/>
-						</apply>
-					</apply_if>
-				</apply>
-			</switch>	
 
 			<!-- rue pedestre -->					
 			<switch minzoom="13">					
@@ -3285,8 +3227,7 @@
 			<!-- en construction -->
 			<apply_if additional="construction=yes" cap="BUTT">
 				<apply>
-					<case maxzoom="12" strokeWidth="2" pathEffect="10_5"/>
-					<case maxzoom="13" strokeWidth="3" pathEffect="11_6"/>
+					<case maxzoom="13" strokeWidth="0" />
 					<case maxzoom="14" strokeWidth="4" pathEffect="12_7"/>
 					<case maxzoom="15" strokeWidth="5" pathEffect="13_8"/>
 					<case maxzoom="16" strokeWidth="6" pathEffect="14_9"/>
@@ -3472,8 +3413,9 @@
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
 						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
 							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
 						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
@@ -3512,8 +3454,9 @@
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
 						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
 							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
 						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
@@ -3550,8 +3493,9 @@
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
 						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
 							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
 						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
@@ -3595,8 +3539,9 @@
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
 						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
 							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
 						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
@@ -3662,21 +3607,19 @@
 						<case noPolygons="false" maxzoom="18" strokeWidth_5="4.5" color_5="#225522"/>
 						<case noPolygons="false" maxzoom="19" strokeWidth_5="5" color_5="#225522"/>
 						<case noPolygons="false" minzoom="20" strokeWidth_5="5.5" color_5="#225522"/>
-						<case noPolygons="true" maxzoom="12" strokeWidth_0="0"/> 
-						<case noPolygons="true" maxzoom="13" strokeWidth_5="2.4" strokeWidth_0="6" pathEffect_0="12_4"/><!--avec cartes-->
-						<case noPolygons="true" maxzoom="14" strokeWidth_5="2.6" strokeWidth_0="6.4" pathEffect_0="14_5"/>
-						<case noPolygons="true" maxzoom="15" strokeWidth_5="2.8" strokeWidth_0="7" pathEffect_0="15_6"/>
-						<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5" strokeWidth_0="10" pathEffect_0="20_7"/>
+						<case noPolygons="true" maxzoom="13" strokeWidth_0="0" pathEffect_0="12_4"/><!--avec cartes-->
+						<case noPolygons="true" maxzoom="14" strokeWidth_5="2.2" strokeWidth_0="4.4" pathEffect_0="14_5"/>
+						<case noPolygons="true" maxzoom="15" strokeWidth_5="2.4" strokeWidth_0="5.4" pathEffect_0="15_6"/>
+						<case noPolygons="true" maxzoom="16" strokeWidth_5="5.0" strokeWidth_0="10" pathEffect_0="20_7"/>
 						<case noPolygons="true" maxzoom="17" strokeWidth_5="8" strokeWidth_0="18" pathEffect_0="31_9"/>
 						<case noPolygons="true" maxzoom="18" strokeWidth_5="12" strokeWidth_0="26" pathEffect_0="44_9"/>
 						<case noPolygons="true" minzoom="19" strokeWidth_5="18" strokeWidth_0="34" pathEffect_0="57_10"/>
 						<apply_if noPolygons="true" maxzoom="12" strokeWidth_5="0"/>
 						<apply shadowColor="#ddeedd">
-							<case noPolygons="true" maxzoom="12" shadowRadius="0"/><!--avec cartes-->
-							<case noPolygons="true" maxzoom="13" shadowRadius="2"/>
+							<case noPolygons="true" maxzoom="13" shadowRadius="0"/><!--avec cartes-->
 							<case noPolygons="true" maxzoom="14" shadowRadius="3"/>
 							<case noPolygons="true" maxzoom="15" shadowRadius="2"/>
-							<case noPolygons="true" maxzoom="16" shadowRadius="2.6"/>
+							<case noPolygons="true" maxzoom="16" shadowRadius="3.6"/>
 							<case noPolygons="true" maxzoom="17" shadowRadius="5"/>
 							<case noPolygons="true" maxzoom="18" shadowRadius="7"/>
 							<case noPolygons="true" minzoom="19" shadowRadius="8"/>
@@ -3719,8 +3662,9 @@
 					<apply_if ign="true" pathEffect_5="" color_5="#114411">
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
 						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="0"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
 						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
 							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
 						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
@@ -3757,12 +3701,12 @@
 			<switch minzoom="14" lessDetailed="false">
 				<case tag="highway" value="path"/>
 				<case tag="highway" value="bridleway"/>
-				<apply>
-					<case maxzoom="14" strokeWidth_5="1.8" pathEffect_5="5_3" color_5="#ff000000"/> 
-					<case maxzoom="15" strokeWidth_5="2.3" pathEffect_5="7_5" color_5="#ff000000"/> 
-					<case maxzoom="16" strokeWidth_5="2.8" pathEffect_5="9_7" color_5="#ee000000"/> 
-					<case maxzoom="17" strokeWidth_5="3.2" pathEffect_5="11_9" color_5="#dd000000"/> 
-					<case minzoom="18" strokeWidth_5="3.7" pathEffect_5="13_11" color_5="#cc000000"/>
+				<apply color_5="#000000">
+					<case maxzoom="14" strokeWidth_5="1.8" pathEffect_5="5_3" /> 
+					<case maxzoom="15" strokeWidth_5="2.3" pathEffect_5="7_5" /> 
+					<case maxzoom="16" strokeWidth_5="2.8" pathEffect_5="9_7" /> 
+					<case maxzoom="17" strokeWidth_5="3.2" pathEffect_5="11_9" /> 
+					<case minzoom="18" strokeWidth_5="3.7" pathEffect_5="13_11" />
 				</apply>
 				<apply_if additional="indoor=yes"	color_5="#00ff00ff"/>
 				<apply_if additional="covered=yes" color_5="#33000000"/>
@@ -3774,12 +3718,11 @@
 				<apply_if additional="location=roof" color_5="#ff00ff"/> NOK
 				<apply_if additional="tunnel=building_passage" color_5="#0066ff99"/> NOK couleur héritée de covered=yes
 				<apply_if level="1" disable="true"/> enlève tout !! -->
-				<!--
+				<!---->
 				<apply_if additional="trail_visibility=no">
-					<case maxzoom="14" strokeWidth_5="0"/>
-					<case minzoom="15" pathEffect_5="" color_5="#ff3333" strokeWidth_5="1"/>
+					<case color_5="#cc000000" pathEffect_5="1_3"/>
 					<apply_if nightMode="true" color_5="#7f0000"/>
-				</apply_if>-->
+				</apply_if>
 				<apply_if layer="-2" disable="true"/>
 				<apply_if layer="-3" disable="true"/>
 				<apply_if additional="oneway=yes" onewayArrowsColor="#00ff0000"/>
@@ -3988,7 +3931,7 @@
 					<apply_if lessDetailed="true" nightMode="true" color_5="#660000"/>
 					<apply_if lessDetailed="true" nightMode="false" color_5="#ff9999"/>
 					<apply_if nightMode="true" color_5="#cc4f4f"/>
-					<apply_if ign="true" color_5="#cc0000"/>
+					<apply_if ign="true" color_5="#ff6666" shadowColor="#ff6666"/>
 				</switch>
 				<switch>
 					<case additional="vehicle=destination"/>
@@ -4007,7 +3950,7 @@
 						<case lessDetailed="true" nightMode="true" color_5="#660000"/>
 						<case lessDetailed="true" nightMode="false" color_5="#ff9999"/>
 						<case nightMode="true" color_5="#cc0000"/>
-						<case ign="true" color_5="#cc0000"/>
+						<case ign="true" color_5="#ff6666" shadowColor="#ff6666"/>
 					</apply>
 				</switch>
 			</apply> 
