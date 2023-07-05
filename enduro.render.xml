@@ -1019,6 +1019,9 @@
 			<apply_if maxzoom="15" textMinDistance="100"/>
 			<apply_if maxzoom="16" textMinDistance="250"/>
 			<apply_if minzoom="17" textMinDistance="350"/>
+			<apply_if additional="construction=yes" textColor="#666666" textHaloColor="#cccccc">
+				<case maxzoom="14" textSize="0"/>
+			</apply_if>
 		</switch>
 
 		<switch>
@@ -2999,6 +3002,26 @@
 				<case maxzoom="20" strokeWidth__2="13"/>
 				<case minzoom="21" strokeWidth__2="13.5"/>
 			</apply_if>
+
+			<!-- en construction -->
+			<apply_if additional="construction=yes" cap="BUTT">
+				<apply strokeWidth_0="0">
+					<case maxzoom="11" strokeWidth="0" />
+					<case maxzoom="12" strokeWidth="2" pathEffect="10_5"/>
+					<case maxzoom="13" strokeWidth="3" pathEffect="11_6"/>
+					<case maxzoom="14" strokeWidth="4" pathEffect="12_7"/>
+					<case maxzoom="15" strokeWidth="5" pathEffect="13_8"/>
+					<case maxzoom="16" strokeWidth="6" pathEffect="14_9"/>
+					<case maxzoom="17" strokeWidth="7" pathEffect="15_10"/>
+					<case maxzoom="18" strokeWidth="8" pathEffect="16_11"/>
+					<case maxzoom="19" strokeWidth="9" pathEffect="17_12"/>
+					<case maxzoom="20" strokeWidth="10" pathEffect="17_13"/>
+					<case minzoom="21" strokeWidth="11" pathEffect="19_14"/>
+					<apply color="#99ffffff" shadowColor="#55000000"/>
+				</apply>
+				<apply_if nightMode="true" color="#000000" shadowColor="#000000"/>
+				<apply_if additional="bridge=yes" color_0="#33000000"/>
+			</apply_if>	
 
 		</switch>
 		
