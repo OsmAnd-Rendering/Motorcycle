@@ -36,7 +36,7 @@
 	<renderingProperty attr="engine_v1" type="boolean"/>
 
 	<renderingConstant name="highwayOnewayIcon" value="arrow_triangle_black"/>
-	<renderingConstant name="highwayOnewayIconBig" value="osmc_black_triangle"/><!-- arrow_triangle_black_big -->
+	<renderingConstant name="highwayOnewayIconBig" value="oneway_gray_big"/><!-- osmc_black_triangle -->
 	
 	<renderingAttribute name="defaultColor">
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
@@ -228,7 +228,7 @@
 	<!-- couverture sol -->
 	<renderingAttribute name="foret">
 		<case gris="true" attrColorValue="#d0d0d0"/>
-		<case attrColorValue="#ccdfc6"/><!-- dce6d0 -->
+		<case attrColorValue="#cfdfc6"/><!-- dce6d0 -->
 	</renderingAttribute>
 	<renderingAttribute name="broussaille">
 		<case gris="true" attrColorValue="#dcdcdc"/>
@@ -600,9 +600,9 @@
 				<case tag="region:type" value="mountain_area" order="100"/>
 			</switch>
 	
-			<switch area="false" addPoint="true" objectType="2" order="80">
+			<switch area="false" addPoint="true" objectType="2" >
 				<!-- default line -->
-				<case tag="" value="" order="12"/>
+				<case tag="" value="" order="12"/><!---->
 				<case layer="-1" tag="" value="" order="11"/>
 				<case tag="leisure" value="track" order="60" ignorePolygonArea="true"/>
 				<case tag="osmand" value="file_trackline"/>
@@ -768,11 +768,11 @@
 				<apply_if maxzoom="13" additional="construction=yes" order="-1"/>-->
 				<case tag="railway" value="subway" layer="-1" order="-1"/>
 				<case tag="railway" value="subway" additional="layer=-2" order="-1"/>
-				<case tag="railway" value="" order="64">
-					<apply_if layer="1" order="112"/>
+				<case tag="railway" value="" order="22">
+					<apply_if additional="layer=1" order="112"/>
 					<apply_if additional="layer=2" order="140"/>
 					<apply_if additional="layer=3" order="147"/>
-					<apply_if layer="-1" order="21"/>
+					<apply_if additional="layer=-1" order="21"/>
 					<apply_if additional="layer=-2" order="20"/>
 				</case>
 				<case tag="man_made" value="pipeline">
@@ -1267,7 +1267,7 @@
 		</switch>
 
 		<!--hameau etc -->
-		<switch textWrapWidth="20" textHaloColor="#ccffffff" >
+		<switch textWrapWidth="20" textHaloColor="#ccffffff" textDy="-12">
 			<switch textColor="#666666">
 				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="45" />
 				<apply ><!-- intersectionSizeFactor="5" intersectsWith="place" -->
@@ -1344,6 +1344,21 @@
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 		
+		<!-- cols routier -->
+		<switch minzoom="12" textWrapWidth="12" >
+			<case tag="mountain_pass" value="yes" nameTag="" textOrder="44" />
+			<apply textMinDistance="100" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="true" textColor="#cc0000">
+				<case maxzoom="13" textSize="10" />
+				<case minzoom="14" textSize="11" />
+				<apply_if nightMode="true" textHaloColor="#000000" textColor="#ff9999" textHaloRadius="2"/>
+			</apply>
+			<apply_if engine_v1="false" textDy="-6"/>
+			<apply_if lessDetailed="true" textSize="12" textBold="true" nameTag2="ele">
+				<case maxzoom="13" textSize="0"/>
+				<case nightMode="true" textHaloColor="#000000" textColor="#ff9999" textHaloRadius="2"/>
+			</apply_if>
+			<apply_if ign="true" noPolygons="true" textSize="0"/>
+		</switch>
 		<!-- cols -->
 		<switch minzoom="13" textWrapWidth="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" >
 			<case tag="natural" value="saddle" nameTag="" textOrder="58" textColor="#cc0000"/>
@@ -1356,18 +1371,6 @@
 			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2">
 				<case maxzoom="15" textSize="0"/>
 			</apply_if>
-			<apply_if ign="true" noPolygons="true" textSize="0"/>
-		</switch>
-		<!-- cols routier -->
-		<switch minzoom="12" textWrapWidth="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" >
-			<case tag="mountain_pass" value="yes" nameTag="" textOrder="44" textColor="#000000"/>
-			<apply textMinDistance="100">
-				<case maxzoom="13" textSize="10" nameTag=""/>
-				<case minzoom="14" textSize="11" nameTag=""/>
-			</apply>
-			<apply_if engine_v1="false" textDy="-6"/>
-			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2"/>
-			<apply_if lessDetailed="true" textSize="11" />
 			<apply_if ign="true" noPolygons="true" textSize="0"/>
 		</switch>
 		<!-- sommet -->
@@ -1522,8 +1525,8 @@
 				<case tag="aerialway" value="j-bar"/>
 				<case tag="aerialway" value="platter"/>
 				<case tag="aerialway" value="magic_carpet"/>
-				<case tag="aerialway" value="rope_tow"/>
-				<case tag="aerialway" value="zip_line"/>
+				<case tag="aerialway" value="rope_tow"/><!--
+				<case tag="aerialway" value="zip_line"/>-->
 				<apply nameTag="" textOnPath="true">
 					<case minzoom="18" textSize="18"/>
 				</apply>
@@ -1933,7 +1936,7 @@
 			<apply_if additional="ele_limit=9000" iconOrder="52"/>-->
 
 			<apply_if nightMode="true" shield=""/>
-			<apply_if lessDetailed="true" maxzoom="13" icon="" shield=""/><!--
+			<apply_if lessDetailed="true" maxzoom="14" icon="" shield=""/><!--
 			<apply intersectionMargin="30" intersectionSizeFactor="30" intersectsWith="place"/> merde en OpenGL-->
 		</switch>
 
@@ -2011,12 +2014,19 @@
 			<apply_if nightMode="true" shield="red_round_night_shield"/>
 		</switch>
 
-		<switch><!---->
+		<!-- cols -->
+		<switch>
 			<case minzoom="13" tag="natural" value="hill" icon="hill" shield="hill_shield" iconOrder="70"/>
 			<case minzoom="15" tag="natural" value="sinkhole" icon="hill" shield="hill_shield"/>
 			<case minzoom="13" tag="natural" value="saddle" icon="hill" shield="hill_shield" iconOrder="66"/>
-			<case minzoom="13" tag="mountain_pass" value="yes" icon="hill" shield="hill_shield" iconOrder="16"/>
 			<apply_if nightMode="true" icon="natural_peak_night" shield=""/>
+			<apply_if lessDetailed="true" maxzoom="13" icon="" shield="">
+			</apply_if>
+		</switch>
+		<switch><!---->
+			<case minzoom="13" tag="mountain_pass" value="yes" icon="hill" shield="hill_shield" iconOrder="16"/>
+			<apply_if lessDetailed="true" maxzoom="13" icon="hill" shield="hill_shield"/><!--
+			<apply_if nightMode="true" icon="natural_peak_night" shield=""/>-->
 		</switch>
 		
 		<case nightMode="false" minzoom="16" tag="natural" value="stone" icon="natural_peak" shield="peakvolcano_white_shield"/>
@@ -2717,15 +2727,14 @@
 			</switch>
 
 			<!-- pelouse -->
-			<switch minzoom="11" color="#e3ffd9">
+			<switch minzoom="11" color="$herbe">
 				<case tag="landuse" value="grass"/>
-				<apply_if minzoom="13" color_2="#d3dfcf" strokeWidth_2="0.5:1"/>
 			</switch>
 
 			<!-- parcs -->
 			<switch minzoom="12">
 				<case tag="landuse" value="village_green"/>
-				<apply color="#efffef"/>
+				<apply color="$herbe"/>
 			</switch>
 
 			<!-- glacier -->
@@ -3146,7 +3155,7 @@
 						<case minzoom="13" shadowColor="#000000"/>
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
-					<apply_if nightMode="true" color="#cccccc" shadowColor="#999999">
+					<apply_if nightMode="true" color="#afafaf" shadowColor="#999999">
 						<case maxzoom="12" strokeWidth="3"/>
 						<case maxzoom="13" strokeWidth="4"/>
 						<case maxzoom="14" strokeWidth="5" strokeWidth_0="8.5"/>
@@ -3339,68 +3348,75 @@
 				<case minzoom="20" shadowRadius="3"/>
 			</apply_if>
 			<apply_if nightMode="true" shadowColor="#000000"/>
-			<apply_if additional="oneway=yes" pathIcon="$highwayOnewayIconBig" pathIconStep="70"/>
+			<apply_if additional="oneway=yes" pathIcon="$highwayOnewayIconBig" pathIconStep="70">
+				<case maxzoom="15" pathIcon=""/>
+			</apply_if >
 
 		</switch>
 
 		<!-- rail -->
 		<switch minzoom="12" cap_2="BUTT">
-			<switch color="#22ffffff">
-				<case tag="railway" value="rail" color_2="#333333" color__1="#333333">
-				  <apply_if nightMode="true" color_2="#666666"/>
-				</case>
-				<case tag="railway" value="light_rail" color_2="#333333" color__1="#333333"/>
-				<case tag="railway" value="monorail" color_2="#333333" color__1="#333333"/>
-				<case tag="railway" value="preserved" color_2="#333333" color__1="#333333"/>
-				<case tag="railway" value="narrow_gauge" color_2="#333333" color__1="#333333"/>
+			<switch color="#22ffffff" color_2="#666666">
+				<case tag="railway" value="rail" />
+				<case tag="railway" value="light_rail" />
+				<case tag="railway" value="monorail" />
+				<case tag="railway" value="preserved" />
+				<case tag="railway" value="narrow_gauge" />
 				<case minzoom="15" tag="railway" value="tram" color_2="#999999" color="#00000000">
-				<apply_if nightMode="true" color_2="#444444" color="#00000000"/>
+					<apply_if nightMode="true" color_2="#444444" color="#00000000"/>
 				</case>
 				<case minzoom="16" tag="railway" value="funicular" color_2="#777777"/>
-				<case minzoom="13" tag="railway" value="disused" color_2="#99996633" color__1="#99996633"/>
-				<case minzoom="13" tag="railway" value="abandoned" color_2="#66339966" color__1="#66339966"/>
+				<case minzoom="13" tag="railway" value="disused" color_2="#99996633" />
+				<case minzoom="13" tag="railway" value="abandoned" color_2="#99339966" />
 				<case minzoom="14" tag="railway" value="construction" color_2="#66cc66"/>
 			</switch>
 			<apply>
-				<case maxzoom="12" strokeWidth_2="3:1" pathEffect_2="1_2" strokeWidth="2:1" color="#66ffffff"/>
-				<case maxzoom="13" strokeWidth_2="3.5:1.33" pathEffect_2="1_2" strokeWidth="2.5:1.33" color="#44ffffff"/>
-				<case maxzoom="14" strokeWidth_2="4:1.66" pathEffect_2="1_2" strokeWidth="3:1.66" color="#22ffffff"/>
-				<case maxzoom="15" strokeWidth_2="4.5:2" pathEffect_2="1_2" strokeWidth="3.5:2"/>
-				<case maxzoom="16" strokeWidth_2="5:2.33" pathEffect_2="1.5_2.5" strokeWidth="4:2.33"/>
-				<case maxzoom="17" strokeWidth_2="5.5:2.66" pathEffect_2="2_3" strokeWidth="3.5:2.66"/>
-				<case maxzoom="18" strokeWidth_2="6:3" pathEffect_2="2_3" strokeWidth="4:3"/>
-				<case minzoom="19" strokeWidth_2="6.5:3.33" pathEffect_2="2_4" strokeWidth="4.5:3.33"/>
+				<case maxzoom="12" strokeWidth_2="4" pathEffect_2="1_2" strokeWidth="2" />
+				<case maxzoom="13" strokeWidth_2="5" pathEffect_2="1_2" strokeWidth="3" />
+				<case maxzoom="14" strokeWidth_2="6" pathEffect_2="1_2" strokeWidth="4" />
+				<case maxzoom="15" strokeWidth_2="7" pathEffect_2="1_2" strokeWidth="5"/>
+				<case maxzoom="16" strokeWidth_2="8" pathEffect_2="1.5_2.5" strokeWidth="6"/>
+				<case maxzoom="17" strokeWidth_2="9" pathEffect_2="2_3" strokeWidth="7"/>
+				<case maxzoom="18" strokeWidth_2="10" pathEffect_2="2_3" strokeWidth="8"/>
+				<case minzoom="19" strokeWidth_2="11" pathEffect_2="2_4" strokeWidth="9"/>
 			</apply>
-			<apply_if tag="railway" value="abandoned" color="#00000000"/>
-			<apply_if tag="railway" value="disused" color="#00000000"/>
 
-			<apply_if minzoom="14" additional="bridge=yes">
-				<apply color_0="#99ffeedd">
-					<case maxzoom="14" strokeWidth__1="4:4" strokeWidth_0="2:2"/>
-					<case maxzoom="15" strokeWidth__1="5:5" strokeWidth_0="3:3"/>
-					<case maxzoom="16" strokeWidth__1="6:6" strokeWidth_0="4:4"/>
-					<case maxzoom="17" strokeWidth__1="7:7" strokeWidth_0="5:5"/>
-					<case maxzoom="18" strokeWidth__1="8:8" strokeWidth_0="6:6"/>
-					<case minzoom="19" strokeWidth__1="9:9" strokeWidth_0="7:7"/>
+			<apply_if minzoom="15" additional="bridge=yes">
+				<apply color_0="#99ffeedd" color__1="#333333">
+					<case maxzoom="14" strokeWidth__1="8" strokeWidth_0="6"/>
+					<case maxzoom="15" strokeWidth__1="9" strokeWidth_0="7"/>
+					<case maxzoom="16" strokeWidth__1="10" strokeWidth_0="8"/>
+					<case maxzoom="17" strokeWidth__1="11" strokeWidth_0="9"/>
+					<case maxzoom="18" strokeWidth__1="12" strokeWidth_0="10"/>
+					<case minzoom="19" strokeWidth__1="13" strokeWidth_0="11"/>
 				</apply>
 				<apply_if nightMode="true" color_0="#000000" color="#000000"/>
 			</apply_if>
 			<apply_if additional="service=spur" color_0="#666666"/>
 
 			<!-- Tunnels-->
-			<apply_if maxzoom="13" additional="tunnel=yes" strokeWidth_2="0"/>
 			<apply_if minzoom="14" additional="tunnel=yes">
-				<apply color="#99ffeedd" color_2="#11000000" shadowColor="#999999" shadowRadius="1.5:1.5">
-					<case maxzoom="14" strokeWidth="2:2" pathEffect="10_10"/>
-					<case maxzoom="15" strokeWidth="3:3" pathEffect="11_11"/>
-					<case maxzoom="16" strokeWidth="4:4" pathEffect="12_12"/>
-					<case maxzoom="17" strokeWidth="5:5" pathEffect="13_13"/>
-					<case maxzoom="18" strokeWidth="6:6" pathEffect="14_14"/>
-					<case minzoom="19" strokeWidth="7:7" pathEffect="15_15"/>
+				<apply color="#66ffffff" color_2="#00000000" shadowColor="#333333" shadowRadius="3">
+					<case maxzoom="14" strokeWidth="4" pathEffect="10_10"/>
+					<case maxzoom="15" strokeWidth="6" pathEffect="10_12"/>
+					<case maxzoom="16" strokeWidth="8" pathEffect="12_16"/>
+					<case maxzoom="17" strokeWidth="10" pathEffect="13_20"/>
+					<case maxzoom="18" strokeWidth="11" pathEffect="14_28"/>
+					<case minzoom="19" strokeWidth="13" pathEffect="15_35"/>
 				</apply>
-				<apply_if nightMode="true" color="#222222" shadowColor="#666666"/>
+				<apply_if nightMode="true" color="#66000000" shadowColor="#cccccc"/>
 			</apply_if>
-
+			<apply_if minzoom="14" additional="covered=yes">
+				<apply color="#66ffffff" color_2="#00000000" shadowColor="#333333" shadowRadius="3">
+					<case maxzoom="14" strokeWidth="4" pathEffect="10_10"/>
+					<case maxzoom="15" strokeWidth="6" pathEffect="10_12"/>
+					<case maxzoom="16" strokeWidth="8" pathEffect="12_16"/>
+					<case maxzoom="17" strokeWidth="10" pathEffect="13_20"/>
+					<case maxzoom="18" strokeWidth="11" pathEffect="14_28"/>
+					<case minzoom="19" strokeWidth="13" pathEffect="15_35"/>
+				</apply>
+				<apply_if nightMode="true" color="#66000000" shadowColor="#cccccc"/>
+			</apply_if>
 		</switch>
 
 		<!-- chemins & sentiers -->
@@ -3611,8 +3627,6 @@
 						<case minzoom="18" strokeWidth_5="3.8"/> 
 					</apply>
 					<apply_if lessDetailed="true" color_5="#afbf9f">
-						<case maxzoom="11" strokeWidth_5="0"/> 
-						<case maxzoom="12" strokeWidth_5="0"/> 
 						<case maxzoom="13" strokeWidth_5="0"/> 
 						<case maxzoom="14" strokeWidth_5="2.8"/> 
 						<case maxzoom="15" strokeWidth_5="3.2"/> 
@@ -3717,7 +3731,6 @@
 					<apply_if nightMode="true" color_2="#000000"/>
 				</apply_if>
 
-				<apply_if additional="oneway=yes" onewayArrowsColor="#00ff0000"/>
 				<apply_if arriereplan="true" color="#000000" shadowColor="#99000000" shadowRadius="4"/>
 			</switch>	
 
@@ -3980,22 +3993,27 @@
 			</apply> 
 
 			<!-- Tunnels -->
-			<apply_if minzoom="14" additional="tunnel=yes">
-				<case maxzoom="15" pathEffect_5="1_2"/>
-				<case maxzoom="16" pathEffect_5="2_3"/>
-				<case maxzoom="17" pathEffect_5="3_4"/>
-				<case minzoom="18" pathEffect_5="4_5"/>
-			</apply_if>
-			<apply_if additional="tunnel=building_passage">
-				<case maxzoom="15" pathEffect_5="1_2"/>
-				<case maxzoom="16" pathEffect_5="2_3"/>
-				<case maxzoom="17" pathEffect_5="3_4"/>
-				<case minzoom="18" pathEffect_5="4_5"/>
+			<apply_if additional="tunnel=yes" >
+					<case maxzoom="15" pathEffect_5="1_2"/>
+					<case maxzoom="16" pathEffect_5="2_3"/>
+					<case maxzoom="17" pathEffect_5="3_4"/>
+					<case minzoom="18" pathEffect_5="4_5"/>
+					<case maxzoom="15" pathEffect_5="1_2"/>
+					<case maxzoom="16" pathEffect_5="2_3"/>
+					<case maxzoom="17" pathEffect_5="3_4"/>
+					<case minzoom="18" pathEffect_5="4_5"/>
+			</apply_if><!---->
+			<apply_if additional="covered=yes">
+					<case maxzoom="15" pathEffect_5="1_2"/>
+					<case maxzoom="16" pathEffect_5="2_3"/>
+					<case maxzoom="17" pathEffect_5="3_4"/>
+					<case minzoom="18" pathEffect_5="4_5"/>
+					<case maxzoom="15" pathEffect_5="1_2"/>
+					<case maxzoom="16" pathEffect_5="2_3"/>
+					<case maxzoom="17" pathEffect_5="3_4"/>
+					<case minzoom="18" pathEffect_5="4_5"/>
 			</apply_if>
 
-			<apply_if tag="railway" value="" additional="bridge=yes" strokeWidth__1="0" strokeWidth_0="0"/>
-			<!--<apply_if nightMode="true" color="#222222"/>
-			<apply_if tag="disused:highway" value="" color_5="#00000000"/>-->
 		</switch>
 
 		<!-- balisage vélo -->
@@ -4070,7 +4088,7 @@
 			<switch>
 				<case tag="aerialway" value="magic_carpet" color="#999999" strokeWidth="1:1"/>
 				<case tag="aerialway" value="rope_tow" color="#999999" strokeWidth="1:1" pathEffect="24_3"/>
-				<case tag="aerialway" value="zip_line" color="#999999" strokeWidth="1:1" pathEffect="15_3"/>
+				<case tag="aerialway" value="zip_line" color="#999999" strokeWidth="0" pathEffect="15_3"/>
 				<case tag="aerialway" value="chair_lift">
 					<apply_if color="#666666" color_2="#333333">
 						<case maxzoom="13" strokeWidth="1:1" strokeWidth_2="1.5:1" pathEffect_2="1_2_1_11"/>
@@ -4481,11 +4499,9 @@
 
 		<case minzoom="15" tag="natural" value="crevasse" strokeWidth="1:1" color="#886a6a"/>
 
-		<case minzoom="14" tag="highway" value="via_ferrata" color="$null" strokeWidth="0.1:1" color_2="#ff0000" color_3="#ff0000" pathEffect_2="1_1" pathEffect_3="1_5">
+		<case minzoom="14" tag="highway" value="via_ferrata" color="$null" strokeWidth="0" >
 			<apply>
 				<switch>
-					<case additional="bridge=yes" color="$white" color__1="$black"/>
-					<case additional="tunnel=yes" color="$white" color__1="#444444" pathEffect="6_4" pathEffect__1="6_4"/>
 				</switch>
 			</apply>
 		</case>
