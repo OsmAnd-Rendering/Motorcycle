@@ -3311,7 +3311,7 @@
 						<case lessDetailed="true" color="#888888" shadowColor="#000000" />
 					</apply_if >
 					<apply_if lessDetailed="true" >
-						<case maxzoom="15" color="#666666" shadowColor="#666666" />
+						<case nightMode="true" maxzoom="15" color="#666666" shadowColor="#666666" />
 						<case  maxzoom="12" strokeWidth="0"/>
 					</apply_if>
 					<apply_if additional="oneway=yes" onewayArrowsColor="#000000"/>
