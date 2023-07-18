@@ -14,6 +14,7 @@
 	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="hideAccess" name="Hide access restrictions" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="gris" name="niveaux de gris" description="niveaux de gris" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="comment" name="cacher commentaires" description="cacher commentaires" type="boolean" possibleValues="" category="enduro"/>
 	
 	<renderingProperty attr="hideUnderground" name="Hide underground objects" description="Hide underground objects" type="boolean" possibleValues="" category="hide"/>
 	<renderingProperty attr="hideBuildings" name="Hide buildings" description="Hide buildings" type="boolean" possibleValues="" category="hide"/>
@@ -42,7 +43,12 @@
 		<!-- next line should should make background transparent for underlays to be visible, but this curretnly does not work as desired -->
 		<!-- To change default color completely you should do that also for tag="place" value="island" and tag="natural" value="land" (search this file) -->
 		<case noPolygons="true" attrColorValue="#00000000"/>
-		<case nightMode="true" attrColorValue="#000000"/>
+		<case nightMode="true" attrColorValue="#000000">
+			<case lessDetailed="true" attrColorValue="#000000">
+				<apply gris="true" attrColorValue="#101f26"/>
+			</case>
+		</case>
+		<case lessDetailed="true" attrColorValue="#F9F9Ef"/>
 		<case gris="true" attrColorValue="#f0f0f0"/>
 		<case attrColorValue="#F9F9Ef"/>
 	</renderingAttribute>
@@ -240,7 +246,9 @@
 		<case attrColorValue="#Fcefff"/><!-- Ffe0ff -->
 	</renderingAttribute>
 	<renderingAttribute name="culture">
-		<case gris="true" attrColorValue="#f0f0f0"/><!-- f0f0f0 -->
+		<case gris="true" >
+			<case attrColorValue="#f0f0f0"/><!-- f0f0f0 -->
+		</case>
 		<case attrColorValue="#F9F9Ef"/><!-- FFF6E6 -->
 	</renderingAttribute>
 	<renderingAttribute name="herbe">
@@ -910,15 +918,17 @@
 			</case>
 		</switch>
 
-		<!-- track name -->
+		<!-- track comment -->
 		<switch lessDetailed="false" textMinDistance="2" textOrder="1" nameTag="note" ><!-- nameTag="note" nameTag2="" -->
-			<case minzoom="14" tag="highway" value="track" />
-			<case minzoom="14" tag="highway" value="path" />
-			<case minzoom="14" tag="abandoned:highway" value="" />
-			<apply textOnPath="false" textBold="true" textSize="10" textColor="#ffffff" textHaloColor="#00cc00" textHaloRadius="4"><!--
-				<case icon="osmc_white_bicycle" textShield="osmc_red_round_bg" icon_shift_px="" icon_shift_py="" />-->
-			</apply>
-			<apply_if nightMode="true" textColor="#dfdfdf" textHaloColor="#007700" textHaloRadius="4" />
+			<switch comment="false">
+				<case minzoom="14" tag="highway" value="track" />
+				<case minzoom="14" tag="highway" value="path" />
+				<case minzoom="14" tag="abandoned:highway" value="" />
+				<apply textOnPath="false" textBold="true" textSize="10" textColor="#ffffff" textHaloColor="#00cc00" textHaloRadius="4"><!--
+					<case icon="osmc_white_bicycle" textShield="osmc_red_round_bg" icon_shift_px="" icon_shift_py="" />-->
+				</apply>
+				<apply_if nightMode="true" textColor="#dfdfdf" textHaloColor="#007700" textHaloRadius="4" />
+			</switch>
 		</switch>
 
 		<!--motorway jonction-->
@@ -1309,7 +1319,7 @@
 
 		<!--hameau etc -->
 		<switch textWrapWidth="20" textHaloColor="#ccffffff" >
-			<switch textColor="#666666">
+			<switch textColor="#555555">
 				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="45" />
 				<apply ><!-- intersectionSizeFactor="5" intersectsWith="place" -->
 					<case maxzoom="13" textSize="10" intersectionMargin="30"/>
@@ -1317,8 +1327,8 @@
 					<case minzoom="15" textSize="12" intersectionMargin="5"/>
 				</apply>
 				<apply_if >
-					<case maxzoom="13" textHaloRadius="1" textHaloColor="#ffffff"/>
-					<case minzoom="14" textHaloRadius="2" textHaloColor="#ffffff"/>
+					<case maxzoom="14" textHaloRadius="1" textHaloColor="#ccffffff"/>
+					<case minzoom="15" textHaloRadius="2" textHaloColor="#ccffffff"/>
 				</apply_if>
 			</switch>
 			<apply_if nightMode="true" textColor="#cccccc" textHaloColor="#000000" textHaloRadius="4"/>
@@ -3281,7 +3291,7 @@
 					</apply>
 					<apply_if minzoom="14" additional="bridge=yes" color_0="#000000" shadowRadius="0"/>
 					<apply_if nightMode="true" color="#cccc66" shadowColor="#000000" ><!-- cccc66 -->
-						<case lessDetailed="true" color="#cccc66" shadowColor="#000000" />
+						<case lessDetailed="true" color="#b9b933" shadowColor="#000000" />
 					</apply_if>
 				</apply>
 			</switch>
@@ -4247,7 +4257,7 @@
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
 			<apply_if arriereplan="true" color="#99dd99ff" shadowColor="#99dd99ff"/>
-			<apply_if nightMode="true" color="#3f2f77" shadowColor="#3f2f77"/>
+			<apply_if nightMode="true" color="#4f2f5f" shadowColor="#4f2f5f"/>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" shadowRadius="0"/>
 			<apply_if><!-- enlève balisage sous tag mtb:scale -->
@@ -4257,13 +4267,12 @@
 
 		<!-- balisages pedestre -->
 		<switch balisage="false" cap="ROUND" strokeWidth="0.1">
-			<case minzoom="12" tag="network_iwn" value="" shadowColor="#ccffddaa" color="#ccffddaa"/>
-			<case minzoom="12" tag="network_nwn" value="" shadowColor="#ccffddaa" color="#ccffddaa"/>
-			<case minzoom="13" tag="network_rwn" value="" shadowColor="#ccffeeaa" color="#ccffeeaa"/>
-			<case minzoom="15" tag="network_lwn" value="" shadowColor="#ccffffaa" color="#ccffffaa"/><!--
-			<case minzoom="15" tag="route_hiking" value="" shadowColor="#99ffffaa" color="#99ffffaa"/>-->
-			<case minzoom="15" tag="route" value="hiking" shadowColor="#ccffffaa" color="#ccffffaa"/>
-			<case minzoom="15" tag="hiking" value="yes" shadowColor="#ccffffaa" color="#ccffffaa"/>
+			<case minzoom="12" tag="network_iwn" value="" shadowColor="#ffddaa" color="#ffddaa"/><!-- ccffddaa -->
+			<case minzoom="12" tag="network_nwn" value="" shadowColor="#ffddaa" color="#ffddaa"/><!-- ccffddaa -->
+			<case minzoom="13" tag="network_rwn" value="" shadowColor="#ffeeaa" color="#ffeeaa"/><!-- ccffeeaa -->
+			<case minzoom="15" tag="network_lwn" value="" shadowColor="#ffffcc" color="#ffffcc"/><!-- ccffffaa -->
+			<case minzoom="15" tag="route" value="hiking" shadowColor="#ffffaa" color="#ffffaa"/><!-- ccffffaa -->
+			<case minzoom="15" tag="hiking" value="yes" shadowColor="#ffffaa" color="#ffffaa"/><!-- ccffffaa -->
 			<apply>
 				<case maxzoom="12" shadowRadius="5"/>
 				<case maxzoom="13" shadowRadius="6"/>
@@ -4276,20 +4285,12 @@
 				<case maxzoom="20" shadowRadius="10"/>
 				<case minzoom="21" shadowRadius="10.5"/>
 			</apply>
-			<apply_if arriereplan="true" color="#88ffff00" shadowColor="#88ffff00" />
+			<apply_if arriereplan="true" color="#807000" shadowColor="#807000" />
 			<apply_if nightMode="true">
-				<case shadowColor="#504000" color="#504000"/><!-- 99ffffaa -->
+				<case shadowColor="#564600" color="#564600"/><!-- 99ffffaa -->
 			</apply_if>
 			<apply_if lessDetailed="true" strokeWidth="0"/>
 			<apply_if ign="true" noPolygons="true" color="#ff00ff" shadowColor="#ff00ff" shadowRadius="0"/>
-			<apply_if gris="true">
-				<case tag="network_iwn" value="" shadowColor="#aaffddaa" color="#aaffddaa"/>
-				<case tag="network_nwn" value="" shadowColor="#aaffddaa" color="#aaffddaa"/>
-				<case tag="network_rwn" value="" shadowColor="#aaffeeaa" color="#aaffeeaa"/>
-				<case tag="network_lwn" value="" shadowColor="#aaffffaa" color="#aaffffaa"/>
-				<case tag="route" value="hiking" shadowColor="#aaffffaa" color="#aaffffaa"/>
-				<case tag="hiking" value="yes" shadowColor="#aaffffaa" color="#aaffffaa"/>
-			</apply_if>
 		</switch>
 
 		<!-- aerial -->
