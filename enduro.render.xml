@@ -451,13 +451,13 @@
 			<!-- Polygon 1-10-->
 			<switch area="true" point="false" addPoint="true" objectType="3" order="10"><!-- aire non close -->
 				<case tag="leisure" value="nature_reserve" order="10"/>
-				<case tag="boundary" value="national_park" order="1" ignorePolygonAsPointArea="true" />
-				<case tag="boundary" value="protected_area" order="1" ignorePolygonAsPointArea="true"/>
+				<case tag="boundary" value="national_park" order="1" ignorePolygonArea="true" /><!-- ignorePolygonAsPointArea="true" -->
+				<case tag="boundary" value="protected_area" order="1" ignorePolygonArea="true"/><!-- ignorePolygonAsPointArea="true" -->
 			</switch>
 
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5"><!-- start and end point are same -->
 				<case tag="leisure" value="nature_reserve" order="10"/><!--
-				<case tag="boundary" value="national_park" order="10" />  -->
+				<case tag="boundary" value="national_park" order="10" /> --> 
 
 				<case tag="note_tag" value="yes" order="10"/>
 
@@ -848,10 +848,10 @@
 				<case tag="aeroway" value="" order="62"/>
 				<case tag="railway" value="station"/>
 				<case tag="public_transport" value="platform"/>
-				<case tag="boundary" value="" order="20"/>
+				<case tag="boundary" value="" order="20"/><!--
 				<case tag="boundary" value="protected_area" order="79" ignorePolygonArea="true"/>
 				<case tag="boundary" value="national_park" order="81" ignorePolygonArea="true"/>
-				<case tag="leisure" value="nature_reserve" order="80" ignorePolygonArea="true"/>
+				<case tag="leisure" value="nature_reserve" order="80" ignorePolygonArea="true"/>-->
 				<case tag="contour" value="elevation" order="11"/>
 				<case tag="lit" value="" order="12"/>
 				<case tag="bridge" value="yes" order="86"/>
@@ -1768,7 +1768,7 @@
 		</switch>
 
 		<!-- protected area -->
-		<switch minzoom="9" textOrder="51" ><!-- intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="" -->
+		<switch minzoom="10" textOrder="4" >
 			<case tag="boundary" value="national_park"/>
 			<apply hideAccess="false" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" > 
 				<case maxzoom="10" textSize="11" textColor="#cccc0000"/>
@@ -1787,9 +1787,9 @@
 		</switch>
 
 		<switch hideAccess="false" >
-			<switch minzoom="16" ><!-- textDy="0" intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="any"-->
-				<case tag="leisure" value="nature_reserve" nameTag="" textOrder="46"/>
-					<apply textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="true" textWrapWidth="20">
+			<switch minzoom="12" ><!-- textDy="0" intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="any"-->
+				<case tag="leisure" value="nature_reserve" nameTag="" textOrder="50" />
+					<apply textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20">
 						<case maxzoom="14" textSize="12" textColor="#66cc0000"/>
 						<case maxzoom="15" textSize="13" textColor="#66cc0000"/>
 						<case maxzoom="16" textSize="14" textColor="#66cc0000"/>
@@ -4475,26 +4475,6 @@
 				<case minzoom="12" strokeWidth="6:1"/>
 			</apply>
 		</switch>
-
-		<!-- parc national pas vu en polygone par opengl 
-		<switch engine_v1="false" hideAccess="false" minzoom="8">
-			<case tag="boundary" value="national_park"/>
-			<apply color="#ff0000">
-v				<case minzoom="8" strokeWidth="10"/>
-			</apply>
-		</switch>
-		<switch engine_v1="false" hideAccess="false" minzoom="8">
-			<case tag="leisure" value="nature_reserve"/>
-			<apply color="#00ff00">
-v				<case minzoom="8" strokeWidth="20"/>
-			</apply>
-		</switch>
-		<switch engine_v1="false" hideAccess="false" minzoom="8">
-			<case tag="boundary" value="protected_area"/>
-			<apply color="#0000ff">
-v				<case minzoom="8" strokeWidth="30"/>
-			</apply>
-		</switch>-->
 
 		<case minzoom="14" tag="osmand_change" value="delete"/> <!-- OSMC will break if delete -->
 	</line>
