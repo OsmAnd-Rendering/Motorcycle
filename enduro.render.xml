@@ -452,6 +452,7 @@
 			<switch area="true" point="false" addPoint="true" objectType="3" order="10"><!-- aire non close -->
 				<case tag="leisure" value="nature_reserve" order="10" />
 				<case tag="boundary" value="national_park" order="10" />
+				<case tag="man_made" value="breakwater" order="9"/>
 			</switch>
 
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5"><!-- start and end point are same -->
@@ -492,8 +493,6 @@
 				<case tag="power" value="plant" order="10"/>
 				<case tag="power" value="generator" order="10"/>
 				<case tag="power" value="substation" order="10"/>
-
-				<case tag="man_made" value="reinforced_slope"/>
 
 				<switch>
 					<case tag="public_transport" value="platform"/>
@@ -586,6 +585,7 @@
 				<case tag="man_made" value="tower"/>
 				<case tag="man_made" value="monitoring_station"/>
 				<case tag="man_made" value="reinforced_slope"/>
+				<case tag="man_made" value="breakwater" order="9"/>
 				
 				<case tag="building" value="no" order="-1"/>
 				<case tag="building" value="" order="10"/>
@@ -826,6 +826,8 @@
 				<case tag="waterway" value="waterfall" order="80"/>
 				<case tag="waterway" value="dam" order="19"/>
 				<case tag="waterway" value="weir" order="19"/>
+				<case tag="waterway" value="ditch" order="11"/>
+				<case tag="waterway" value="drain" order="11"/>
 				<case tag="waterway" value="river" order="11"/>
 				<case tag="waterway" value="stream" order="11"/>
 				<case tag="waterway" value="canal" order="11"/>
@@ -2665,6 +2667,7 @@
 				</switch>
 			</switch>
 
+			<case minzoom="14" tag="man_made" value="breakwater" color="#22ff6600" strokeWidth_2="1" color_2="#66ff6600"/>
 			<case minzoom="14" tag="landuse" value="construction" color="#89eadccf" shader="topo_construction"/>
 			<case minzoom="13" tag="landuse" value="landfill" color="#DEDECF" color_2="#000000" strokeWidth_2="1:1">
 				<apply_if minzoom="14" shader="topo_landfill"/>
@@ -4195,8 +4198,9 @@
 		<switch lessDetailed="false" minzoom="14" cap="ROUND">
 			<case tag="ford" value="yes"/>
 			<case tag="ford" value="stepping_stones"/>
-			<apply color="#607777ff" strokeWidth="4"/>
+			<apply color="#607777ff" strokeWidth="4"/><!--
 			<apply color_3="#0000cc" strokeWidth_3="4" pathEffect_3="1_5"/>
+			<apply strokeWidth="1" pathIcon="ford" pathIconStep="50"/>-->
 		</switch>
 		<case minzoom="13" tag="man_made" value="pier" color="#ffffff">
 			<switch minzoom="15" showAccess="true">
@@ -4213,7 +4217,7 @@
 		<!-- waterway-->
 		<switch minzoom="14">
 			<!-- ruisseau fossés-->
-			<switch minzoom="13" strokeWidth="0.3" >
+			<switch minzoom="13" strokeWidth="0.1" >
 				<case tag="waterway" value="stream"/>
 				<case tag="waterway" value="wadi"/>
 				<case tag="waterway" value="ditch"/>
