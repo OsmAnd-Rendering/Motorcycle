@@ -450,22 +450,21 @@
 
 			<!-- Polygon 1-10-->
 			<switch area="true" point="false" addPoint="true" objectType="3" order="10"><!-- aire non close -->
-				<case tag="leisure" value="nature_reserve" order="10"/>
-				<case tag="boundary" value="national_park" order="1" ignorePolygonArea="true" /><!-- ignorePolygonAsPointArea="true" -->
-				<case tag="boundary" value="protected_area" order="1" ignorePolygonArea="true"/><!-- ignorePolygonAsPointArea="true" -->
+				<case tag="leisure" value="nature_reserve" order="10" />
+				<case tag="boundary" value="national_park" order="10" />
 			</switch>
 
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5"><!-- start and end point are same -->
-				<case tag="leisure" value="nature_reserve" order="10"/><!--
-				<case tag="boundary" value="national_park" order="10" /> --> 
+				<case tag="leisure" value="nature_reserve" order="10" />
+				<case tag="boundary" value="national_park" order="-1" /> 
 
 				<case tag="note_tag" value="yes" order="10"/>
 
 				<case tag="leisure" value="park" order="6"/>
 				<case tag="leisure" value="sports_centre" order="7"/>
 				<case tag="leisure" value="pitch" order="11"/>
-				<case tag="leisure" value="track" order="8"/>
-				<case tag="leisure" value="" order="10"/><!---->
+				<case tag="leisure" value="track" order="8"/><!--
+				<case tag="leisure" value="" order="10"/>-->
 
 				<case tag="amenity" value="parking" order="10"/>
 				<case tag="amenity" value="school" order="10"/>
@@ -851,7 +850,7 @@
 				<case tag="boundary" value="" order="20"/><!--
 				<case tag="boundary" value="protected_area" order="79" ignorePolygonArea="true"/>
 				<case tag="boundary" value="national_park" order="81" ignorePolygonArea="true"/>
-				<case tag="leisure" value="nature_reserve" order="80" ignorePolygonArea="true"/>-->
+				<case tag="leisure" value="nature_reserve" order="80" />-->
 				<case tag="contour" value="elevation" order="11"/>
 				<case tag="lit" value="" order="12"/>
 				<case tag="bridge" value="yes" order="86"/>
@@ -1317,7 +1316,7 @@
 		<!--hameau etc -->
 		<switch textWrapWidth="20" textHaloColor="#ccffffff" >
 			<switch textColor="#555555">
-				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="45" />
+				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="46" />
 				<apply textHaloRadius="2" intersectionMargin="20" intersectsWith="any">
 					<case maxzoom="13" textSize="10"/>
 					<case maxzoom="14" textSize="11"/>
@@ -1393,10 +1392,10 @@
 
 		<!-- cols routier -->
 		<switch textWrapWidth="12" textDy="-8" textHaloRadius="2" textItalic="true" textSize="11">
-			<switch minzoom="12" textHaloColor="#ccffffff" textBold="false" textColor="#cc0000">
-				<case tag="mountain_pass" value="yes" nameTag="" textOrder="44" />
-				<apply ><!-- intersectionMargin="0.1" textMinDistance="1" intersectionSizeFactor="0.1" -->
-					<case maxzoom="12" textSize="10" />
+			<switch minzoom="12" textHaloColor="#ccffffff" textBold="false" textColor="#900000">
+				<case tag="mountain_pass" value="yes" nameTag="" textOrder="45" />
+				<apply >
+					<case maxzoom="12" textSize="10" textColor="#800000"/>
 					<apply_if nightMode="true" textHaloColor="#000000" textColor="#ff9999" />
 				</apply>
 				<apply_if lessDetailed="true" textBold="true" nameTag2="ele" textSize="12">
@@ -1405,7 +1404,7 @@
 				</apply_if>
 			</switch>
 			<!-- cols -->
-			<switch minzoom="13" textHaloColor="#ccffffff" textBold="false" textColor="#cc0000">
+			<switch minzoom="13" textHaloColor="#ccffffff" textBold="false" textColor="#900000">
 				<case tag="natural" value="saddle" nameTag="" textOrder="58" />
 				<apply textMinDistance="250" intersectionMargin="50">
 					<case maxzoom="13" textSize="10" nameTag=""/>
@@ -1422,26 +1421,29 @@
 		</switch>
 
 		<!-- sommet -->
-		<switch minzoom="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" intersectionMargin="0.7" textDy="-6" textColor="#cc0000">
+		<switch minzoom="12" textHaloColor="#ccffffff" textHaloRadius="2" textItalic="true" textBold="false" intersectionMargin="0.7" textDy="-6" textColor="#900000">
 			<case tag="natural" value="peak"/>
 			<case tag="natural" value="hill"/>
 			<case tag="natural" value="volcano"/>
-			<apply textOrder="51" textWrapWidth="12">
-				<case additional="ele_limit=250" textOrder="50"/>
-				<case additional="ele_limit=500" textOrder="49"/>
-				<case additional="ele_limit=1000" textOrder="48"/>
-				<case additional="ele_limit=1500" textOrder="47"/>
-				<case additional="ele_limit=2000" textOrder="46"/>
-				<case additional="ele_limit=2500" textOrder="35"/>
-				<case additional="ele_limit=3000" textOrder="34"/>
-				<case additional="ele_limit=3500" textOrder="33"/>
-				<case additional="ele_limit=4000" textOrder="32"/>
-				<case additional="ele_limit=4500" textOrder="31"/>
-				<case additional="ele_limit=5000" textOrder="30"/>
+			<apply textWrapWidth="12">
+				<case additional="ele_limit=250" textOrder="44"/>
+				<case additional="ele_limit=500" textOrder="44"/>
+				<case additional="ele_limit=1000" textOrder="44"/>
+				<case additional="ele_limit=1500" textOrder="44"/>
+				<case additional="ele_limit=2000" textOrder="44"/>
+				<case additional="ele_limit=2500" textOrder="44"/>
+				<case additional="ele_limit=3000" textOrder="44"/>
+				<case additional="ele_limit=3500" textOrder="44"/>
+				<case additional="ele_limit=4000" textOrder="44"/>
+				<case additional="ele_limit=4500" textOrder="44"/>
+				<case additional="ele_limit=5000" textOrder="44"/>
 				<case textOrder="51"/>
 			</apply>
-			<apply_if maxzoom="14" textSize="10" nameTag=""/>
-			<apply_if minzoom="15" textSize="11" nameTag="" nameTag2="ele" textMinDistance="250"/>
+			<apply>
+				<case maxzoom="12" textSize="10" nameTag="" textColor="#800000"/>
+				<case maxzoom="14" textSize="10" nameTag=""/>
+				<case minzoom="15" textSize="11" nameTag="" nameTag2="ele" textMinDistance="250"/>
+			</apply>
 			<apply_if lessDetailed="true" maxzoom="15" textSize="0"/>
 			<apply_if engine_v1="true" textDy="0"/>
 			<apply_if nightMode="true" textHaloColor="#000000" textColor="#cc6666" textHaloRadius="2">
@@ -1452,7 +1454,7 @@
 
 		<!-- natural -->
 		<switch textOrder="236" >			
-			<switch lessDetailed="false" textColor="#cc0000" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" textMinDistance="150" >
+			<switch lessDetailed="false" textColor="#900000" textWrapWidth="12" textHaloColor="#99ffffff" textHaloRadius="2" textItalic="true" textBold="false" textMinDistance="150" >
 				<case minzoom="17" tag="natural" value="cave_entrance" textOrder="236"/>
 				<case minzoom="17" tag="natural" value="cliff" textOnPath="true" textHaloRadius="3" textOrder="43"/>
 				<case minzoom="15" tag="natural" value="crater" textColor="#4e0d0d"/>
@@ -1462,7 +1464,7 @@
 				<case minzoom="14" tag="natural" value="rock" nameTag="" textOrder="60"/>
 				<case minzoom="16" tag="natural" value="stone" nameTag="" textOrder="60"/>
 				<case minzoom="16" tag="natural" value="bare_rock" nameTag="" textOrder="60"/>
-				<apply ><!-- textDy="0" intersectionMargin="20" intersectionSizeFactor="1" intersectsWith="place" -->
+				<apply >
 					<case maxzoom="13" textSize="9" nameTag=""/>
 					<case maxzoom="14" textSize="10" nameTag=""/>
 					<case minzoom="15" textSize="11" nameTag="" nameTag2="ele"/>
@@ -1470,7 +1472,7 @@
 				<apply_if engine_v1="true" textDy="0"/>
 			</switch>
 			
-			<switch minzoom="10" maxzoom="13" textOrder="43" > <!--intersectionMargin="0.1" intersectsWith="any" intersectionSizeFactor="0.1"  -->
+			<switch minzoom="10" maxzoom="13" textOrder="43" > 
 				<case tag="region:type" value="mountain_area" nameTag=""/>
 				<case tag="natural" value="mountain_area" nameTag=""/>
 				<case tag="natural" value="mountain_range" nameTag=""/>
@@ -1787,9 +1789,9 @@
 		</switch>
 
 		<switch hideAccess="false" >
-			<switch minzoom="12" ><!-- textDy="0" intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="any"-->
-				<case tag="leisure" value="nature_reserve" nameTag="" textOrder="50" />
-					<apply textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20">
+			<switch minzoom="11" ><!-- textDy="0" intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="any"-->
+				<case tag="leisure" value="nature_reserve" nameTag="" textOrder="44" intersectionMargin="40"/>
+					<apply textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="true" textWrapWidth="20">
 						<case maxzoom="14" textSize="12" textColor="#66cc0000"/>
 						<case maxzoom="15" textSize="13" textColor="#66cc0000"/>
 						<case maxzoom="16" textSize="14" textColor="#66cc0000"/>
