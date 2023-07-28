@@ -33,27 +33,35 @@
 | :-------------: | :-------------: | 
 |![chemin_interdit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/1c01b8b2-0096-4ad9-a731-5e6887ca85a9)|![chemin_interdit_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6812752d-06cf-4ddd-bf20-ce6510807692)|
 
-
+###### <i>La visualisation des interdictions de façon générale est gérée par l'option du style "accès restreints".</i>
 
 ---
 
 ## Sentiers
-|**les sentiers** sont en trait fin noir pointillé<br>auquel se superposent les informations de difficultés VTT et / ou pédestre |
-| :-------------: |
-|<img src="https://1.bp.blogspot.com/-CSiVyXZ-h0g/YB1JEYd6VqI/AAAAAAAAEYM/hYFAhdq8Xd44MeuX1B-N2__RZRSJY3KeQCLcBGAsYHQ/s0/chemin_sentier.png" width="150" />|
 
-|des **points verts** <br>pour un sentier facile pour une moto d'enduro|des **points oranges** <br>pour un sentier "technique" pour une moto d'enduro|
+| sentier | sentier nuit |
 | :-------------: | :-------------: | 
-|<img src="https://1.bp.blogspot.com/--RhhojaGxC4/YB1J6wMu2KI/AAAAAAAAEYU/A_CqHx8NFHsExdDb3FnQ0upxU6gT0KMEQCLcBGAsYHQ/s0/sentier_facile.png" width="150" />|<img src="https://1.bp.blogspot.com/-fGl8G5qj3SY/YB1Kgf__t0I/AAAAAAAAEYg/vc7EFpL2DmkO-dfzrg1PEDoZSHj1VcYPwCLcBGAsYHQ/s0/sentier_technique.png" width="130" />|
+|![sentier](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/fc4a3c44-bace-4f44-b067-f5112342c6ca)|![sentier_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/843f1836-4262-4dbd-8714-b3587db91e3c)|
 
-|des **points rouge** <br>pour un sentier difficile pour une moto d'enduro|des **points noir (blanc en mode nuit)** <br>pour un sentier "impassable" pour une moto d'enduro|
+| sentier invisible | sentier sur photo |
 | :-------------: | :-------------: | 
-|<img src="https://1.bp.blogspot.com/-6klUOtb7z3w/YB1MqIbAmDI/AAAAAAAAEYs/sIF4pEH_4iAdjnwqFiePQHypmL7L-PHrwCLcBGAsYHQ/s0/sentier_difficile.pn" width="150" />|<img src="https://1.bp.blogspot.com/-RaKRPK-MkB4/YB1NBhLk2yI/AAAAAAAAEY0/5rPMHWuiFlQ2k62STFKgvpF7UPYcZC4jQCLcBGAsYHQ/s0/sentier_impassable.png" width="120" />|
-<br>
+|![sentier_invisible](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/7d3930d1-efa2-44d0-a1d2-a7a5e8f13e96)|![sentier_photo](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/d0cbbb3f-6aa0-491f-be76-ecc01cfc6b39)|
 
-###### <i>vous pourrez aussi rencontrer très rarement des traits fins rouge qui apparaissent à un zoom plus élevé que les sentiers, ce sont des sentiers dont la visibilité est notée "aucune" dans OpenStreetMap, le routage "enduro" pourra vous y faire passer mais ... il n'existe probablement pas
-###### et enfin une dernière variante des sentiers qui s'affiche en marron clair car vous n'êtes pas censés les emprunter, ce sont les "footway" pour OSM, des cheminements piéton exclusivement comme les trottoirs en ville mais qui sont souvent à tort identifié comme tel à la place de sentiers génériques en pleine nature.</i> <br>
-<br>
+| pédestre | pédestre nuit |
+| :-------------: | :-------------: | 
+|![footway](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/46a5ffae-4012-4dd5-a8e3-120d3342248c)|![footway_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/af23563d-f4bc-483d-8089-149bdac75442)|
+
+| pedestre avec accès OK | pédestre pont |
+| :-------------: | :-------------: | 
+|![footway_OK](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/b61e37b7-f195-421d-be57-536a435af0aa)|![footway_pont](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/af1fb095-d1d2-482a-9124-dcc317724742)|
+
+###### <i>Quand l'option du style "accès restreints" est active, les chemins pédestres sont représentés comme des sentiers (path).</i>
+
+| cyclable | cyclable avec accès OK |
+| :-------------: | :-------------: | 
+|![cyclable](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/ebf20a0a-4d6f-4fbd-a820-a4928e972a0a)|![cyclable_OK](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/e8c98306-bf02-4b38-ad8f-63c011a841f0)|
+
+###### <i>Quand l'option du style "accès restreints" est active, les chemins cyclables perdent l'interdiction en rouge.</i>
 
 ### barrière
 une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
