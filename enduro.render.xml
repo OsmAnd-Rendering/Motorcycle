@@ -869,6 +869,7 @@
 				<case tag="route_walking" value="" order="12"/>
 				<case tag="route" value="hiking" order="12"/>
 				<case tag="hiking" value="yes" order="12"/>
+				<case tag="leisure" value="nature_reserve" order="12"/>
 			</switch>
 			<apply_if hideUnderground="true">
 				<apply_if layer="-1" order="-1"/>
@@ -1791,7 +1792,7 @@
 		</switch>
 
 		<switch hideAccess="false" >
-			<switch minzoom="11" ><!-- textDy="0" intersectionMargin="0.1" intersectionSizeFactor="0.1" intersectsWith="any"-->
+			<switch minzoom="11" >
 				<case tag="leisure" value="nature_reserve" nameTag="" textOrder="44" intersectionMargin="40"/>
 					<apply textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="true" textWrapWidth="20">
 						<case maxzoom="14" textSize="12" textColor="#66cc0000"/>
@@ -2986,10 +2987,10 @@
 		</switch>
 
 		<!-- nature_reserve-->
-		<switch hideAccess="false">
+		<switch >
 			<case tag="leisure" value="nature_reserve"/><!--
 			<case tag="boundary" value="national_park"/>-->
-			<apply minzoom="8" color_2="#88ffcccc" strokeWidth_2="1" color="#99ffd0d0">
+			<apply hideAccess="false" minzoom="8" color_2="#88ffcccc" strokeWidth_2="1" color="#99ffd0d0">
 				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1"/>
 				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5"/>
 				<case maxzoom="11" color_2="#55ff6666" strokeWidth_2="2"/>
@@ -2999,6 +3000,7 @@
 			</apply>
 			<apply_if nightMode="true" color_2="#990000" color="#660000"/>
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
+			<apply_if hideAccess="true" color_2="#6600ff00" color="#0000ff00" strokeWidth_2="8"/>
 		</switch> 
 
 		<switch nightMode="true"><!--
@@ -3809,8 +3811,8 @@
 				<apply_if additional="layer=-1" disable="true"/>
 				<apply_if additional="layer=-2" disable="true"/>
 				<apply_if additional="layer=-3" disable="true"/>
-				<apply_if additional="layer=1" disable="true"/>
-				<apply_if additional="layer=2" disable="true"/>
+				<apply_if additional="layer=1" color="#00000000"/>
+				<apply_if additional="layer=2" color="#00000000"/>
 				<apply_if additional="layer=3" disable="true"/>
 				<apply_if additional="footway=sidewalk" disable="true"/><!-- sidewalk trottoir pas pris en compte-->
 				
@@ -4455,6 +4457,33 @@
 		</case>
 
 		<case minzoom="15" tag="golf" value="hole" strokeWidth="6:1" color="#99ffffff"/><!-- pas pris en compte -->
+
+		<!-- telesiege -->
+		<switch lessDetailed="false" minzoom="13">
+			<switch cap_2="SQUARE">
+				<case tag="aerialway" value="mixed_lift" />
+				<case tag="aerialway" value="gondola" />
+				<case tag="aerialway" value="cable_car" />
+				<case tag="aerialway" value="chair_lift"/>
+				<apply color__1="#ffffff" color="#333333" color_2="#666666" strokeWidth__1="10">
+					<case maxzoom="14" strokeWidth="1" strokeWidth_2="5" pathEffect_2="1_20"/>
+					<case minzoom="15" strokeWidth="1.5" strokeWidth_2="7" pathEffect_2="1_30"/>
+				</apply>
+			</switch>
+			<case tag="aerialway" value="zip_line" color="#333333" strokeWidth="1.5" pathEffect="1_3"/><!-- tirolienne -->
+			<case minzoom="15" tag="aerialway" value="goods" color="#666666" strokeWidth="1.5" pathEffect="1_3"/><!-- sans passager -->
+			<apply_if nightMode="true" color__1="#333333" color="#999999" color_2="#999999"/>
+		</switch>
+
+		<!-- nature reserve 
+		<switch hideAccess="true" minzoom="9">
+			<case tag="leisure" value="nature_reserve"/>
+			<apply color="#00ff00" >
+				<case maxzoom="10" strokeWidth="4" />
+				<case minzoom="11" strokeWidth="6" />
+			</apply>
+		</switch>-->
+
 
 		<!-- Admin levels (boundaries) -->
 		<switch minzoom="2">
