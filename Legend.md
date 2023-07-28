@@ -63,6 +63,30 @@
 
 ###### <i>Quand l'option du style "accès restreints" est active, les chemins cyclables perdent l'interdiction en rouge.</i>
 
+---
+
+### difficulté (pour des motos légères ...)
+
+| facile | facile nuit |
+| :-------------: | :-------------: | 
+|![facile](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/d5aad369-dae3-447c-8620-a78afc0ac9da)|![facile_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/a1f8e361-bd4e-404e-b061-4933ccba4f73)|
+
+| technique | technique nuit |
+| :-------------: | :-------------: | 
+|![technique](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/06c179fc-8409-40c5-bb39-17b22d31e528)|![technique_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/2c38ce54-ad75-415e-a726-b7d4e10d3c24)|
+
+| difficile | difficile nuit |
+| :-------------: | :-------------: | 
+|![difficile](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/3248e3a0-b165-412a-8dac-ba69b3baa0d4)|![difficile_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/c7923c45-c67d-4174-942e-10216f62569d)|
+
+| infranchissable | infranchissable nuit |
+| :-------------: | :-------------: | 
+|![impassable](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/d783f7b3-1db7-4e94-994f-fba57a67297a)|![impassable_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8a42c82e-caed-4c0c-95a6-811edfd30aa9)|
+
+###### <i>l'affichage peut être enlevé par l'option du style "cacher difficulté".</i>
+
+---
+
 ### barrière
 une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
 
