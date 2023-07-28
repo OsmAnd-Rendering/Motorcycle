@@ -129,17 +129,42 @@
 ---
 
 ## Routes
-| autoroute | profil autoroutier | 
-| :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-j8cd8vBYYtw/YB1S4Ag1sNI/AAAAAAAAEZA/tGnsCcEtpxMlBCVkJvLiGGkieSTuxPq7gCLcBGAsYHQ/s0/autoroute.png" width="150" /> | <img src="https://1.bp.blogspot.com/-WOXj9Wpj9Jk/YB1TIQBgoKI/AAAAAAAAEZI/_L69ImXJDMs5ZPUu9cYgOdo7uxNjpJ7tQCLcBGAsYHQ/s0/autoroute_profil.png" width="150" /> |
 
-| primaire | tertiaire |
+| autoroute | autoroute nuit | 
 | :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-UWSwSxK2Wtk/YB1TVltu4sI/AAAAAAAAEZM/89I183maR1MgLGxlm_iZ_1_XE1eg8A80wCLcBGAsYHQ/s0/route_primaire.png" width="150" /> | <img src="https://1.bp.blogspot.com/-Ikv9d3lfA38/YB1TrfRFxhI/AAAAAAAAEZY/Pf0Gox-5Eu8T_qPVP_YVQ11VL9PUbcmYgCLcBGAsYHQ/s0/route_tertiaire.png" width="150" /> |
+| ![autoroute](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/9d76979c-7107-44d2-a4c3-f1277ff407fb)|![autoroute_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8dc10ecb-509c-468d-adcb-95ee80b6a4f1)|
 
-| route / rue | tunnel | pont |
-| :-------------: | :-------------: | :-------------: |
-| <img src="https://1.bp.blogspot.com/-LgitEs6tC1o/YB1UCWgpi6I/AAAAAAAAEZk/MYVnG0knz7YpxkTKYdeHlJmXtbPTCYmAACLcBGAsYHQ/s0/route_unclassified.png" width="100" /> | <img src="https://1.bp.blogspot.com/-1Cct4SKgnMs/YB1UTcY6PWI/AAAAAAAAEZs/JEEGpKdhZhUk6gY8Ij9iqPmmJppQex_dQCLcBGAsYHQ/s0/route_tunnel.png" width="90" /> | <img src="https://1.bp.blogspot.com/-FLURUTDkWwM/YB1UfACvX4I/AAAAAAAAEZw/mvcgBz6PvYU2yeOOM07GH1Fd3pmxMX3OgCLcBGAsYHQ/s0/route_pont.png" width="90" /> |
+| profil autoroutier | profil autoroutier nuit |
+| :-------------: | :-------------: | 
+|![trunk](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/87065dd2-9b49-4c90-b6b2-3939e4211a82)|![trunk_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/13deea0d-4bde-4116-a687-202f46862a52)|
+
+| Route principale (ancienne nationale) | Route principale nuit |
+| :-------------: | :-------------: | 
+|![primary](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/5eba6932-4aac-498b-8fec-c9ecbbc87b73)|![primary_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6baec7fa-92e0-455b-a5cc-6e9ca3ebac86)|
+
+| Route secondaire | Route secondaire nuit |
+| :-------------: | :-------------: | 
+|![secondary](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/974a153a-81d6-40e3-b9b4-74a4c87ca407)|![secondary_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/34ce94fd-c002-4b7b-afc7-fbc2e369f163)|
+
+| tertiaire | tertiaire nuit |
+| :-------------: | :-------------: | 
+| ![tertiary](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8c58a783-7e8c-4502-965e-71a097da1ad2)|![tertiary_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/0b98f0a6-0dfb-4317-ab58-8779ccda1d5e)|
+
+| route / rue | route / rue nuit |
+| :-------------: | :-------------: | 
+| ![unclassified](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/28e36349-6331-42bc-8642-3617860b7fd1)|![unclassified_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/230c6cca-5c17-49ee-a64c-c376a0d2cd23)|
+
+| route pont | route pont nuit |
+| :-------------: | :-------------: | 
+|![route_pont](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/dd3d9719-8aac-4ab6-a7af-6eb6e0a5ecbf)|![route_pont_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/1cafc7b5-f09d-44c3-8428-4af4c86226d0)|
+
+| route tunnel | route tunnel nuit |
+| :-------------: | :-------------: | 
+|![route_tunnel](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/bc9b2340-bbd7-4929-ab2a-eb9909d3df1b)|![route_tunne_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/0d2f941e-22a6-4a20-a21f-a002798ac08b)|
+
+| route construction | route construction nuit |
+| :-------------: | :-------------: | 
+|![route_construction](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/633cc7ee-b62d-4265-8131-effe1a066b85)|![route_construction_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/7e79beaa-4d07-47e0-aabd-9aa05a90f1b5)|
 
 ---
 ## voies ferrées
