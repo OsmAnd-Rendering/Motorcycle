@@ -83,6 +83,10 @@
 | :-------------: | :-------------: | 
 |![impassable](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/d783f7b3-1db7-4e94-994f-fba57a67297a)|![impassable_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8a42c82e-caed-4c0c-95a6-811edfd30aa9)|
 
+| pente > 60° | pente > 60° nuit |
+| :-------------: | :-------------: | 
+|![grimpette](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/a475d3ea-a825-413a-9590-57cfc4105aca)|![grimpette_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/3e5ddca2-44fc-47cb-9016-7f0db7ac5cef)|
+
 ###### <i>l'affichage peut être enlevé par l'option du style "cacher difficulté".</i>
 
 ---
