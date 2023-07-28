@@ -92,16 +92,16 @@
 ---
 
 ### barrière
-une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
 
 | ![barriere](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/cbf61cc3-ec5f-41bf-8f64-2e971bf0faa6)|![barriere_loin](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/de99b8c5-89e2-4760-a53a-c30bf2864fc9)|![barriere_loin_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/63a0f551-1ce1-4dec-b0d7-4f9d71dab04a)|
 | :-------------: | :-------------: | :-------------: |
 
+###### <i>une icône selon le type aux zooms proches et un point rouge à zoom éloigné </i>
+
+---
+
 ### Balisages
-désactivables dans le menu du style<br>
-icônes selon le type (GR rouge et blanc, tour de pays rouge et jaune, PR
- jaune) et surlignage des parcours en jaune pour pédestre et mauve pour 
-VTT<br>
+
 | type GR | type GR nuit | 
 | :-------------: | :-------------: | 
 |![GR](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8040ba62-5db3-445c-884e-4ed8754ac266)|![GR_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f98b57d0-c561-45d3-8943-224eb52a0d96)|
@@ -124,7 +124,10 @@ VTT<br>
 | :-------------: | :-------------: | 
 |![velo_route](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f6ba1a10-4fc7-40e5-92ca-dec37201ee13)|![velo_route_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/157fc26f-e454-438d-8bd1-c54aa943b65f)|
 
+###### <i>désactivables dans le menu du style</i>
+
 ---
+
 ## Routes
 | autoroute | profil autoroutier | 
 | :-------------: | :-------------: | 
