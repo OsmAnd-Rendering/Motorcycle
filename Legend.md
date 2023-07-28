@@ -3,16 +3,37 @@
 
 ## Chemins
 
-| chemins carrossables | chemins non empierrés |
+| chemins carrossables | nuit |
 | :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-iHEZhIDXOEA/YB095Yhq_ZI/AAAAAAAAEXY/ShwiJQ05x-U5RY3i8N1dKF7mpZpKr7A4gCLcBGAsYHQ/s0/chemin_piste.png" width="150" /> | <img src="https://1.bp.blogspot.com/-UoMty04fab8/YB1BdJbsmCI/AAAAAAAAEXw/Ktn2G57d7uwkZ_DxLw-i0lMyZvNMiI_wQCPcBGAYYCw/s111/chemin_moyen.png" width="150" /> |
+![carrossable_1](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/0c863588-7942-45c4-8bd9-af145623d93a) | ![carrossable_1_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/9bba0dcb-eca9-4988-9374-194a27186688) |
 
-|chemins d'exploitation <br>ou sans précisions|les chemins interdits|
+| chemins carrossables IGN carte | chemins carrosables IGN sans carte |
 | :-------------: | :-------------: | 
-|<img src="https://1.bp.blogspot.com/-y9jiDaOYy9I/YB1E2QWry1I/AAAAAAAAEX4/214npSiahV8oujLH7RMQuu3BJgNWXDkcQCLcBGAsYHQ/s0/chemin_hard.png" width="150" />|<img src="https://1.bp.blogspot.com/-OAlU7vZ3VxE/YB1Y8L95jII/AAAAAAAAEaw/UyuG6j-0uDQLMfeISH-1nEoVYmeVoOeigCLcBGAsYHQ/s0/chemin_interdit.png" width="150" />|
+|![carrossable_IGN_1](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/3e4c5d82-57dd-4b59-b565-d54c05a8e8e2)|![carrossable_IGN_2](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/c366488e-3479-4398-bce5-bdb3ccebf65c)|
+
+| chemins carrossables moins détaillé | nuit |
+| :-------------: | :-------------: | 
+|![carrossable_less](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6728d213-64cb-4545-b81f-a4ee2b941d03)|![carrossable_less_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/383fe3e8-af23-405b-bd68-62668bd4538d)
+
+| chemins carrossables grossier | nuit |
+| :-------------: | :-------------: | 
+|![carrossable_2](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/83eba31e-db4c-442b-9540-064d308a9b1d)|![carrossable_2_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/bf98f340-e2c6-429a-87eb-a37b45a39fbb)|
+
+| chemins terre | nuit |
+| :-------------: | :-------------: | 
+|![chemin_terre](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/2524cce5-903a-4b98-ad6d-70e3ba6431e4)|![chemin_terre_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/a650feca-cdb1-4271-a346-9c68dffc2700)|
+
+|chemins d'exploitation <br>ou sans précisions| nuit |
+| :-------------: | :-------------: | 
+|![chemin_exploit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f5cd6505-8aee-4115-863e-1958a86ac67f)|![chemin_exploit_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/e2183c0d-f064-4e79-a928-f0f00988c2c3)|
+
+###### <i>Lorsque l'option "cacher chemin sans info" est activée dans le menu "Détails" du style les chemins non renseignés dans OSM sont en trait continu.</i>
+
+|chemins interdits| nuit |
+| :-------------: | :-------------: | 
+|![chemin_interdit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/1c01b8b2-0096-4ad9-a731-5e6887ca85a9)|![chemin_interdit_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6812752d-06cf-4ddd-bf20-ce6510807692)|
 
 
-###### <i>Lorsque l'option "cacher chemin sans info" est désactivée dans le menu "Détails" du style les chemins non renseignés dans OSM restent en trait continu.</i>
 
 ---
 
