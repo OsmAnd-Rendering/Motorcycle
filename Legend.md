@@ -94,21 +94,35 @@
 ### barrière
 une icône selon le type aux zooms proches et un point rouge à zoom éloigné <br>
 
-| <img src="https://1.bp.blogspot.com/-RJlYD5hBMqE/YB1YDu-OosI/AAAAAAAAEag/dbk9uKBeTXkosn2C2PllA7DVcbw-WoPKQCLcBGAsYHQ/s0/barriere_loin.png" width="70" /> | <img src="https://1.bp.blogspot.com/-FZYJpvLS6oQ/YB1YDtGf5VI/AAAAAAAAEak/C7mlJVBEPWY1P_curMLMt_r22D1EHpFbgCLcBGAsYHQ/s0/barriere_proche.pngg" width="100" /> |
-| :-------------: | :-------------: |
+| ![barriere](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/cbf61cc3-ec5f-41bf-8f64-2e971bf0faa6)|![barriere_loin](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/de99b8c5-89e2-4760-a53a-c30bf2864fc9)|![barriere_loin_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/63a0f551-1ce1-4dec-b0d7-4f9d71dab04a)|
+| :-------------: | :-------------: | :-------------: |
 
 ### Balisages
 désactivables dans le menu du style<br>
 icônes selon le type (GR rouge et blanc, tour de pays rouge et jaune, PR
  jaune) et surlignage des parcours en jaune pour pédestre et mauve pour 
 VTT<br>
-
-| <img src="https://1.bp.blogspot.com/-v9JIlGQyY04/YB1fTNBit8I/AAAAAAAAEcI/y0XLKm7IjKQX2dLxHZf4UiGqmvlCuQgbgCLcBGAsYHQ/s0/balisage_GR.png" width="130" /> | <img src="https://1.bp.blogspot.com/-2_uR1MBI6i4/YB1fTEK6XAI/AAAAAAAAEcM/viiTU1aELfU--BqJzzx2eBlQLsdxqvcAwCLcBGAsYHQ/s0/balisage_PR.png" width="100" /> | 
+| type GR | type GR nuit | 
 | :-------------: | :-------------: | 
+|![GR](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8040ba62-5db3-445c-884e-4ed8754ac266)|![GR_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f98b57d0-c561-45d3-8943-224eb52a0d96)|
+| type GR loin | type GR loin nuit | 
+|![GR_loin](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/92499802-7a8f-4788-9934-ab143799c778)|![GR_loin_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/3d8ab24c-56fb-4fd4-8192-e7d463007ae7)|
 
-| <img src="https://1.bp.blogspot.com/-KwuLIkdzr6w/YB1fTG9afrI/AAAAAAAAEcQ/HVoeu2oKI5YpwGiWMPqaPUKIWw_ZLvFHACLcBGAsYHQ/s0/balisage_tour-pays.png" width="130" /> | <img src="https://1.bp.blogspot.com/-BGUBHcmYT3o/YB1hZrCc8FI/AAAAAAAAEck/pWMR0K2vTFkiUUS_fUZbEnxWTUYxee-ZACLcBGAsYHQ/s0/balisage_vtt.png" width="150" /> |
+| type GRP | type GRP nuit | 
 | :-------------: | :-------------: | 
-<br>
+|![GRP](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/4f7e98e6-f99a-42d9-b7ae-f1e4be26e1cb)|![GRP_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/c8edd341-5330-496a-9d7b-7dce8d5e4d22)|
+
+| type PR | type PR nuit | 
+| :-------------: | :-------------: | 
+|![PR](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/9529f9fd-659f-480b-85d2-2fbb5108e70b)|![PR_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/ccecee7d-0023-476e-b245-a42b56d8185c)|
+
+| VTT | VTT nuit | 
+| :-------------: | :-------------: | 
+|![VTT](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/e66f2bed-8bad-4171-b290-ea0efce0d2d1)|![VTT_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/c3ad6a96-12fd-49dd-9ff5-1d885f70ab53)|
+
+| vélo route | vélo route nuit | 
+| :-------------: | :-------------: | 
+|![velo_route](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f6ba1a10-4fc7-40e5-92ca-dec37201ee13)|![velo_route_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/157fc26f-e454-438d-8bd1-c54aa943b65f)|
 
 ---
 ## Routes
