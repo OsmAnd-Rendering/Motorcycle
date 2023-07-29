@@ -270,5 +270,5 @@
 | :-------------: |
 |![viewpoint](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/0410851f-33cd-4c5d-97fb-413119eeb054)|
 
-
+###### <i>le reste est facilement identifiable et un appui sur l'icone ouvre le détail du POI</i>
 
