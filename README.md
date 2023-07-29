@@ -20,13 +20,15 @@ exemple en vidéo **[https://youtu.be/mj46qerdwTs](https://youtu.be/07nj4LoACdc)
 
 ## Copies d'écran<br>
 
-| <img src="https://user-images.githubusercontent.com/83398215/183831439-a7dd7cf4-dcf2-4445-8d46-e685157f93bf.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183831631-e2f86260-1324-4201-8042-be67361d5ef0.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832089-7a685512-f251-4986-81de-f92a765f964f.jpg" width="250" /> |
-| :-------------: | :-------------: | :-------------: |
+![screen_free](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/5955da4c-204e-4bdb-aeef-4edc2fe28fd3)
+![screen_jour](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/0492fc7f-45a6-487a-b169-a524aec98473)
+![screen_3D](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/7eb88954-fe53-4f84-a451-7f3b2a33dff5)
+![screen_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/4ea5c842-b796-4dbf-adc9-c34699e82694)
+![screen_less](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/2acc2a04-4c96-4cd3-80b1-5ce2baf8b408)
+![screen_IGN](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/46d1aa8c-2ed7-4b5f-9c7e-5b6493768e4c)
+![screen_photo](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/699889b6-5d48-4a19-b6ee-86b68ae64b26)
+![screen_strava](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/181ae2d8-aed5-4928-a879-e13f365fcb21)
 
-### 
-| <img src="https://user-images.githubusercontent.com/83398215/183832776-3ed55db4-1ce4-4e79-8c3e-97a521e8722e.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832485-45b79c76-e6db-4ccb-b058-5220a79175e5.jpg" width="250" /> | <img src="https://user-images.githubusercontent.com/83398215/183832969-e00c8ae1-ec4a-472a-8a17-95958cdeab14.jpg" width="250" /> |
-| :-------------: | :-------------: | :-------------: |
-<br>
 
 ---
 
