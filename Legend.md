@@ -189,23 +189,86 @@
 ---
 
 ## Eléments remarquables
- <font size="1">Quelques éléments remarquables (les autres sont facilement reconnaissables)<br></font>
 
-| conduites d'eau forcée | terrain militaire | 
-| :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-9woAA4wbSdg/YB1bKgqm6JI/AAAAAAAAEa8/ogNaDqWsSvAPaaPYwe0VxctBXcOfMoKCgCLcBGAsYHQ/s0/eau_conduite-forcee.png" width="170" /> | <img src="https://1.bp.blogspot.com/-P4daDzQp1II/YB1bhI2Wl8I/AAAAAAAAEbE/r-zW5ZY77hM8viriXsWd2jmnEiaxrwJvwCLcBGAsYHQ/s0/terrain_militaire.png" width="150" /> |
+| village | hameau |
+| :-------------: | :-------------: |
+| ![village](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/3f3fcc30-b64a-44ed-b325-a42131c9c9a9)|![hameau](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/7648911a-efca-4134-845e-3b70dba403a7)|
 
-| reserve naturelle | carrière |
-| :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-geofTIuUdQg/YB1byDK1eqI/AAAAAAAAEbM/OtGVu9RXAl8E9FuqtX9cuHFlyBlTAsXTACLcBGAsYHQ/s0/reserve_parc.png" width="150" /> | <img src="https://1.bp.blogspot.com/-_tm5d2ctw8g/YB1cV-7hinI/AAAAAAAAEbY/-jn8CxUNcqcsf2oS0lhQiSWQh3Edvd76wCLcBGAsYHQ/s0/carriere.png" width="150" /> |
+| maison isolée | maison isolée nuit |
+| :-------------: | :-------------: |
+|![maison_isolee](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/3e8a1e8b-8fff-44a8-aa80-b54ef6be1c20)|![maison_isolee_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/41b6031d-0348-49f2-8c28-2d26819865b7)|
 
-| ligne électrique | ruine |
-| :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-Y0GxbUv2qkQ/YB1cwHbk4FI/AAAAAAAAEbg/3HjWzF6Dk74vZgU3qr8HxmVwItkMY8GBACLcBGAsYHQ/s0/ligne_electrique.png" width="140" /> | <img src="https://1.bp.blogspot.com/-r32vIhECieM/YB1c9zlftWI/AAAAAAAAEbk/u5DmiG_mIHYD3r5CEsAEoeTsm2mx7oP4gCLcBGAsYHQ/s0/ruine.png" width="150" /> |
+| abri | abri nuit |
+| :-------------: | :-------------: |
+|![abri](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6a9ed38a-80e8-457b-afaa-44205b938986)|![abri_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/cf5a7c7f-3bae-48ee-8164-ea69a9f95c29)|
 
-| maison isolée | hameau |
-| :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-dIXcC-IyZNY/YB1dNeLMrdI/AAAAAAAAEbw/Kr6WGf02BWApYaR3obV8pqnbSsklv-IawCLcBGAsYHQ/s0/ville_maison.png" width="150" /> | <img src="https://1.bp.blogspot.com/-yH1u6Z-8feY/YB1d3D2YyWI/AAAAAAAAEb8/OY-6S-_BNY0qO6UXehanKgkjVggBAPg_ACLcBGAsYHQ/s0/ville_hameau.png" width="150" /> |
+| carrière | carrière nuit |
+| :-------------: | :-------------: |
+|![carriere](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8911047c-c03a-4c39-9f16-84e809c97431)|![carriere_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6e445835-bca9-42e5-a4c6-5cd0ddcdd117)|
+
+| cascade | centrale électrique |
+| :-------------: | :-------------: |
+|![cascade](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/ebf35dc9-414e-4320-95d0-8a128957d4bb)|![centrale_elec](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/3aec65e7-c655-4934-bfbd-9f32375b2b1d)|
+
+| cloture | commentaire osm |
+| :-------------: | :-------------: |
+|![cloture](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/312e1037-0f4a-4613-a80b-bdf50531d64b)|![commentaire](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/1ed58567-5e2f-4f95-8108-1cac472fc156)|
+
+| falaise | forêt |
+| :-------------: | :-------------: |
+|![falaise](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/da22cfb7-8f74-4b8f-bff8-2b5fc489f5ad)|![foret](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/c0977d95-277f-4984-a821-83faebb13e84)|
+
+| grotte | grotte nuit nuit |
+| :-------------: | :-------------: |
+|![grotte](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/29f1427c-25e7-460d-90c4-4a18fdac1225)|![grotte_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/c55202a2-99b9-4a01-b861-d724d81511a0)|
+
+| gué | lieu dit |
+| :-------------: | :-------------: |
+|![gué_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/fc3fb357-68d5-4b27-8575-67e896e3f960)|![lieu_dit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/64b679df-2af6-401a-8fb5-4e02ae79158d)|
+
+| ligne électrique | militaire |
+| :-------------: | :-------------: |
+|![ligne_elec](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/eff9f77f-7a68-4866-b4ee-6ef7023fe0e6)|![militaire](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/31d83c1f-e4fe-41fc-b9e4-2a3dc2b409b0)|
+
+| mine | monument |
+| :-------------: | :-------------: |
+|![mine](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f252a567-311c-4ef4-b668-a5437b873e9f)|![monument](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/e360b3e9-59f9-4e9a-8dab-9987845746bf)|
+
+| parc national | parc national nuit |
+| :-------------: | :-------------: |
+|![parc_national](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f4c96b12-3dcc-4b47-bab7-850a73246d05)|![parc_national_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/a70fafe7-7adc-4765-bf23-37d48098e5da)|
+
+| reserve naturelle | reserve nuit |
+| :-------------: | :-------------: |
+|![reserve](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/75da5f2d-374b-4a9f-a331-20fa0fd3f6b9)|![reserve_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/2ef092d2-5a76-4e48-9145-95834f38d05e)|
+
+| pipeline | radar |
+| :-------------: | :-------------: |
+|![pipeline](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/e68edb66-6a20-49f5-8c8d-e88ce576f3eb)|![radar](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/1d3db1e6-5f63-46e3-9161-d071ffc9b8b4)|
+
+| refuge | ruine |
+| :-------------: | :-------------: |
+|![refuge](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/df6728e1-91b9-4665-a66a-4a04121db628)|![ruine](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/16987207-7566-4ab7-bb9d-655312865bef)|
+
+| sommet | sommet nuit |
+| :-------------: | :-------------: |
+|![sommet](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/a28d8c83-d183-49ac-91cf-c0f07b2cd025)|![sommet_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/64ee6a5a-7b2d-440f-8c82-a0b58e31dc91)|
+
+| col | col nuit |
+| :-------------: | :-------------: |
+|![col](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/ed5a67d9-4521-4584-9c37-ada3d2c308b9)|![col_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/a8ef73cf-ac5b-4e4d-9a2a-9fd5c69efff4)|
+
+| source | eau potable |
+| :-------------: | :-------------: |
+|![source](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/b3687995-2b4a-40aa-95be-0eeaf351065f)|![eau_potable](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6bc5bc71-5cef-47c7-8e91-3bda71f3a99e)|
+
+| télécabine | télécabine nuit |
+| :-------------: | :-------------: |
+|![telepherique](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6ca4d54e-8719-4ef5-92d6-5d55973f28d4)|![telepherique_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/2f804825-9401-4a79-b486-8c010e1f695f)|
+
+| point de vue |
+| :-------------: |
+|![viewpoint](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/0410851f-33cd-4c5d-97fb-413119eeb054)|
 
 
 
