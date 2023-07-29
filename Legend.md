@@ -125,7 +125,7 @@
 |![velo_route](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f6ba1a10-4fc7-40e5-92ca-dec37201ee13)|![velo_route_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/157fc26f-e454-438d-8bd1-c54aa943b65f)|
 
 ###### <i>désactivables dans le menu du style<br>
-sous Android un appui sur l'icône ouvrira le menu du parcours</i>
+###### sous Android un appui sur l'icône ouvrira le menu du parcours</i>
 
 ---
 
