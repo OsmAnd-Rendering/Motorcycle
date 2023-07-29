@@ -202,6 +202,10 @@
 | :-------------: | :-------------: |
 |![abri](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6a9ed38a-80e8-457b-afaa-44205b938986)|![abri_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/cf5a7c7f-3bae-48ee-8164-ea69a9f95c29)|
 
+| refuge | ruine |
+| :-------------: | :-------------: |
+|![refuge](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/df6728e1-91b9-4665-a66a-4a04121db628)|![ruine](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/16987207-7566-4ab7-bb9d-655312865bef)|
+
 | carrière | carrière nuit |
 | :-------------: | :-------------: |
 |![carriere](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/8911047c-c03a-4c39-9f16-84e809c97431)|![carriere_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6e445835-bca9-42e5-a4c6-5cd0ddcdd117)|
@@ -245,10 +249,6 @@
 | pipeline | radar |
 | :-------------: | :-------------: |
 |![pipeline](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/e68edb66-6a20-49f5-8c8d-e88ce576f3eb)|![radar](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/1d3db1e6-5f63-46e3-9161-d071ffc9b8b4)|
-
-| refuge | ruine |
-| :-------------: | :-------------: |
-|![refuge](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/df6728e1-91b9-4665-a66a-4a04121db628)|![ruine](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/16987207-7566-4ab7-bb9d-655312865bef)|
 
 | sommet | sommet nuit |
 | :-------------: | :-------------: |
