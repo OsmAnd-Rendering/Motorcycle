@@ -167,15 +167,25 @@
 |![route_construction](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/633cc7ee-b62d-4265-8131-effe1a066b85)|![route_construction_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/7e79beaa-4d07-47e0-aabd-9aa05a90f1b5)|
 
 ---
+
 ## voies ferrées
 
-| voies ferrées | désaffectée | 
+| voies ferrées | voies ferrées nuit | 
 | :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-9bmaXL7I5Qk/YB1Vn7EVtRI/AAAAAAAAEaA/9FaAuUIfrCEFZ1UB_S80Q1vX9Ya_KP6TwCLcBGAsYHQ/s0/voie_ferree.png" width="170" /> | <img src="https://1.bp.blogspot.com/-lGWedo3z8mc/YB1WBvez7RI/AAAAAAAAEaI/zZIwVKm1Y1ISAoQRgqQx5ZEbssPfQ1DUgCLcBGAsYHQ/s0/voie_ferree_desafectee.png" width="150" /> |
+|![train](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/9a4e2c9a-ec93-4da7-8d09-4384721f8889)|![train_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6e5859f9-b94f-4f78-92de-849bb9245bb6)|
 
-| tunnel | pont |
+| voies désaffectées | voies désaffectées nuit | 
 | :-------------: | :-------------: | 
-| <img src="https://1.bp.blogspot.com/-MXh4pXRREMY/YB1WN0ZmN-I/AAAAAAAAEaM/pJ-YjJ77vlwDkcDFytrU7YKV6Us5SVkWQCLcBGAsYHQ/s0/voie_ferree_tunnel.png" width="150" /> | <img src="https://1.bp.blogspot.com/-zW1HQZXLnRE/YB1WYR8M0bI/AAAAAAAAEaQ/6_ibC5ZIEHsCJDPpo5a6GiVJHy7ndPL6wCLcBGAsYHQ/s0/voie_ferree_pont.png" width="150" /> | 
+|![train_ancien](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/1a900eb2-6485-4f92-9bbc-47f2c06ee981)|![train_ancien_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/02065d20-1035-4354-8225-3a995a7c27a1)|
+
+| voies ferrées pont | voies ferrées pont nuit |
+| :-------------: | :-------------: | 
+|![train_pont](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/744aa506-268e-43d9-b053-9fe0ba92793f)|![train_pont_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/6f64e497-59e6-4f94-b3ad-688dac51780e)|
+
+| voies ferrées tunnel | voies ferrées tunnel |
+| :-------------: | :-------------: | 
+| ![train_tunnel](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/30bfa5c5-e497-4975-a73d-f1812969ff82)|![train_tunnel_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/9d4a731f-b1ca-4d04-825d-243a15c094e2)|
+
 ---
 
 ## Eléments remarquables
