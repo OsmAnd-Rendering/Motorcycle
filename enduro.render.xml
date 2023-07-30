@@ -3497,138 +3497,10 @@
 				<apply color="#0066ffff" color_5="#99996600" strokeWidth_5="1.5" pathEffect_5="1_3"/>
 			</switch>
 
-			<!-- chemins -->	
+			<!-- chemins 	-->
 			<switch tag="highway" value="track"	>
-
-				<!-- impassable-->
-				<switch lessDetailed="false">
-					<case additional="smoothness=impassable"/>
-					<case additional="mtb:scale=5"/>
-					<case additional="mtb:scale=4"/>
-					<apply minzoom="13" color_5="$sentier">
-						<case maxzoom="14" strokeWidth_5="1.5" pathEffect_5="5_3"/> 
-						<case maxzoom="15" strokeWidth_5="2" pathEffect_5="7_5"/> 
-						<case maxzoom="16" strokeWidth_5="2.5" pathEffect_5="9_7"/> 
-						<case maxzoom="17" strokeWidth_5="3" pathEffect_5="11_9"/> 
-						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="13_11"/>
-					</apply>
-					<apply_if ign="true" pathEffect_5="" >
-						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
-							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
-						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
-							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
-						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
-							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
-						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
-							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
-						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
-							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
-					</apply_if>
-				</switch>
-
-				<!-- hard -->
-				<switch lessDetailed="false">
-					<case additional="surface=grass"/>
-					<case additional="surface=sand"/>
-					<case additional="smoothness=horrible"/>
-					<case additional="smoothness=very_horrible"/>
-					<case additional="tracktype=grade5"/>
-					<apply minzoom="13" color_5="$chemin"> 
-						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="6_3"/>
-						<case maxzoom="14" strokeWidth_5="2.2" pathEffect_5="8_3"/>
-						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="14_4"/>
-						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/>
-						<case maxzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/>
-						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 
-					</apply>
-					<apply_if ign="true" pathEffect_5="" >
-						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
-							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
-						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
-							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
-						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
-							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
-						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
-							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
-						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
-							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
-					</apply_if>
-				</switch>
-
-				<!-- medium -->
-				<switch lessDetailed="false">
-					<case additional="mtb:scale=0"/>
-					<case additional="mtb:scale=1"/>
-					<case additional="surface=unpaved"/>
-					<case additional="surface=ground"/>
-					<case additional="surface=dirt"/>
-					<case additional="surface=earth"/>
-					<case additional="tracktype=grade4"/>
-					<apply minzoom="13" color_5="$chemin"> 
-						<case maxzoom="13" strokeWidth_5="1.8" />
-						<case maxzoom="14" strokeWidth_5="2.2" />
-						<case maxzoom="15" strokeWidth_5="2.6" />
-						<case maxzoom="16" strokeWidth_5="3" />
-						<case minzoom="17" strokeWidth_5="3.4" /> 
-						<case minzoom="18" strokeWidth_5="3.8" /> 
-					</apply> 
-					<apply_if ign="true" pathEffect_5="" >
-						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
-							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
-						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
-							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
-						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
-							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
-						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
-							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
-						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
-							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
-					</apply_if>
-				</switch>
-
-				<!-- carrossable -->
-				<switch lessDetailed="false">
-					<case additional="surface=pebblestone"/>
-					<case ign="false" additional="smoothness=very_bad"/>
-					<case additional="tracktype=grade3"/>
-					<apply minzoom="12" color_5="$piste">
-						<case maxzoom="11" strokeWidth_5="0"/> 
-						<case maxzoom="12" strokeWidth_5="1.4" pathEffect_5="5_2"/> 
-						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="6_3"/> 
-						<case maxzoom="14" strokeWidth_5="2.2" pathEffect_5="8_3"/> 
-						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="14_4"/> 
-						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/> 
-						<case maxzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/> 
-						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 
-					</apply>
-					<apply_if ign="true" pathEffect_5="" >
-						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
-							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
-						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
-							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
-						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
-							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
-						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
-							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
-						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
-							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
-						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
-							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
-						<apply_if nightMode="true" color_5="$chemin"/>
-					</apply_if>
-				</switch>
-
-				<!-- facile -->
+				
+				<!-- carrossable marron continu -->
 				<switch>
 					<case additional="surface=gravel"/>
 					<case additional="surface=paved"/>
@@ -3666,8 +3538,8 @@
 						<case minzoom="18" strokeWidth_5="5.4"/> 
 						<apply_if nightMode="true" color_5="#555522"/>
 					</apply_if>
-					<apply_if ign="true" strokeWidth_5="0" color="#ffffff" color_0="#000000" color_5="#ffffff"><!-- -->
-						<case noPolygons="false" maxzoom="11" strokeWidth="0"/> <!-- sans carte-->
+					<apply_if ign="true" strokeWidth_5="0" color="#ffffff" color_0="#000000" color_5="#ffffff">
+						<case noPolygons="false" maxzoom="11" strokeWidth="0"/> 
 						<case noPolygons="false" maxzoom="12" strokeWidth_5="1.2" color_5="#225522"/> 
 						<case noPolygons="false" maxzoom="13" strokeWidth_5="2" color_5="#225522"/>
 						<case noPolygons="false" maxzoom="14" strokeWidth_5="2.5" color_5="#225522"/>
@@ -3677,7 +3549,7 @@
 						<case noPolygons="false" maxzoom="18" strokeWidth_5="4.5" color_5="#225522"/>
 						<case noPolygons="false" maxzoom="19" strokeWidth_5="5" color_5="#225522"/>
 						<case noPolygons="false" minzoom="20" strokeWidth_5="5.5" color_5="#225522"/>
-						<case noPolygons="true" maxzoom="13" strokeWidth_0="0" pathEffect_0="12_4"/><!--avec cartes-->
+						<case noPolygons="true" maxzoom="13" strokeWidth_0="0" pathEffect_0="12_4"/>
 						<case noPolygons="true" maxzoom="14" strokeWidth_5="2.2" strokeWidth_0="4.4" pathEffect_0="14_5"/>
 						<case noPolygons="true" maxzoom="15" strokeWidth_5="2.4" strokeWidth_0="5.4" pathEffect_0="15_6"/>
 						<case noPolygons="true" maxzoom="16" strokeWidth_5="5.0" strokeWidth_0="10" pathEffect_0="20_7"/>
@@ -3687,7 +3559,7 @@
 						<apply_if noPolygons="true" maxzoom="12" strokeWidth_5="0"/>
 						<apply_if nightMode="true" color_5="$chemin"/>
 						<apply shadowColor="#ddeedd">
-							<case noPolygons="true" maxzoom="13" shadowRadius="0"/><!--avec cartes-->
+							<case noPolygons="true" maxzoom="13" shadowRadius="0"/>
 							<case noPolygons="true" maxzoom="14" shadowRadius="3"/>
 							<case noPolygons="true" maxzoom="15" shadowRadius="2"/>
 							<case noPolygons="true" maxzoom="16" shadowRadius="3.6"/>
@@ -3698,7 +3570,139 @@
 					</apply_if>
 				</switch>
 
-				<!-- sans info idem hard + pointillés si option active -->
+				<!-- carrossable grossier marron pointillé -->
+				<switch lessDetailed="false">
+					<case additional="surface=pebblestone"/>
+					<case additional="tracktype=grade3"/>
+					<apply minzoom="12" color_5="$piste">
+						<case maxzoom="11" strokeWidth_5="0"/> 
+						<case maxzoom="12" strokeWidth_5="1.4" pathEffect_5="5_2"/> 
+						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="6_3"/> 
+						<case maxzoom="14" strokeWidth_5="2.2" pathEffect_5="8_3"/> 
+						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="14_4"/> 
+						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/> 
+						<case maxzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/> 
+						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 
+					</apply>
+					<apply_if ign="true" pathEffect_5="" >
+						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
+						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
+							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
+						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
+							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
+						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
+							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
+						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
+							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
+						<apply_if nightMode="true" color_5="$chemin"/>
+					</apply_if>
+				</switch>
+
+				<!-- selon meteo vert continu -->
+				<switch lessDetailed="false">
+					<case additional="mtb:scale=0"/>
+					<case additional="surface=unpaved"/>
+					<case additional="surface=ground"/>
+					<case additional="surface=dirt"/>
+					<case additional="surface=earth"/>
+					<case additional="tracktype=grade4"/>
+					<apply minzoom="13" color_5="$chemin"> 
+						<case maxzoom="13" strokeWidth_5="1.8" />
+						<case maxzoom="14" strokeWidth_5="2.2" />
+						<case maxzoom="15" strokeWidth_5="2.6" />
+						<case maxzoom="16" strokeWidth_5="3" />
+						<case minzoom="17" strokeWidth_5="3.4" /> 
+						<case minzoom="18" strokeWidth_5="3.8" /> 
+					</apply> 
+					<apply_if ign="true" pathEffect_5="" >
+						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
+						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
+							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
+						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
+							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
+						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
+							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
+						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
+							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
+					</apply_if>
+				</switch>
+			
+				<!-- exploitation vert pointillé -->
+				<switch lessDetailed="false">
+					<case additional="mtb:scale=1"/>
+					<case additional="surface=grass"/>
+					<case additional="surface=sand"/>
+					<case additional="surface=mud"/>
+					<case additional="smoothness=very_bad"/>
+					<case additional="smoothness=horrible"/>
+					<case additional="smoothness=very_horrible"/>
+					<case additional="tracktype=grade5"/>
+					<apply minzoom="13" color_5="$chemin"> 
+						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="6_3"/>
+						<case maxzoom="14" strokeWidth_5="2.2" pathEffect_5="8_3"/>
+						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="14_4"/>
+						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/>
+						<case maxzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/>
+						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 
+					</apply>
+					<apply_if ign="true" pathEffect_5="" >
+						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
+						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
+							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
+						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
+							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
+						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
+							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
+						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
+							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
+					</apply_if>
+				</switch>
+
+				<!-- impassable noir pointillé -->
+				<switch lessDetailed="false">
+					<case additional="smoothness=impassable"/>
+					<case additional="mtb:scale=6"/>
+					<case additional="mtb:scale=5"/>
+					<case additional="mtb:scale=4"/>
+					<case additional="mtb:scale=3"/>
+					<case additional="mtb:scale=2"/>
+					<apply minzoom="13" color_5="$sentier">
+						<case maxzoom="14" strokeWidth_5="1.5" pathEffect_5="5_3"/> 
+						<case maxzoom="15" strokeWidth_5="2" pathEffect_5="7_5"/> 
+						<case maxzoom="16" strokeWidth_5="2.5" pathEffect_5="9_7"/> 
+						<case maxzoom="17" strokeWidth_5="3" pathEffect_5="11_9"/> 
+						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="13_11"/>
+					</apply>
+					<apply_if ign="true" pathEffect_5="" >
+						<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
+							<case noPolygons="true" maxzoom="13" strokeWidth_5="0"/>
+						<case noPolygons="false" maxzoom="14" strokeWidth_5="1.8"/>
+							<case noPolygons="true" maxzoom="14" strokeWidth_5="1.8"/>
+						<case noPolygons="false" maxzoom="15" strokeWidth_5="2.1"/>
+							<case noPolygons="true" maxzoom="15" strokeWidth_5="2.5"/>
+						<case noPolygons="false" maxzoom="16" strokeWidth_5="2.4"/>
+							<case noPolygons="true" maxzoom="16" strokeWidth_5="4.5"/>
+						<case noPolygons="false" maxzoom="17" strokeWidth_5="2.7"/>
+							<case noPolygons="true" maxzoom="17" strokeWidth_5="7.5"/>
+						<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
+							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
+					</apply_if>
+				</switch>
+
+				<!-- sans info idem hard + pointillés si option active -->	
 				<switch lessDetailed="false">
 					<case/>
 					<apply minzoom="13" color_5="$chemin"> 
@@ -3733,7 +3737,7 @@
 							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
 					</apply_if>
 				</switch>
-					
+				
 				<!-- pont -->
 				<apply_if additional="bridge=yes" minzoom="17" >
 					<case/>
@@ -3749,6 +3753,7 @@
 
 				<apply_if arriereplan="true" color="#000000" shadowColor="#99000000" shadowRadius="4"/>
 			</switch>	
+
 
 			<!-- sentier -->
 			<switch minzoom="14" lessDetailed="false">
