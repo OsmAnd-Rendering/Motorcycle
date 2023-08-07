@@ -134,8 +134,8 @@
 
 		<way attribute="priority">
 			<if param="avoid_sentier">
-				<select value="1" t="highway" v="steps"/><!--escalier -->
-				<select value="2" t="highway" v="path"/><!--sentiers -->
+				<select value="0'25" t="highway" v="steps"/><!--escalier -->
+				<select value="1'5" t="highway" v="path"/><!--sentiers -->
 				<select value="2.5" t="highway" v="track"/><!--chemins -->
 				<select value="1" t="highway"/><!--routes -->
 			</if>

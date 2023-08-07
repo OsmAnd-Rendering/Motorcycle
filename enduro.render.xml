@@ -3620,8 +3620,22 @@
 				<apply color="#0066ffff" color_5="#99996600" strokeWidth_5="1.5" pathEffect_5="1_3"/>
 			</switch>
 
-			<!-- chemins 	-->
+			<!-- chemins le dernier additional l'emporte	-->
 			<switch tag="highway" value="track"	>
+				<!-- ecrase par les suivants si existants (info peu importante) -->
+				<switch>
+					<case lessDetailed="false" additional="smoothness=very_bad" color_5="$chemin" strokeWidth_5="$chemin_trait" />
+					<case lessDetailed="false" additional="mtb:scale=0" color_5="$chemin" strokeWidth_5="$chemin_trait"/>
+					<apply_if engine_v1="true">
+						<case maxzoom="12" strokeWidth_5="0"/>
+						<case maxzoom="13" strokeWidth_5="1.8"/>
+						<case maxzoom="14" strokeWidth_5="2.2"/>
+						<case maxzoom="15" strokeWidth_5="2.6"/>
+						<case maxzoom="16" strokeWidth_5="3"/>
+						<case minzoom="17" strokeWidth_5="3.4"/> 
+						<case minzoom="18" strokeWidth_5="3.8"/> 					
+					</apply_if>
+				</switch>
 				<!-- exploitation 	-->				
 				<!--"surface=unpaved" "surface=ground" "surface=dirt" "surface=earth" pas de sens ...-->
 				<switch>
@@ -3684,23 +3698,21 @@
 				<switch>
 					<case additional="surface=gravel" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="tracktype=grade2" strokeWidth_5="$piste_trait" color_5="$piste"/>
-					<!-- carrossable 	-->
+					<case additional="smoothness=bad" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=paved" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=asphalt" strokeWidth_5="$piste_trait" color_5="$piste"/>
+					<case additional="surface=chipseal" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=concrete" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=concrete:lanes" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=concrete:plates" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=paving_stones" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=sett" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=cobblestone" strokeWidth_5="$piste_trait" color_5="$piste"/>
+					<case additional="surface=unhewn_cobblestone" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=compacted" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="surface=fine_gravel" strokeWidth_5="$piste_trait" color_5="$piste"/>
 					<case additional="tracktype=grade1" strokeWidth_5="$piste_trait" color_5="$piste"/>
-					<!-- si pas pris avant -->
-					<case additional="smoothness=excellent" strokeWidth_5="$piste_trait" color_5="$piste"/>
-					<case additional="smoothness=good" strokeWidth_5="$piste_trait" color_5="$piste"/>
-					<case additional="smoothness=intermediate" strokeWidth_5="$piste_trait" color_5="$piste"/>
-					<case additional="smoothness=bad" strokeWidth_5="$piste_trait" color_5="$piste"/>
+					<!-- "smoothness=excellent" "smoothness=good" "smoothness=intermediate" pour les routes -->
 					<apply_if engine_v1="true">
 						<case maxzoom="11" strokeWidth_5="0"> 
 							<apply_if lessDetailed="true" strokeWidth_5="0"/> 
@@ -3728,25 +3740,10 @@
 						</case>
 					</apply_if>
 				</switch>
-				<!-- si pas pris avant car points difficulté sur chemin -->
-				<switch>
-					<case lessDetailed="false" additional="smoothness=very_bad" color_5="$chemin" strokeWidth_5="$chemin_trait" />
-					<case lessDetailed="false" additional="mtb:scale=0" color_5="$chemin" strokeWidth_5="$chemin_trait"/>
-					<apply_if engine_v1="true">
-						<case maxzoom="12" strokeWidth_5="0"/>
-						<case maxzoom="13" strokeWidth_5="1.8"/>
-						<case maxzoom="14" strokeWidth_5="2.2"/>
-						<case maxzoom="15" strokeWidth_5="2.6"/>
-						<case maxzoom="16" strokeWidth_5="3"/>
-						<case minzoom="17" strokeWidth_5="3.4"/> 
-						<case minzoom="18" strokeWidth_5="3.8"/> 					
-					</apply_if>
-				</switch>
-				
+				<!-- ecrase les tracktype si existants -->
 				<switch>
 					<case lessDetailed="false" additional="smoothness=horrible" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>				
 					<case lessDetailed="false" additional="smoothness=very_horrible" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
-					<case lessDetailed="false" additional="smoothness=impassable" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
 					<case lessDetailed="false" additional="surface=sand" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
 					<case lessDetailed="false" additional="surface=mud" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
 					<case lessDetailed="false" additional="surface=grass" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
@@ -3761,8 +3758,9 @@
 						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 										
 					</apply_if>
 				</switch>
-					
+				<!-- impraticable ecrase les tracktypes si existants -->	
 				<switch>
+					<case lessDetailed="false" additional="smoothness=impassable" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
 					<case lessDetailed="false" additional="mtb:scale=2" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
 					<case lessDetailed="false" additional="mtb:scale=3" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
 					<case lessDetailed="false" additional="mtb:scale=4" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
@@ -3986,7 +3984,22 @@
 				<!-- "smoothness=excellent" "smoothness=good" "smoothness=intermediate" "smoothness=bad" "smoothness=very_bad"  just chemins normaux :) -->
 				<apply_if additional="smoothness=horrible" color_3="#ff9933"/>
 				<apply_if additional="smoothness=very_horrible" color_3="#ff0000"/>
-				<apply_if additional="smoothness=impassable" color_3="#000000">	
+				<apply_if additional="smoothness=impassable" color_3="#99000000">	
+					<case nightMode="true" color_3="#cccccc"/>
+				</apply_if>
+				<!-- difficulté alpine	-->
+				<apply_if additional="sac_scale=hiking" color_3="#ff9933"/>
+				<apply_if additional="sac_scale=mountain_hiking" color_3="#ff0000"/>
+				<apply_if additional="sac_scale=demanding_mountain_hiking" color_3="#99000000">
+					<case nightMode="true" color_3="#cccccc"/>
+				</apply_if>
+				<apply_if additional="sac_scale=alpine_hiking" color_3="#99000000">
+					<case nightMode="true" color_3="#cccccc"/>
+				</apply_if>
+				<apply_if additional="sac_scale=demanding_alpine_hiking" color_3="#99000000">
+					<case nightMode="true" color_3="#cccccc"/>
+				</apply_if>
+				<apply_if additional="sac_scale=difficult_alpine_hiking" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
 				<!--difficulté mtb -->
@@ -3998,31 +4011,16 @@
 				<apply_if additional="mtb:scale:imba=2" color_3="#ff0000"/>
 				<apply_if additional="mtb:scale=3" color_3="#ff0000"/>
 				<apply_if additional="mtb:scale:imba=3" color_3="#ff0000"/>
-				<apply_if additional="mtb:scale=4" color_3="#000000">
+				<apply_if additional="mtb:scale=4" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
-				<apply_if additional="mtb:scale:imba=4" color_3="#000000">
+				<apply_if additional="mtb:scale:imba=4" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
-				<apply_if additional="mtb:scale=5" color_3="#000000">
+				<apply_if additional="mtb:scale=5" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
-				<apply_if additional="mtb:scale=6" color_3="#000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
-				<!-- difficulté alpine	-->
-				<apply_if additional="sac_scale=hiking" color_3="#ff9933"/>
-				<apply_if additional="sac_scale=mountain_hiking" color_3="#ff0000"/>
-				<apply_if additional="sac_scale=demanding_mountain_hiking" color_3="#000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
-				<apply_if additional="sac_scale=alpine_hiking" color_3="#000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
-				<apply_if additional="sac_scale=demanding_alpine_hiking" color_3="#000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
-				<apply_if additional="sac_scale=difficult_alpine_hiking" color_3="#000000">
+				<apply_if additional="mtb:scale=6" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
 				<apply lessDetailed="false" cap_3="ROUND">
