@@ -172,9 +172,10 @@
 		
 	<renderingAttribute name="polygonMinSizeToDisplay">
 		<!-- Minimum polygon size in pixels -->
-		<case lessDetailed="false" minzoom="14" attrIntValue="10"/>
-		<case lessDetailed="true" attrIntValue="50"/>
-		<case attrIntValue="250"/>
+		<case lessDetailed="true" attrIntValue="75"/>
+		<case attrIntValue="250">
+			<apply_if minzoom="14" attrIntValue="5"/>
+		</case>
 	</renderingAttribute>
 	<renderingAttribute name="roadDensityZoomTile">
 		<!-- 8 (=1 pixel tile) down to 0 (=large tile) -->
@@ -214,7 +215,7 @@
 		<case arriereplan="true" attrColorValue="#00ff00" />
 		<case ign="true" attrColorValue="#114411"/>
 		<switch>
-			<case maxzoom="13" attrColorValue="#007700"/>
+			<case maxzoom="13" attrColorValue="#008000"/>
 			<case maxzoom="14" attrColorValue="#008800"/>
 			<case minzoom="15" attrColorValue="#009900"/>
 		</switch>
@@ -332,21 +333,21 @@
 	</renderingAttribute>
 	<renderingAttribute name="piste_pointillé">
 		<case maxzoom="12" attrStringValue="5_2"/> 
-		<case maxzoom="13" attrStringValue="6_3"/> 
-		<case maxzoom="14" attrStringValue="8_3"/> 
-		<case maxzoom="15" attrStringValue="14_4"/> 
-		<case maxzoom="16" attrStringValue="20_4"/> 
-		<case maxzoom="17" attrStringValue="28_5"/> 
-		<case minzoom="18" attrStringValue="35_6"/> 
+		<case maxzoom="13" attrStringValue="8_2"/> 
+		<case maxzoom="14" attrStringValue="12_3" />
+		<case maxzoom="15" attrStringValue="16_4" />
+		<case maxzoom="16" attrStringValue="20_5" />
+		<case maxzoom="17" attrStringValue="24_6" />
+		<case minzoom="18" attrStringValue="28_7" />
 	</renderingAttribute>
 	<renderingAttribute name="chemin_pointillé">
 		<case maxzoom="12" attrStringValue=""/> 
-		<case maxzoom="13" attrStringValue="6_3"/> 
-		<case maxzoom="14" attrStringValue="8_3"/> 
-		<case maxzoom="15" attrStringValue="14_4"/> 
-		<case maxzoom="16" attrStringValue="20_4"/> 
-		<case maxzoom="17" attrStringValue="28_5"/> 
-		<case minzoom="18" attrStringValue="35_6"/> 
+		<case maxzoom="13" attrStringValue="8_2"/> 
+		<case maxzoom="14" attrStringValue="12_3" />
+		<case maxzoom="15" attrStringValue="16_4" />
+		<case maxzoom="16" attrStringValue="20_5" />
+		<case maxzoom="17" attrStringValue="24_6" />
+		<case minzoom="18" attrStringValue="28_7" />
 	</renderingAttribute>
 	<renderingAttribute name="sentier_trait">
 		<case maxzoom="13" attrFloatValue="0" />
@@ -545,21 +546,23 @@
 			<!-- Polygon 1-10-->
 			<switch area="true" point="false" addPoint="true" objectType="3" order="10"><!-- aire non close -->
 				<case tag="leisure" value="nature_reserve" order="10" />
-				<case tag="boundary" value="national_park" order="10" />
+				<case tag="boundary" value="national_park" order="-1" />
+				<case tag="boundary" value="protected_area" order="-1" />
 				<case tag="man_made" value="breakwater" order="9"/>
 			</switch>
 
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5"><!-- start and end point are same -->
 				<case tag="leisure" value="nature_reserve" order="10" />
 				<case tag="boundary" value="national_park" order="-1" /> 
+				<case tag="boundary" value="protected_area" order="-1" />
 
 				<case tag="note_tag" value="yes" order="10"/>
 
 				<case tag="leisure" value="park" order="6"/>
 				<case tag="leisure" value="sports_centre" order="7"/>
 				<case tag="leisure" value="pitch" order="11"/>
-				<case tag="leisure" value="track" order="8"/><!--
-				<case tag="leisure" value="" order="10"/>-->
+				<case tag="leisure" value="track" order="8"/><!---->
+				<case tag="leisure" value="" order="10"/>
 
 				<case tag="amenity" value="parking" order="10"/>
 				<case tag="amenity" value="school" order="10"/>
@@ -634,7 +637,7 @@
 				<case tag="natural" value="hot_spring"/>
 				<case tag="natural" value="geyser"/>
 				<case tag="natural" value="crater"/>
-				<case tag="natural" value="wetland" order="7"/>
+				<case tag="natural" value="wetland" order="9"/>
 				<case tag="natural" value="scrub" order="7"/>
 				<case tag="natural" value="wood" order="7"/>
 				<case tag="natural" value="heath" order="8"/>
@@ -725,8 +728,8 @@
 			</switch>
 	
 			<switch area="false" addPoint="true" objectType="2" >
-				<!-- default line -->
-				<case tag="" value="" order="12"/><!---->
+				<!-- default line --><!--
+				<case tag="" value="" order="12"/>-->
 				<case tag="note_tag" value="yes" order="11"/>
 				
 				<case layer="-1" tag="" value="" order="11"/>
@@ -943,8 +946,8 @@
 				<case tag="aeroway" value="" order="62"/>
 				<case tag="railway" value="station"/>
 				<case tag="public_transport" value="platform"/>
-				<case tag="boundary" value="" order="20"/><!--
-				<case tag="boundary" value="protected_area" order="79" ignorePolygonArea="true"/>
+				<case tag="boundary" value="" order="20"/>
+				<case tag="boundary" value="protected_area" order="79" ignorePolygonArea="true"/><!--
 				<case tag="boundary" value="national_park" order="81" ignorePolygonArea="true"/>
 				<case tag="leisure" value="nature_reserve" order="80" />-->
 				<case tag="contour" value="elevation" order="11"/>
@@ -1087,6 +1090,7 @@
 		<!-- MTB icon -->
 		<switch textOnPath="false" textSize="10" textOrder="169" >
 			<case minzoom="14" tag="route_mtb" value="" nameTag="bicycle_ref" />
+			<case minzoom="14" tag="route_mtb" value="" nameTag2="name" />
 			<apply textColor="#00ffffff" textMinDistance="250">
 				<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
 			</apply>
@@ -3126,6 +3130,20 @@
 			<apply_if hideAccess="true" color_2="#6600ff00" color="#0000ff00" strokeWidth_2="8"/>
 		</switch> 
 
+		<!-- protected_area
+		<switch minzoom="10" >
+			<case tag="boundary" value="protected_area"/>
+			<apply color="#9900ff00">
+				<case maxzoom="10" color_2="#6600ff00" strokeWidth_2="1.5"/>
+				<case maxzoom="11" color_2="#5500ff00" strokeWidth_2="2"/>
+				<case maxzoom="12" color_2="#4400ff00" strokeWidth_2="3"/>
+				<case maxzoom="13" color_2="#3000ff00" strokeWidth_2="4"/>
+				<case minzoom="14" color_2="#2000ff00" strokeWidth_2="5"/>
+			</apply>
+			<apply_if nightMode="true" color_2="#009900" />
+			<apply_if ign="true" noPolygons="true" color_2="#8800ff00" />
+		</switch> -->
+		
 		<switch nightMode="true"><!--
 			<case tag="natural" value="land" />
 			<apply color="#000000"/>-->
@@ -3620,20 +3638,41 @@
 				<apply color="#0066ffff" color_5="#99996600" strokeWidth_5="1.5" pathEffect_5="1_3"/>
 			</switch>
 
-			<!-- chemins le dernier additional l'emporte	-->
+			<!-- chemins le premier additional l'emporte	-->
 			<switch tag="highway" value="track"	>
-				<!-- ecrase par les suivants si existants (info peu importante) -->
+				<!-- ecrase les tracktype si existants -->
 				<switch>
-					<case lessDetailed="false" additional="smoothness=very_bad" color_5="$chemin" strokeWidth_5="$chemin_trait" />
-					<case lessDetailed="false" additional="mtb:scale=0" color_5="$chemin" strokeWidth_5="$chemin_trait"/>
+					<case lessDetailed="false" additional="smoothness=horrible" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>				
+					<case lessDetailed="false" additional="smoothness=very_horrible" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
+					<case lessDetailed="false" additional="surface=sand" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
+					<case lessDetailed="false" additional="surface=mud" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
+					<case lessDetailed="false" additional="surface=grass" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=1" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
 					<apply_if engine_v1="true">
-						<case maxzoom="12" strokeWidth_5="0"/>
-						<case maxzoom="13" strokeWidth_5="1.8"/>
-						<case maxzoom="14" strokeWidth_5="2.2"/>
-						<case maxzoom="15" strokeWidth_5="2.6"/>
-						<case maxzoom="16" strokeWidth_5="3"/>
-						<case minzoom="17" strokeWidth_5="3.4"/> 
-						<case minzoom="18" strokeWidth_5="3.8"/> 					
+						<case maxzoom="12" strokeWidth_5="0" pathEffect_5=""/>
+						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="6_3"/>
+						<case maxzoom="14" strokeWidth_5="2.2" pathEffect_5="8_3"/>
+						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="14_4"/>
+						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/>
+						<case minzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/> 
+						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 										
+					</apply_if>
+				</switch>
+				<!-- impraticable ecrase les tracktypes si existants -->	
+				<switch>
+					<case lessDetailed="false" additional="smoothness=impassable" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=2" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=3" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=4" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=5" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=6" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+					<apply_if engine_v1="true">
+						<case maxzoom="13" strokeWidth_5="0" />
+						<case maxzoom="14" strokeWidth_5="1.6" pathEffect_5="6_3" />
+						<case maxzoom="15" strokeWidth_5="2.1" pathEffect_5="8_4" />
+						<case maxzoom="16" strokeWidth_5="2.6" pathEffect_5="10_5" />
+						<case maxzoom="17" strokeWidth_5="3.0" pathEffect_5="12_6" />
+						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="14_7" />					
 					</apply_if>
 				</switch>
 				<!-- exploitation 	-->				
@@ -3648,6 +3687,20 @@
 						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/>
 						<case minzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/> 
 						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 										
+					</apply_if>
+				</switch>
+				<!-- ecrasé par les précédents si existants (info peu importante) -->
+				<switch>
+					<case lessDetailed="false" additional="smoothness=very_bad" color_5="$chemin" strokeWidth_5="$chemin_trait" />
+					<case lessDetailed="false" additional="mtb:scale=0" color_5="$chemin" strokeWidth_5="$chemin_trait"/>
+					<apply_if engine_v1="true">
+						<case maxzoom="12" strokeWidth_5="0"/>
+						<case maxzoom="13" strokeWidth_5="1.8"/>
+						<case maxzoom="14" strokeWidth_5="2.2"/>
+						<case maxzoom="15" strokeWidth_5="2.6"/>
+						<case maxzoom="16" strokeWidth_5="3"/>
+						<case minzoom="17" strokeWidth_5="3.4"/> 
+						<case minzoom="18" strokeWidth_5="3.8"/> 					
 					</apply_if>
 				</switch>
 				<!-- selon meteo 	-->
@@ -3738,41 +3791,6 @@
 						<case minzoom="18" strokeWidth_5="3.8"> 
 							<apply_if lessDetailed="true" strokeWidth_5="5.4"/> 
 						</case>
-					</apply_if>
-				</switch>
-				<!-- ecrase les tracktype si existants -->
-				<switch>
-					<case lessDetailed="false" additional="smoothness=horrible" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>				
-					<case lessDetailed="false" additional="smoothness=very_horrible" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
-					<case lessDetailed="false" additional="surface=sand" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
-					<case lessDetailed="false" additional="surface=mud" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
-					<case lessDetailed="false" additional="surface=grass" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=1" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
-					<apply_if engine_v1="true">
-						<case maxzoom="12" strokeWidth_5="0" pathEffect_5=""/>
-						<case maxzoom="13" strokeWidth_5="1.8" pathEffect_5="6_3"/>
-						<case maxzoom="14" strokeWidth_5="2.2" pathEffect_5="8_3"/>
-						<case maxzoom="15" strokeWidth_5="2.6" pathEffect_5="14_4"/>
-						<case maxzoom="16" strokeWidth_5="3" pathEffect_5="20_4"/>
-						<case minzoom="17" strokeWidth_5="3.4" pathEffect_5="28_5"/> 
-						<case minzoom="18" strokeWidth_5="3.8" pathEffect_5="35_6"/> 										
-					</apply_if>
-				</switch>
-				<!-- impraticable ecrase les tracktypes si existants -->	
-				<switch>
-					<case lessDetailed="false" additional="smoothness=impassable" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=2" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=3" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=4" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=5" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=6" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<apply_if engine_v1="true">
-						<case maxzoom="13" strokeWidth_5="0" />
-						<case maxzoom="14" strokeWidth_5="1.6" pathEffect_5="6_3" />
-						<case maxzoom="15" strokeWidth_5="2.1" pathEffect_5="8_4" />
-						<case maxzoom="16" strokeWidth_5="2.6" pathEffect_5="10_5" />
-						<case maxzoom="17" strokeWidth_5="3.0" pathEffect_5="12_6" />
-						<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="14_7" />					
 					</apply_if>
 				</switch>
 				
@@ -4587,12 +4605,12 @@
 			<apply_if nightMode="true" color__1="#333333" color="#999999" color_2="#999999"/>
 		</switch>
 
-		<!-- nature reserve 
-		<switch hideAccess="true" minzoom="9">
-			<case tag="leisure" value="nature_reserve"/>
+		<!-- protected_area 
+		<switch minzoom="10">
+			<case tag="boundary" value="protected_area"/>
 			<apply color="#00ff00" >
-				<case maxzoom="10" strokeWidth="4" />
-				<case minzoom="11" strokeWidth="6" />
+				<case maxzoom="11" strokeWidth="4" />
+				<case minzoom="12" strokeWidth="6" />
 			</apply>
 		</switch>-->
 
