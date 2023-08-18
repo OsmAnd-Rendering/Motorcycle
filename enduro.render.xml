@@ -375,7 +375,7 @@
 		<case contourColorScheme="brown" attrColorValue="#40bb9966"/>
 		<case contourColorScheme="dark_brown" attrColorValue="#30886633"/>
 		<case contourColorScheme="red" attrColorValue="#40ff6666"/>
-		<case attrColorValue="#20333333">
+		<case attrColorValue="#1c333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
@@ -389,7 +389,7 @@
 		<case contourColorScheme="brown" attrColorValue="#49bb9966"/>
 		<case contourColorScheme="dark_brown" attrColorValue="#39886633"/>
 		<case contourColorScheme="red" attrColorValue="#59ff6666"/>
-		<case attrColorValue="#29333333">
+		<case attrColorValue="#1c333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
@@ -403,7 +403,7 @@
 		<case contourColorScheme="brown" attrColorValue="#4fbb9966"/>
 		<case contourColorScheme="dark_brown" attrColorValue="#3f886633"/>
 		<case contourColorScheme="red" attrColorValue="#5fff6666"/>
-		<case attrColorValue="#2f333333">
+		<case attrColorValue="#1c333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
@@ -1034,6 +1034,15 @@
 			</switch>
 		</switch>
 
+		<!-- track name -->
+		<switch minzoom="17" nightMode="false" textOnPath="true" textSize="10" textOrder="169" textHaloColor="#99ffffff" textHaloRadius="3">
+			<case tag="highway" value="track" nameTag="" /> 
+			<case tag="highway" value="path" nameTag="" /> 
+			<case tag="highway" value="service" nameTag="" /> 
+			<apply textColor="#996600" textMinDistance="250">
+			</apply>
+		</switch>
+
 		<!--motorway jonction-->
 		<case minzoom="19" tag="highway" value="motorway_junction" textColor="#00008b" textHaloRadius="1" textWrapWidth="16" textMinDistance="10" textOrder="146" textItalic="true">
 			<case textSize="12" nameTag="" nameTag2="ref"/>
@@ -1088,9 +1097,10 @@
 		</switch> 
 
 		<!-- MTB icon -->
-		<switch textOnPath="false" textSize="10" textOrder="169" >
-			<case minzoom="14" tag="route_mtb" value="" nameTag="bicycle_ref" />
-			<case minzoom="14" tag="route_mtb" value="" nameTag2="name" />
+		<switch minzoom="14" textOnPath="false" textSize="10" textOrder="169" >
+			<case tag="route_mtb" value="" nameTag="bicycle_ref" />
+			<case tag="route_mtb" value="" nameTag="bicycle_mtb:name" />
+			<case tag="route_mtb" value="" nameTag="mtb:name" />
 			<apply textColor="#00ffffff" textMinDistance="250">
 				<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
 			</apply>
