@@ -882,7 +882,7 @@
 					<apply_if additional="layer=-2" order="16"/>
 				</case>
 				<case tag="highway" value="steps" order="65"/>
-				<case tag="abandoned:highway" value="61"/>
+				<case tag="abandoned:highway" value="" order="61"/>
 				<case tag="highway" value="via_ferrata"/>
 				<case tag="highway" value="raceway" order="85"/>
 				<case tag="highway" value="bridleway" order="53"/>
@@ -1496,7 +1496,7 @@
 		<!-- lieu dit (locality) -->
 		<switch lessDetailed="false" nameTag="" >
 			<case minzoom="15" tag="place" value="locality"/>
-			<apply textHaloRadius="0" textHaloColor="#66336633" textItalic="true" textBold="true" textOrder="52" intersectionMargin="5" >
+			<apply textHaloRadius="0" textHaloColor="#66336633" textItalic="true" textBold="true" textOrder="112"  ><!-- intersectionMargin="5" -->
 				<case maxzoom="15" textSize="10" textColor="#33003300"/>
 				<case maxzoom="16" textSize="14" textColor="#2f003300"/>
 				<case minzoom="17" textSize="18" textColor="#20003300"/>
@@ -2365,12 +2365,8 @@
 			<case minzoom="14" tag="tourism" value="cabin" icon="topo_cabin" shield="green_round_shield"/>
 			<case minzoom="14" tag="tourism" value="lean_to" icon="topo_lean_to" shield="green_round_shield"/>
 			<case minzoom="14" tag="tourism" value="wilderness_hut" icon="topo_wilderness_hut" shield="green_round_shield"/>
-			<case minzoom="15" tag="" value="public_transport" icon="" shield="" iconOrder="130"/>
-			<case minzoom="15" tag="amenity" value="shelter" >
-				<apply icon="topo_shelter" shield="green_round_shield" iconOrder="130"/>
-				<apply_if additional="shelter_type=public_transport" icon="" shield=""/>
-				<apply_if additional="shelter=public_transport" icon="" shield=""/>
-				<apply_if lessDetailed="true" maxzoom="16" icon="" shield=""/>
+			<case minzoom="14" tag="amenity" value="shelter" >
+				<apply_if additional="osmand_not_pt_shelter=yes" icon="topo_shelter" shield="green_round_shield" iconOrder="48"/>
 			</case>
 			<apply_if minzoom="14" additional="drinking_water=yes" icon_2="topo_drinking_water_yes_map"/><!--
 			<apply_if minzoom="16" additional="drinking_water=no" icon_2="topo_drinking_water_no_map"/>-->
@@ -2498,7 +2494,7 @@
 			<apply_if ign="true" noPolygons="true" icon="" shield=""/><!--
 			<apply_if nightMode="true" shield=""/>-->
 		</switch>
-		<case minzoom="16" tag="amenity" value="drinking_water" icon="topo_drinking_water" shield="topo_drinking_water_shield" iconOrder="44">
+		<case minzoom="16" tag="amenity" value="drinking_water" icon="topo_drinking_water" shield="topo_drinking_water_shield" iconOrder="49">
 			<apply_if nightMode="true" maxzoom="16" icon="" shield=""/>
 			<apply_if lessDetailed="true" maxzoom="17" icon="" shield=""/>
 		</case>
@@ -3639,15 +3635,15 @@
 		</switch>
 
 		<!-- chemins & sentiers -->
-		<switch strokeWidth="0.1">
-			<!-- disused-->
+			<!-- disused converti en abandoned par osmand -->
 			<switch minzoom="14">
 				<case tag="abandoned:highway" value="track"/>
 				<case tag="abandoned:highway" value="path"/>
 				<case tag="abandoned:highway" value="footway"/>
-				<apply color="#0066ffff" color_5="#99996600" strokeWidth_5="1.5" pathEffect_5="1_3"/>
+				<apply color="#cc996600" strokeWidth="1.5" pathEffect="1_4"/>
 			</switch>
-
+			
+		<switch strokeWidth="0.1">
 			<!-- chemins le premier additional l'emporte	-->
 			<switch tag="highway" value="track"	>
 				<!-- ecrase les tracktype si existants -->
