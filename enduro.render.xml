@@ -4078,13 +4078,15 @@
 			<apply hideAccess="false" >
 				<switch>
 					<case additional="access=private"/>
-					<case additional="vehicle=private"/>
-					<case additional="motor_vehicle=private"/>
-					<case additional="motorcar=private"/>
-					<case additional="motor_vehicle=no"/>
-					<case additional="vehicle=no"/>
-					<case additional="vehicle=no"/>
 					<case additional="access=no"/>
+					<case additional="vehicle=private"/>
+					<case additional="vehicle=no"/>
+					<case additional="motor_vehicle=private"/>
+					<case additional="motor_vehicle=no"/>
+					<case additional="motorcar=private"/>
+					<case additional="motorcar=no"/>
+					<case additional="motorcycle=private"/>
+					<case additional="motorcycle=no"/>
 					<case tag="highway" value="cycleway"/>
 					<case tag="highway" value="footway"/>
 					<apply color_5="$interdit" color_3="#00000000" />
