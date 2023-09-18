@@ -3571,8 +3571,21 @@
 					<case additional="surface=gravel"/>
 					<case additional="surface=compacted"/>
 					<case additional="surface=fine_gravel"/>
+					<case additional="tracktype=grade2"/>
+					<case additional="tracktype=grade3"/>
 					<apply color="#cc9933" shadowColor="#996600"/>					
 					<apply_if nightMode="true" color="#996600" shadowColor="#000000"/>					
+				</switch>
+			</apply>
+			<apply >
+				<switch >
+					<case additional="surface=ground"/>
+					<case additional="surface=dirt"/>
+					<case additional="surface=earth"/>
+					<case additional="tracktype=grade4"/>
+					<case additional="tracktype=grade5"/>
+					<apply color="#00cc00" shadowColor="#006600"/>					
+					<apply_if nightMode="true" color="#009900" shadowColor="#000000"/>					
 				</switch>
 			</apply>
 		</switch>
