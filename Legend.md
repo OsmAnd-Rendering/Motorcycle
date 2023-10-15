@@ -167,6 +167,10 @@
 | :-------------: | :-------------: | 
 |![route_construction](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/633cc7ee-b62d-4265-8131-effe1a066b85)|![route_construction_nuit](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/7e79beaa-4d07-47e0-aabd-9aa05a90f1b5)|
 
+| route en gravier | route en terre |
+| :-------------: | :-------------: | 
+|![gravel_road](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/f335728e-21f3-4aa2-b834-f96881cc6cae)|![dirt_road](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/255ff14a-474e-42fb-86cb-0ef98377401e)|
+
 ---
 
 ## voies ferrées
