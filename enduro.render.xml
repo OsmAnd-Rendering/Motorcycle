@@ -89,7 +89,7 @@
 		</case>
 	</renderingAttribute>
 	<renderingAttribute name="measureDistanceLine"><!-- ligne planif itineraire -->
-		<case color="#66ff00ff" strokeWidth="24" />
+		<case color="#66ff00ff" strokeWidth="16" />
 		<apply_if nightMode="true" color="#66ff00ff"/>
 	</renderingAttribute>
 	<renderingAttribute name="markerGuideline">
