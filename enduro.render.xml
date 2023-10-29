@@ -3534,9 +3534,32 @@
 				<case lessDetailed="false" shadowColor="#000000"/>
 			</apply_if>
 
+			<!-- gravel road -->
+			<apply >
+				<switch >
+					<case additional="surface=gravel"/>
+					<case additional="surface=compacted"/>
+					<case additional="surface=fine_gravel"/>
+					<case additional="tracktype=grade2"/>
+					<case additional="tracktype=grade3"/>
+					<apply strokeWidth="$piste_trait" color="$piste" shadowRadius="0"/>		
+				</switch>
+			</apply>
+			<!-- dirt road -->
+			<apply >
+				<switch >
+					<case additional="surface=ground"/>
+					<case additional="surface=dirt"/>
+					<case additional="surface=earth"/>
+					<case additional="tracktype=grade4"/>
+					<case additional="tracktype=grade5"/>
+					<apply color="$chemin" strokeWidth="$chemin_trait" shadowRadius="0"/>			
+				</switch>
+			</apply>
+
 			<!-- interdiction -->
 			<apply hideAccess="false" >
-				<switch minzoom="16">
+				<switch minzoom="16"><!--  -->
 					<case tag="highway" value="pedestrian"/>
 					<case additional="access=private"/>
 					<case additional="vehicle=private"/>
@@ -3558,36 +3581,12 @@
 					<case additional="motorcar=agricultural"/>
 					<case additional="motor_vehicle=agricultural"/>
 					<case additional="access=agricultural"/>
-					<apply color="#ff9999" />
-					<apply_if nightMode="true" color="#882222"/>
-					<apply_if additional="service=driveway" strokeWidth="0"/>
-					<apply_if additional="oneway=yes" pathIcon=""/><!--
-					<apply_if tag="highway" value="service" additional="access=private" strokeWidth_2="0"/>-->
+					<apply color="#ff6666" />
+					<apply_if nightMode="true" color="#aa0000"/><!-- 
+					<apply_if additional="service=driveway" strokeWidth="0"/> -->
+					<apply_if additional="oneway=yes" pathIcon=""/>
 				</switch>
 			</apply> 
-			<!-- gravel road -->
-			<apply >
-				<switch >
-					<case additional="surface=gravel"/>
-					<case additional="surface=compacted"/>
-					<case additional="surface=fine_gravel"/>
-					<case additional="tracktype=grade2"/>
-					<case additional="tracktype=grade3"/>
-					<apply color="#cc9933" shadowColor="#996600"/>					
-					<apply_if nightMode="true" color="#996600" shadowColor="#000000"/>					
-				</switch>
-			</apply>
-			<apply >
-				<switch >
-					<case additional="surface=ground"/>
-					<case additional="surface=dirt"/>
-					<case additional="surface=earth"/>
-					<case additional="tracktype=grade4"/>
-					<case additional="tracktype=grade5"/>
-					<apply color="#00cc00" shadowColor="#006600"/>					
-					<apply_if nightMode="true" color="#009900" shadowColor="#000000"/>					
-				</switch>
-			</apply>
 		</switch>
 
 		<!-- rail -->
