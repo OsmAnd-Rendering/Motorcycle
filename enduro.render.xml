@@ -4454,8 +4454,8 @@
 			<apply_if additional="tunnel=yes" pathEffect="2_5"/>
 			<apply_if additional="tunnel=building_passage" pathEffect="2_5"/>
 			<apply_if additional="tunnel=avalanche_protector" pathEffect="2_5"/>
-			<apply_if additional="tunnel=culvert" pathEffect="2_5"/>
-			<apply_if additional="layer=-1" pathEffect="2_5"/>
+			<apply_if additional="tunnel=culvert" pathEffect="2_5"/><!--
+			<apply_if additional="layer=-1" pathEffect="2_5"/>-->
 			<apply_if additional="layer=-2" disable="true"/>
 			<apply_if arriereplan="true" color="#336699" shadowColor="#336699"/>
 			<apply_if nightMode="true" color="#114477" shadowColor="#114477" color_2="#114477"/>
