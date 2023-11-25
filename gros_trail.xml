@@ -203,6 +203,8 @@
 				<select value="2" t="highway" v="service"/>
 				<select value="2" t="highway" v="residential"/>
 				<select value="1" t="highway" v="living_street"/>
+				<select value="0.1" t="smoothness" v="very_horrible"/><!-- 30 -->
+				<select value="0.1" t="smoothness" v="horrible"/><!-- 40 -->
 				<select value="0.5" t="tracktype" v="grade2"/>
 				<select value="1" t="tracktype" v="grade1"/>
 				<select value="0.1" t="highway" v="track"/><!--20 -->
