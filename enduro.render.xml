@@ -4199,7 +4199,7 @@
 					<case additional="motorcycle=no"/>
 					<case tag="highway" value="cycleway"/>
 					<case tag="highway" value="footway"/>
-					<apply color_5="$interdit" color_3="#00000000" />
+					<apply color_5="$interdit" color_3="#00000000" color="$interdit" shadowRadius="0"/>
 				</switch>
 				<switch>
 					<case additional="vehicle=destination"/>
@@ -4214,7 +4214,7 @@
 					<case additional="motorcar=agricultural"/>
 					<case additional="motor_vehicle=agricultural"/>
 					<case additional="access=agricultural"/>
-					<apply color_5="$interdit" color_3="#00000000"/>
+					<apply color_5="$interdit" color_3="#00000000" color="$interdit" shadowRadius="0"/>
 				</switch>
 			</apply> 
 
