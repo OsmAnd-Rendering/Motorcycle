@@ -3639,7 +3639,7 @@
 			<!-- chemins le premier additional l'emporte	-->
 			<switch tag="highway" value="track"	>
 				<!-- goudronné 	-->
-				<switch>
+				<switch minzoom="14">
 					<case additional="surface=asphalt" />
 					<case additional="tracktype=grade1" />
 					<apply color="#ffffff" > 
@@ -3923,7 +3923,7 @@
 			<!-- service -->
 			<switch minzoom="12" tag="highway" value="service" >
 				<!-- goudronné 	-->
-				<switch>
+				<switch minzoom="14">
 					<case additional="surface=asphalt" />
 					<case additional="tracktype=grade1" />
 					<apply color="#ffffff" > 
