@@ -3665,15 +3665,6 @@
 							<case nightMode="true" maxzoom="13" color="#777777" shadowColor="#777777" />
 							<apply maxzoom="12" strokeWidth="0"/>
 						</apply_if>
-						<apply_if ign="true">
-							<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" />
-							<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" />
-							<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7"/>
-							<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10"/>
-							<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18"/>
-							<case noPolygons="true" maxzoom="18" strokeWidth="12" strokeWidth_0="26"/>
-							<case noPolygons="true" minzoom="19" strokeWidth="18" strokeWidth_0="34"/>
-						</apply_if>
 					</apply>
 				</switch>
 				<!-- impraticable ecrase les tracktypes si existants -->	
@@ -3834,7 +3825,6 @@
 					<switch>
 						<case additional="surface=gravel"/>
 						<case additional="surface=paved"/>
-						<case additional="surface=asphalt"/>
 						<case additional="surface=concrete"/>
 						<case additional="surface=concrete:lanes"/>
 						<case additional="surface=concrete:plates"/>
@@ -3847,9 +3837,10 @@
 						<case additional="smoothness=good"/>
 						<case additional="smoothness=excellent"/>
 						<case additional="tracktype=grade2"/>
+						<case additional="surface=asphalt"/>
 						<case additional="tracktype=grade1"/>
 						<apply pathEffect_5="" strokeWidth_5="$chemin_trait_ign"/>
-						<apply_if noPolygons="true" color_5="#ffffff" color="#000000" color__2="#99ffffff"><!--  -->
+						<apply_if noPolygons="true" color_5="#ffffff" color="#000000" color__2="#99ffffff" cap="BUTT" shadowColor="#01000000"><!--  -->
 							<case maxzoom="12" strokeWidth="0" strokeWidth_5="0" strokeWidth__2="0" />
 							<case maxzoom="13" strokeWidth="3.8" strokeWidth_5="2.0" pathEffect_5="12_4" pathEffect="12_4" strokeWidth__2="3.8"/>
 							<case maxzoom="14" strokeWidth="4.4" strokeWidth_5="2.2" pathEffect_5="14_5" pathEffect="14_5" strokeWidth__2="4.4"/>
@@ -3949,18 +3940,9 @@
 							<case nightMode="true" maxzoom="13" color="#777777" shadowColor="#777777" />
 							<apply maxzoom="12" strokeWidth="0"/>
 						</apply_if>
-						<apply_if ign="true">
-							<case noPolygons="true" maxzoom="13" strokeWidth="2.4" strokeWidth_0="6" />
-							<case noPolygons="true" maxzoom="14" strokeWidth="2.6" strokeWidth_0="6.4" />
-							<case noPolygons="true" maxzoom="15" strokeWidth="2.8" strokeWidth_0="7"/>
-							<case noPolygons="true" maxzoom="16" strokeWidth="4.5" strokeWidth_0="10"/>
-							<case noPolygons="true" maxzoom="17" strokeWidth="8" strokeWidth_0="18"/>
-							<case noPolygons="true" maxzoom="18" strokeWidth="12" strokeWidth_0="26"/>
-							<case noPolygons="true" minzoom="19" strokeWidth="18" strokeWidth_0="34"/>
-						</apply_if>
+					<apply_if ign="true" shadowColor="#000000"/>
 					</apply>
 				</switch>
-
 				<!-- sans precision -->
 				<switch>
 					<case />
@@ -3969,8 +3951,9 @@
 					<apply_if additional="layer=-3" strokeWidth="0"/>
 					<apply_if additional="service=parking_aisle" maxzoom="15" strokeWidth="0"/>
 					<apply_if arriereplan="true" color="#000000" shadowColor="#99000000" shadowRadius="4"/>
-					<apply_if ign="true" pathEffect="" strokeWidth="$chemin_trait_ign">
-						<apply_if noPolygons="true" color_5="#ffffff" color="#000000" color__2="#99ffffff" cap="BUTT">
+					<apply_if ign="true" >
+						<apply pathEffect_5="" strokeWidth_5="$chemin_trait_ign"/>
+						<apply_if noPolygons="true" color_5="#ffffff" color="#000000" color__2="#99ffffff" cap="BUTT" ><!--  -->
 							<case maxzoom="12" strokeWidth="0" strokeWidth_5="0" strokeWidth__2="0" />
 							<case maxzoom="13" strokeWidth="3.8" strokeWidth_5="2.0" pathEffect_5="12_4" pathEffect="12_4" strokeWidth__2="3.8"/>
 							<case maxzoom="14" strokeWidth="4.4" strokeWidth_5="2.2" pathEffect_5="14_5" pathEffect="14_5" strokeWidth__2="4.4"/>
@@ -3980,7 +3963,7 @@
 							<case maxzoom="18" strokeWidth="18" strokeWidth_5="12" pathEffect_5="44_9" pathEffect="44_9" strokeWidth__2="18"/>
 							<case minzoom="19" strokeWidth="26" strokeWidth_5="18" pathEffect_5="57_10" pathEffect="57_10" strokeWidth__2="26"/>
 						</apply_if>
-						<apply_if nightMode="true" color="$chemin"/>
+						<apply_if nightMode="true" color_5="$chemin"/>
 						<apply_if engine_v1="true" >
 							<case noPolygons="false" maxzoom="12" strokeWidth_5="0"/>
 							<case noPolygons="false" maxzoom="13" strokeWidth_5="1.5"/>
@@ -3996,8 +3979,7 @@
 							<case noPolygons="false" minzoom="18" strokeWidth_5="3.0"/> 
 							<case noPolygons="true" minzoom="18" strokeWidth_5="10"/> 
 						</apply_if>
-					</apply_if>
-				</switch>
+					</apply_if>				</switch>
 			</switch>
 				
 			<!-- sentier -->
