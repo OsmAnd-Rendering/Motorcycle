@@ -236,6 +236,7 @@
 				<select value="0.5" t="surface" v="mud"/>
 				<select value="1" t="surface" v="sand"/>
 				<select value="1" t="surface" v="grass"/>
+				<select value="1.75" t="tracktype" v="grade5"/>
 				<select value="2.75" t="tracktype" v="grade4"/>
 				<select value="3.5" t="surface" v="compacted"/>
 				<select value="3.5" t="surface" v="gravel"/>

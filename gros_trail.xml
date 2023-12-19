@@ -234,7 +234,7 @@
 				<select value="1.25" t="surface" v="ground"/>-->
 				<select value="1.25" t="surface" v="rock"/>
 				<select value="1.25" t="tracktype" v="grade5"/><!-- 20 -->
-				<select value="3.5" t="tracktype" v="grade4"/><!-- 30 -->
+				<select value="1.5" t="tracktype" v="grade4"/><!-- 30 -->
 				<select value="2" t="surface" v="unhewn_cobblestone"/><!-- 30 -->
 				<select value="2" t="surface" v="cobblestone"/><!-- 60 -->
 				<select value="2" t="tracktype" v="grade3"/><!-- 60 -->
@@ -306,7 +306,7 @@
 			<select value="0.25" t="smoothness" v="horrible"/><!-- 40 -->
 			<select value="0.25" t="tracktype" v="grade5"/><!-- 20 -->
 			<select value="0.5" t="surface" v="rock"/><!-- 30 -->
-			<select value="2.75" t="tracktype" v="grade4"/><!-- 30 -->
+			<select value="0.75" t="tracktype" v="grade4"/><!-- 30 -->
 
 			<select value="2" t="surface" v="unhewn_cobblestone"/><!-- 60 -->
 			<select value="2" t="surface" v="cobblestone"/><!-- 60 -->
