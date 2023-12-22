@@ -369,42 +369,51 @@
 	<renderingConstant name="null" value="#000000"/>
 
 	<renderingAttribute name="contourLineColor">
-		<case contourColorScheme="white" attrColorValue="#50ffffff"/>
-		<case contourColorScheme="yellow" attrColorValue="#50FFff99"/>
-		<case contourColorScheme="green" attrColorValue="#40009900"/>
-		<case contourColorScheme="light_brown" attrColorValue="#50ccbb66"/>
-		<case contourColorScheme="brown" attrColorValue="#40bb9966"/>
+		<case contourColorScheme="white" attrColorValue="#16333333">
+			<apply_if nightMode="true" attrColorValue="#99666666"/>
+			<apply_if arriereplan="true" attrColorValue="#99000000"/>
+		</case>
+		<case contourColorScheme="yellow" attrColorValue="#50aaaa66"/>
+		<case contourColorScheme="green" attrColorValue="#5066aa66"/>
+		<case contourColorScheme="light_brown" attrColorValue="#20886633"/>
+		<case contourColorScheme="brown" attrColorValue="#25886633"/>
 		<case contourColorScheme="dark_brown" attrColorValue="#30886633"/>
-		<case contourColorScheme="red" attrColorValue="#40ff6666"/>
-		<case attrColorValue="#1c333333">
+		<case contourColorScheme="red" attrColorValue="#50aa6666"/>
+		<case attrColorValue="#22333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
 	</renderingAttribute>
 
 	<renderingAttribute name="contourLineColor50">
-		<case contourColorScheme="white" attrColorValue="#59ffffff"/>
-		<case contourColorScheme="yellow" attrColorValue="#59FFff99"/>
-		<case contourColorScheme="green" attrColorValue="#49009900"/>
-		<case contourColorScheme="light_brown" attrColorValue="#59ccaa66"/>
-		<case contourColorScheme="brown" attrColorValue="#49bb9966"/>
-		<case contourColorScheme="dark_brown" attrColorValue="#39886633"/>
-		<case contourColorScheme="red" attrColorValue="#59ff6666"/>
-		<case attrColorValue="#1c333333">
+		<case contourColorScheme="white" attrColorValue="#16333333">
+			<apply_if nightMode="true" attrColorValue="#99666666"/>
+			<apply_if arriereplan="true" attrColorValue="#99000000"/>
+		</case>
+		<case contourColorScheme="yellow" attrColorValue="#50aaaa66"/>
+		<case contourColorScheme="green" attrColorValue="#5066aa66"/>
+		<case contourColorScheme="light_brown" attrColorValue="#20886633"/>
+		<case contourColorScheme="brown" attrColorValue="#25886633"/>
+		<case contourColorScheme="dark_brown" attrColorValue="#30886633"/>
+		<case contourColorScheme="red" attrColorValue="#50aa6666"/>
+		<case attrColorValue="#22333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
 	</renderingAttribute>
 
 	<renderingAttribute name="contourLineColor100">
-		<case contourColorScheme="white" attrColorValue="#5fffffff"/>
-		<case contourColorScheme="yellow" attrColorValue="#5fFFff99"/>
-		<case contourColorScheme="green" attrColorValue="#4f009900"/>
-		<case contourColorScheme="light_brown" attrColorValue="#5fccaa66"/>
-		<case contourColorScheme="brown" attrColorValue="#4fbb9966"/>
-		<case contourColorScheme="dark_brown" attrColorValue="#3f886633"/>
-		<case contourColorScheme="red" attrColorValue="#5fff6666"/>
-		<case attrColorValue="#1c333333">
+		<case contourColorScheme="white" attrColorValue="#16333333">
+			<apply_if nightMode="true" attrColorValue="#99666666"/>
+			<apply_if arriereplan="true" attrColorValue="#99000000"/>
+		</case>
+		<case contourColorScheme="yellow" attrColorValue="#50aaaa66"/>
+		<case contourColorScheme="green" attrColorValue="#5066aa66"/>
+		<case contourColorScheme="light_brown" attrColorValue="#20886633"/>
+		<case contourColorScheme="brown" attrColorValue="#25886633"/>
+		<case contourColorScheme="dark_brown" attrColorValue="#30886633"/>
+		<case contourColorScheme="red" attrColorValue="#50aa6666"/>
+		<case attrColorValue="#22333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
@@ -1172,7 +1181,7 @@
 			</switch>
 			<switch minzoom="14" textOrder="63" >
 				<case tag="highway" value="tertiary" />
-				<apply textColor="#000000" intersectionMargin="25">
+				<apply textColor="#000000" ><!-- intersectionMargin="25" -->
 					<case textHaloColor="#ffee00" />
 				</apply>
 				<apply_if nightMode="true" textHaloColor="#cccc66" >
@@ -1189,7 +1198,7 @@
 			</switch>
 			<switch minzoom="16" textOrder="144" >
 				<case tag="highway" value="unclassified" />
-				<apply textColor="#000000" intersectionMargin="25">
+				<apply textColor="#000000" ><!-- intersectionMargin="25" -->
 					<case textHaloColor="#ffffff" />
 				</apply>
 				<apply_if nightMode="true" textHaloColor="#cccccc" >
@@ -1304,7 +1313,7 @@
 		<!-- villes -->
 		<switch >
 			<switch textColor="#000000" textWrapWidth="20" textBold="true" >
-				<case minzoom="5" tag="place" value="city" nameTag="" textOrder="29" intersectionMargin="3"/><!-- intersectionSizeFactor="1" intersectsWith="place" -->
+				<case minzoom="5" tag="place" value="city" nameTag="" textOrder="29" /><!-- intersectionMargin="3" -->
 				<apply textHaloColor="#ffffff">
 					<case maxzoom="5" textSize="10"/>
 					<case maxzoom="6" textSize="11"/>
@@ -1354,11 +1363,11 @@
 
 			<!-- town -->
 			<switch minzoom="8" textColor="#000000" textWrapWidth="20" textBold="true" >
-				<case tag="place" value="town" textOrder="34" intersectionMargin="2"/>
+				<case tag="place" value="town" textOrder="34" /><!-- intersectionMargin="2" -->
 				<apply textHaloColor="#ffffff">
-					<case maxzoom="8" textSize="10" intersectionMargin="5"/>
-					<case maxzoom="9" textSize="10" intersectionMargin="3"/>
-					<case maxzoom="10" textSize="11" intersectionMargin="3"/>
+					<case maxzoom="8" textSize="10" /><!-- intersectionMargin="5" -->
+					<case maxzoom="9" textSize="10" /><!-- intersectionMargin="3" -->
+					<case maxzoom="10" textSize="11" /><!-- intersectionMargin="3" -->
 					<case maxzoom="11" textSize="12"/>
 					<case maxzoom="12" textSize="13"/>
 					<case maxzoom="13" textSize="13"/>
@@ -1396,7 +1405,7 @@
 			<!-- villages -->
 			<switch minzoom="10" >
 				<case tag="place" value="village" textOrder="42" textWrapWidth="20" textSize="10" textBold="true" textColor="#000000" />
-				<apply textHaloColor="#ffffff" intersectionMargin="20" intersectsWith="any">
+				<apply textHaloColor="#ffffff" intersectionMargin="20"><!--  intersectsWith="any" -->
 					<case maxzoom="10" textSize="10"/>
 					<case maxzoom="11" textSize="10"/>
 					<case maxzoom="12" textSize="11"/>
@@ -4002,7 +4011,28 @@
 						<case minzoom="18" strokeWidth_5="3.8"> 
 							<apply_if lessDetailed="true" strokeWidth_5="5.4"/> 
 						</case>
-					</apply_if>
+					</apply_if><!--  
+					<apply_if ign="true" color_5="#ffffff" shadowColor="#000000" color="#000000" color__2="#ccffffff">
+						<case maxzoom="13" strokeWidth_5="2.5" shadowRadius="2.2"/>
+						<case maxzoom="14" strokeWidth_5="3" shadowRadius="2.4"/>
+						<case maxzoom="15" strokeWidth_5="4" shadowRadius="3.2"/>
+						<case maxzoom="16" strokeWidth_5="5" shadowRadius="4.2"/>
+						<case maxzoom="17" strokeWidth_5="6" shadowRadius="5.2"/>
+						<case maxzoom="18" strokeWidth_5="7" shadowRadius="6.2"/>
+						<case maxzoom="19" strokeWidth_5="8" shadowRadius="7.2"/>
+						<case maxzoom="20" strokeWidth_5="9" shadowRadius="8.2"/>
+						<case minzoom="21" strokeWidth_5="10" shadowRadius="9.2"/>
+					</apply_if>-->
+						<apply_if ign="true" color_5="#ffffff" color_2="#000000" color__2="#ccffffff">
+							<case maxzoom="12" strokeWidth_2="0" strokeWidth_5="0" strokeWidth__2="0" />
+							<case maxzoom="13" strokeWidth_2="3.8" strokeWidth_5="2.0" pathEffect_5="12_4" pathEffect_2="12_4" strokeWidth__2="3.8"/>
+							<case maxzoom="14" strokeWidth_2="4.4" strokeWidth_5="2.2" pathEffect_5="14_5" pathEffect_2="14_5" strokeWidth__2="4.4"/>
+							<case maxzoom="15" strokeWidth_2="5.4" strokeWidth_5="2.4" pathEffect_5="15_6" pathEffect_2="15_6" strokeWidth__2="5.4"/>
+							<case maxzoom="16" strokeWidth_2="10" strokeWidth_5="6" pathEffect_5="20_7" pathEffect_2="20_7" strokeWidth__2="10"/>
+							<case maxzoom="17" strokeWidth_2="16" strokeWidth_5="8" pathEffect_5="31_9" pathEffect_2="31_9" strokeWidth__2="16"/>
+							<case maxzoom="18" strokeWidth_2="30" strokeWidth_5="16" pathEffect_5="50_15" pathEffect_2="50_15" strokeWidth__2="30"/>
+							<case minzoom="19" strokeWidth_2="40" strokeWidth_5="22" pathEffect_5="70_30" pathEffect_2="70_30" strokeWidth__2="40"/>
+						</apply_if>
 				</switch> 
 			</switch>
 				
@@ -4589,41 +4619,41 @@
 			<case minzoom="16" contourLines="16"/>
 			<apply_if contourLines="13">
 				<switch>
-					<case minzoom="14" additional="contourtype=10m" color="$contourLineColor"/>
+					<case minzoom="13" additional="contourtype=10m" color="$contourLineColor"/>
 					<case minzoom="13" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="14" additional="contourtype=50m" color="$contourLineColor50"/>
+					<case minzoom="13" additional="contourtype=50m" color="$contourLineColor50"/>
 					<case minzoom="13" additional="contourtype=100m" color="$contourLineColor100"/>
 				</switch>
 			</apply_if>
 			<apply_if contourLines="14">
 				<switch>
-					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
+					<case minzoom="14" additional="contourtype=10m" color="$contourLineColor"/>
 					<case minzoom="14" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
+					<case minzoom="14" additional="contourtype=50m" color="$contourLineColor50"/>
 					<case minzoom="14" additional="contourtype=100m" color="$contourLineColor100"/>
 				</switch>
 			</apply_if>
 			<apply_if contourLines="">
 				<switch>
-					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
+					<case minzoom="14" additional="contourtype=10m" color="$contourLineColor"/>
 					<case minzoom="14" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
+					<case minzoom="14" additional="contourtype=50m" color="$contourLineColor50"/>
 					<case minzoom="14" additional="contourtype=100m" color="$contourLineColor100"/>
 				</switch>
 			</apply_if>
 			<apply_if contourLines="15">
 				<switch>
-					<case minzoom="16" additional="contourtype=10m" color="$contourLineColor"/>
+					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
 					<case minzoom="15" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="16" additional="contourtype=50m" color="$contourLineColor50"/>
+					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
 					<case minzoom="15" additional="contourtype=100m" color="$contourLineColor100"/>
 				</switch>
 			</apply_if>
 			<apply_if contourLines="16">
 				<switch>
-					<case minzoom="17" additional="contourtype=10m" color="$contourLineColor"/>
+					<case minzoom="16" additional="contourtype=10m" color="$contourLineColor"/>
 					<case minzoom="16" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="17" additional="contourtype=50m" color="$contourLineColor50"/>
+					<case minzoom="16" additional="contourtype=50m" color="$contourLineColor50"/>
 					<case minzoom="16" additional="contourtype=100m" color="$contourLineColor100"/>
 				</switch>
 			</apply_if>
