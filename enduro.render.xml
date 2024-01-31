@@ -278,7 +278,7 @@
 	</renderingAttribute>
 	<renderingAttribute name="eau">
 		<case nightMode="true" attrColorValue="#114477"/>
-		<case attrColorValue="#8fbfff"/>
+		<case attrColorValue="#80b0ff"/><!-- 8fbfff -->
 	</renderingAttribute>
 		
 	<!-- trait chemin -->
@@ -384,36 +384,36 @@
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
 	</renderingAttribute>
-
+<!---->	
 	<renderingAttribute name="contourLineColor50">
-		<case contourColorScheme="white" attrColorValue="#19333333">
+		<case contourColorScheme="white" attrColorValue="#16333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
-		<case contourColorScheme="yellow" attrColorValue="#53aaaa66"/>
-		<case contourColorScheme="green" attrColorValue="#5366aa66"/>
-		<case contourColorScheme="light_brown" attrColorValue="#23886633"/>
-		<case contourColorScheme="brown" attrColorValue="#28886633"/>
-		<case contourColorScheme="dark_brown" attrColorValue="#33886633"/>
-		<case contourColorScheme="red" attrColorValue="#53aa6666"/>
-		<case attrColorValue="#23333333">
+		<case contourColorScheme="yellow" attrColorValue="#50aaaa66"/>
+		<case contourColorScheme="green" attrColorValue="#5066aa66"/>
+		<case contourColorScheme="light_brown" attrColorValue="#20886633"/>
+		<case contourColorScheme="brown" attrColorValue="#25886633"/>
+		<case contourColorScheme="dark_brown" attrColorValue="#30886633"/>
+		<case contourColorScheme="red" attrColorValue="#50aa6666"/>
+		<case attrColorValue="#20333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
 	</renderingAttribute>
 
 	<renderingAttribute name="contourLineColor100">
-		<case contourColorScheme="white" attrColorValue="#1c333333">
+		<case contourColorScheme="white" attrColorValue="#26333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
-		<case contourColorScheme="yellow" attrColorValue="#56aaaa66"/>
-		<case contourColorScheme="green" attrColorValue="#5666aa66"/>
-		<case contourColorScheme="light_brown" attrColorValue="#26886633"/>
-		<case contourColorScheme="brown" attrColorValue="#31886633"/>
-		<case contourColorScheme="dark_brown" attrColorValue="#36886633"/>
-		<case contourColorScheme="red" attrColorValue="#56aa6666"/>
-		<case attrColorValue="#26333333">
+		<case contourColorScheme="yellow" attrColorValue="#60aaaa66"/>
+		<case contourColorScheme="green" attrColorValue="#6066aa66"/>
+		<case contourColorScheme="light_brown" attrColorValue="#30886633"/>
+		<case contourColorScheme="brown" attrColorValue="#35886633"/>
+		<case contourColorScheme="dark_brown" attrColorValue="#40886633"/>
+		<case contourColorScheme="red" attrColorValue="#60aa6666"/>
+		<case attrColorValue="#30333333">
 			<apply_if nightMode="true" attrColorValue="#99666666"/>
 			<apply_if arriereplan="true" attrColorValue="#99000000"/>
 		</case>
@@ -559,10 +559,12 @@
 				<case tag="boundary" value="national_park" order="-1" />
 				<case tag="boundary" value="protected_area" order="-1" />
 				<case tag="man_made" value="breakwater" order="9"/>
+				<case tag="boundary" value="forest" order="10" />
 			</switch>
 
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5"><!-- start and end point are same -->
 				<case tag="leisure" value="nature_reserve" order="10" />
+				<case tag="boundary" value="forest" order="10" />
 				<case tag="boundary" value="national_park" order="-1" /> 
 				<case tag="boundary" value="protected_area" order="-1" />
 
@@ -3686,10 +3688,10 @@
 					<apply_if ign="true" color_5="#ffffff" shadowColor="#000000"/>
 				</switch>
 				<!-- impraticable ecrase les tracktypes si existants -->	
-				<switch>
+				<switch >
 					<case lessDetailed="false" additional="smoothness=impassable" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=2" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-					<case lessDetailed="false" additional="mtb:scale=3" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=2" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
+					<case lessDetailed="false" additional="mtb:scale=3" color_5="$chemin" strokeWidth_5="$chemin_trait" pathEffect_5="$chemin_pointillé"/>
 					<case lessDetailed="false" additional="mtb:scale=4" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
 					<case lessDetailed="false" additional="mtb:scale=5" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
 					<case lessDetailed="false" additional="mtb:scale=6" color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
@@ -4149,7 +4151,7 @@
 			</apply>
 				
 			<!--difficulté sentier/chemins -->
-			<apply difficulte="false">
+			<apply minzoom="14" difficulte="false">
 				<apply_if additional="surface=mud" color_3="#ff0000"/>
 				<!-- "smoothness=excellent" "smoothness=good" "smoothness=intermediate" "smoothness=bad" "smoothness=very_bad"  just chemins normaux :) -->
 				<apply_if additional="smoothness=horrible" color_3="#ff9933"/>
@@ -4223,30 +4225,38 @@
 			<!-- interdiction -->
 			<apply hideAccess="false" >
 				<switch>
-					<case additional="access=private"/>
-					<case additional="access=no"/>
-					<case additional="vehicle=private"/>
-					<case additional="vehicle=no"/>
-					<case additional="motor_vehicle=private"/>
-					<case additional="motor_vehicle=no"/>
-					<case additional="motorcar=private"/>
-					<case additional="motorcar=no"/>
 					<case additional="motorcycle=private"/>
 					<case additional="motorcycle=no"/>
+					<case additional="motorcycle=destination"/>
+					<case additional="motorcycle=forestry"/>
+					<case additional="motorcycle=agricultural"/>
+					
+					<case additional="vehicle=private"/>
+					<case additional="vehicle=no"/>
+					<case additional="vehicle=destination"/>
+					<case additional="vehicle=forestry"/>
+					<case additional="vehicle=agricultural"/>
+				
+					<case additional="motor_vehicle=private"/>
+					<case additional="motor_vehicle=no"/>
+					<case additional="motor_vehicle=destination"/>
+					<case additional="motor_vehicle=forestry"/>
+					<case additional="motor_vehicle=agricultural"/>
+					
+					<case additional="motorcar=private"/>
+					<case additional="motorcar=no"/>
+					<case additional="motorcar=destination"/>
+					<case additional="motorcar=forestry"/>
+					<case additional="motorcar=agricultural"/>
+					
+					<case additional="access=private"/>
+					<case additional="access=no"/>
+					<case additional="access=destination"/>
+					<case additional="access=forestry"/>
+					<case additional="access=agricultural"/>
+					
 					<case tag="highway" value="cycleway"/>
 					<case tag="highway" value="footway"/>
-					<case additional="vehicle=destination"/>
-					<case additional="motorcar=destination"/>
-					<case additional="motor_vehicle=destination"/>
-					<case additional="access=destination"/>
-					<case additional="vehicle=forestry"/>
-					<case additional="motorcar=forestry"/>
-					<case additional="motor_vehicle=forestry"/>
-					<case additional="access=forestry"/>
-					<case additional="vehicle=agricultural"/>
-					<case additional="motorcar=agricultural"/>
-					<case additional="motor_vehicle=agricultural"/>
-					<case additional="access=agricultural"/>
 					<apply color_5="$interdit" color_3="#00000000"/><!--   
 					<apply_if ign="true">
 						<case noPolygons="true" maxzoom="14" shadowRadius="0"/>
@@ -4321,12 +4331,12 @@
 
 		<!-- balisages pedestre -->
 		<switch balisage="false" cap="ROUND" strokeWidth="0.1">
-			<case minzoom="12" tag="network_iwn" value="" shadowColor="#ffddaa" color="#ffddaa"/>
-			<case minzoom="12" tag="network_nwn" value="" shadowColor="#ffddaa" color="#ffddaa"/>
-			<case minzoom="13" tag="network_rwn" value="" shadowColor="#ffeeaa" color="#ffeeaa"/>
-			<case minzoom="15" tag="network_lwn" value="" shadowColor="#ffffcc" color="#fff099"/>
-			<case minzoom="15" tag="route" value="hiking" shadowColor="#ffffaa" color="#fff099"/>
-			<case minzoom="15" tag="hiking" value="yes" shadowColor="#ffffaa" color="#fff099"/>
+			<case minzoom="12" tag="network_iwn" value="" shadowColor="#ccffddaa" color="#ccffddaa"/>
+			<case minzoom="12" tag="network_nwn" value="" shadowColor="#ccffddaa" color="#ccffddaa"/>
+			<case minzoom="13" tag="network_rwn" value="" shadowColor="#ccffeeaa" color="#ccffeeaa"/>
+			<case minzoom="15" tag="network_lwn" value="" shadowColor="#ccffffcc" color="#ccffffcc"/>
+			<case minzoom="15" tag="route" value="hiking" shadowColor="#ccffffcc" color="#ccffffcc"/>
+			<case minzoom="15" tag="hiking" value="yes" shadowColor="#ccffffcc" color="#ccffffcc"/>
 			<apply>
 				<case maxzoom="12" shadowRadius="4"/>
 				<case maxzoom="13" shadowRadius="5"/>
@@ -4510,15 +4520,15 @@
 				<case tag="waterway" value="ditch"/>
 				<case tag="waterway" value="drain"/>
 				<case tag="waterway" value="drystream" pathEffect="6_4"/>
-				<apply color="$eau" shadowColor="$eau" >
+				<apply color="$eau" shadowColor="$eau" shadowRadius="0.7"><!--  
 					<case maxzoom="13" shadowRadius="0.8" />
 					<case maxzoom="14" shadowRadius="0.9" /> 
 					<case maxzoom="15" shadowRadius="1" /> 
 					<case maxzoom="16" shadowRadius="1.1" /> 
 					<case maxzoom="17" shadowRadius="1.2" /> 
-					<case minzoom="18" shadowRadius="1.3" />
+					<case minzoom="18" shadowRadius="1.3" />-->
 				</apply>
-				<apply_if additional="intermittent=yes" >  
+				<apply_if additional="intermittent=yes" shadowRadius="0.7">  
 					<case maxzoom="13" strokeWidth="0"/><!--
 					<case maxzoom="14" pathEffect="5_2" /> 
 					<case maxzoom="15" pathEffect="7_3" /> 
@@ -4526,6 +4536,7 @@
 					<case maxzoom="17" pathEffect="11_5" /> 
 					<case minzoom="18" pathEffect="13_6" />-->
 				</apply_if>
+				<apply_if nightMode="true" shadowRadius="1.2"/>
 				<apply_if lessDetailed="true" maxzoom="14" strokeWidth="0"/>
 				<apply_if ign="true" noPolygons="true" strokeWidth="0"/>
 				<apply_if engine_v1="true" shadowRadius="1.1"/>
@@ -4676,9 +4687,9 @@
 				<case strokeWidth="1.1"/>
 			</apply_if>
 			<apply_if additional="contourtype=50m">
-				<case contourWidth="thin" strokeWidth="1.3"/>
-				<case contourWidth="medium" strokeWidth="1.45"/>
-				<case contourWidth="thick" strokeWidth="1.6"/>
+				<case contourWidth="thin" strokeWidth="1.1"/>
+				<case contourWidth="medium" strokeWidth="1.25"/>
+				<case contourWidth="thick" strokeWidth="1.4"/>
 				<case strokeWidth="1.3"/>
 			</apply_if>
 			<apply_if ign="true" noPolygons="true" strokeWidth="0"/>
@@ -4760,14 +4771,14 @@
 			<apply_if nightMode="true" color__1="#333333" color="#999999" color_2="#999999"/>
 		</switch>
 
-		<!-- protected_area 
+		<!-- foret domaniale -->
 		<switch minzoom="10">
-			<case tag="boundary" value="protected_area"/>
+			<case tag="boundary" value="forest"/>
 			<apply color="#00ff00" >
 				<case maxzoom="11" strokeWidth="4" />
 				<case minzoom="12" strokeWidth="6" />
 			</apply>
-		</switch>-->
+		</switch>
 
 
 		<!-- Admin levels (boundaries) -->
