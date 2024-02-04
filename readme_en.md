@@ -1,4 +1,4 @@
-🇫🇷 [Français](README.md) `🇬🇧 English`&emsp;
+[Français](README.md) `English`&emsp;
 
 # Display and calculation of off-road motorcycle routes
 Modifies the display of the offline map (vector) for off-road motorcycle use with the paths visually classified by "difficulty" related to the type of vehicle and the details present in OpenStreetMap, allows "off-road" routing calculations for 3 types of motorcycles (from the heaviest to the lightest).
