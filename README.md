@@ -15,7 +15,7 @@ un didactitiel en vidéo **[https://youtu.be/07nj4LoACdc](https://www.youtube.co
 - Simplification pour lisibilité des itinéraires VTT/pédestre
 - Réglages supplémentaires pour la lisibilité en roulant
 
-- **[fonctionnement du style](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--le-style)**
+- **[fonctionnement du style](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/FR%E2%80%94le-style)**
 - **[fonctionnement des routages](routage.md)**
 
 ## Copies d'écran<br>
