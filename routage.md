@@ -106,4 +106,4 @@ VTT par exemple).
 <br>
 <br>
  
-plus de détails dans le **[wiki](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/%F0%9F%87%AB%F0%9F%87%B7--Routing)**
+plus de détails dans le **[le routage](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/FR%E2%80%94Routing)**
