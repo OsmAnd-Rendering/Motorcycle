@@ -1620,6 +1620,7 @@
 	
 			<switch minzoom="12" textOrder="8" intersectionMargin="0.1" ><!-- intersectionSizeFactor="0.1" intersectsWith="any" -->		
 				<case tag="natural" value="gorge"/>
+				<case tag="natural" value="plateau"/>
 				<apply textColor="#99990000" textBold="true" textItalic="true" textHaloColor="#99ffffff" textHaloRadius="4" textOnPath="true">
 					<case maxzoom="12" textSize="10" textDy="0" textColor="#bb990000"/>
 					<case maxzoom="13" textSize="11" textDy="0"/>
