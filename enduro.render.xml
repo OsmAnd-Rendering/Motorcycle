@@ -113,11 +113,11 @@
 	</renderingAttribute>
 	<renderingAttribute name="shadowRendering">
 	<!-- 0 - no shadow, 1 - one step, 2 - blur shadow, 3 - solid shadow -->
-		<!-- next line ensures bridges stand out ok 
-		<case minzoom="14" nightMode="false" attrIntValue="3" shadowColor="#000000"/>
-		<case minzoom="14" attrIntValue="3" shadowColor="#000000"/>
-		<case minzoom="8" maxzoom="13" attrIntValue="3" shadowColor="#000000"/>-->
-		<case attrIntValue="3" shadowColor="#000000"/>
+		<!-- next line ensures bridges stand out ok -->
+		<case minzoom="14" nightMode="false" attrIntValue="3" shadowColor="#969696"/>
+		<case minzoom="14" attrIntValue="3" shadowColor="#464646"/>
+		<case minzoom="8" maxzoom="13" attrIntValue="3" shadowColor="#969696"/>
+		<case attrIntValue="0"/>
 	</renderingAttribute>
 
 	<!-- couleur guidage-->	
@@ -184,8 +184,8 @@
 	</renderingAttribute>
 	<renderingAttribute name="roadsDensityLimitPerTile">
 		<!-- Number of roads to display per tile -->
-		<case lessDetailed="true" attrIntValue="30"/>
-		<case maxzoom="13" attrIntValue="30"/>
+		<case lessDetailed="true" attrIntValue="30"/><!--
+		<case maxzoom="13" attrIntValue="30"/>-->
 		<case attrIntValue="55"/>
 	</renderingAttribute>
 	<renderingAttribute name="defaultSymbolPathSpacing">
@@ -206,7 +206,7 @@
 		<case arriereplan="true" attrColorValue="#cc9900" />
 		<case nightMode="true" attrColorValue="#cc9966"/>
 		<case ign="true" attrColorValue="#114411"/>
-		<case maxzoom="12" attrColorValue="#774400"/>
+		<case maxzoom="12" attrColorValue="#663300"/>
 		<case attrColorValue="#996600"/>
 	</renderingAttribute>
 	<renderingAttribute name="chemin">
@@ -214,15 +214,14 @@
 		<case arriereplan="true" attrColorValue="#00ff00" />
 		<case ign="true" attrColorValue="#114411"/>
 		<case maxzoom="13" attrColorValue="#558855"/>
-		<case attrColorValue="#009900"/>
+		<case attrColorValue="#008800"/>
 	</renderingAttribute>
 	<renderingAttribute name="sentier">
 		<case arriereplan="true" attrColorValue="#afafaf" />
 		<case nightMode="true" attrColorValue="#cccccc"/>
 		<case ign="true" attrColorValue="#114411"/>
-		<switch>
-			<case attrColorValue="#000000"/>
-		</switch>
+		<case maxzoom="14" attrColorValue="#444444"/>
+		<case attrColorValue="#000000"/>
 	</renderingAttribute>
 	<renderingAttribute name="pieton">
 		<case arriereplan="true" attrColorValue="#afafaf" />
@@ -282,45 +281,38 @@
 		<case maxzoom="11" attrFloatValue="0"> 
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
 		</case>
-		<case maxzoom="12" attrFloatValue="0.4:1"> 
+		<case maxzoom="12" attrFloatValue="1"> 
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
 		</case>
-		<case maxzoom="13" attrFloatValue="1.0:1">
+		<case maxzoom="13" attrFloatValue="1.5">
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
 		</case>
-		<case maxzoom="14" attrFloatValue="1.25:1">
+		<case maxzoom="14" attrFloatValue="2.0">
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
 		</case>
-		<case maxzoom="15" attrFloatValue="1.5:1">
-			<apply_if lessDetailed="true" attrFloatValue="2.5:1"/> 
+		<case maxzoom="15" attrFloatValue="2.5">
+			<apply_if lessDetailed="true" attrFloatValue="3.5"/> 
 		</case>
-		<case maxzoom="16" attrFloatValue="2.0:1">
-			<apply_if lessDetailed="true" attrFloatValue="3:1"/> 
+		<case maxzoom="16" attrFloatValue="3">
+			<apply_if lessDetailed="true" attrFloatValue="4"/> 
 		</case>
-		<case minzoom="17" attrFloatValue="2.5:1"> 
-			<apply_if lessDetailed="true" attrFloatValue="3.5:1"/> 
+		<case minzoom="17" attrFloatValue="3.5"> 
+			<apply_if lessDetailed="true" attrFloatValue="4.5"/> 
 		</case>
-		<case minzoom="18" attrFloatValue="3:1"> 
-			<apply_if lessDetailed="true" attrFloatValue="4:1"/> 
+		<case minzoom="18" attrFloatValue="4.0"> 
+			<apply_if lessDetailed="true" attrFloatValue="5"/> 
 		</case>
 	</renderingAttribute>
+
 	<renderingAttribute name="chemin_trait">
 		<case maxzoom="12" attrFloatValue="0"/>
-		<case maxzoom="13" attrFloatValue="1.0:1"/>
-		<case maxzoom="14" attrFloatValue="1.25:1"/>
-		<case maxzoom="15" attrFloatValue="1.5:1"/>
-		<case maxzoom="16" attrFloatValue="2.0:1"/>
-		<case minzoom="17" attrFloatValue="2.5:1"/>
-	</renderingAttribute><!-- test
-	<renderingAttribute name="chemin_trait">
-		<case maxzoom="12" attrFloatValue="0"/>
-		<case maxzoom="13" attrFloatValue="1.6"/>
-		<case maxzoom="14" attrFloatValue="2.2"/>
-		<case maxzoom="15" attrFloatValue="2.6"/>
+		<case maxzoom="13" attrFloatValue="1.5"/>
+		<case maxzoom="14" attrFloatValue="2.0"/>
+		<case maxzoom="15" attrFloatValue="2.5"/>
 		<case maxzoom="16" attrFloatValue="3"/>
-		<case minzoom="17" attrFloatValue="3.4"/> 
-		<case minzoom="18" attrFloatValue="3.8"/> 
-	</renderingAttribute>-->
+		<case minzoom="17" attrFloatValue="3.5"/> 
+		<case minzoom="18" attrFloatValue="4.0"/> 
+	</renderingAttribute>
 
 	<renderingAttribute name="chemin_trait_ign">
 		<case noPolygons="false" maxzoom="12" attrFloatValue="0"/>
@@ -357,11 +349,11 @@
 	</renderingAttribute>
 	<renderingAttribute name="sentier_trait">
 		<case maxzoom="13" attrFloatValue="0"/>
-		<case maxzoom="14" attrFloatValue="1.0:1"/>
-		<case maxzoom="15" attrFloatValue="1.25:1.0"/>
-		<case maxzoom="16" attrFloatValue="1.5:1"/>
-		<case maxzoom="17" attrFloatValue="1.75:1"/>
-		<case minzoom="18" attrFloatValue="2:1"/>
+		<case maxzoom="14" attrFloatValue="1.5"/>
+		<case maxzoom="15" attrFloatValue="1.75"/>
+		<case maxzoom="16" attrFloatValue="2.0"/>
+		<case maxzoom="17" attrFloatValue="2.25"/>
+		<case minzoom="18" attrFloatValue="2.5"/>
 	</renderingAttribute>
 	<renderingAttribute name="sentier_pointillé">
 		<case maxzoom="14" attrStringValue="6_4" />
@@ -3469,11 +3461,11 @@
 				<case minzoom="19" shadowRadius="1.3:1"/>
 			</apply_if>
 			<apply_if engine_v1="false"><!---->
-				<case maxzoom="11" shadowRadius="0.8"/>
-				<case maxzoom="13" shadowRadius="1.0"/>
-				<case maxzoom="15" shadowRadius="1.1"/>
-				<case maxzoom="17" shadowRadius="1.2"/>
-				<case minzoom="19" shadowRadius="1.3"/>
+				<case maxzoom="11" shadowRadius="0.9"/>
+				<case maxzoom="13" shadowRadius="1.1"/>
+				<case maxzoom="15" shadowRadius="1.3"/>
+				<case maxzoom="17" shadowRadius="1.5"/>
+				<case minzoom="19" shadowRadius="1.7"/>
 			</apply_if>
 			<apply_if arriereplan="true" shadowColor="#000000" >
 				<case maxzoom="12" shadowRadius="1.4"/>
