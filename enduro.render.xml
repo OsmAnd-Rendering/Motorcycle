@@ -14,6 +14,7 @@
 	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="hideAccess" name="Hide access restrictions" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="gris" name="niveaux de gris" description="niveaux de gris" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="piste" name="couleur piste" description="couleur piste" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="comment" name="cacher commentaires" description="cacher commentaires" type="boolean" possibleValues="" category="enduro"/>
 	
 	<renderingProperty attr="hideUnderground" name="Hide underground objects" description="Hide underground objects" type="boolean" possibleValues="" category="hide"/>
@@ -204,6 +205,9 @@
 			<apply_if nightMode="true" attrColorValue="#886633" />
 		</case>
 		<case arriereplan="true" attrColorValue="#cc9900" />
+		<case piste="true" attrColorValue="#ff00ff">
+			<apply_if nightMode="true" attrColorValue="#ff00ff" />
+		</case>
 		<case nightMode="true" attrColorValue="#cc9966"/>
 		<case ign="true" attrColorValue="#114411"/>
 		<case maxzoom="12" attrColorValue="#663300"/>
@@ -1065,8 +1069,10 @@
 		</switch>
 					
 		<!-- hiking icon-->
-		<switch lessDetailed="false" >
-			<switch minzoom="12" textSize="10" textColor="#00ff0000" textOrder="47" seq="1:10" >
+		<switch lessDetailed="false" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
+			<switch minzoom="12" textOrder="47" ><!--
+				<case tag="network_nwn" value="" nameTag="hiking_route_name"/>
+				<case tag="network_iwn" value="" nameTag="hiking_route_name"/>-->
 				<case tag="network_nwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
 				<case tag="network_iwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/><!--hiking_route_ref-->
 				<apply maxzoom="13" icon="osmc_white_hiker" textShield="osmc_green_round_bg"/>
@@ -1074,21 +1080,21 @@
 					<case icon="osmc_red_lower" textShield="osmc_white_bg" /><!---->
 				</apply>
 			</switch>
-			<switch minzoom="13" textOnPath="false" textSize="10" textColor="#00ff0000" textOrder="48" seq="1:10" >
-				<case tag="network_rwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/><!---->
+			<switch minzoom="13" textOrder="48" >
+				<case tag="network_rwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
 				<apply maxzoom="13" icon="osmc_white_hiker" textShield="osmc_green_round_bg"/>
 				<apply minzoom="14" >
 					<case icon="osmc_red_lower" textShield="osmc_yellow_bg"/>
 				</apply>
 			</switch>
-			<switch minzoom="14" textOnPath="false" textSize="10" textColor="#00ffffff" textOrder="49" seq="1:10" >
+			<switch minzoom="14" textOrder="49" >
 				<case minzoom="15" tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/><!-- route_hiking_#SEQ_osmc_text -->
 				<case minzoom="15" tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
 				<apply >
 					<case icon="osmc_yellow_lower" textShield="osmc_white_bg"/>
 				</apply>
 			</switch><!--
-			<apply_if maxzoom="13" textMinDistance="1" intersectionMargin="0.5"/>
+			<apply textMinDistance="1" intersectionMargin="0.5"/>
 			<apply_if maxzoom="14" textMinDistance="10" intersectionMargin="2.5"/>
 			<apply_if maxzoom="15" textMinDistance="150" intersectionMargin="50"/>
 			<apply_if maxzoom="16" textMinDistance="250" intersectionMargin="100"/>
@@ -3465,7 +3471,7 @@
 				<case maxzoom="13" shadowRadius="1.1"/>
 				<case maxzoom="15" shadowRadius="1.3"/>
 				<case maxzoom="17" shadowRadius="1.5"/>
-				<case minzoom="19" shadowRadius="1.7"/>
+				<case minzoom="18" shadowRadius="1.7"/>
 			</apply_if>
 			<apply_if arriereplan="true" shadowColor="#000000" >
 				<case maxzoom="12" shadowRadius="1.4"/>
@@ -4169,6 +4175,19 @@
 				<apply_if additional="mtb:scale=6" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
+				<!--difficulté dirtbike -->
+				<apply_if tag="highway" value="path" additional="dirtbike:scale=0" color_3="#00ff00"/>
+				<apply_if additional="dirtbike:scale=1" color_3="#ff9933"/>
+				<apply_if additional="dirtbike:scale=2" color_3="#ff9933"/>
+				<apply_if additional="dirtbike:scale=3" color_3="#ff0000"/>
+				<apply_if additional="dirtbike:scale=4" color_3="#ff0000"/>
+				<apply_if additional="dirtbike:scale=5" color_3="#99000000">
+					<case nightMode="true" color_3="#cccccc"/>
+				</apply_if>
+				<apply_if additional="dirtbike:scale=6" color_3="#99000000">
+					<case nightMode="true" color_3="#cccccc"/>
+				</apply_if>
+
 				<apply lessDetailed="false" cap_3="ROUND">
 					<case maxzoom="12" strokeWidth_3="0" pathEffect_3=""/>
 					<case maxzoom="13" strokeWidth_3="6" pathEffect_3="1_20"/>

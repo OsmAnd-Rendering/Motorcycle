@@ -16,6 +16,7 @@
 		<!-- NEW ROUTING API -->
 
 	<routingProfile name="gros_trail" baseProfile="gros_trail" restrictionsAware="true" minSpeed="1" defaultSpeed="30" maxSpeed="120" followSpeedLimitations="false" onewayAware="true">
+		<parameter id="avoid_balisage" name="pas de chemins balisés" description="evite les chemins balisés" type="boolean"/>
 		<parameter id="avoid_track" name="pas de chemins" description="evite les chemins" type="boolean"/>
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean"/>
 		<parameter id="avoid_mud" name="si chemins secs" description="ajoute chemins en terre" type="boolean"/>
@@ -191,6 +192,7 @@
 			<select value="0.1" t="highway" v="motorway_link"/>
 			<select value="0.1" t="highway" v="trunk"/>
 			<select value="0.1" t="highway" v="trunk_link"/>
+
 			<if param="avoid_track"><!-- pas de chemins -->
 				<select value="0.15" t="highway" v="primary"/>
 				<select value="0.15" t="highway" v="primary_link"/>
@@ -293,6 +295,13 @@
 			<select value="2" t="highway" v="service"/>
 			<select value="2" t="highway" v="residential"/>
 			<select value="1.15" t="highway" v="living_street"/>
+
+			<if param="avoid_balisage"><!-- pas de chemins balisés-->
+				<select value="0.1" t="route" v="mtb"/><!-- circuits VTT -->
+				<select value="0.1" t="route_mtb"/><!-- circuits VTT -->
+				<select value="0.1" t="route" v="hiking"/><!-- circuits pedestre -->
+				<select value="0.1" t="route_hiking"/><!-- circuits pedestre -->
+			</if>
 			
 			<select value="1" t="ford" v="yes"/><!-- 5 -->
 			<select value="0.15" t="surface" v="mud"/><!-- 5 -->

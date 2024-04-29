@@ -16,6 +16,7 @@
 		<!-- NEW ROUTING API -->
 		
 	<routingProfile name="petit_trail" baseProfile="petit_trail" restrictionsAware="true" minSpeed="1" defaultSpeed="40" maxSpeed="110" followSpeedLimitations="false" onewayAware="true">
+		<parameter id="avoid_balisage" name="pas de chemins balisés" description="evite les chemins balisés" type="boolean"/>
 		<parameter id="avoid_grade" name="trie les chemins" description="priorité aux chemins carrossables" type="boolean"/>
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean"/>
 		<parameter id="avoid_borders" name="Avoid border crossing" description="Avoid crossing a border into another country" type="boolean"/>
@@ -227,6 +228,12 @@
 			<select value="1" t="highway" v="service"/>
 			<select value="1" t="highway" v="residential"/>
 			<select value="0.55" t="highway" v="living_street"/>
+			<if param="avoid_balisage"><!-- pas de chemins balisés-->
+				<select value="0.1" t="route" v="mtb"/><!-- circuits VTT -->
+				<select value="0.1" t="route_mtb"/><!-- circuits VTT -->
+				<select value="0.1" t="route" v="hiking"/><!-- circuits pedestre -->
+				<select value="0.1" t="route_hiking"/><!-- circuits pedestre -->
+			</if>
 			<if param="avoid_grade"><!-- trie les chemins -->
 				<select value="2" t="sac_scale " v="hiking"/>
 				<select value="2" t="mtb:scale" v="0"/>
