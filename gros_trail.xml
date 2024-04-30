@@ -27,6 +27,10 @@
 		<parameter id="avoid_route" name="encore moins de route" description="pour trajet de moins de 200 km" type="boolean"/>
 
 		<way attribute="access">
+			<select value="-1" t="dirtbike:scale" v="3"/>			
+			<select value="-1" t="dirtbike:scale" v="4"/>			
+			<select value="-1" t="dirtbike:scale" v="5"/>			
+			<select value="-1" t="dirtbike:scale" v="6"/>			
 			<select value="-1" t="osmand_change" v="delete"/>
 			<select value="-1" t="construction" v="yes"/>
 			<select value="1" t="ford" v="yes"/>
@@ -155,18 +159,21 @@
 		<way attribute="speed" type="speed">
 			<select value="5" t="surface" v="mud"/>
 			<select value="5" t="ford" v="yes"/>
+			<select value="10" t="dirtbike:scale" v="2"/>			
 			<select value="10" t="surface" v="grass"/>
 			<select value="10" t="surface" v="sand"/>
 			<select value="10" t="smoothness" v="very_horrible"/>
-			<select value="30" t="smoothness" v="horrible"/>
 			<select value="20" t="surface" v="dirt"/>
 			<select value="20" t="surface" v="earth"/>
 			<select value="20" t="surface" v="unpaved"/>
 			<select value="20" t="surface" v="ground"/>
 			<select value="20" t="tracktype" v="grade5"/>
+			<select value="30" t="dirtbike:scale" v="1"/>			
+			<select value="30" t="smoothness" v="horrible"/>
 			<select value="30" t="surface" v="unhewn_cobblestone"/>
 			<select value="30" t="surface" v="rock"/>
 			<select value="30" t="tracktype" v="grade4"/>
+			<select value="60" t="dirtbike:scale" v="0"/>			
 			<select value="60" t="surface" v="cobblestone"/>
 			<select value="60" t="tracktype" v="grade3"/>
 			<select value="60" t="surface" v="paving_stones"/>
@@ -226,6 +233,7 @@
 
 				<select value="1" t="ford" v="yes"/>
 				<select value="0.35" t="smoothness" v="very_horrible"/>
+				<select value="0.35" t="dirtbike:scale" v="2"/>			
 				<select value="0.5" t="surface" v="mud"/>
 				<select value="0.5" t="surface" v="sand"/>
 				<select value="0.5" t="surface" v="grass"/>
@@ -235,6 +243,7 @@
 				<select value="1.25" t="surface" v="unpaved"/>
 				<select value="1.25" t="surface" v="ground"/>-->
 				<select value="1.25" t="surface" v="rock"/>
+				<select value="1.25" t="dirtbike:scale" v="1"/>			
 				<select value="1.25" t="tracktype" v="grade5"/><!-- 20 -->
 				<select value="1.5" t="tracktype" v="grade4"/><!-- 30 -->
 				<select value="2" t="surface" v="unhewn_cobblestone"/><!-- 30 -->
@@ -313,6 +322,7 @@
 			<select value="0.25" t="surface" v="ground"/>-->
 			<select value="0.25" t="smoothness" v="very_horrible"/><!-- 30 -->
 			<select value="0.25" t="smoothness" v="horrible"/><!-- 40 -->
+			<select value="0.25" t="dirtbike:scale" v="1"/>			
 			<select value="0.25" t="tracktype" v="grade5"/><!-- 20 -->
 			<select value="0.5" t="surface" v="rock"/><!-- 30 -->
 			<select value="0.75" t="tracktype" v="grade4"/><!-- 30 -->
@@ -336,6 +346,7 @@
 			<select value="2" t="surface" v="concrete:plates"/><!-- 60 -->
 			<select value="2" t="surface" v="compacted"/><!-- 60 -->
 			<select value="2" t="tracktype" v="grade1"/><!-- 60 -->
+			<select value="2" t="dirtbike:scale" v="0"/>			
 			<select value="0.5" t="highway" v="track"/><!--20 chemins sans tags idem grade5--><!--
 			<select value="0"/> tout le reste -->
 		</way>

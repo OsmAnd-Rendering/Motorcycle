@@ -26,6 +26,7 @@
 			<select value="-1" t="mtb:scale" v="4"/>			
 			<select value="-1" t="mtb:scale" v="5"/>			
 			<select value="-1" t="mtb:scale" v="6"/>			
+			<select value="-1" t="dirtbike:scale" v="6"/>			
 			<select value="-1" t="sac_scale" v="demanding_mountain_hiking"/>
 			<select value="-1" t="sac_scale" v="alpine_hiking"/>
 			<select value="-1" t="sac_scale" v="demanding_alpine_hiking"/>
@@ -125,6 +126,11 @@
 			<select value="40" t="mtb:scale" v="1"/>			
 			<select value="15" t="mtb:scale" v="2"/>			
 			<select value="5" t="mtb:scale" v="3"/>			
+			<select value="30" t="dirtbike:scale" v="1"/>			
+			<select value="20" t="dirtbike:scale" v="2"/>			
+			<select value="10" t="dirtbike:scale" v="3"/>			
+			<select value="6" t="dirtbike:scale" v="4"/>			
+			<select value="3" t="dirtbike:scale" v="5"/>			
 			<select value="45" t="sac_scale" v="hiking"/>
 			<select value="15" t="sac_scale" v="mountain_hiking"/>
 			<select value="30" t="highway" v="path"/><!-- 110 vmax profil/ 30 v path = 3.5 max pour priority-->
@@ -175,6 +181,12 @@
 			<select value="0.75" t="sac_scale" v="mountain_hiking"/>
 			<select value="0.75" t="mtb:scale" v="3"/>
 			<select value="1" t="mtb:scale" v="2"/>
+			<select value="3.5" t="dirtbike:scale" v="0"/>			
+			<select value="3.0" t="dirtbike:scale" v="1"/>			
+			<select value="2.5" t="dirtbike:scale" v="2"/>			
+			<select value="2.0" t="dirtbike:scale" v="3"/>			
+			<select value="0.75" t="dirtbike:scale" v="4"/>			
+			<select value="0.25" t="dirtbike:scale" v="5"/>			
 			<select value="3.5" t="sac_scale" v="hiking"/>
 			<select value="3.5" t="mtb:scale" v="0"/>
 			<select value="2.5" t="mtb:scale" v="1"/>

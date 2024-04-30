@@ -4133,7 +4133,7 @@
 			<!--difficulté sentier/chemins -->
 			<apply minzoom="14" difficulte="false">
 				<apply_if additional="surface=mud" color_3="#ff0000"/>
-				<!-- "smoothness=excellent" "smoothness=good" "smoothness=intermediate" "smoothness=bad" "smoothness=very_bad"  just chemins normaux :) -->
+				<!-- "smoothness=excellent" "smoothness=good" "smoothness=intermediate" "smoothness=bad" "smoothness=very_bad"  juste des chemins normaux :) -->
 				<apply_if additional="smoothness=horrible" color_3="#ff9933"/>
 				<apply_if additional="smoothness=very_horrible" color_3="#ff0000"/>
 				<apply_if additional="smoothness=impassable" color_3="#99000000">	

@@ -28,6 +28,9 @@
 			<select value="-1" t="osmand_change" v="delete"/>
 			<select value="-1" t="construction" v="yes"/>
 			<select value="-1" t="smoothness" v="impassable"/>
+			<select value="-1" t="dirtbike:scale" v="4"/>			
+			<select value="-1" t="dirtbike:scale" v="5"/>			
+			<select value="-1" t="dirtbike:scale" v="6"/>			
 			<select value="-1" t="mtb:scale" v="2"/>
 			<select value="-1" t="mtb:scale" v="3"/>
 			<select value="-1" t="mtb:scale" v="4"/>
@@ -155,6 +158,9 @@
 		</way>
 
 		<way attribute="speed" type="speed">
+			<select value="30" t="dirtbike:scale" v="1"/>			
+			<select value="20" t="dirtbike:scale" v="2"/>			
+			<select value="5" t="dirtbike:scale" v="3"/>			
 			<!-- sentier facile vers difficile -->
 			<select value="30" t="sac_scale " v="hiking"/>
 			<select value="30" t="mtb:scale" v="0"/>
@@ -263,6 +269,9 @@
 				<select value="3.5" t="tracktype" v="grade1"/>
 				<select value="2.5" t="highway" v="track"/><!--20 chemins non taggés-->
 			</if>
+			<select value="3.0" t="dirtbike:scale" v="1"/>			
+			<select value="2.5" t="dirtbike:scale" v="2"/>			
+			<select value="1.0" t="dirtbike:scale" v="3"/>			
 			<select value="3.5" t="sac_scale " v="hiking"/><!-- 30 -->
 			<select value="3.5" t="mtb:scale" v="0"/><!-- 30 -->
 			<select value="3.5" t="highway" v="track"/><!--chemins non taggés -->
