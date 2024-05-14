@@ -1922,7 +1922,7 @@
 			<apply_if nightMode="true" hideAccess="true" textHaloColor="#000000" textHaloRadius="0" textColor="#6666ff66"/>
 		</switch>
 
-		<switch minzoom="11" textOrder="44" >
+		<switch minzoom="16" textOrder="44" >
 			<case tag="leisure" value="nature_reserve" nameTag="" intersectionMargin="40"/>
 			<apply_if hideAccess="false" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="true" textWrapWidth="20">
 				<case maxzoom="14" textSize="12" textColor="#66cc0000"/>
@@ -1942,8 +1942,8 @@
 				<case maxzoom="19" textSize="17" textColor="#7f009900"/>
 				<case minzoom="20" textSize="18" textColor="#88009900"/>
 			</apply_if>
-			<apply_if nightMode="true" textHaloColor="#000000" textHaloRadius="0" textColor="#66ff6666"/>
-			<apply_if nightMode="true" hideAccess="true" textHaloColor="#000000" textHaloRadius="0" textColor="#6666ff66"/>
+			<apply_if nightMode="true" textHaloColor="#000000" textHaloRadius="1" textColor="#ccff6666"/>
+			<apply_if nightMode="true" hideAccess="true" textHaloColor="#000000" textHaloRadius="1" textColor="#9966ff66"/>
 		</switch>
 
 		<!-- water -->
