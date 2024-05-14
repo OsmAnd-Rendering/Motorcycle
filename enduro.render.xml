@@ -1069,7 +1069,7 @@
 		</switch>
 					
 		<!-- hiking icon-->
-		<switch lessDetailed="false" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
+		<switch balisage="false" lessDetailed="false" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
 			<switch minzoom="12" textOrder="47" ><!--
 				<case tag="network_nwn" value="" nameTag="hiking_route_name"/>
 				<case tag="network_iwn" value="" nameTag="hiking_route_name"/>-->
@@ -1093,40 +1093,31 @@
 				<apply >
 					<case icon="osmc_yellow_lower" textShield="osmc_white_bg"/>
 				</apply>
-			</switch><!--
-			<apply textMinDistance="1" intersectionMargin="0.5"/>
-			<apply_if maxzoom="14" textMinDistance="10" intersectionMargin="2.5"/>
-			<apply_if maxzoom="15" textMinDistance="150" intersectionMargin="50"/>
-			<apply_if maxzoom="16" textMinDistance="250" intersectionMargin="100"/>
-			<apply_if minzoom="17" textMinDistance="350" intersectionMargin="200"/>-->
+			</switch>
 		</switch>
 
 		<!-- velo ref -->
-		<switch balisage="true" minzoom="10" textOrder="169">
-			<case tag="route_bicycle" value="" nameTag="bicycle_ref"/>
-			<apply textSize="0"/>
-		</switch> 
-		<switch minzoom="10" textOrder="169">
-			<case tag="route_mtb" value="" nameTag="bicycle_mtb:name" />
+		<switch balisage="true" >
+			<case tag="route_bicycle" value="" />
+			<case tag="route_mtb" value="" />
 			<apply textSize="0"/>
 		</switch> 
 
 		<!-- MTB icon -->
-		<switch minzoom="14" textOnPath="false" textSize="10" textOrder="169" >
-			<case tag="route_mtb" value="" nameTag="bicycle_ref" />
-			<case tag="route_mtb" value="" nameTag="bicycle_mtb:name" />
-			<case tag="route_mtb" value="" nameTag="mtb:name" />
+		<switch balisage="false" textOnPath="false" textSize="10" textOrder="169" seq="1:10">
+			<case tag="route_mtb" value=""  />
 			<apply textColor="#00ffffff" textMinDistance="250">
 				<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
 			</apply>
 			<apply_if lessDetailed="true" icon="" textShield=""/>
 		</switch>
 		<!-- velo icon -->
-		<switch balisage="false" textOnPath="false" textSize="10" textOrder="169" >
-			<case minzoom="13" tag="route_bicycle" value="" nameTag="bicycle_ref"/>
-			<apply textColor="#00ffffff">
+		<switch balisage="false" textOnPath="false" textSize="10" textOrder="49" seq="1:10">
+			<case tag="route_bicycle" value="" />
+			<apply textColor="#00ffffff" textMinDistance="100">
 				<case icon="osmc_white_bicycle" textShield="osmc_blue_round_bg"/>
 			</apply>
+			<apply_if lessDetailed="true" icon="" textShield=""/>
 		</switch>
 
 		<!-- routes ref -->
@@ -4299,6 +4290,10 @@
 		</switch>
 
 		<!-- balisage VTT -->
+		<switch balisage="true" strokeWidth="0" cap="ROUND">
+			<case tag="route_mtb" value=""/>
+			<case tag="route" value="mtb"/>
+		</switch>
 		<switch balisage="false" strokeWidth="0.1" cap="ROUND">
 			<case tag="route_mtb" value=""/>
 			<case tag="route" value="mtb"/>
