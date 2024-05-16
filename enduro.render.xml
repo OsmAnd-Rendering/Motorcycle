@@ -360,11 +360,11 @@
 		<case minzoom="18" attrFloatValue="2.5"/>
 	</renderingAttribute>
 	<renderingAttribute name="sentier_pointillé">
-		<case maxzoom="14" attrStringValue="6_4" />
-		<case maxzoom="15" attrStringValue="8_5" />
-		<case maxzoom="16" attrStringValue="10_6" />
-		<case maxzoom="17" attrStringValue="12_6" />
-		<case minzoom="18" attrStringValue="14_7" />
+		<case maxzoom="14" attrStringValue="4_4" />
+		<case maxzoom="15" attrStringValue="5_5" />
+		<case maxzoom="16" attrStringValue="6_6" />
+		<case maxzoom="17" attrStringValue="7_7" />
+		<case minzoom="18" attrStringValue="8_8" />
 	</renderingAttribute>
 
 	<renderingConstant name="null" value="#000000"/>
@@ -4146,8 +4146,8 @@
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
 				<!--difficulté mtb -->
-				<apply_if tag="highway" value="path" additional="mtb:scale=0" color_3="#00ff00"/>
-				<apply_if tag="highway" value="path" additional="mtb:scale:imba=0" color_3="#00ff00"/>
+				<apply_if tag="highway" value="path" additional="mtb:scale=0" color_3="#00dd00"/>
+				<apply_if tag="highway" value="path" additional="mtb:scale:imba=0" color_3="#00dd00"/>
 				<apply_if additional="mtb:scale=1" color_3="#ff9933"/>
 				<apply_if additional="mtb:scale:imba=1" color_3="#ff9933"/>
 				<apply_if additional="mtb:scale=2" color_3="#ff0000"/>
@@ -4167,7 +4167,7 @@
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
 				<!--difficulté dirtbike -->
-				<apply_if tag="highway" value="path" additional="dirtbike:scale=0" color_3="#00ff00"/>
+				<apply_if tag="highway" value="path" additional="dirtbike:scale=0" color_3="#00dd00"/>
 				<apply_if additional="dirtbike:scale=1" color_3="#ff9933"/>
 				<apply_if additional="dirtbike:scale=2" color_3="#ff9933"/>
 				<apply_if additional="dirtbike:scale=3" color_3="#ff0000"/>
