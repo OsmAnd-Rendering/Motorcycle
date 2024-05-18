@@ -352,7 +352,7 @@
 		<case ign="false" minzoom="18" attrStringValue="28_7" />
 	</renderingAttribute>
 	<renderingAttribute name="sentier_trait">
-		<case maxzoom="13" attrFloatValue="0"/>
+		<case maxzoom="13" attrFloatValue="1.0"/>
 		<case maxzoom="14" attrFloatValue="1.5"/>
 		<case maxzoom="15" attrFloatValue="1.75"/>
 		<case maxzoom="16" attrFloatValue="2.0"/>
@@ -360,6 +360,7 @@
 		<case minzoom="18" attrFloatValue="2.5"/>
 	</renderingAttribute>
 	<renderingAttribute name="sentier_pointillé">
+		<case maxzoom="13" attrStringValue="1_2" />
 		<case maxzoom="14" attrStringValue="4_4" />
 		<case maxzoom="15" attrStringValue="5_5" />
 		<case maxzoom="16" attrStringValue="6_6" />
@@ -1070,7 +1071,7 @@
 					
 		<!-- hiking icon-->
 		<switch balisage="false" lessDetailed="false" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
-			<switch minzoom="12" textOrder="47" ><!--
+			<switch minzoom="13" textOrder="47" ><!--
 				<case tag="network_nwn" value="" nameTag="hiking_route_name"/>
 				<case tag="network_iwn" value="" nameTag="hiking_route_name"/>-->
 				<case tag="network_nwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
@@ -1104,12 +1105,14 @@
 		</switch> 
 
 		<!-- MTB icon -->
-		<switch balisage="false" textOnPath="false" textSize="10" textOrder="169" seq="1:10">
-			<case tag="route_mtb" value=""  />
-			<apply textColor="#00ffffff" textMinDistance="250">
-				<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
-			</apply>
-			<apply_if lessDetailed="true" icon="" textShield=""/>
+		<switch balisage="false" textOnPath="false" textSize="10" seq="1:10">
+			<switch minzoom="14" textOrder="169" >
+				<case tag="route_mtb" value=""  />
+				<apply textColor="#00ffffff" textMinDistance="250">
+					<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
+				</apply>
+				<apply_if lessDetailed="true" icon="" textShield=""/>
+			</switch>
 		</switch>
 		<!-- velo icon -->
 		<switch balisage="false" textOnPath="false" textSize="10" textOrder="49" seq="1:10">
@@ -4010,10 +4013,11 @@
 			</switch>
 				
 			<!-- sentier -->
-			<switch minzoom="14" lessDetailed="false">
+			<switch minzoom="13" lessDetailed="false">
 				<case tag="highway" value="path"/>
 				<case tag="highway" value="bridleway"/>
 				<apply color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
+				<apply_if nightMode="true" maxzoom="14" strokeWidth_5="0"/>
 				<apply_if additional="indoor=yes" disable="true"/>
 				<apply_if additional="covered=yes" color_5="#33000000"/>
 				<apply_if additional="layer=1" color_5="#33000000">
@@ -4628,7 +4632,7 @@
 			</apply_if>
 			<apply_if contourLines="14">
 				<switch>
-					<case minzoom="15" additional="contourtype=10m" color="$contourLineColor"/>
+					<case minzoom="14" additional="contourtype=10m" color="$contourLineColor"/>
 					<case minzoom="14" additional="contourtype=20m" color="$contourLineColor"/>
 					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
 					<case minzoom="14" additional="contourtype=100m" color="$contourLineColor100"/>

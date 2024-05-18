@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <osmand_routing_config defaultProfile="enduro" name="enduro">
-	<attribute name="heuristicCoefficient" value="3.4" />
+	<attribute name="heuristicCoefficient" value="2.6" />
 	<attribute name="zoomToLoadTiles" value="16" />
 	<attribute name="planRoadDirection" value="1" />
 	<attribute name="recalculateDistanceHelp" value="100000" />
@@ -124,11 +124,9 @@
 			<select value="40" t="mtb:scale" v="1"/>			
 			<select value="20" t="mtb:scale" v="2"/>			
 			<select value="10" t="mtb:scale" v="3"/>			
-			<select value="30" t="dirtbike:scale" v="1"/>			
-			<select value="20" t="dirtbike:scale" v="2"/>			
-			<select value="10" t="dirtbike:scale" v="3"/>			
-			<select value="6" t="dirtbike:scale" v="4"/>			
-			<select value="3" t="dirtbike:scale" v="5"/>			
+			<select value="30" t="dirtbike:scale" v="3"/>			
+			<select value="10" t="dirtbike:scale" v="4"/>			
+			<select value="5" t="dirtbike:scale" v="5"/>			
 			<select value="40" t="sac_scale" v="hiking"/>
 			<select value="20" t="sac_scale" v="mountain_hiking"/>
 			<select value="20" t="highway" v="path"/><!-- 120 vmax profil/ 20 v path = 6 max pour priority-->
@@ -144,17 +142,6 @@
 			<select value="0.15" t="highway" v="trunk_link"/>
 			<select value="0.2" t="highway" v="primary"/>
 			<select value="0.2" t="highway" v="primary_link"/>
-			<select value="0.2" t="highway" v="secondary"/>
-			<select value="0.2" t="highway" v="secondary_link"/>
-			<select value="0.2" t="highway" v="tertiary"/>
-			<select value="0.2" t="highway" v="tertiary_link"/>
-			<select value="0.35" t="highway" v="unclassified"/>
-			<select value="0.35" t="highway" v="road"/>
-			<select value="0.5" t="highway" v="service"/>
-			<select value="0.5" t="highway" v="residential"/>
-			<select value="0.2" t="highway" v="living_street"/>
-			<select value="0.15" t="highway" v="footway"/>
-			<select value="0.15" t="highway" v="steps"/>
 			
 			<select value="0.25" t="smoothness" v="impassable"/>
 			<select value="0.5" t="mtb:scale:uphill" v="5"/>
@@ -162,21 +149,36 @@
 			<select value="0.75" t="dirtbike:scale" v="4"/>			
 			<select value="0.25" t="dirtbike:scale" v="5"/>	
 			
-			<select value="2" t="sac_scale" v="mountain_hiking"/>
-			<select value="4" t="mtb:scale" v="2"/>
+			<select value="6" t="sac_scale" v="hiking"/>
+			<select value="3" t="sac_scale" v="mountain_hiking"/>
+			<select value="6" t="mtb:scale" v="0"/>
+			<select value="6" t="mtb:scale" v="1"/>
+			<select value="3.5" t="mtb:scale" v="2"/>
 			<select value="1" t="mtb:scale" v="3"/>
 			<select value="0.25" t="mtb:scale" v="4"/>
 			
-			<select value="2.0" t="highway" v="track"/>
+			<select value="0.2" t="highway" v="secondary"/>
+			<select value="0.2" t="highway" v="secondary_link"/>
+			<select value="0.2" t="highway" v="tertiary"/>
+			<select value="0.2" t="highway" v="tertiary_link"/>
+			<select value="0.15" t="highway" v="footway"/>
 			
 			<!-- balisages -->
 			<select value="6" t="mtb" v="designated"/>
 			<select value="6" t="route" v="mtb"/>
-			<select value="6" t="route_mtb"/>
-			<select value="6" t="route_hiking"/>
-			<select value="6" t="route" v="hiking"/>
+			<select value="6" t="route_mtb"/><!-- -->
+			<select value="2.25" t="route_hiking"/>
+			<select value="2.25" t="route" v="hiking"/>
 			
-			<select value="4" t="highway" v="path"/>
+			<select value="0.35" t="highway" v="unclassified"/>
+			<select value="0.35" t="highway" v="road"/>
+			<select value="0.5" t="highway" v="service"/>
+			<select value="0.5" t="highway" v="residential"/>
+			<select value="0.2" t="highway" v="living_street"/>
+			<select value="0.15" t="highway" v="steps"/>
+			
+			<select value="1.75" t="highway" v="track"/>
+			<select value="2.5" t="highway" v="path"/>
 		</way>
 
 		<point attribute="obstacle">
