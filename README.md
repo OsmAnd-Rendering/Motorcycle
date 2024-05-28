@@ -1,4 +1,4 @@
-<img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/Profile/ic_action_enduro_motorcycle%403x.png" width="90" /> <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_map_languge%403x.png" width="25" /> `🇫🇷 Français`&emsp;🇬🇧 [English](readme_en.md)
+<img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/Profile/ic_action_enduro_motorcycle%403x.png" width="100" /> <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_map_languge%403x.png" width="25" /> `🇫🇷 Français`&emsp;🇬🇧 [English](readme_en.md)
 
 # Affichage et calculs d'itinéraires pour la moto tout terrain
 Modifie l'affichage des cartes offline (vectorielle) pour l'utilisation en moto tout terrain avec les chemins visuellement classifiés par "**difficulté**" liée au type d'engin et aux précisions présentes dans **OpenStreetMap**, permet des calculs de routage "**tout terrain**" pour 3 types de motos (de la plus lourde à la plus légère).
