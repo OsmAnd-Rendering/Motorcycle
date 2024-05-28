@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/osmandapp/OsmAnd-resources/dfeb72b4bce364e680a0316bbec196f347c7d875/icons/svg/special/enduro_motorcycle.svg" width="90" /> 🇫🇷 [Français](README.md) `🇬🇧 English`&emsp;
+<img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/Profile/ic_action_enduro_motorcycle%403x.png" width="90" /> <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_map_languge%403x.png" width="25" /> 🇫🇷 [Français](README.md) `🇬🇧 English`&emsp;
 
 # Display and calculation of off-road motorcycle routes
 Modifies the display of the offline map (vector) for off-road motorcycle use with the paths visually classified by "difficulty" related to the type of vehicle and the details present in OpenStreetMap, allows "off-road" routing calculations for 3 types of motorcycles (from the heaviest to the lightest).
