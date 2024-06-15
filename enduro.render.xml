@@ -121,6 +121,40 @@
 		<case attrIntValue="0"/>
 	</renderingAttribute>
 
+	<renderingAttribute name="osmcBlackColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcBlueColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcGreenColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcRedColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcYellowColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcOrangeColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcBrownColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcPurpleColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcPinkColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcTealColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+	<renderingAttribute name="osmcDefaultColor">
+		<case attrColorValue="#00ff00ff"/>
+	</renderingAttribute>
+
 	<!-- couleur guidage-->	
 	<!-- color used for route line color for iOS #882a4bd1 -->
 	<!-- color_0 used for route line stroke color -->
@@ -969,7 +1003,7 @@
 				<case tag="bridge" value="yes" order="86"/>
 				<case tag="tunnel" value="yes" order="11"/>
 				<case tag="route_bicycle" value="" order="11"/>
-				<case tag="route_mtb" value="" order="11"/>
+				<case tag="route_mtb" value="" order="16"/>
 				<case tag="route" value="mtb" order="11"/>
 				<case tag="network_iwn" value="" order="15"/>
 				<case tag="network_nwn" value="" order="14"/>
@@ -1070,28 +1104,32 @@
 		</switch>
 					
 		<!-- hiking icon-->
-		<switch balisage="false" lessDetailed="false" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
-			<switch minzoom="13" textOrder="47" ><!--
-				<case tag="network_nwn" value="" nameTag="hiking_route_name"/>
-				<case tag="network_iwn" value="" nameTag="hiking_route_name"/>-->
+		<switch balisage="false" lessDetailed="false" textMinDistance="50" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
+			<switch textOrder="46" ><!---->
+				<case tag="route_hiking" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
+				<case tag="route_hiking" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/>
+				<apply >
+					<case icon="" icon_2="" textShield=""/>
+				</apply>
+			</switch>
+			<switch minzoom="12" textOrder="47" >
 				<case tag="network_nwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
-				<case tag="network_iwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/><!--hiking_route_ref-->
+				<case tag="network_iwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
 				<apply maxzoom="13" icon="osmc_white_hiker" textShield="osmc_green_round_bg"/>
 				<apply minzoom="14">
 					<case icon="osmc_red_lower" textShield="osmc_white_bg" /><!---->
 				</apply>
 			</switch>
-			<switch minzoom="13" textOrder="48" >
+			<switch minzoom="14" textOrder="48" >
 				<case tag="network_rwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
-				<apply maxzoom="13" icon="osmc_white_hiker" textShield="osmc_green_round_bg"/>
 				<apply minzoom="14" >
 					<case icon="osmc_red_lower" textShield="osmc_yellow_bg"/>
 				</apply>
 			</switch>
-			<switch minzoom="14" textOrder="49" >
-				<case minzoom="15" tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/><!-- route_hiking_#SEQ_osmc_text -->
-				<case minzoom="15" tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
-				<apply >
+			<switch minzoom="14" textOrder="49" ><!---->
+				<case tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/> 
+				<case tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
+				<apply minzoom="14">
 					<case icon="osmc_yellow_lower" textShield="osmc_white_bg"/>
 				</apply>
 			</switch>
@@ -3564,13 +3602,13 @@
 			</switch>
 			<apply>
 				<case maxzoom="12" strokeWidth_2="4" pathEffect_2="1_2" strokeWidth="2" />
-				<case maxzoom="13" strokeWidth_2="5" pathEffect_2="1_2" strokeWidth="3" />
-				<case maxzoom="14" strokeWidth_2="6" pathEffect_2="1_2" strokeWidth="4" />
-				<case maxzoom="15" strokeWidth_2="7" pathEffect_2="1_2" strokeWidth="5"/>
-				<case maxzoom="16" strokeWidth_2="8" pathEffect_2="1.5_2.5" strokeWidth="6"/>
-				<case maxzoom="17" strokeWidth_2="9" pathEffect_2="2_3" strokeWidth="7"/>
-				<case maxzoom="18" strokeWidth_2="10" pathEffect_2="2_3" strokeWidth="8"/>
-				<case minzoom="19" strokeWidth_2="11" pathEffect_2="2_4" strokeWidth="9"/>
+				<case maxzoom="13" strokeWidth_2="4.5" pathEffect_2="1_3" strokeWidth="2.5" />
+				<case maxzoom="14" strokeWidth_2="5" pathEffect_2="1_3" strokeWidth="3" />
+				<case maxzoom="15" strokeWidth_2="5.5" pathEffect_2="1_3" strokeWidth="3.5"/>
+				<case maxzoom="16" strokeWidth_2="6" pathEffect_2="1.5_3.5" strokeWidth="4"/>
+				<case maxzoom="17" strokeWidth_2="6.5" pathEffect_2="2_4" strokeWidth="4.5"/>
+				<case maxzoom="18" strokeWidth_2="7" pathEffect_2="2_4" strokeWidth="5"/>
+				<case minzoom="19" strokeWidth_2="8" pathEffect_2="2_5" strokeWidth="6"/>
 			</apply>
 
 			<apply_if minzoom="15" additional="bridge=yes">
@@ -4017,7 +4055,7 @@
 				<case tag="highway" value="path"/>
 				<case tag="highway" value="bridleway"/>
 				<apply color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
-				<apply_if nightMode="true" maxzoom="14" strokeWidth_5="0"/>
+				<apply_if nightMode="true" maxzoom="13" strokeWidth_5="0"/>
 				<apply_if additional="indoor=yes" disable="true"/>
 				<apply_if additional="covered=yes" color_5="#33000000"/>
 				<apply_if additional="layer=1" color_5="#33000000">
@@ -4326,11 +4364,11 @@
 			<case minzoom="12" tag="network_iwn" value="" shadowColor="#ccffddaa" color="#ccffddaa"/>
 			<case minzoom="12" tag="network_nwn" value="" shadowColor="#ccffddaa" color="#ccffddaa"/>
 			<case minzoom="13" tag="network_rwn" value="" shadowColor="#ccffeeaa" color="#ccffeeaa"/>
-			<case minzoom="15" tag="network_lwn" value="" shadowColor="#ccffffcc" color="#ccffffcc"/>
+			<case minzoom="14" tag="network_lwn" value="" shadowColor="#ccffffcc" color="#ccffffcc"/>
 			<case minzoom="15" tag="route" value="hiking" shadowColor="#ccffffcc" color="#ccffffcc"/>
-			<case minzoom="15" tag="hiking" value="yes" shadowColor="#ccffffcc" color="#ccffffcc"/>
+			<case minzoom="15" tag="hiking" value="yes" shadowColor="#ccffffcc" color="#ccffffcc"/><!--
 			<case maxzoom="13" tag="route_hiking" value="" hikingRoutesOSMC="walkingRoutesOSMCNodes" strokeWidth="0" />
-			<case minzoom="14" tag="route_hiking" value="" hikingRoutesOSMC="walkingRoutesOSMCNodes" shadowColor="#ccffffcc" color="#ccffffcc" />
+			<case minzoom="14" tag="route_hiking" value="" hikingRoutesOSMC="walkingRoutesOSMCNodes" shadowColor="#ff00ff" color="#ccffffcc" />-->
 			<apply>
 				<case maxzoom="12" shadowRadius="4"/>
 				<case maxzoom="13" shadowRadius="5"/>
@@ -4540,13 +4578,13 @@
 			<switch minzoom="11" strokeWidth="0.1" color="$eau" shadowColor="$eau">
 				<case tag="waterway" value="river"/>
 					<apply >
-						<case maxzoom="11" shadowRadius="1.0"/>
-						<case maxzoom="12" shadowRadius="1.2"/>
-						<case maxzoom="13" shadowRadius="1.4"/>
-						<case maxzoom="14" shadowRadius="1.6"/>
-						<case maxzoom="15" shadowRadius="1.8"/>
-						<case maxzoom="16" shadowRadius="2.0"/>
-						<case minzoom="17" shadowRadius="2.2"/>
+						<case maxzoom="11" shadowRadius="0.8" color="#9980b0ff"/>
+						<case maxzoom="12" shadowRadius="1.0" color="#cc80b0ff"/>
+						<case maxzoom="13" shadowRadius="1.2"/>
+						<case maxzoom="14" shadowRadius="1.4"/>
+						<case maxzoom="15" shadowRadius="1.6"/>
+						<case maxzoom="16" shadowRadius="1.8"/>
+						<case minzoom="17" shadowRadius="2.0"/>
 					</apply>
 				<apply_if ign="true" noPolygons="true" strokeWidth="0"/>
 			</switch>
@@ -4634,7 +4672,7 @@
 				<switch>
 					<case minzoom="14" additional="contourtype=10m" color="$contourLineColor"/>
 					<case minzoom="14" additional="contourtype=20m" color="$contourLineColor"/>
-					<case minzoom="15" additional="contourtype=50m" color="$contourLineColor50"/>
+					<case minzoom="14" additional="contourtype=50m" color="$contourLineColor50"/>
 					<case minzoom="14" additional="contourtype=100m" color="$contourLineColor100"/>
 				</switch>
 			</apply_if>
