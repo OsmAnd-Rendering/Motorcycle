@@ -1143,14 +1143,12 @@
 		</switch> 
 
 		<!-- MTB icon -->
-		<switch balisage="false" textOnPath="false" textSize="10" seq="1:10">
-			<switch minzoom="14" textOrder="169" >
-				<case tag="route_mtb" value=""  />
-				<apply textColor="#00ffffff" textMinDistance="250">
-					<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
-				</apply>
-				<apply_if lessDetailed="true" icon="" textShield=""/>
-			</switch>
+		<switch balisage="false" textOnPath="false" textSize="10" textOrder="49" seq="1:10">
+			<case tag="route_mtb" value="" />
+			<apply textColor="#00ffffff" textMinDistance="100">
+				<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
+			</apply>
+			<apply_if lessDetailed="true" icon="" textShield=""/>
 		</switch>
 		<!-- velo icon -->
 		<switch balisage="false" textOnPath="false" textSize="10" textOrder="49" seq="1:10">
