@@ -36,7 +36,7 @@
 	<!-- pour OpenGL -->
 	<renderingProperty attr="engine_v1" type="boolean"/>
 
-	<renderingConstant name="highwayOnewayIconBig" value="oneway_black_semitransparent_big"/><!-- osmc_black_triangle oneway_gray_big oneway_blue_big oneway_black_semitransparent_big-->
+	<renderingConstant name="highwayOnewayIconBig" value="osmc_red_triangle_2"/><!-- osmc_black_triangle oneway_gray_big oneway_blue_big oneway_black_semitransparent_big-->
 	
 	<renderingAttribute name="waterwayArrows">
 		<case attrIntValue="0"/>
@@ -3514,8 +3514,8 @@
 				<case maxzoom="19" shadowRadius="2.8"/>
 				<case minzoom="20" shadowRadius="3"/>
 			</apply_if>
-			<apply_if additional="oneway=yes" pathIcon="$highwayOnewayIconBig" pathIconStep="150">
-				<case maxzoom="17" pathIcon=""/>
+			<apply_if additional="oneway=yes" pathIcon="$highwayOnewayIconBig" pathIconStep="100" >
+				<case maxzoom="16" pathIcon="" />
 			</apply_if >
 			<apply_if nightMode="true" >
 				<case lessDetailed="false" shadowColor="#000000"/>
