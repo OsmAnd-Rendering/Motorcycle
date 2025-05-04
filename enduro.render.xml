@@ -4206,18 +4206,6 @@
 				<apply_if additional="mtb:scale=6" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
-				<!--difficulté dirtbike -->
-				<apply_if tag="highway" value="path" additional="dirtbike:scale=0" color_3="#00dd00"/>
-				<apply_if additional="dirtbike:scale=1" color_3="#ff9933"/>
-				<apply_if additional="dirtbike:scale=2" color_3="#ff9933"/>
-				<apply_if additional="dirtbike:scale=3" color_3="#ff0000"/>
-				<apply_if additional="dirtbike:scale=4" color_3="#ff0000"/>
-				<apply_if additional="dirtbike:scale=5" color_3="#99000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
-				<apply_if additional="dirtbike:scale=6" color_3="#99000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
 
 				<apply lessDetailed="false" cap_3="ROUND">
 					<case maxzoom="12" strokeWidth_3="0" pathEffect_3=""/>
