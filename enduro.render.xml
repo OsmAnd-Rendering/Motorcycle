@@ -592,8 +592,8 @@
 			<!-- Polygon 1-10-->
 			<switch area="true" point="false" addPoint="true" objectType="3" order="10"><!-- aire non close -->
 				<case tag="leisure" value="nature_reserve" order="10" />
-				<case tag="boundary" value="national_park" order="-1" />
-				<case tag="boundary" value="protected_area" order="-1" />
+				<case tag="boundary" value="national_park" order="10" />
+				<case tag="boundary" value="protected_area" order="10" />
 				<case tag="man_made" value="breakwater" order="9"/>
 				<case tag="boundary" value="forest" order="10" />
 			</switch>
@@ -601,8 +601,8 @@
 			<switch cycle="true" point="false" addPoint="true" objectType="3" order="5"><!-- start and end point are same -->
 				<case tag="leisure" value="nature_reserve" order="10" />
 				<case tag="boundary" value="forest" order="10" />
-				<case tag="boundary" value="national_park" order="-1" /> 
-				<case tag="boundary" value="protected_area" order="-1" />
+				<case tag="boundary" value="national_park" order="10" />
+				<case tag="boundary" value="protected_area" order="10" />
 
 				<case tag="note_tag" value="yes" order="10"/>
 
@@ -995,9 +995,6 @@
 				<case tag="railway" value="station"/>
 				<case tag="public_transport" value="platform"/>
 				<case tag="boundary" value="" order="20"/>
-				<case tag="boundary" value="protected_area" order="79" ignorePolygonArea="true"/><!--
-				<case tag="boundary" value="national_park" order="81" ignorePolygonArea="true"/>
-				<case tag="leisure" value="nature_reserve" order="80" />-->
 				<case tag="contour" value="elevation" order="11"/>
 				<case tag="lit" value="" order="12"/>
 				<case tag="bridge" value="yes" order="86"/>
@@ -1015,6 +1012,8 @@
 				<case tag="route" value="hiking" order="12"/>
 				<case tag="hiking" value="yes" order="12"/>
 				<case tag="leisure" value="nature_reserve" order="12"/>
+				<case tag="boundary" value="protected_area" order="12"/>
+				<case tag="boundary" value="national_park" order="12"/>
 			</switch>
 			<apply_if hideUnderground="true">
 				<apply_if layer="-1" order="-1"/>
@@ -1922,7 +1921,8 @@
 		<!-- protected area -->
 		<switch minzoom="10" textOrder="4" >
 			<case tag="boundary" value="national_park"/>
-			<apply_if hideAccess="false" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" > 
+			<case tag="boundary" value="protected_area" />
+			<apply_if hideAccess="false" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" >
 				<case maxzoom="10" textSize="11" textColor="#cccc0000"/>
 				<case maxzoom="11" textSize="12" textColor="#afcc0000"/>
 				<case maxzoom="12" textSize="13" textColor="#99cc0000"/>
@@ -3156,6 +3156,8 @@
 		<!-- nature_reserve-->
 		<switch minzoom="8" >
 			<case tag="leisure" value="nature_reserve"/>
+			<case tag="boundary" value="protected_area"/>
+			<case tag="boundary" value="national_park"/>
 			<apply >
 				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1"/>
 				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5"/>
@@ -4205,18 +4207,6 @@
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
 				<apply_if additional="mtb:scale=6" color_3="#99000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
-				<!--difficulté dirtbike -->
-				<apply_if tag="highway" value="path" additional="dirtbike:scale=0" color_3="#00dd00"/>
-				<apply_if additional="dirtbike:scale=1" color_3="#ff9933"/>
-				<apply_if additional="dirtbike:scale=2" color_3="#ff9933"/>
-				<apply_if additional="dirtbike:scale=3" color_3="#ff0000"/>
-				<apply_if additional="dirtbike:scale=4" color_3="#ff0000"/>
-				<apply_if additional="dirtbike:scale=5" color_3="#99000000">
-					<case nightMode="true" color_3="#cccccc"/>
-				</apply_if>
-				<apply_if additional="dirtbike:scale=6" color_3="#99000000">
 					<case nightMode="true" color_3="#cccccc"/>
 				</apply_if>
 
