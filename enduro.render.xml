@@ -2095,40 +2095,40 @@
 		<switch iconOrder="166" shield="green_round_shield" iconVisibleSize="48" intersectionSizeFactor="2.5">
 			<case minzoom="15" tag="leisure" value="stadium" icon="sport_stadium" iconOrder="165"/>
 			<case minzoom="14" tag="sport" value="equestrian" icon="equestrian"/>
-			<case minzoom="16" tag="sport" value="climbing" icon="sport_climbing"/>
-			<case minzoom="16" tag="sport" value="climbing_adventure" icon="sport_climbing_adventure"/>
-			<case minzoom="16" tag="sport" value="soccer" icon="sport_soccer"/>
-			<case minzoom="16" tag="sport" value="baseball" icon="sport_baseball"/>
-			<case minzoom="16" tag="sport" value="canoe" icon="sport_canoe"/>
-			<case minzoom="16" tag="sport" value="shooting" icon="sport_shooting"/>
+			<case minzoom="17" tag="sport" value="climbing" icon="sport_climbing"/>
+			<case minzoom="17" tag="sport" value="climbing_adventure" icon="sport_climbing_adventure"/>
+			<case minzoom="17" tag="sport" value="soccer" icon="sport_soccer"/>
+			<case minzoom="17" tag="sport" value="baseball" icon="sport_baseball"/>
+			<case minzoom="17" tag="sport" value="canoe" icon="sport_canoe"/>
+			<case minzoom="17" tag="sport" value="shooting" icon="sport_shooting"/>
 			<case minzoom="15" tag="sport" value="golf" icon="sport_golf"/>
-			<case minzoom="15" tag="leisure" value="golf_course" icon="sport_golf"/>
-			<case minzoom="16" tag="sport" value="swimming" icon="sport_swimming"/>
-			<case minzoom="16" tag="sport" value="ice_skating" icon="leisure_ice_rink"/>
-			<case minzoom="16" tag="sport" value="sailing" icon="sport_sailing"/>
+			<case minzoom="17" tag="leisure" value="golf_course" icon="sport_golf"/>
+			<case minzoom="17" tag="sport" value="swimming" icon="sport_swimming"/>
+			<case minzoom="17" tag="sport" value="ice_skating" icon="leisure_ice_rink"/>
+			<case minzoom="17" tag="sport" value="sailing" icon="sport_sailing"/>
 			<case minzoom="16" tag="sport" value="skiing" icon="sport_skiing"/>
-			<case minzoom="16" tag="sport" value="diving" icon="sport_diving"/>
-			<case minzoom="16" tag="amenity" value="dive_centre" icon="dive_centre"/>
-			<case minzoom="16" tag="sport" value="scuba_diving" icon="sport_scuba_diving"/>
+			<case minzoom="17" tag="sport" value="diving" icon="sport_diving"/>
+			<case minzoom="17" tag="amenity" value="dive_centre" icon="dive_centre"/>
+			<case minzoom="17" tag="sport" value="scuba_diving" icon="sport_scuba_diving"/>
 			<case minzoom="15" tag="sport" value="motor" icon="sport_motor"/>
-			<case minzoom="16" tag="sport" value="free_flying" icon="sport_free_flying"/>
-			<case minzoom="16" tag="sport" value="bmx" icon="sport_bmx"/>
-			<case minzoom="16" tag="sport" value="skateboard" icon="sport_skateboard"/>
-			<case minzoom="16" tag="sport" value="ice_hockey" icon="ice_hockey"/>
-			<case minzoom="16" tag="sport" value="field_hockey" icon="field_hockey"/>
-			<case minzoom="16" tag="sport" value="cycling" icon="sport_cycling"/>
-			<case minzoom="16" tag="sport" value="rugby_union" icon="sport_rugby_union"/>
-			<case minzoom="16" tag="sport" value="rugby_league" icon="sport_rugby_league"/>
+			<case minzoom="17" tag="sport" value="free_flying" icon="sport_free_flying"/>
+			<case minzoom="17" tag="sport" value="bmx" icon="sport_bmx"/>
+			<case minzoom="17" tag="sport" value="skateboard" icon="sport_skateboard"/>
+			<case minzoom="17" tag="sport" value="ice_hockey" icon="ice_hockey"/>
+			<case minzoom="17" tag="sport" value="field_hockey" icon="field_hockey"/>
+			<case minzoom="17" tag="sport" value="cycling" icon="sport_cycling"/>
+			<case minzoom="17" tag="sport" value="rugby_union" icon="sport_rugby_union"/>
+			<case minzoom="17" tag="sport" value="rugby_league" icon="sport_rugby_league"/>
 			<case minzoom="16" tag="sport" value="base" icon="sport_base"/>
-			<case minzoom="16" tag="sport" value="athletics" icon="sport_athletics"/>
-			<case minzoom="16" tag="sport" value="surfing" icon="sport_surfing"/>
-			<case minzoom="16" tag="sport" value="handball" icon="sport_handball"/>
-			<case minzoom="16" tag="sport" value="team_handball" icon="sport_handball"/>
-			<case minzoom="16" tag="sport" value="volleyball" icon="sport_volleyball"/>
-			<case minzoom="16" tag="sport" value="basketball" icon="sport_basketball"/>
-			<case minzoom="16" tag="sport" value="model_aerodrome" icon="model_aerodrome"/>
-			<case minzoom="16" tag="sport" value="american_football" icon="american_football"/>
-			<case minzoom="16" tag="sport" value="multi" icon="sport_multi"/>
+			<case minzoom="17" tag="sport" value="athletics" icon="sport_athletics"/>
+			<case minzoom="17" tag="sport" value="surfing" icon="sport_surfing"/>
+			<case minzoom="17" tag="sport" value="handball" icon="sport_handball"/>
+			<case minzoom="17" tag="sport" value="team_handball" icon="sport_handball"/>
+			<case minzoom="17" tag="sport" value="volleyball" icon="sport_volleyball"/>
+			<case minzoom="17" tag="sport" value="basketball" icon="sport_basketball"/>
+			<case minzoom="17" tag="sport" value="model_aerodrome" icon="model_aerodrome"/>
+			<case minzoom="17" tag="sport" value="american_football" icon="american_football"/>
+			<case minzoom="17" tag="sport" value="multi" icon="sport_multi"/>
 
 			<case minzoom="16" tag="attraction" value="water_slide" icon="attraction_water_slide"/>
 			<case minzoom="16" tag="leisure" value="water_park" icon="leisure_water_park"/>
@@ -2163,6 +2163,7 @@
 			
 		<!-- Food and Drink -->
 		<switch shield="orange_round_shield" iconVisibleSize="96">
+			<case minzoom="17" tag="craft" value="winery" icon="craft_winery" iconOrder="159"/>
 			<case minzoom="15" tag="amenity" value="fast_food" icon="amenity_fast_food" iconOrder="159"/>
 			<case minzoom="15" tag="amenity" value="restaurant" icon="amenity_restaurant" iconOrder="159"/>
 			<case minzoom="16" tag="amenity" value="cafe" icon="amenity_cafe" iconOrder="160"/>
