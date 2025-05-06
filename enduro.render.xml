@@ -13,6 +13,7 @@
 	<renderingProperty attr="difficulte" name="cacher difficulté" description="cacher difficulté" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="hideAccess" name="Hide access restrictions" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="protectedArea" name="Hide protected restrictions" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="gris" name="niveaux de gris" description="niveaux de gris" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="piste" name="couleur piste" description="couleur piste" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="comment" name="cacher commentaires" description="cacher commentaires" type="boolean" possibleValues="" category="enduro"/>
@@ -3156,7 +3157,6 @@
 		<!-- nature_reserve-->
 		<switch minzoom="8" >
 			<case tag="leisure" value="nature_reserve"/>
-			<case tag="boundary" value="protected_area"/>
 			<case tag="boundary" value="national_park"/>
 			<apply >
 				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1"/>
@@ -3172,19 +3172,22 @@
 			<apply_if hideAccess="true" color_2="#6600ff00" color="#0000ff00" strokeWidth_2="8"/>
 		</switch> 
 
-		<!-- protected_area
-		<switch minzoom="10" >
+		<!-- protected_area -->
+		<switch minzoom="8" >
 			<case tag="boundary" value="protected_area"/>
-			<apply color="#9900ff00">
-				<case maxzoom="10" color_2="#6600ff00" strokeWidth_2="1.5"/>
-				<case maxzoom="11" color_2="#5500ff00" strokeWidth_2="2"/>
-				<case maxzoom="12" color_2="#4400ff00" strokeWidth_2="3"/>
-				<case maxzoom="13" color_2="#3000ff00" strokeWidth_2="4"/>
-				<case minzoom="14" color_2="#2000ff00" strokeWidth_2="5"/>
+			<case tag="boundary" value="national_park"/>
+			<apply >
+				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1"/>
+				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5"/>
+				<case maxzoom="11" color_2="#55ff6666" strokeWidth_2="2"/>
+				<case maxzoom="12" color_2="#44ff5555" strokeWidth_2="3"/>
+				<case maxzoom="13" color_2="#30ff0000" strokeWidth_2="4"/>
+				<case minzoom="14" color_2="#20ff0000" strokeWidth_2="5"/>
 			</apply>
-			<apply_if nightMode="true" color_2="#009900" />
-			<apply_if ign="true" noPolygons="true" color_2="#8800ff00" />
-		</switch> -->
+			<apply_if nightMode="true" color_2="#990000" color="#660000"/>
+			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
+			<apply_if protectedArea="false" color_2="#88ffcccc" color="#99ffd0d0"/> 
+		</switch> 
 		
 		<switch nightMode="true"><!--
 			<case tag="natural" value="land" />
