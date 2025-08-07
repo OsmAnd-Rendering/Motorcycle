@@ -3169,7 +3169,7 @@
 			<apply_if nightMode="true" color_2="#990000" color="#660000"/>
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
 			<apply_if hideAccess="false" color_2="#88ffcccc" color="#99ffd0d0"/>
-			<apply_if hideAccess="true" color_2="#6600ff00" color="#0000ff00" strokeWidth_2="8"/>
+			<apply_if hideAccess="true" color_2="#0000ff00" color="#0000ff00" strokeWidth_2="0"/>
 		</switch> 
 
 		<!-- protected_area -->
@@ -3186,7 +3186,8 @@
 			</apply>
 			<apply_if nightMode="true" color_2="#990000" color="#660000"/>
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
-			<apply_if protectedArea="false" color_2="#88ffcccc" color="#99ffd0d0"/> 
+			<apply_if protectedArea="false" color_2="#00ffcccc" color="#00ffd0d0"/> 
+			<apply_if protectedArea="true" color_2="#99ffcccc" color="#99ffd0d0"/> 
 		</switch> 
 		
 		<switch nightMode="true"><!--
