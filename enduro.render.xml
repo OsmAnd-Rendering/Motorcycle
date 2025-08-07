@@ -12,8 +12,8 @@
 	<renderingProperty attr="arriereplan" name="en cas  de carte arrière plan" description="ajoute un contour noir" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="difficulte" name="cacher difficulté" description="cacher difficulté" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="enduro"/>
-	<renderingProperty attr="hideAccess" name="Hide access restrictions" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
-	<renderingProperty attr="protectedArea" name="Hide protected restrictions" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="hideAccess" name="masque les restrictions d'accès FR" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="protectedArea" name="show all protected boundaries" description="show all protected boundaries" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="gris" name="niveaux de gris" description="niveaux de gris" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="piste" name="couleur piste" description="couleur piste" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="comment" name="cacher commentaires" description="cacher commentaires" type="boolean" possibleValues="" category="enduro"/>
@@ -1920,10 +1920,37 @@
 		</switch>
 
 		<!-- protected area -->
-		<switch minzoom="10" textOrder="4" >
-			<case tag="boundary" value="national_park"/>
-			<case tag="boundary" value="protected_area" />
-			<apply_if hideAccess="false" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" >
+		<switch minzoom="10" >
+			<case tag="leisure" value="nature_reserve" nameTag="" textOrder="40"/>
+			<case tag="boundary" value="national_park" nameTag="" textOrder="4"/>
+			<case protectedArea="true" tag="boundary" value="protected_area" nameTag="" textOrder="42"/>
+			<apply_if hideAccess="false" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="true" textWrapWidth="20">
+				<case maxzoom="14" textSize="12" textColor="#66cc0000"/>
+				<case maxzoom="15" textSize="13" textColor="#66cc0000"/>
+				<case maxzoom="16" textSize="14" textColor="#66cc0000"/>
+				<case maxzoom="17" textSize="15" textColor="#6fcc0000"/>
+				<case maxzoom="18" textSize="16" textColor="#77cc0000"/>
+				<case maxzoom="19" textSize="17" textColor="#7fcc0000"/>
+				<case minzoom="20" textSize="18" textColor="#88cc0000"/>
+			</apply_if>
+			<apply_if hideAccess="true" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="true" textWrapWidth="20">
+				<case maxzoom="14" textSize="12" textColor="#66009900"/>
+				<case maxzoom="15" textSize="13" textColor="#66009900"/>
+				<case maxzoom="16" textSize="14" textColor="#66009900"/>
+				<case maxzoom="17" textSize="15" textColor="#6f009900"/>
+				<case maxzoom="18" textSize="16" textColor="#77009900"/>
+				<case maxzoom="19" textSize="17" textColor="#7f009900"/>
+				<case minzoom="20" textSize="18" textColor="#88009900"/>
+			</apply_if>
+			<apply_if nightMode="true" hideAccess="false" textHaloColor="#000000" textHaloRadius="1" textColor="#cc3333"/>
+			<apply_if nightMode="true" hideAccess="true" textHaloColor="#000000" textHaloRadius="1" textColor="#00cc3333"/>
+		</switch>
+		
+		<!--<switch minzoom="10" >
+			<case tag="boundary" value="national_park" />
+			<case tag="boundary" value="protected_area"/>
+			<apply textColor="#00cc0000"/>
+			<apply_if protectedArea="true" textOrder="4" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" >
 				<case maxzoom="10" textSize="11" textColor="#cccc0000"/>
 				<case maxzoom="11" textSize="12" textColor="#afcc0000"/>
 				<case maxzoom="12" textSize="13" textColor="#99cc0000"/>
@@ -1936,24 +1963,11 @@
 				<case maxzoom="19" textSize="34" textColor="#33cc0000"/>
 				<case minzoom="20" textSize="48" textColor="#33cc0000"/>
 			</apply_if>
-			<apply_if hideAccess="true" nameTag="" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="false" textWrapWidth="20" > 
-				<case maxzoom="10" textSize="11" textColor="#cc009900"/>
-				<case maxzoom="11" textSize="12" textColor="#af009900"/>
-				<case maxzoom="12" textSize="13" textColor="#99009900"/>
-				<case maxzoom="13" textSize="14" textColor="#7f009900"/>
-				<case maxzoom="14" textSize="15" textColor="#66009900"/>
-				<case maxzoom="15" textSize="16" textColor="#4f009900"/>
-				<case maxzoom="16" textSize="18" textColor="#33009900"/>
-				<case maxzoom="17" textSize="20" textColor="#33009900"/>
-				<case maxzoom="18" textSize="26" textColor="#33009900"/>
-				<case maxzoom="19" textSize="34" textColor="#33009900"/>
-				<case minzoom="20" textSize="48" textColor="#33009900"/>
-			</apply_if>
 			<apply_if nightMode="true" textHaloColor="#000000" textHaloRadius="0" textColor="#66ff6666"/>
 			<apply_if nightMode="true" hideAccess="true" textHaloColor="#000000" textHaloRadius="0" textColor="#6666ff66"/>
-		</switch>
-
-		<switch minzoom="16" textOrder="44" >
+		</switch>-->
+		
+	<!--<switch minzoom="16" textOrder="44" >
 			<case tag="leisure" value="nature_reserve" nameTag="" intersectionMargin="40"/>
 			<apply_if hideAccess="false" textHaloColor="#99ffffff" textHaloRadius="2" textBold="true" textItalic="true" textOnPath="true" textWrapWidth="20">
 				<case maxzoom="14" textSize="12" textColor="#66cc0000"/>
@@ -1975,7 +1989,7 @@
 			</apply_if>
 			<apply_if nightMode="true" textHaloColor="#000000" textHaloRadius="1" textColor="#ccff6666"/>
 			<apply_if nightMode="true" hideAccess="true" textHaloColor="#000000" textHaloRadius="1" textColor="#9966ff66"/>
-		</switch>
+		</switch>-->
 
 		<!-- water -->
 		<switch textColor="#2665ff" textHaloRadius="2" textHaloColor="#ccffffff" textItalic="true">
@@ -3158,7 +3172,7 @@
 		<switch minzoom="8" >
 			<case tag="leisure" value="nature_reserve"/>
 			<case tag="boundary" value="national_park"/>
-			<apply >
+			<apply color="#99ffd0d0">
 				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1"/>
 				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5"/>
 				<case maxzoom="11" color_2="#55ff6666" strokeWidth_2="2"/>
@@ -3166,17 +3180,15 @@
 				<case maxzoom="13" color_2="#30ff0000" strokeWidth_2="4"/>
 				<case minzoom="14" color_2="#20ff0000" strokeWidth_2="5"/>
 			</apply>
-			<apply_if nightMode="true" color_2="#990000" color="#660000"/>
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
-			<apply_if hideAccess="false" color_2="#88ffcccc" color="#99ffd0d0"/>
-			<apply_if hideAccess="true" color_2="#0000ff00" color="#0000ff00" strokeWidth_2="0"/>
+			<apply_if hideAccess="true" color="#0000ff00" color_2="#2000ff00"/>
+			<apply_if nightMode="true" strokeWidth_2="0"/>
 		</switch> 
 
 		<!-- protected_area -->
 		<switch minzoom="8" >
 			<case tag="boundary" value="protected_area"/>
-			<case tag="boundary" value="national_park"/>
-			<apply >
+			<apply hideAccess="false" color="#99ffd0d0">
 				<case maxzoom="9" color_2="#77ff9999" strokeWidth_2="1"/>
 				<case maxzoom="10" color_2="#66ff7575" strokeWidth_2="1.5"/>
 				<case maxzoom="11" color_2="#55ff6666" strokeWidth_2="2"/>
@@ -3184,10 +3196,8 @@
 				<case maxzoom="13" color_2="#30ff0000" strokeWidth_2="4"/>
 				<case minzoom="14" color_2="#20ff0000" strokeWidth_2="5"/>
 			</apply>
-			<apply_if nightMode="true" color_2="#990000" color="#660000"/>
 			<apply_if ign="true" noPolygons="true" color_2="#88ffcccc" color="#66ffd0d0"/>
-			<apply_if protectedArea="false" color_2="#00ffcccc" color="#00ffd0d0"/> 
-			<apply_if protectedArea="true" color_2="#99ffcccc" color="#99ffd0d0"/> 
+			<apply_if protectedArea="false" color="#00ffd0d0" strokeWidth_2="0"/> 
 		</switch> 
 		
 		<switch nightMode="true"><!--
@@ -3858,7 +3868,7 @@
 					</apply_if>
 				</switch>
 				
-				<apply_if ign="true" >
+				<apply_if ign="true"  nightMode="false">
 					<switch>
 						<case additional="surface=gravel">
 							<apply_if tracktype="grade3"/>
