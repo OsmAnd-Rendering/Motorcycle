@@ -39,3 +39,7 @@ un didactitiel en vidéo **[https://youtu.be/07nj4LoACdc](https://www.youtube.co
 
 - **[Documentation générale](https://github.com/OsmAnd-Rendering/Motorcycle/wiki)**
 
+---
+
+## <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_info%403x.png" width="30" > Si vous préférez BRouter pour le calcul d'itinéraire
+- pour mes profiles moto tout-terrain avec BRouter voir [ici](https://github.com/cricri-du-lauragais/QMapShack_enduro/tree/main/BRouter/profiles2) et le détail [ici](https://github.com/cricri-du-lauragais/QMapShack_enduro/blob/main/BRouter_profiles.md)
