@@ -1,4 +1,3 @@
-<img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/Profile/ic_action_enduro_motorcycle%403x.png" width="100" /><br>
 <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_map_languge%403x.png" width="25" /> `Français`&emsp;[English](readme_en.md)
 
 # Affichage et calculs d'itinéraires pour la moto tout terrain
