@@ -1187,8 +1187,9 @@
 		</switch>
 					
 		<!-- hiking icon-->
-		<switch balisage="false" lessDetailed="false" textMinDistance="50" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
+		<switch balisage="false" lessDetailed="false" intersectionMargin="5" textOnPath="false" textSize="10" textColor="#00ff00ff" seq="1:10" >
 			<switch textOrder="46" ><!---->
+				<case tag="route_hiking" value="" nameTag="hiking_route_name"/>
 				<case tag="route_hiking" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
 				<case tag="route_hiking" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/>
 				<apply >
@@ -1196,20 +1197,26 @@
 				</apply>
 			</switch>
 			<switch minzoom="12" textOrder="47" >
+				<case tag="route_hiking" value="" nameTag="hiking_route_name"/>
 				<case tag="network_nwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
+				<case tag="network_nwn" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/>
 				<case tag="network_iwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
+				<case tag="network_iwn" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/>
 				<apply maxzoom="13" icon="osmc_white_hiker" textShield="osmc_green_round_bg"/>
 				<apply minzoom="14">
 					<case icon="osmc_red_lower" textShield="osmc_white_bg" /><!---->
 				</apply>
 			</switch>
 			<switch minzoom="14" textOrder="48" >
+				<case tag="route_hiking" value="" nameTag="hiking_route_name"/>
 				<case tag="network_rwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
+				<case tag="network_rwn" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/>
 				<apply minzoom="14" >
 					<case icon="osmc_red_lower" textShield="osmc_yellow_bg"/>
 				</apply>
 			</switch>
 			<switch minzoom="14" textOrder="49" ><!---->
+				<case tag="route_hiking" value="" nameTag="hiking_route_name"/>
 				<case tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_stub_name_v2"/> 
 				<case tag="network_lwn" value="" nameTag="route_hiking_#SEQ_osmc_text"/>
 				<apply minzoom="14">
