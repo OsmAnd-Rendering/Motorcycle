@@ -1398,7 +1398,7 @@
 
 			<!-- town -->
 			<switch minzoom="8" textColor="#000000" textWrapWidth="20" textBold="true" >
-				<case tag="place" value="town" /><!--  -->
+				<case tag="place" value="town" nameTag=""/><!--  -->
 				<apply textHaloColor="#ffffff" textOrder="34" intersectionMargin="40" intersectsWith="any">
 					<case maxzoom="9" textSize="10" />
 					<case maxzoom="10" textSize="11" />
@@ -1437,7 +1437,7 @@
 
 			<!-- villages -->
 			<switch minzoom="10" >
-				<case tag="place" value="village" textWrapWidth="15" textBold="true" textColor="#000000" />
+				<case tag="place" value="village" nameTag="" textWrapWidth="15" textBold="true" textColor="#000000" />
 				<apply textHaloColor="#ffffff" textOrder="42" intersectionMargin="20" intersectsWith="any">
 					<case maxzoom="11" textSize="9"/>
 					<case maxzoom="12" textSize="10"/>
