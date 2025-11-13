@@ -534,6 +534,89 @@
 		<case attrColorValue="#000000" attrStringValue="route"/>
 	</renderingAttribute>
 
+	<renderingAttribute name="cycleRouteMtbScale0Color">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale0UnrecommendedColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScaleImba0Color">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale1Color">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScaleImba1Color">
+		<case attrColorValue="#00000000"/>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale1UnrecommendedColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale2Color">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScaleImba2Color">
+		<case attrColorValue="#00000000"/>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale2UnrecommendedColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale3Color">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScaleImba3Color">
+		<case attrColorValue="#00000000"/>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale3UnrecommendedColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale4Color">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScaleImba4Color">
+		<case attrColorValue="#00000000"/>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale4UnrecommendedColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale4AdditionalColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="cycleRouteMtbScale4AdditionalUnrecommendedColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+	<renderingAttribute name="classBicycleMtbColor">
+		<case attrColorValue="#00000000">
+			<apply_if nightMode="true" attrColorValue="#00000000"/>
+		</case>
+	</renderingAttribute>
+
 	<!-- input layer check tag, value, point, cycle, area -->
 	<!-- Order should be between 0 and 255 (integer) -->
 	<!-- output ! objectType point = 1, line = 2, polygon = 3 and order -->
@@ -1143,9 +1226,10 @@
 		</switch> 
 
 		<!-- MTB icon -->
-		<switch balisage="false" textOnPath="false" textSize="10" textOrder="49" seq="1:10">
-			<case tag="route_mtb" value="" />
-			<apply textColor="#00ffffff" textMinDistance="100">
+		<switch minzoom="14" balisage="false" intersectionMargin="60" textOnPath="false" textSize="10" textOrder="149" seq="1:10">
+			<!--<case tag="route_mtb" value="" />-->
+			<case tag="route" value="mtb" />
+			<apply textColor="#00ffffff" >
 				<case icon="osmc_white_bicycle" textShield="osmc_green_round_bg"/>
 			</apply>
 			<apply_if lessDetailed="true" icon="" textShield=""/>
@@ -4336,11 +4420,11 @@
 
 		<!-- balisage VTT -->
 		<switch balisage="true" strokeWidth="0" cap="ROUND">
-			<case tag="route_mtb" value=""/>
+			<case tag="route_mtb" value=""/><!-- -->
 			<case tag="route" value="mtb"/>
 		</switch>
 		<switch balisage="false" strokeWidth="0.1" cap="ROUND">
-			<case tag="route_mtb" value=""/>
+			<case tag="route_mtb" value=""/><!-- -->
 			<case tag="route" value="mtb"/>
 			<apply minzoom="14" color="#ddddff" shadowColor="#ddddff">
 				<case maxzoom="13" shadowRadius="0"/>
