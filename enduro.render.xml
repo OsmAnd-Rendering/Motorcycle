@@ -6,6 +6,7 @@
 	<renderingProperty attr="appMode" name="Rendering mode" description="Map optimization for respective User Profile" type="string" possibleValues=""/> <!-- linked to profiles -->
 	<renderingProperty attr="baseAppMode" name="Default Rendering mode" description="Map optimization for respective User Profile based on base (parent) profile" type="string" possibleValues="default, car, bicycle, pedestrian, public_transport, boat, ski"/>
 
+	<renderingProperty attr="chemin_zoom" name="chemin_zoom" description="chemin_zoom" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="balisage" name="cacher balisages" description="cacher balisages" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="track" name="cacher chemin sans info" description="cacher chemin sans info" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="lessDetailed" name="moins de détails" description="moins de détails" type="boolean" possibleValues="" category="enduro"/>
@@ -319,6 +320,7 @@
 	<renderingAttribute name="piste_trait">
 		<case maxzoom="11" attrFloatValue="0"> 
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
+			<apply_if chemin_zoom="true" attrFloatValue="1"/> 
 		</case>
 		<case maxzoom="12" attrFloatValue="1"> 
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
@@ -344,7 +346,9 @@
 	</renderingAttribute>
 
 	<renderingAttribute name="chemin_trait">
-		<case maxzoom="12" attrFloatValue="0"/>
+		<case maxzoom="12" attrFloatValue="0">
+			<apply_if chemin_zoom="true" attrFloatValue="1"/> 
+		</case>
 		<case maxzoom="13" attrFloatValue="1.5"/>
 		<case maxzoom="14" attrFloatValue="2.0"/>
 		<case maxzoom="15" attrFloatValue="2.5"/>
@@ -378,7 +382,9 @@
 		<case ign="false" minzoom="18" attrStringValue="28_7"/>
 	</renderingAttribute>
 	<renderingAttribute name="chemin_pointillé">
-		<case ign="false" maxzoom="12" attrStringValue=""/> 
+		<case ign="false" maxzoom="12" attrStringValue=""> 
+			<apply_if chemin_zoom="true" attrFloatValue="8_2"/> 
+		</case>
 		<case ign="false" maxzoom="13" attrStringValue="8_2"/> 
 		<case ign="false" maxzoom="14" attrStringValue="12_3" />
 		<case ign="false" maxzoom="15" attrStringValue="16_4" />
@@ -387,7 +393,9 @@
 		<case ign="false" minzoom="18" attrStringValue="28_7" />
 	</renderingAttribute>
 	<renderingAttribute name="sentier_trait">
-		<case maxzoom="13" attrFloatValue="1.0"/>
+		<case maxzoom="13" attrFloatValue="0">
+			<apply_if chemin_zoom="true" attrFloatValue="1"/> 
+		</case>
 		<case maxzoom="14" attrFloatValue="1.5"/>
 		<case maxzoom="15" attrFloatValue="1.75"/>
 		<case maxzoom="16" attrFloatValue="2.0"/>
@@ -1183,6 +1191,8 @@
 		<!-- hiking name -->
 		<switch minzoom="10" textOrder="169" >
 			<case tag="route_hiking" value="" nameTag="hiking_route_name"/>
+			<case tag="route_hiking" value="" nameTag="foot_route_name"/>
+			<case tag="route_hiking" value="" nameTag="walking_route_name"/>
 			<apply textSize="0" />
 		</switch>
 					
@@ -1567,9 +1577,9 @@
 		<!--hameau etc -->
 		<switch textWrapWidth="20" textHaloColor="#ccffffff" >
 			<switch textColor="#555555">
-				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="true" textOrder="46" />
+				<case minzoom="13" tag="place" value="hamlet" nameTag="" textBold="true" textItalic="false" textOrder="46" />
 				<apply textHaloRadius="2" intersectionMargin="50" >
-					<case maxzoom="13" textSize="10"/>
+					<case maxzoom="13" textSize="9" textHaloRadius="1"/>
 					<case maxzoom="14" textSize="11"/>
 					<case minzoom="15" textSize="12"/>
 				</apply>
@@ -3472,13 +3482,16 @@
 			</switch>
 
 			<!-- unclassified & residential -->
-			<switch >
-				<case minzoom="12" tag="highway" value="unclassified" color="#FFffff"/>
+			<switch minzoom="11">
+				<case minzoom="11" tag="highway" value="unclassified" color="#FFffff"/>
 				<case minzoom="13" tag="highway" value="living_street" color="#FFffff"/>
-				<case minzoom="12" tag="highway" value="residential" color="#FFffff"/>
+				<case minzoom="11" tag="highway" value="residential" color="#FFffff"/>
 				<case minzoom="13" tag="highway" value="pedestrian" color="#FFffff"/><!--
 				<case minzoom="13" tag="highway" value="service" color="#FFcc99"/>-->
 				<apply strokeWidth_0="0"> 
+					<case maxzoom="11" strokeWidth="0">
+						<apply_if chemin_zoom="true" strokeWidth="1.6"/>
+					</case>
 					<case maxzoom="12" strokeWidth="1.6"/>
 					<case maxzoom="13" strokeWidth="2.2"/>
 					<case maxzoom="14" strokeWidth="3"/>
@@ -4057,10 +4070,10 @@
 				<apply_if arriereplan="true" color="#000000" shadowColor="#99000000" shadowRadius="4"/>		<!--  -->						
 			</switch>	
 
-			<!-- service -->
-			<switch minzoom="12" tag="highway" value="service" >
+			<!-- service level 13 mini dans obf-->
+			<switch minzoom="11" tag="highway" value="service" >
 				<!-- goudronné 	-->
-				<switch minzoom="13" >
+				<switch >
 					<case additional="surface=asphalt" />
 					<case additional="surface=shipseal"/>
 					<case additional="tracktype=grade1" />
@@ -4157,7 +4170,7 @@
 			</switch>
 				
 			<!-- sentier -->
-			<switch minzoom="13" lessDetailed="false">
+			<switch minzoom="11" lessDetailed="false">
 				<case tag="highway" value="path"/>
 				<case tag="highway" value="bridleway"/>
 				<apply color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
