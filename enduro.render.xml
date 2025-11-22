@@ -322,7 +322,7 @@
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
 			<apply_if chemin_zoom="true" attrFloatValue="1"/> 
 		</case>
-		<case maxzoom="12" attrFloatValue="1"> 
+		<case maxzoom="12" attrFloatValue="1.25"> 
 			<apply_if lessDetailed="true" attrFloatValue="0"/> 
 		</case>
 		<case maxzoom="13" attrFloatValue="1.5">
@@ -347,7 +347,7 @@
 
 	<renderingAttribute name="chemin_trait">
 		<case maxzoom="12" attrFloatValue="0">
-			<apply_if chemin_zoom="true" attrFloatValue="1"/> 
+			<apply_if chemin_zoom="true" attrFloatValue="1.25"/> 
 		</case>
 		<case maxzoom="13" attrFloatValue="1.5"/>
 		<case maxzoom="14" attrFloatValue="2.0"/>
@@ -393,9 +393,11 @@
 		<case ign="false" minzoom="18" attrStringValue="28_7" />
 	</renderingAttribute>
 	<renderingAttribute name="sentier_trait">
-		<case maxzoom="13" attrFloatValue="0">
-			<apply_if chemin_zoom="true" attrFloatValue="1"/> 
+		<case maxzoom="11" attrFloatValue="0"/>
+		<case maxzoom="12" attrFloatValue="0">
+			<apply_if chemin_zoom="true" attrFloatValue="0.8"/> 
 		</case>
+		<case maxzoom="13" attrFloatValue="1.0"/>
 		<case maxzoom="14" attrFloatValue="1.5"/>
 		<case maxzoom="15" attrFloatValue="1.75"/>
 		<case maxzoom="16" attrFloatValue="2.0"/>
@@ -403,7 +405,8 @@
 		<case minzoom="18" attrFloatValue="2.5"/>
 	</renderingAttribute>
 	<renderingAttribute name="sentier_pointillé">
-		<case maxzoom="13" attrStringValue="1_2" />
+		<case maxzoom="12" attrStringValue="1_1" />
+		<case maxzoom="13" attrStringValue="2_2" />
 		<case maxzoom="14" attrStringValue="4_4" />
 		<case maxzoom="15" attrStringValue="5_5" />
 		<case maxzoom="16" attrStringValue="6_6" />
