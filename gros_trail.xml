@@ -43,9 +43,12 @@
 				<select value="-1" t="ice_road" v="yes"/>
 				<select value="-1" t="winter_road" v="yes"/>
 			</if>
+			<select value="1" t="ice_road" v="yes"/>
+			<select value="1" t="winter_road" v="yes"/>
 			<if param="avoid_toll">
 				<select value="-1" t="toll" v="yes"/>
 			</if>
+			<select value="1" t="toll" v="yes"/>
 			<if param="allow_private">
 				<select value="1" t="motorcar" v="private"/>
 				<select value="1" t="motor_vehicle" v="private"/>
@@ -53,6 +56,7 @@
 				<select value="1" t="access" v="private"/>
 			</if>
 			<if param="avoid_interdit">
+				<select value="1" t="motorcycle" v="no"/>
 				<select value="1" t="motorcar" v="no"/>
 				<select value="1" t="motorcar" v="private"/>
 				<select value="1" t="motorcar" v="destination"/>
@@ -79,6 +83,7 @@
 				<select value="1" t="access" v="agricultural"/>
 				<select value="1" t="access" v="forestry"/>
 			</if>
+			<select value="-1" t="motorcycle" v="no"/>
 			<select value="-1" t="motorcar" v="no"/>
 			<select value="-1" t="motorcar" v="private"/>
 			<select value="-1" t="motorcar" v="destination"/>
@@ -232,7 +237,7 @@
 				<select value="1" t="highway" v="living_street"/>
 
 				<select value="1" t="ford" v="yes"/>
-				<select value="0.35" t="smoothness" v="very_horrible"/>
+				<select value="0.15" t="smoothness" v="very_horrible"/>
 				<select value="0.35" t="dirtbike:scale" v="2"/>			
 				<select value="0.5" t="surface" v="mud"/>
 				<select value="0.5" t="surface" v="sand"/>
@@ -244,9 +249,9 @@
 				<select value="1.25" t="surface" v="ground"/>-->
 				<select value="1.25" t="surface" v="rock"/>
 				<select value="1.25" t="dirtbike:scale" v="1"/>			
-				<select value="1.25" t="tracktype" v="grade5"/><!-- 20 -->
-				<select value="1.5" t="tracktype" v="grade4"/><!-- 30 -->
-				<select value="2" t="surface" v="unhewn_cobblestone"/><!-- 30 -->
+				<select value="1.5" t="tracktype" v="grade5"/><!-- 20 -->
+				<select value="2.5" t="tracktype" v="grade4"/><!-- 30 -->
+				<select value="3" t="surface" v="unhewn_cobblestone"/><!-- 30 -->
 				<select value="2" t="surface" v="cobblestone"/><!-- 60 -->
 				<select value="2" t="tracktype" v="grade3"/><!-- 60 -->
 				<select value="2" t="surface" v="pebblestone"/><!-- 60 -->
@@ -265,7 +270,7 @@
 				<select value="2" t="surface" v="concrete:plates"/><!-- 60 -->
 				<select value="2" t="surface" v="compacted"/><!-- 60 -->
 				<select value="2" t="tracktype" v="grade1"/><!-- 60 -->
-				<select value="1.25" t="highway" v="track"/><!--20 chemins sans tags idem grade5-->
+				<select value="2.00" t="highway" v="track"/><!--20 chemins sans tags idem grade5-->
 			</if>
 			<if param="avoid_route"><!-- encore plus de chemins pour courte distance -->
 				<select value="0.15" t="highway" v="primary"/>
@@ -320,7 +325,7 @@
 			<select value="0.25" t="surface" v="earth"/>
 			<select value="0.25" t="surface" v="unpaved"/>
 			<select value="0.25" t="surface" v="ground"/>-->
-			<select value="0.25" t="smoothness" v="very_horrible"/><!-- 30 -->
+			<select value="0.15" t="smoothness" v="very_horrible"/><!-- 30 -->
 			<select value="0.25" t="smoothness" v="horrible"/><!-- 40 -->
 			<select value="0.25" t="dirtbike:scale" v="1"/>			
 			<select value="0.25" t="tracktype" v="grade5"/><!-- 20 -->
@@ -355,6 +360,7 @@
 			<if param="avoid_borders">
 				<select value="-1" t="barrier" v="border_control"/>
 			</if>
+			<select value="1" t="barrier" v="border_control"/>
 			<select value="-1" t="barrier" v="chain"/>
 			<select value="-1" t="barrier" v="jersey_barrier"/>
 			<select value="-1" t="barrier" v="horse_stile"/>
@@ -367,9 +373,9 @@
 			<select value="-1" t="barrier" v="sump_buster"/>
 			<select value="-1" t="barrier" v="fence"/>
 			<select value="-1" t="barrier" v="debris"/>
-			<select value="50" t="barrier" v="lift_gate"/>
+			<select value="30" t="barrier" v="lift_gate"/>
 			<select value="-1" t="barrier" v="bollard"/>
-			<select value="100" t="barrier" v="swing_gate"/>
+			<select value="50" t="barrier" v="swing_gate"/>
 			<select value="100" t="barrier" v="yes"/>
 			<select value="100" t="barrier" v="gate"/>
 			<select value="200" t="barrier" v="entrance"/>

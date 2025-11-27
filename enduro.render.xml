@@ -500,6 +500,33 @@
 
 	<!-- routeInfo_tracktype-->
 	<renderingAttribute name="routeInfo_tracktype"> <!-- dureté de la surface-->
+		<case additional="motorcycle=private" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcycle=no" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcycle=destination" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcycle=forestry" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcycle=agricultural" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="vehicle=private" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="vehicle=no" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="vehicle=destination" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="vehicle=forestry" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="vehicle=agricultural" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motor_vehicle=private" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motor_vehicle=no" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motor_vehicle=destination" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motor_vehicle=forestry" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motor_vehicle=agricultural" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcar=private" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcar=no" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcar=destination" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcar=forestry" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="motorcar=agricultural" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="access=foot" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="access=horse" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="access=private" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="access=no" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="access=destination" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="access=forestry" attrColorValue="#ff3333" attrStringValue="interdit"/>
+		<case additional="access=agricultural" attrColorValue="#ff3333" attrStringValue="interdit"/>
 		<case additional="smoothness=impassable" attrColorValue="#66ff99" attrStringValue="sentier"/>
 		<case additional="smoothness=very_horrible" attrColorValue="$chemin" attrStringValue="mauvais chemin"/>
 		<case additional="smoothness=horrible" attrColorValue="$chemin" attrStringValue="chemin"/>
