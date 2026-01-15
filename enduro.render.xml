@@ -1396,13 +1396,6 @@
 		</switch>
 		
 		<!-- places (états) -->
-		<switch minzoom="3">
-			<case tag="natural" value="coastline"/>
-			<case tag="natural" value="land"/>
-			<apply_if textSize="14" textColor="#883287" textWrapWidth="35" textHaloColor="#aaffffff"/>
-			<apply_if nightMode="true" textColor="#ffb9fe" textHaloColor="#77333333"/>
-		</switch>
-
 		<case minzoom="1" maxzoom="2" tag="place" value="continent" textSize="13" textColor="#3D3D3D" textHaloColor="#99ffffff" textHaloRadius="3" textBold="true" textWrapWidth="15" textOrder="1"/>
 		<case minzoom="3" tag="place" value="country" nameTag="" textColor="#3D3D3D" textHaloColor="#99ffffff" textHaloRadius="3" textWrapWidth="15" textOrder="5">
 			<case maxzoom="3" textSize="12"/>
@@ -1442,37 +1435,20 @@
 			</apply_if>
 		</case>
 
-		<switch minzoom="5" textSize="13" textColor="#505050" textWrapWidth="20" textHaloRadius="2" textHaloColor="#99ffffff">
-			<switch >
-				<case maxzoom="10" tag="place" value="state">
-					<case maxzoom="5" nameTag="" textOrder="24"/>
-					<case maxzoom="5" nameTag="ref" textOrder="24"/>
-					<case minzoom="6" nameTag="" textOrder="33"/>
-				</case>
-				<case tag="place" value="region">
-					<case maxzoom="5" nameTag="ref" textOrder="25"/>
-					<case minzoom="6" nameTag="" textOrder="33"/>
-				</case>
-				<case tag="place" value="province">
-					<case maxzoom="5" nameTag="ref" textOrder="25"/>
-					<case minzoom="6" nameTag="" textOrder="33"/>
-				</case>
+		<switch minzoom="5" textSize="13" textItalic="true" textColor="#505050" textWrapWidth="20" textHaloRadius="2" textHaloColor="#99ffffff" >
+			<switch maxzoom="10" tag="place" value="state" nameTag="">
+				<case maxzoom="5" textOrder="24"/>
+				<case minzoom="6" textOrder="33"/>
 			</switch>
-			<switch maxzoom="10" tag="place" value="state">
-				<case maxzoom="5" nameTag="" textOrder="24"/>
-				<case maxzoom="5" nameTag="ref" textOrder="24"/>
-				<case minzoom="6" nameTag="" textOrder="33"/>
+			<switch tag="place" value="region" nameTag="">
+				<case maxzoom="5" textOrder="25"/>
+				<case minzoom="6" textOrder="33"/>
 			</switch>
-			<switch tag="place" value="region">
-				<case maxzoom="5" nameTag="ref" textOrder="25"/>
-				<case minzoom="6" nameTag="" textOrder="33"/>
+			<switch tag="place" value="province" nameTag="">
+				<case maxzoom="5" textOrder="25"/>
+				<case minzoom="6" textOrder="33"/>
 			</switch>
-			<switch tag="place" value="province">
-				<case maxzoom="5" nameTag="ref" textOrder="25"/>
-				<case minzoom="6" nameTag="" textOrder="33"/>
-			</switch>
-			<apply textItalic="true"/>
-			<case minzoom="9" maxzoom="12" tag="place" value="county" nameTag="" textSize="13" textItalic="true" textOrder="63"/>
+			<case minzoom="9" maxzoom="12" tag="place" value="county" nameTag="" textSize="13" textOrder="63"/>
 			<apply_if nightMode="true" textColor="#ffffff" textHaloColor="#000000"/>
 		</switch>
 
@@ -1667,8 +1643,9 @@
 		</switch>
 		
 		<!-- lieu dit (locality) -->
-		<switch lessDetailed="false" nameTag="" >
-			<case minzoom="15" tag="place" value="locality"/>
+		<switch lessDetailed="false" minzoom="15" nameTag="" >
+			<case tag="place" value="locality"/>
+			<case tag="natural" value="land"/>
 			<apply textHaloRadius="0" textHaloColor="#66336633" textItalic="true" textBold="true" textOrder="112"  ><!-- intersectionMargin="5" -->
 				<case maxzoom="15" textSize="10" textColor="#33003300"/>
 				<case maxzoom="16" textSize="14" textColor="#2f003300"/>
@@ -2184,7 +2161,6 @@
 		
 		<switch minzoom="3">
 			<case tag="natural" value="coastline"/>
-			<case tag="natural" value="land"/>
 			<apply textSize="14" textColor="#883287" textWrapWidth="35" textHaloRadius="2" textHaloColor="#aaffffff"/>
 			<apply_if nightMode="true" textColor="#6666cc" textHaloColor="#006699ff" textHaloRadius="1"/>
 		</switch>
