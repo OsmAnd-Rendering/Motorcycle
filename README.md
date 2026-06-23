@@ -5,7 +5,7 @@ Modifie l'affichage des cartes offline (vectorielle) pour l'utilisation en moto 
 
 ( le processus d'installation créé 3 nouveaux profils avec leur configuration et leur guidage, les profils et la configuration **Osmand** existante ne sont pas modifiés )
 
-Pour iOS ou périphérique avec peu de mémoire, activez l'option "**for iOS**" (voir [fonctionnement du style](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/FR%E2%80%94le-style) )
+Pour **iOS** ou périphérique avec peu de mémoire, activez l'option "**for iOS**" (voir [fonctionnement du style](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/FR%E2%80%94le-style) )
 
 un didactitiel en vidéo **[https://youtu.be/07nj4LoACdc](https://www.youtube.com/watch?v=gszR1176Ot0)**
 
