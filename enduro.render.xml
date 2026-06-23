@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<renderingStyle name="Enduro" depends="" defaultColor="#000000" version="2">
+<renderingStyle name="Enduro" depends="" defaultColor="#000000" version="3">
 <!-- style pour l'utilisation offroad en véhicule motorisé par cricri, vous pouvez me trouver sur le forum https://www.terre-bitume.org/ sous le pseudo "cricri" ou sur cette adresse   grosmono500@hotmail.com -->
 
 	<!-- ajouts depuis "default" pour test sur IOS-->
 	<renderingProperty attr="appMode" name="Rendering mode" description="Map optimization for respective User Profile" type="string" possibleValues=""/> <!-- linked to profiles -->
 	<renderingProperty attr="baseAppMode" name="Default Rendering mode" description="Map optimization for respective User Profile based on base (parent) profile" type="string" possibleValues="default, car, bicycle, pedestrian, public_transport, boat, ski"/>
 
-	<renderingProperty attr="chemin_zoom" name="chemin_zoom" description="chemin_zoom" type="boolean" possibleValues="" category="enduro"/>
-	<renderingProperty attr="balisage" name="cacher balisages" description="cacher balisages" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="iOS" name="for iOS" description="for iOS" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="track" name="cacher chemin sans info" description="cacher chemin sans info" type="boolean" possibleValues="" category="enduro"/>
-	<renderingProperty attr="lessDetailed" name="moins de détails" description="moins de détails" type="boolean" possibleValues="" category="enduro"/>
-	<renderingProperty attr="arriereplan" name="en cas  de carte arrière plan" description="ajoute un contour noir" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="balisage" name="cacher balisages" description="cacher balisages" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="difficulte" name="cacher difficulté" description="cacher difficulté" type="boolean" possibleValues="" category="enduro"/>
-	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="hideAccess" name="masque les restrictions d'accès FR" description="Hide access type" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="protectedArea" name="show all protected boundaries" description="show all protected boundaries" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="comment" name="cacher commentaires" description="cacher commentaires" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="lessDetailed" name="moins de détails" description="moins de détails" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="arriereplan" name="en cas  de carte arrière plan" description="ajoute un contour noir" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="ign" name="comme IGN" description="comme IGN" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="gris" name="niveaux de gris" description="niveaux de gris" type="boolean" possibleValues="" category="enduro"/>
 	<renderingProperty attr="piste" name="couleur piste" description="couleur piste" type="boolean" possibleValues="" category="enduro"/>
-	<renderingProperty attr="comment" name="cacher commentaires" description="cacher commentaires" type="boolean" possibleValues="" category="enduro"/>
+	<renderingProperty attr="chemin_zoom" name="chemin_zoom" description="chemin_zoom" type="boolean" possibleValues="" category="enduro"/>
 	
 	<renderingProperty attr="hideUnderground" name="Hide underground objects" description="Hide underground objects" type="boolean" possibleValues="" category="hide"/>
 	<renderingProperty attr="hideBuildings" name="Hide buildings" description="Hide buildings" type="boolean" possibleValues="" category="hide"/>
@@ -209,10 +210,9 @@
 		
 	<renderingAttribute name="polygonMinSizeToDisplay">
 		<!-- Minimum polygon size in pixels -->
-		<case lessDetailed="true" attrIntValue="75"/>
-		<case attrIntValue="500">
-			<apply_if minzoom="14" attrIntValue="5"/>
-		</case>
+		<case lessDetailed="true" attrIntValue="80"/>
+		<case iOS="true" attrIntValue="80"/>
+		<case minzoom="14" attrIntValue="10"/>
 	</renderingAttribute>
 	<renderingAttribute name="roadDensityZoomTile">
 		<!-- 8 (=1 pixel tile) down to 0 (=large tile) -->
@@ -221,9 +221,12 @@
 	</renderingAttribute>
 	<renderingAttribute name="roadsDensityLimitPerTile">
 		<!-- Number of roads to display per tile -->
-		<case lessDetailed="true" attrIntValue="30"/><!--
-		<case maxzoom="13" attrIntValue="30"/>-->
-		<case attrIntValue="55"/>
+		<case lessDetailed="true" attrIntValue="18"/>
+		<case iOS="true" maxzoom="15" attrIntValue="18"/>
+		<case maxzoom="12" attrIntValue="18"/>
+		<case maxzoom="13" attrIntValue="25"/>
+		<case maxzoom="14" attrIntValue="30"/>
+		<case attrIntValue="35"/>
 	</renderingAttribute>
 	<renderingAttribute name="defaultSymbolPathSpacing">
 		<case attrFloatValue="5"/>
@@ -414,7 +417,13 @@
 		<case minzoom="18" attrStringValue="8_8" />
 	</renderingAttribute>
 
+	<renderingAttribute name="zoom_building">
+		<case iOS="false" attrStringValue="14"/>
+		<case iOS="true" attrStringValue="17"/>
+	</renderingAttribute>
+
 	<renderingConstant name="null" value="#000000"/>
+	<renderingConstant name="trackColor" value="#6b4423"/>
 
 	<renderingAttribute name="contourLineColor">
 		<case contourColorScheme="white" attrColorValue="#16333333">
@@ -470,6 +479,8 @@
 	<!-- pour "depends=default-->
 	<renderingConstant name="waterwayStreamTextMinZoom" value="18"/>
 	<renderingConstant name="placeLocalityMinZoom" value="16"/>
+	<renderingConstant name="default3DBuildingHeight" value="10"/>
+	<renderingConstant name="default3DBuildingLevelHeight" value="3"/>
 
 	<!-- type de route a tester sur iOS (risque de plantage à cause des mots francisés) --><!--
 	<renderingAttribute name="routeInfo_roadClass"> 
@@ -1266,7 +1277,7 @@
 		</switch>
 
 		<!-- velo ref -->
-		<switch balisage="true" >
+		<switch minzoom="14" balisage="true" >
 			<case tag="route_bicycle" value="" />
 			<case tag="route_mtb" value="" />
 			<apply textSize="0"/>
@@ -1282,7 +1293,7 @@
 			<apply_if lessDetailed="true" icon="" textShield=""/>
 		</switch>
 		<!-- velo icon -->
-		<switch balisage="false" textOnPath="false" textSize="10" textOrder="49" seq="1:10">
+		<switch minzoom="14" balisage="false" textOnPath="false" textSize="10" textOrder="49" seq="1:10">
 			<case tag="route_bicycle" value="" />
 			<apply textColor="#00ffffff" textMinDistance="100">
 				<case icon="osmc_white_bicycle" textShield="osmc_blue_round_bg"/>
@@ -1435,20 +1446,13 @@
 			</apply_if>
 		</case>
 
-		<switch minzoom="5" textSize="13" textItalic="true" textColor="#505050" textWrapWidth="20" textHaloRadius="2" textHaloColor="#99ffffff" >
-			<switch maxzoom="10" tag="place" value="state" nameTag="">
-				<case maxzoom="5" textOrder="24"/>
-				<case minzoom="6" textOrder="33"/>
-			</switch>
-			<switch tag="place" value="region" nameTag="">
-				<case maxzoom="5" textOrder="25"/>
-				<case minzoom="6" textOrder="33"/>
-			</switch>
-			<switch tag="place" value="province" nameTag="">
-				<case maxzoom="5" textOrder="25"/>
-				<case minzoom="6" textOrder="33"/>
-			</switch>
-			<case minzoom="9" maxzoom="12" tag="place" value="county" nameTag="" textSize="13" textOrder="63"/>
+		<switch minzoom="5" maxzoom="12" >
+			<case minzoom="8" tag="place" value="state" nameTag=""/>
+			<case minzoom="8" tag="place" value="region" nameTag=""/>
+			<case minzoom="8" tag="place" value="province" nameTag=""/>
+			<case minzoom="9" tag="place" value="county" nameTag="" />
+
+			<apply textSize="13" textItalic="true" textColor="#505050" textWrapWidth="20" textHaloRadius="2" textHaloColor="#99ffffff" />
 			<apply_if nightMode="true" textColor="#ffffff" textHaloColor="#000000"/>
 		</switch>
 
@@ -1729,10 +1733,10 @@
 				<apply_if engine_v1="true" textDy="0"/>
 			</switch>
 			
-			<switch minzoom="10" textOrder="9" intersectionMargin="0.1" > 
-				<case tag="region:type" value="mountain_area" nameTag=""/>
-				<case tag="natural" value="mountain_area" nameTag=""/>
-				<case tag="natural" value="mountain_range" nameTag=""/>
+			<switch textOrder="7" intersectionMargin="0.1" > 
+				<case minzoom="12" tag="region:type" value="mountain_area" nameTag=""/>
+				<case minzoom="12" tag="natural" value="mountain_area" nameTag=""/>
+				<case minzoom="12" tag="natural" value="mountain_range" nameTag=""/>
 				<apply textBold="true" textItalic="true" textHaloColor="#99ffffff" textHaloRadius="4" textOnPath="true">
 					<case maxzoom="11" textSize="12" textColor="#77990000" textHaloColor="#88ffffff"/>
 					<case maxzoom="12" textSize="16" textColor="#6f990000" textHaloColor="#77ffffff"/>
@@ -2028,7 +2032,7 @@
 		</switch>
 
 		<!-- protected area -->
-		<switch minzoom="10" >
+		<switch minzoom="12" >
 			<case tag="leisure" value="nature_reserve" nameTag="" textOrder="40"/>
 			<case tag="boundary" value="national_park" nameTag="" textOrder="4"/>
 			<case protectedArea="true" tag="boundary" value="protected_area" nameTag="" textOrder="42"/>
@@ -2729,7 +2733,7 @@
 	<polygon>
 
 		<!-- Buildings -->
-		<switch hideBuildings="false" arriereplan="false" minzoom="14" color_2="#000000">
+		<switch hideBuildings="false" arriereplan="false" minzoom="$zoom_building" color_2="#000000">
 			<case tag="building" value="" color="#666666"/>
 			<switch>
 				<case tag="building" value="garage"/>
@@ -3074,7 +3078,7 @@
 			</switch>
 
 			<!-- residential -->
-			<switch minzoom="11" >
+			<switch minzoom="14" >
 				<case tag="landuse" value="residential"/>
 				<case tag="landuse" value="farmyard"/>
 				<apply>
@@ -3084,8 +3088,8 @@
 				<apply_if lessDetailed="true" minzoom="16" color="#999999"/>-->
 			</switch>
 
-			<case minzoom="12" tag="landuse" value="industrial" color="#e0c0c0"/>
-			<case minzoom="12" tag="landuse" value="railway" color="#EDE8EB"/>
+			<case minzoom="14" tag="landuse" value="industrial" color="#e0c0c0"/>
+			<case minzoom="14" tag="landuse" value="railway" color="#EDE8EB"/>
 			<case minzoom="14" tag="landuse" value="garages" color="#EDE8EB"/>
 			<case minzoom="14" tag="amenity" value="parking" color="#ffffff"/>
 
@@ -3218,7 +3222,7 @@
 					<case maxzoom="17" strokeWidth_2="2.2" pathEffect_2="1_3"/>
 					<case maxzoom="18" strokeWidth_2="2.4" pathEffect_2="1_3"/>
 					<case maxzoom="19" strokeWidth_2="2.6" pathEffect_2="1_4"/>
-					<case minxzoom="20" strokeWidth_2="2.8" pathEffect_2="1_5"/>
+					<case minzoom="20" strokeWidth_2="2.8" pathEffect_2="1_5"/>
 				</apply>
 			</switch>
 			
@@ -3336,9 +3340,9 @@
 				<case maxzoom="7" strokeWidth="1.5" />
 				<case maxzoom="8" strokeWidth="2" />
 				<case maxzoom="11" strokeWidth="2.5" />
-				<case maxzoom="12" strokeWidth="3" strokeWidth_0="7" />
-				<case maxzoom="13" strokeWidth="3.5" strokeWidth_0="7.5" />
-				<case maxzoom="14" strokeWidth="4" strokeWidth_0="8" />
+				<case maxzoom="12" strokeWidth="3" strokeWidth_0="5" />
+				<case maxzoom="13" strokeWidth="3.5" strokeWidth_0="5.5" />
+				<case maxzoom="14" strokeWidth="4" strokeWidth_0="6" />
 				<case maxzoom="15" strokeWidth="4.5" />
 				<case maxzoom="16" strokeWidth="5"/>
 				<case maxzoom="17" strokeWidth="5.5"/>
@@ -3404,11 +3408,11 @@
 					<case maxzoom="8" strokeWidth="1.5"/>
 					<case maxzoom="9" strokeWidth="2"/>
 					<case maxzoom="10" strokeWidth="2.5"/>
-					<case maxzoom="11" strokeWidth="3.5"/>
-					<case maxzoom="12" strokeWidth="4.5"/>
-					<case maxzoom="13" strokeWidth="5"/>
-					<case maxzoom="14" strokeWidth="6" strokeWidth_0="10"/><!-- ponts -->
-					<case maxzoom="15" strokeWidth="8" strokeWidth_0="14"/>
+					<case maxzoom="11" strokeWidth="2.5"/>
+					<case maxzoom="12" strokeWidth="3.5"/>
+					<case maxzoom="13" strokeWidth="4"/>
+					<case maxzoom="14" strokeWidth="6" strokeWidth_0="7"/><!-- ponts -->
+					<case maxzoom="15" strokeWidth="8" strokeWidth_0="11"/>
 					<case maxzoom="16" strokeWidth="10" strokeWidth_0="16"/>
 					<case maxzoom="17" strokeWidth="12" strokeWidth_0="18"/>
 					<case maxzoom="18" strokeWidth="14" strokeWidth_0="20"/>
@@ -3435,11 +3439,11 @@
 				<apply strokeWidth_0="0">
 					<case maxzoom="9" strokeWidth="1.5"/>
 					<case maxzoom="10" strokeWidth="2.5"/>
-					<case maxzoom="11" strokeWidth="3.5"/>
-					<case maxzoom="12" strokeWidth="4.5"/>
-					<case maxzoom="13" strokeWidth="5"/>
-					<case maxzoom="14" strokeWidth="6" strokeWidth_0="10"/>
-					<case maxzoom="15" strokeWidth="8" strokeWidth_0="14"/>
+					<case maxzoom="11" strokeWidth="2.5"/>
+					<case maxzoom="12" strokeWidth="3.5"/>
+					<case maxzoom="13" strokeWidth="4"/>
+					<case maxzoom="14" strokeWidth="6" strokeWidth_0="7"/>
+					<case maxzoom="15" strokeWidth="8" strokeWidth_0="11"/>
 					<case maxzoom="16" strokeWidth="10" strokeWidth_0="16"/>
 					<case maxzoom="17" strokeWidth="12" strokeWidth_0="18"/>
 					<case maxzoom="18" strokeWidth="14" strokeWidth_0="20"/>
@@ -3490,9 +3494,11 @@
 			<!-- unclassified & residential -->
 			<switch minzoom="11">
 				<case minzoom="11" tag="highway" value="unclassified" color="#FFffff"/>
-				<case minzoom="13" tag="highway" value="living_street" color="#FFffff"/>
-				<case minzoom="11" tag="highway" value="residential" color="#FFffff"/>
-				<case minzoom="13" tag="highway" value="pedestrian" color="#FFffff"/><!--
+				<case iOS="false" minzoom="14" tag="highway" value="living_street" color="#FFffff"/>
+				<case iOS="true" minzoom="15" tag="highway" value="living_street" color="#FFffff"/>
+				<case iOS="false" minzoom="12" tag="highway" value="residential" color="#FFffff"/>
+				<case iOS="true" minzoom="14" tag="highway" value="residential" color="#FFffff"/>
+				<case minzoom="14" tag="highway" value="pedestrian" color="#FFffff"/><!--
 				<case minzoom="13" tag="highway" value="service" color="#FFcc99"/>-->
 				<apply strokeWidth_0="0"> 
 					<case maxzoom="11" strokeWidth="0">
@@ -3709,7 +3715,7 @@
 		</switch>
 
 		<!-- rail -->
-		<switch minzoom="12" cap_2="BUTT">
+		<switch minzoom="14" cap_2="BUTT">
 			<switch color="#22ffffff" color_2="#666666">
 				<case tag="railway" value="construction" disable="true"/>
 				<case tag="railway" value="rail" />
@@ -4077,7 +4083,7 @@
 			</switch>	
 
 			<!-- service level 13 mini dans obf-->
-			<switch minzoom="11" tag="highway" value="service" >
+			<switch minzoom="13" tag="highway" value="service" >
 				<!-- goudronné 	-->
 				<switch >
 					<case additional="surface=asphalt" />
@@ -4116,6 +4122,7 @@
 						</apply_if>
 					</apply>
 					<apply_if ign="true" color_5="#ffffff" shadowColor="#000000"/>
+					<apply_if iOS="true" maxzoom="14" strokeWidth_5="0" shadowRadius="0"/>
 				</switch>
 				<!-- sans precision -->
 				<switch>
@@ -4172,11 +4179,12 @@
 							<case maxzoom="18" strokeWidth_2="30" strokeWidth_5="16" pathEffect_5="50_15" pathEffect_2="50_15" strokeWidth__2="30"/>
 							<case minzoom="19" strokeWidth_2="40" strokeWidth_5="22" pathEffect_5="70_30" pathEffect_2="70_30" strokeWidth__2="40"/>
 						</apply_if>
+					<apply_if iOS="true" maxzoom="14" strokeWidth_5="0"/>
 				</switch> 
 			</switch>
 				
 			<!-- sentier -->
-			<switch minzoom="11" lessDetailed="false">
+			<switch minzoom="13" lessDetailed="false">
 				<case tag="highway" value="path"/>
 				<case tag="highway" value="bridleway"/>
 				<apply color_5="$sentier" strokeWidth_5="$sentier_trait" pathEffect_5="$sentier_pointillé"/>
@@ -4217,6 +4225,7 @@
 					<case maxzoom="17" strokeWidth_5="3.0" pathEffect_5="12_6" />
 					<case minzoom="18" strokeWidth_5="3.5" pathEffect_5="14_7" />					
 				</apply_if>
+				<apply_if iOS="true" maxzoom="13" strokeWidth_5="0"/>
 			</switch>			
 
 			<!-- footway -->
@@ -4597,7 +4606,7 @@
 				<case maxzoom="17" strokeWidth="2.2" pathEffect="1_3"/>
 				<case maxzoom="18" strokeWidth="2.4" pathEffect="1_3"/>
 				<case maxzoom="19" strokeWidth="2.6" pathEffect="1_4"/>
-				<case minxzoom="20" strokeWidth="2.8" pathEffect="1_5"/>
+				<case minzoom="20" strokeWidth="2.8" pathEffect="1_5"/>
 			</apply>
 			<apply/>
 			<apply_if nightMode="true" color="#000000"/>
