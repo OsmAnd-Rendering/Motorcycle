@@ -31,9 +31,7 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 - les chemins "**interdits**" sont regroupés sous le switch "<b>pas d'interdiction</b>" dans "<b>Eviter les routes</b>".
 - dissuade d'empreinter les chemins trop difficiles (vous pouvez poser un point de passage dessus pour les prendre délibéremment).
 - autorise le passage sur les sentiers "faciles" points verts sur la carte.
-- considère tous les chemins de la même façon (pas de carrossable ou de boueux) <br>:bulb: <b>SAUF</b> si le switch "<b>trie les chemins</b>" dans "<b>Eviter les routes</b>" est actif (coché) il va hiérarchiser les chemins du plus carrossable à inconnu.
-<i><br>
- dans les faits il va pénaliser de plus en plus les chemins qui sont les moins praticables <br>pour aller d'un point A à un point B si 2 chemins à peu près équivalents en distance existent, le moteur de calcul du routage prendra le plus praticable, la proportion de route augmente si les chemins ne sont pas renseignés dans OpenStreetMap.</i>
+- considère tous les chemins de la même façon (pas de carrossable ou de boueux) <br>
 - considère toutes les routes au même niveau et donc tracera au plus direct.
 - :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>moins de route</b>" qui permet de trouver plus de chemins si vous faites un trajet de moins de 200 km .<br> :warning: le temps de calcul est augmenté et le risque de plantage de l'appli aussi !
  
@@ -81,14 +79,7 @@ qui rajoute des chemins "**verts**" moins carrossables dans une faible proportio
 
 <img src="https://user-images.githubusercontent.com/83398215/184142530-e9a10fd9-30d3-4b41-8bd9-331dbd30c0e4.png" width="400">
 
-Avec le routage "<b>petit_trail</b>" et le switch "<b>trie les chemins</b>" actif:<br>
-les résultats sont souvent très proche du "<b>gros_trail</b>" avec "<b>si chemins secs</b>" actif lorsque les chemins sont renseignés dans <b>OpenStreetMap</b>.<br>
-(mais le type de chemins "vert" change en étant moins "carrossable")
-dans le cas ou la majorité des chemins n'est pas précisée le "tri" des chemins impose plus de route à la place de chemins "difficiles".<br>
-
-<img src="https://user-images.githubusercontent.com/83398215/184142977-1e8ee439-8f1a-4301-ae64-ae093a758a44.png" width="400">
-
-Avec le routage "<b>petit_trail</b>" sans le switch "<b>trie les chemins</b>" actif:<br>
+Avec le routage "<b>petit_trail</b>" :<br>
 la proportion de routes continue de diminuer, les chemins non renseignés dans OpenStreetMap deviennent plus important, jusqu'à représenter la majorité des chemins selon les régions plus ou moins renseignées dans osm.<br>
 
 <img src="https://user-images.githubusercontent.com/83398215/184143477-ba4297bc-d119-4e53-9cab-4f3fe16f45c4.png" width="400">
