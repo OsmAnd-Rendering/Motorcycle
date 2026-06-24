@@ -212,7 +212,7 @@
 		<!-- Minimum polygon size in pixels -->
 		<case lessDetailed="true" attrIntValue="80"/>
 		<case iOS="true" attrIntValue="80"/>
-		<case minzoom="14" attrIntValue="10"/>
+		<case minzoom="14" attrIntValue="5"/>
 	</renderingAttribute>
 	<renderingAttribute name="roadDensityZoomTile">
 		<!-- 8 (=1 pixel tile) down to 0 (=large tile) -->
@@ -3078,12 +3078,15 @@
 			</switch>
 
 			<!-- residential -->
-			<switch minzoom="14" >
+			<switch >
 				<case tag="landuse" value="residential"/>
 				<case tag="landuse" value="farmyard"/>
-				<apply>
+				<apply_if iOS="false" minzoom="11">
 					<case color="#cccccc"/> 
-				</apply>
+				</apply_if>
+				<apply_if iOS="true" minzoom="14">
+					<case color="#cccccc"/> 
+				</apply_if>
 				<apply_if nightMode="true" color="#000000"/><!--
 				<apply_if lessDetailed="true" minzoom="16" color="#999999"/>-->
 			</switch>
@@ -3794,7 +3797,7 @@
 			<!-- chemins le premier additional l'emporte	-->
 			<switch tag="highway" value="track"	>
 				<!-- goudronné 	-->
-				<switch minzoom="13">
+				<switch minzoom="11">
 					<case additional="surface=asphalt" />
 					<apply color_5="#ffffff" shadowColor="#333333" color="#ffffff">
 						<case maxzoom="13" strokeWidth_5="2.5" shadowRadius="2.2"/>
@@ -4083,7 +4086,7 @@
 			</switch>	
 
 			<!-- service level 13 mini dans obf-->
-			<switch minzoom="13" tag="highway" value="service" >
+			<switch minzoom="11" tag="highway" value="service" >
 				<!-- goudronné 	-->
 				<switch >
 					<case additional="surface=asphalt" />
