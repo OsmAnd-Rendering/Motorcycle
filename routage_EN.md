@@ -29,10 +29,7 @@ explanations in French on the categories of **[tracks](https://github.com/OsmAnd
 - the "**private**" tracks are managed as with the default profile of OsmAnd.
 - the "**forbidden**" tracks are grouped under the switch "<b>pas d'interdiction</b>" in "<b>Avoid roads</b>".
 - favors hiking and mountain bike routes over roads.
-- Considers all tracks the same (no drivable or muddy) <br>:bulb: <b>except</b> if the switch "<b>trie les chemins</b>" in "<b>Avoid roads</b>" is active (checked) it will prioritize the tracks from most drivable to unknown.
-<i><br>
-in fact it will penalize more and more the tracks which are the least practicable <br>
-to go from a point A to a point B if 2 tracks approximately equivalent in distance exist, the engine of calculation of routing will take the most practicable, the proportion of road increases if the tracks are not informed in OpenStreetMap</i>
+- Considers all tracks the same (no drivable or muddy)
 - considers all routes at the same level and therefore will plot the most direct.
 
 <i>( do not put points too far away to speed up the calculation - every 100 km for example )</i>
@@ -79,14 +76,7 @@ which adds less passable "green" tracks in a small proportion.<br>
 
 <img src="https://user-images.githubusercontent.com/83398215/184147324-293b2a7a-99bd-4472-999f-9cec8422c684.png" width="400">
 
-with "<b>petit_trail</b>" routing and switch "<b>trie les chemins</b>" active:<br>
-the results are often very close to the "<b>gros_trail</b>" with "<b>si chemins secs</b>" Active when paths are populated in <b>OpenStreetMap.</b><br>
-(but the type of "green" paths changes by being less "passable")
-in the case where the majority of the tracks are not specified, the "sorting" of the tracks imposes more roads instead of "difficult" tracks.<br>
-
-<img src="https://user-images.githubusercontent.com/83398215/184147455-314db882-13e0-4541-81ab-704b6df65bc6.png" width="400">
-
-with "<b>petit_trail</b>" routing without the switch "<b>trie les chemins</b>" active:<br>
+with "<b>petit_trail</b>" :<br>
 the proportion of roads continues to decrease, the tracks not populated in **OpenStreetMap** become more important, until representing the majority of the tracks according to the regions more or less populated in osm.<br>
 
 <img src="https://user-images.githubusercontent.com/83398215/184147989-424d0651-25a6-485a-8e5f-60a8cbbf6dd8.png" width="400">
