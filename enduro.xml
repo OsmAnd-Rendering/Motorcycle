@@ -181,8 +181,8 @@
 			<select value="0.50" t="access" v="agricultural"/>
 			<select value="0.50" t="access" v="forestry"/>
 			
-			<select value="0.5" t="highway" v="service"/>
-			<select value="0.5" t="highway" v="residential"/>
+			<select value="0.35" t="highway" v="service"/>
+			<select value="0.35" t="highway" v="residential"/>
 			<select value="0.2" t="highway" v="living_street"/>
 
 			<if param="avoid_track">
@@ -228,14 +228,14 @@
 			<select value="0.15" t="mtb:scale" v="4"/>
 			
 			<!-- balisages -->
-			<select value="6" t="mtb" v="designated"/>
-			<select value="6" t="route" v="mtb"/>
-			<select value="6" t="route_mtb"/>
+			<select value="3" t="mtb" v="designated"/>
+			<select value="3" t="route" v="mtb"/>
+			<select value="3" t="route_mtb"/>
 
 			<select value="0.35" t="highway" v="path"/>
 			
-			<select value="5" t="route_hiking"/>
-			<select value="5" t="route" v="hiking"/>
+			<select value="1.25" t="route_hiking"/>
+			<select value="1.25" t="route" v="hiking"/>
 						
 			<select value="3.00" t="smoothness" v="very_horrible"/>
 			<select value="3.00" t="smoothness" v="horrible"/>

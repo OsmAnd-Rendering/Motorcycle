@@ -93,8 +93,8 @@
 			<select value="0.1" t="highway" v="motorway_link"/>
 			<select value="0.1" t="highway" v="trunk"/>
 			<select value="0.1" t="highway" v="trunk_link"/>
-			<select value="0.15" t="highway" v="primary"/>
-			<select value="0.15" t="highway" v="primary_link"/>
+			<select value="0.25" t="highway" v="primary"/>
+			<select value="0.25" t="highway" v="primary_link"/>
 			<select value="0.25" t="highway" v="secondary"/>
 			<select value="0.25" t="highway" v="secondary_link"/>
 			<if param="avoid_road"><!-- moins de route -->
@@ -150,8 +150,8 @@
 			<select value="0.50" t="access" v="agricultural"/>
 			<select value="0.50" t="access" v="forestry"/>
 
-			<select value="1" t="highway" v="service"/>
-			<select value="1" t="highway" v="residential"/>
+			<select value="0.55" t="highway" v="service"/>
+			<select value="0.55" t="highway" v="residential"/>
 			<select value="0.55" t="highway" v="living_street"/>
 			<if param="avoid_balisage"><!-- pas de chemins balisés-->
 				<select value="0.1" t="route" v="mtb"/><!-- circuits VTT -->
