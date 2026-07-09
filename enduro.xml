@@ -4,16 +4,6 @@
 	<attribute name="zoomToLoadTiles" value="16" />
 	<attribute name="planRoadDirection" value="1" />
 	<attribute name="recalculateDistanceHelp" value="100000" />
-	<!-- routing for GPX ? -->
-		<!-- MAIN parameter to approximate (35m good for custom recorded tracks)-->
-		<attribute name="minPointApproximation" value = "50"/>
-		<!-- don't search subsegments shorter than specified distance (also used to step back for car turns) -->
-		<attribute name="minStepApproximation" value = "100"/>
-		<!-- This parameter could speed up or slow down evaluation (better to make bigger for long routes and smaller for short)-->
-		<attribute name="maxStepApproximation" value= "3000"/>
-		<!-- Parameter to smoother the track itself (could be 0 if it's not recorded track) -->
-		<attribute name="smoothenPointsNoRoute" value = "5"/>
-		<!-- NEW ROUTING API -->
 		
 	<routingProfile name="enduro" baseProfile="enduro" restrictionsAware="true" minSpeed="1" defaultSpeed="40" maxSpeed="120" followSpeedLimitations="false" onewayAware="true">
 		<parameter id="avoid_interdit" name="pas d'interdiction" description="passe sur l'interdit" type="boolean" default="false"/>
@@ -26,8 +16,6 @@
 			<select value="-1" t="construction" v="yes"/>
 			<select value="-1" t="waterway" v=""/>
 			<select value="-1" t="railway" v=""/>
-			<select value="-1" t="access" v="foot"/>
-			<select value="-1" t="access" v="permit"/>
 			<if param="avoid_track">
 				<select value="1" t="trail_visibility" v="no"/>
 				<select value="1" t="mtb:scale" v="5"/>			
@@ -57,6 +45,26 @@
 			<select value="-1" t="highway" v="busway"/>
 			<select value="-1" t="highway" v="pedestrian"/>
 			<select value="-1" t="highway" v="cycleway"/>
+			<if param="avoid_interdit">
+				<select value="1" t="access" v="foot"/>
+				<select value="1" t="access" v="permit"/>
+				<select value="1" t="motorcycle" v="no"/>
+				<select value="1" t="motor_vehicle" v="no"/>
+				<select value="1" t="motor_vehicle" v="private"/>
+				<select value="1" t="vehicle" v="no"/>
+				<select value="1" t="vehicle" v="private"/>
+				<select value="1" t="access" v="no"/>	
+				<select value="1" t="access" v="private"/>	
+			</if>
+			<select value="-1" t="access" v="foot"/>
+			<select value="-1" t="access" v="permit"/>
+			<select value="-1" t="motorcycle" v="no"/>
+			<select value="-1" t="motor_vehicle" v="no"/>
+			<select value="-1" t="motor_vehicle" v="private"/>
+			<select value="-1" t="vehicle" v="no"/>
+			<select value="-1" t="vehicle" v="private"/>
+			<select value="-1" t="access" v="no"/>	
+			<select value="-1" t="access" v="private"/>	
 		</way>
 
 		<way attribute="oneway">
@@ -77,6 +85,9 @@
 		</way>
 
 		<way attribute="speed" type="speed">
+			<if param="avoid_stat">
+				<select value="40" t="highway" v=""/>
+			</if>
 			<select value="40" t="highway" v="track"/><!-- 120 vmax profil/ 40 v track = 3 max pour priority-->
 			<select value="40" t="mtb:scale" v="0"/>			
 			<select value="40" t="mtb:scale" v="1"/>			
@@ -131,59 +142,45 @@
 			<select value="0.1" t="highway" v="motorway_link"/>
 			<select value="0.15" t="highway" v="trunk"/>
 			<select value="0.15" t="highway" v="trunk_link"/>
-			<select value="0.2" t="highway" v="primary"/>
-			<select value="0.2" t="highway" v="primary_link"/>
-			<select value="0.2" t="highway" v="secondary"/>
-			<select value="0.2" t="highway" v="secondary_link"/>
-			<select value="0.2" t="highway" v="tertiary"/>
-			<select value="0.2" t="highway" v="tertiary_link"/>
+			<select value="0.25" t="highway" v="primary"/>
+			<select value="0.25" t="highway" v="primary_link"/>
+			<select value="0.25" t="highway" v="secondary"/>
+			<select value="0.25" t="highway" v="secondary_link"/>
+			<select value="0.25" t="highway" v="tertiary"/>
+			<select value="0.25" t="highway" v="tertiary_link"/>
 			<select value="0.35" t="highway" v="unclassified"/>
 			<select value="0.35" t="highway" v="road"/>
 			
 			<if param="avoid_interdit">
-				<select value="1" t="motorcycle" v="no"/>
-				<select value="1" t="motor_vehicle" v="no"/>
-				<select value="1" t="motor_vehicle" v="private"/>
 				<select value="1" t="motor_vehicle" v="destination"/>
 				<select value="1" t="motor_vehicle" v="customers"/>
 				<select value="1" t="motor_vehicle" v="agricultural"/>
 				<select value="1" t="motor_vehicle" v="forestry"/>
-				<select value="1" t="vehicle" v="no"/>
-				<select value="1" t="vehicle" v="private"/>
 				<select value="1" t="vehicle" v="destination"/>
 				<select value="1" t="vehicle" v="customers"/>
 				<select value="1" t="vehicle" v="agricultural"/>
 				<select value="1" t="vehicle" v="forestry"/>		
-				<select value="1" t="access" v="no"/>	
-				<select value="1" t="access" v="private"/>	
 				<select value="1" t="access" v="destination"/>	
 				<select value="1" t="access" v="customers"/>
 				<select value="1" t="access" v="agricultural"/>
 				<select value="1" t="access" v="forestry"/>
 			</if>
-			<select value="0.10" t="motorcycle" v="no"/>
-			<select value="0.10" t="motor_vehicle" v="no"/>
-			<select value="0.10" t="motor_vehicle" v="private"/>
-			<select value="0.20" t="motor_vehicle" v="destination"/>
-			<select value="0.50" t="motor_vehicle" v="customers"/>
-			<select value="0.50" t="motor_vehicle" v="agricultural"/>
-			<select value="0.50" t="motor_vehicle" v="forestry"/>
-			<select value="0.10" t="vehicle" v="no"/>
-			<select value="0.10" t="vehicle" v="private"/>
-			<select value="0.20" t="vehicle" v="destination"/>
-			<select value="0.50" t="vehicle" v="customers"/>
-			<select value="0.50" t="vehicle" v="agricultural"/>
-			<select value="0.50" t="vehicle" v="forestry"/>		
-			<select value="0.10" t="access" v="no"/>	
-			<select value="0.10" t="access" v="private"/>	
-			<select value="0.20" t="access" v="destination"/>	
-			<select value="0.50" t="access" v="customers"/>
-			<select value="0.50" t="access" v="agricultural"/>
-			<select value="0.50" t="access" v="forestry"/>
+			<select value="0.25" t="motor_vehicle" v="destination"/>
+			<select value="0.25" t="motor_vehicle" v="customers"/>
+			<select value="0.25" t="motor_vehicle" v="agricultural"/>
+			<select value="0.25" t="motor_vehicle" v="forestry"/>
+			<select value="0.25" t="vehicle" v="destination"/>
+			<select value="0.25" t="vehicle" v="customers"/>
+			<select value="0.25" t="vehicle" v="agricultural"/>
+			<select value="0.25" t="vehicle" v="forestry"/>		
+			<select value="0.25" t="access" v="destination"/>	
+			<select value="0.25" t="access" v="customers"/>
+			<select value="0.25" t="access" v="agricultural"/>
+			<select value="0.25" t="access" v="forestry"/>
 			
 			<select value="0.35" t="highway" v="service"/>
 			<select value="0.35" t="highway" v="residential"/>
-			<select value="0.2" t="highway" v="living_street"/>
+			<select value="0.35" t="highway" v="living_street"/>
 
 			<if param="avoid_track">
 				<select value="1" t="smoothness" v="impassable"/>
@@ -225,24 +222,24 @@
 			<select value="6" t="mtb:scale" v="1"/>
 			<select value="5" t="mtb:scale" v="2"/>
 			<select value="0.75" t="mtb:scale" v="3"/>
-			<select value="0.15" t="mtb:scale" v="4"/>
+			<select value="0.55" t="mtb:scale" v="4"/>
 			
 			<!-- balisages -->
 			<select value="3" t="mtb" v="designated"/>
 			<select value="3" t="route" v="mtb"/>
 			<select value="3" t="route_mtb"/>
 
-			<select value="0.35" t="highway" v="path"/>
+			<select value="1.5" t="highway" v="path"/>
 			
 			<select value="1.25" t="route_hiking"/>
 			<select value="1.25" t="route" v="hiking"/>
 						
 			<select value="3.00" t="smoothness" v="very_horrible"/>
 			<select value="3.00" t="smoothness" v="horrible"/>
-			<select value="2.00" t="smoothness" v="very_bad"/>
-			<select value="0.75" t="tracktype" v="grade5"/>			
-			<select value="0.75" t="tracktype" v="grade4"/>			
-			<select value="0.50" t="highway" v="track"/>
+			<select value="3.00" t="smoothness" v="very_bad"/>
+			<select value="2.00" t="tracktype" v="grade5"/>			
+			<select value="2.00" t="tracktype" v="grade4"/>			
+			<select value="1.50" t="highway" v="track"/>
 		</way>
 
 		<point attribute="obstacle"><!-- -->

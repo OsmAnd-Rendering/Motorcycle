@@ -26,8 +26,6 @@
 			<select value="-1" t="construction" v="yes"/>
 			<select value="-1" t="waterway" v=""/>
 			<select value="-1" t="railway" v=""/>
-			<select value="-1" t="access" v="foot"/>
-			<select value="-1" t="access" v="permit"/>
 			<select value="-1" t="trail_visibility" v="no"/>
 			<select value="-1" t="smoothness" v="impassable"/>
 			<select value="-1" t="mtb:scale:uphill" v="5"/>			
@@ -56,6 +54,26 @@
 			<select value="-1" t="highway" v="cycleway"/>
 			<select value="-1" t="highway" v="footway"/>
 			<select value="-1" t="highway" v="steps"/>
+			<if param="avoid_interdit">
+				<select value="1" t="access" v="foot"/>
+				<select value="1" t="access" v="permit"/>
+				<select value="1" t="motorcycle" v="no"/>
+				<select value="1" t="motor_vehicle" v="no"/>
+				<select value="1" t="motor_vehicle" v="private"/>
+				<select value="1" t="vehicle" v="no"/>
+				<select value="1" t="vehicle" v="private"/>
+				<select value="1" t="access" v="no"/>	
+				<select value="1" t="access" v="private"/>	
+			</if>
+			<select value="-1" t="access" v="foot"/>
+			<select value="-1" t="access" v="permit"/>
+			<select value="-1" t="motorcycle" v="no"/>
+			<select value="-1" t="motor_vehicle" v="no"/>
+			<select value="-1" t="motor_vehicle" v="private"/>
+			<select value="-1" t="vehicle" v="no"/>
+			<select value="-1" t="vehicle" v="private"/>
+			<select value="-1" t="access" v="no"/>	
+			<select value="-1" t="access" v="private"/>	
 		</way>
 
 		<way attribute="oneway">
@@ -112,41 +130,29 @@
 			<select value="0.55" t="highway" v="road"/>
 
 			<if param="avoid_interdit">
-				<select value="1" t="motor_vehicle" v="no"/>
-				<select value="1" t="motor_vehicle" v="private"/>
 				<select value="1" t="motor_vehicle" v="destination"/>
 				<select value="1" t="motor_vehicle" v="customers"/>
 				<select value="1" t="motor_vehicle" v="agricultural"/>
 				<select value="1" t="motor_vehicle" v="forestry"/>
-				<select value="1" t="vehicle" v="no"/>
-				<select value="1" t="vehicle" v="private"/>
 				<select value="1" t="vehicle" v="destination"/>
 				<select value="1" t="vehicle" v="customers"/>
 				<select value="1" t="vehicle" v="agricultural"/>
 				<select value="1" t="vehicle" v="forestry"/>		
-				<select value="1" t="access" v="no"/>	
-				<select value="1" t="access" v="private"/>	
 				<select value="1" t="access" v="destination"/>	
 				<select value="1" t="access" v="customers"/>
 				<select value="1" t="access" v="agricultural"/>
 				<select value="1" t="access" v="forestry"/>
 			</if>
-			<select value="0.20" t="motor_vehicle" v="no"/>
-			<select value="0.20" t="motor_vehicle" v="private"/>
-			<select value="0.40" t="motor_vehicle" v="destination"/>
-			<select value="0.50" t="motor_vehicle" v="customers"/>
+			<select value="0.20" t="motor_vehicle" v="destination"/>
+			<select value="0.40" t="motor_vehicle" v="customers"/>
 			<select value="0.50" t="motor_vehicle" v="agricultural"/>
 			<select value="0.50" t="motor_vehicle" v="forestry"/>
-			<select value="0.20" t="vehicle" v="no"/>
-			<select value="0.20" t="vehicle" v="private"/>
-			<select value="0.40" t="vehicle" v="destination"/>
-			<select value="0.50" t="vehicle" v="customers"/>
+			<select value="0.20" t="vehicle" v="destination"/>
+			<select value="0.40" t="vehicle" v="customers"/>
 			<select value="0.50" t="vehicle" v="agricultural"/>
 			<select value="0.50" t="vehicle" v="forestry"/>		
-			<select value="0.20" t="access" v="no"/>	
-			<select value="0.20" t="access" v="private"/>	
-			<select value="0.40" t="access" v="destination"/>	
-			<select value="0.50" t="access" v="customers"/>
+			<select value="0.20" t="access" v="destination"/>	
+			<select value="0.40" t="access" v="customers"/>
 			<select value="0.50" t="access" v="agricultural"/>
 			<select value="0.50" t="access" v="forestry"/>
 
@@ -187,44 +193,54 @@
 				<select value="1" t="access" v="foot"/>
 				<select value="1" t="access" v="permit"/>
 				<select value="1" t="motorcycle" v="no"/>
-				<select value="1" t="motorcar" v="no"/>
 				<select value="1" t="motorcar" v="private"/>
-				<select value="1" t="motor_vehicle" v="no"/>
+				<select value="1" t="motorcar" v="no"/>
+				<select value="1" t="motorcar" v="destination"/>
+				<select value="1" t="motorcar" v="customers"/>
+				<select value="1" t="motorcar" v="agricultural"/>
+				<select value="1" t="motorcar" v="forestry"/>
 				<select value="1" t="motor_vehicle" v="private"/>
-				<select value="1" t="vehicle" v="no"/>
+				<select value="1" t="motor_vehicle" v="no"/>
+				<select value="1" t="motor_vehicle" v="destination"/>
+				<select value="1" t="motor_vehicle" v="customers"/>
+				<select value="1" t="motor_vehicle" v="agricultural"/>
+				<select value="1" t="motor_vehicle" v="forestry"/>
 				<select value="1" t="vehicle" v="private"/>
-				<select value="1" t="access" v="no"/>
+				<select value="1" t="vehicle" v="no"/>
+				<select value="1" t="vehicle" v="destination"/>
+				<select value="1" t="vehicle" v="customers"/>
+				<select value="1" t="vehicle" v="agricultural"/>
+				<select value="1" t="vehicle" v="forestry"/>
 				<select value="1" t="access" v="private"/>
+				<select value="1" t="access" v="no"/>
+				<select value="1" t="access" v="destination"/>
+				<select value="1" t="access" v="customers"/>
+				<select value="1" t="access" v="agricultural"/>
+				<select value="1" t="access" v="forestry"/>
 				<select value="1" t="barrier" v="chain"/>
 				<select value="1" t="barrier" v="block"/>
 			</if>
 			<select value="-1" t="access" v="foot"/>
 			<select value="-1" t="access" v="permit"/>
-			<select value="250" t="motorcycle" v="no"/>
-			<select value="250" t="motorcar" v="private"/>
-			<select value="250" t="motorcar" v="no"/>
-			<select value="1" t="motorcar" v="destination"/>
-			<select value="1" t="motorcar" v="customers"/>
-			<select value="1" t="motorcar" v="agricultural"/>
-			<select value="1" t="motorcar" v="forestry"/>
-			<select value="250" t="motor_vehicle" v="private"/>
-			<select value="250" t="motor_vehicle" v="no"/>
-			<select value="1" t="motor_vehicle" v="destination"/>
-			<select value="1" t="motor_vehicle" v="customers"/>
-			<select value="1" t="motor_vehicle" v="agricultural"/>
-			<select value="1" t="motor_vehicle" v="forestry"/>
-			<select value="250" t="vehicle" v="private"/>
-			<select value="250" t="vehicle" v="no"/>
-			<select value="1" t="vehicle" v="destination"/>
-			<select value="1" t="vehicle" v="customers"/>
-			<select value="1" t="vehicle" v="agricultural"/>
-			<select value="1" t="vehicle" v="forestry"/>
-			<select value="250" t="access" v="private"/>
-			<select value="250" t="access" v="no"/>
-			<select value="1" t="access" v="destination"/>
-			<select value="1" t="access" v="customers"/>
-			<select value="1" t="access" v="agricultural"/>
-			<select value="1" t="access" v="forestry"/>
+			<select value="-1" t="motorcycle" v="no"/>
+			<select value="-1" t="motor_vehicle" v="private"/>
+			<select value="-1" t="motor_vehicle" v="no"/>
+			<select value="50" t="motor_vehicle" v="destination"/>
+			<select value="50" t="motor_vehicle" v="customers"/>
+			<select value="50" t="motor_vehicle" v="agricultural"/>
+			<select value="50" t="motor_vehicle" v="forestry"/>
+			<select value="-1" t="vehicle" v="private"/>
+			<select value="-1" t="vehicle" v="no"/>
+			<select value="50" t="vehicle" v="destination"/>
+			<select value="50" t="vehicle" v="customers"/>
+			<select value="50" t="vehicle" v="agricultural"/>
+			<select value="50" t="vehicle" v="forestry"/>
+			<select value="-1" t="access" v="private"/>
+			<select value="-1" t="access" v="no"/>
+			<select value="50" t="access" v="destination"/>
+			<select value="50" t="access" v="customers"/>
+			<select value="50" t="access" v="agricultural"/>
+			<select value="50" t="access" v="forestry"/>
 			<select value="-1" t="barrier" v="chain"/>
 			<select value="-1" t="barrier" v="jersey_barrier"/>
 			<select value="-1" t="barrier" v="horse_stile"/>
