@@ -573,7 +573,7 @@
 		<case tag="highway" value="residential" attrColorValue="#000000" attrStringValue="petite route"/>
 		<case tag="highway" value="living_street" attrColorValue="#000000" attrStringValue="petite route"/>
 		<case tag="highway" value="service" attrColorValue="$piste" attrStringValue="carrossable"/>
-		<case tag="highway" value="track" attrColorValue="$chemin" attrStringValue="chemin"/>
+		<case tag="highway" value="track" attrColorValue="$chemin" attrStringValue="chemin inconnu"/>
 		<case tag="highway" value="path" attrColorValue="#66ff99" attrStringValue="sentier"/>
 		<case tag="highway" value="footway" attrColorValue="#ff0000" attrStringValue="piéton"/>
 		<case tag="highway" value="bridleway" attrColorValue="#ff0000" attrStringValue="cavalier"/>
