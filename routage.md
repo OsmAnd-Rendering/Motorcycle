@@ -16,9 +16,8 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 - les chemins "**interdits**" sont regroupés sous le switch "<b>pas d'interdiction</b>" dans "<b>Eviter les routes</b>".
 - :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>pas de chemins</b>" qui évite au maximum les chemins en restant sur les routes les plus petites possible.
 - :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>si chemins secs</b>" qui rajoute quelques chemins "**verts**" de la carte au cas ou il n'y aurai pas de chemins "**marrons**" à proximité.<br> :warning: Attention à la boue avec des pneus non adaptés !
+- :bulb: il y-à 1 autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>pas de chemins balisés</b>" qui évite au maximum les itinéraires type GR, PR, afin d'éviter la proximité avec les randonneurs pédestres.
 - considère toutes les routes au même niveau et donc tracera au plus direct.
-- :bulb: il y-à 2 autres switchs dans "<b>Eviter les routes</b>" pour activer un mode "<b>moins de route</b>" et "<b>encore moins de route</b>" qui permettent l'un ou l'autre de trouver plus de chemins si vous faites un trajet de moins de 200 km pour le premier et 100 km pour le second.<br> :warning: le temps de calcul est augmenté et le risque de plantage de l'appli aussi !
-
 <i>(mettez des points intermédiaires pour "forcer" le détour par les "bons" chemins s'il n'y en à pas en ligne directe).</i>
 <br>
 
@@ -32,14 +31,12 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 - dissuade d'empreinter les chemins trop difficiles (vous pouvez poser un point de passage dessus pour les prendre délibéremment).
 - autorise le passage sur les sentiers "faciles" points verts sur la carte.
 - considère tous les chemins de la même façon (pas de carrossable ou de boueux) <br>
-- considère toutes les routes au même niveau et donc tracera au plus direct.
-- :bulb: il y-à un autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>moins de route</b>" qui permet de trouver plus de chemins si vous faites un trajet de moins de 200 km .<br> :warning: le temps de calcul est augmenté et le risque de plantage de l'appli aussi !
- 
+- :bulb: il y-à 1 autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>pas de chemins balisés</b>" qui évite au maximum les itinéraires type GR, PR, afin d'éviter la proximité avec les randonneurs pédestres.
+- considère toutes les routes au même niveau et donc tracera au plus direct. 
 <i>( ne mettez pas de points trop éloignés pour accélérer le calcul -tous les 100 km par exemple )</i>
  
 ## enduro
 <b>vous fera passer partout sauf pistes cyclables et bien sur les points noirs (impassables ^^).</b><br>
-- tous les switchs sont inactifs (tout est actif, les gués, les routes gelées, l'accès au privé etc)
 - respecte les interdictions "**no**" et "**private**" <b>SAUF</b> si le switch "<b>Pas d'interdit</b>" est actif.
 - respecte les barrières absolues (chaine, portail etc)
 - priorité inférieure pour les **points rouges** de la carte qui seront évités si alternative.
@@ -47,7 +44,9 @@ explications sur les catégories de **[chemins](https://github.com/OsmAnd-Render
 - privilégie les itinéraires balisés (rando et VTT)
 - privilégie légèrement les sentiers aux chemins.
 - toutes les routes sont au même niveau il trace au plus direct.
-
+- :bulb: il y-à 1 switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>tous les sentiers</b>" qui permet de passer sur les sentiers dont le niveau de difficulté n'est pas renseigné à vos risques et périls ...
+je vous conseille d'activer la prise en compte du relief avec ce mode activé.
+- :bulb: il y-à 1 autre switch dans "<b>Eviter les routes</b>" pour activer un mode "<b>moins de route</b>" qui permet de passer sur plus de sentiers en rallongeant la durée de calcul.
 <i>( ne mettez pas de points trop éloignés pour accélérer le calcul - tous les 100 km par exemple )</i><br>
 chez moi un calcul entre 2 points distants d environ 200 km prend 2 minutes.<br>
  
