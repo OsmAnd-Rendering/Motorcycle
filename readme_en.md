@@ -1,4 +1,4 @@
-# Map Display and Route Calculations for Off-Road Motorcycles
+# Map Display and Route Calculations for Off-Road Motorcycles for OsmAnd
 Modifies the display of offline (vector) maps for off-road motorcycle use, with trails visually classified by “**difficulty**” based on vehicle type and the details available in **OpenStreetMap**, enables “**off-road**” route calculations for three types of motorcycles (from heaviest to lightest).
 
 (The installation process creates 3 new profiles with their own settings and navigation guidance; existing **Osmand** profiles and settings are not modified.)
