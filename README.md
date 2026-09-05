@@ -1,6 +1,6 @@
 <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_map_languge%403x.png" width="25" /> `Français`&emsp;[English](readme_en.md)
 
-# Affichage et calculs d'itinéraires pour la moto tout terrain
+# Affichage et calculs d'itinéraires pour la moto tout terrain dans OsmAnd
 Modifie l'affichage des cartes offline (vectorielle) pour l'utilisation en moto tout terrain avec les chemins visuellement classifiés par "**difficulté**" liée au type d'engin et aux précisions présentes dans **OpenStreetMap**, permet des calculs de routage "**tout terrain**" pour 3 types de motos (de la plus lourde à la plus légère).
 
 ( le processus d'installation créé 3 nouveaux profils avec leur configuration et leur guidage, les profils et la configuration **Osmand** existante ne sont pas modifiés )
