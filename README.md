@@ -9,6 +9,10 @@ Pour **iOS** ou périphérique avec peu de mémoire, activez l'option "**for iOS
 
 un didactitiel en vidéo **[https://youtu.be/07nj4LoACdc](https://www.youtube.com/watch?v=gszR1176Ot0)**
 
+## :warning: Sur les dernières versions d'OsmAnd vous devez modifier un paramètre pour retrouver le calcul d'itinéraire initial qui trouve beaucoup plus de chemins ...
+
+sur le profil désiré => gros bouton => configurer le profil => parametres de guidage => parametres de l'itinéraire => méthode de calcul de l'itinéraire => choisir "Standard uniquement" :heavy_exclamation_mark:
+
 ## :white_check_mark: Changements notables par rapport aux styles standard :
 
 - Chemins identifiés visuellement par carrossabilité (couleurs) **[explications](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
