@@ -13,7 +13,7 @@ A video tutorial **[https://youtu.be/07nj4LoACdc](https://www.youtube.com/watch?
 In the desired profile => large button => configure profile => navigation settings => route parameters => route calculation method => select “Standard only” :heavy_exclamation_mark:
 
 
-## <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_point_labels%403x.png" width="30" > Notable changes compared to standard styles:
+## :white_check_mark: Notable changes compared to standard styles:
 
 - Trails visually identified by rideability (colors) **[explanations](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
 - Useful/interesting POIs highlighted
@@ -24,20 +24,20 @@ In the desired profile => large button => configure profile => navigation settin
 - **[How styles work](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/FR%E2%80%94le-style)**
 - **[How routings work](routage.md)**
 
-## <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_navbar_image_outlined%403x.png" width="30" > On-screen example<br>
+## :white_check_mark: On-screen example<br>
 
 ![screen_day](https://github.com/OsmAnd-Rendering/Motorcycle/assets/83398215/0492fc7f-45a6-487a-b169-a524aec98473)
 
 - **[More screenshots](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/photos.md)**
 ---
 
-## <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_download%403x.png" width="30" > Installation Instructions
+## :white_check_mark: Installation Instructions
 
 - **[Installation](https://github.com/OsmAnd-Rendering/Motorcycle/blob/main/installation.md)**
 
 ---
 
-## <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_info%403x.png" width="30" > Documentation
+## :white_check_mark: Documentation
 
 - **[Legend](Legend.md)**
 
@@ -47,5 +47,5 @@ In the desired profile => large button => configure profile => navigation settin
 
 ---
 
-## <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_info%403x.png" width="30" > If you prefer BRouter for route planning
+## :bulb: **Tip:**  If you prefer BRouter for route planning
 - for my off-road motorcycle profiles with BRouter, see [here](https://github.com/cricri-du-lauragais/QMapShack_enduro/tree/main/BRouter/profiles2) and the details [here](https://github.com/cricri-du-lauragais/QMapShack_enduro/blob/main/BRouter_profiles.md)
