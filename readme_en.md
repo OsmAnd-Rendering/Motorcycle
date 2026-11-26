@@ -7,6 +7,12 @@ For iOS or devices with limited memory, enable the “**for iOS**” option (see
 
 A video tutorial **[https://youtu.be/07nj4LoACdc](https://www.youtube.com/watch?v=gszR1176Ot0)**
 
+
+## :warning: In the latest versions of OsmAnd, you need to change a setting to restore the original route calculation, which finds many more paths...
+
+In the desired profile => large button => configure profile => navigation settings => route parameters => route calculation method => select “Standard only” :heavy_exclamation_mark:
+
+
 ## <img src="https://github.com/osmandapp/OsmAnd-iOS/blob/master/Resources/Icons/ic_custom_point_labels%403x.png" width="30" > Notable changes compared to standard styles:
 
 - Trails visually identified by rideability (colors) **[explanations](https://github.com/OsmAnd-Rendering/Motorcycle/wiki/hi%C3%A9rarchie-des-chemins)**
